@@ -4,7 +4,8 @@ data: "11/10/2026"
 palavra: JARVIS
 fala: |
   Você sabia que o seu computador já pode trabalhar enquanto você dorme? Já pensou em ter um funcionário dentro do seu computador, trabalhando por você? Tem gente pagando uma fortuna por coisas que você já pode montar em casa. E o melhor: não precisa ser programador! Você pode criar o seu próprio JARVIS. Um ajudante de inteligência artificial que conversa com você, lembra das coisas, pesquisa e executa tarefas. É como ter um funcionário digital só seu, trabalhando do jeito que você ensinar. No inema ponto club tem vídeos, explicações e material para você começar do zero. Comenta JARVIS que eu te mostro o caminho.
-# As 7 etapas: cada uma entra na palavra 'ancora' da fala (minúscula, sem acento) e troca imagem, manchete e painel.
+# As 7 etapas: cada uma entra na palavra 'ancora' da fala (minúscula, sem acento) e troca imagem, câmera, manchete e destaque.
+# camera: push | pull | pan_dir | pan_esq | sobe   ·   foco: [x, y] (0–1) do plano fechado   ·   destaque: cartão à direita do avatar
 # 'gatilho' e 'por_que' não aparecem no vídeo: vão para o mapa.jpg (a explicação do modelo).
 etapas:
   - id: gancho
@@ -12,7 +13,9 @@ etapas:
     gatilho: "resultado desejado em 2 segundos"
     por_que: "mostra o sonho (dormir enquanto o PC trabalha) antes de falar de tecnologia"
     capa: {linha1: "VOCÊ DORME.", linha2: "ELE TRABALHA.", sub: "SEU PRÓPRIO JARVIS!"}
-    cena: "a person sleeping peacefully in a dark bedroom at night, in the foreground a desk with a glowing computer monitor working by itself, warm golden light from the screen"
+    camera: push
+    foco: [0.5, 0.62]
+    cena: "Quarto à noite. Em primeiro plano, na metade de baixo da imagem, uma escrivaninha com um notebook aberto cuja tela brilha em dourado mostrando janelas de trabalho em andamento. Ao fundo, na cama, uma pessoa adulta dormindo tranquila, bem visível sob uma luz suave de abajur. A pessoa e o notebook nítidos e iluminados."
   - id: desejo
     nome: DESEJO
     gatilho: "ter um funcionário só seu"
@@ -20,8 +23,10 @@ etapas:
     ancora: pensou
     linha1: "UM FUNCIONÁRIO"
     linha2: "DENTRO DO PC"
-    painel: {titulo: "24 HORAS", texto: "trabalhando\npor você"}
-    cena: "close-up of a modern desktop computer on a wooden desk at night, screen glowing with warm golden light, cozy dark home office"
+    destaque: {titulo: "24 H", texto: "trabalhando\npor você"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Monitor de computador numa escrivaninha de home office à noite. Dentro da tela, como se morasse ali, um funcionário em miniatura de camisa social, sentado numa mesinha minúscula, trabalhando concentrado num notebook minúsculo. A luz dourada da tela ilumina o ambiente. Visual divertido e realista."
   - id: medo
     nome: MEDO
     gatilho: "estar gastando à toa"
@@ -30,8 +35,10 @@ etapas:
     linha1: "TEM GENTE PAGANDO"
     linha2: "UMA FORTUNA"
     cor: vermelho
-    painel: {titulo: "R$ $$$", texto: "por algo que\nvocê monta\nem casa", cor: vermelho}
-    cena: "stack of expensive bills and invoices on a dark desk, a hand holding a calculator, dramatic red and golden rim light"
+    destaque: {titulo: "CARO", texto: "por algo que\nvocê monta\nem casa", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.55]
+    cena: "Mesa escura com várias cédulas de dinheiro brasileiro (notas de real de 100 e de 50, azuis e laranja) espalhadas, faturas de assinatura dobradas e uma calculadora; a mão de um homem de meia-idade segura as faturas com tensão. Luz lateral dramática, avermelhada e dourada."
   - id: facilidade
     nome: FACILIDADE
     gatilho: "não precisa ser programador"
@@ -39,8 +46,10 @@ etapas:
     ancora: melhor
     linha1: "NÃO PRECISA SER"
     linha2: "PROGRAMADOR"
-    painel: {titulo: "SEM CÓDIGO", texto: "do zero,\npasso a passo"}
-    cena: "relaxed middle-aged person smiling while using a laptop on a sofa in a cozy living room at night, warm golden lamp light"
+    destaque: {titulo: "SEM CÓDIGO", texto: "do zero,\npasso a passo"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Mulher de uns 45 anos, sorrindo e relaxada no sofá da sala à noite, com o notebook no colo, falando com ele naturalmente como quem conversa com uma pessoa. A tela mostra uma janela de conversa simples, sem código. Abajur com luz dourada quente; rosto bem iluminado."
   - id: descoberta
     nome: DESCOBERTA
     gatilho: "existe um jeito: o seu JARVIS"
@@ -48,8 +57,10 @@ etapas:
     ancora: criar
     linha1: "CRIE O SEU"
     linha2: "PRÓPRIO JARVIS"
-    painel: {titulo: "JARVIS", texto: "conversa · lembra\npesquisa · executa"}
-    cena: "home office at night, a soft glowing golden circular light interface floating above the computer monitor like a personal assistant, realistic, no robot"
+    destaque: {titulo: "ELE", texto: "conversa\nlembra · pesquisa\nexecuta tarefas"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Escrivaninha à noite. Na tela do computador, um assistente pessoal representado por uma esfera de luz dourada suave e calorosa, com pequenos balões de conversa, uma lupa, um calendário e uma caixinha de tarefas flutuando ao redor, como ícones simples. Atmosfera acolhedora. Nada de robô, nada de gráfico de ações."
   - id: beneficio
     nome: BENEFÍCIO
     gatilho: "do jeito que você ensinar"
@@ -57,18 +68,25 @@ etapas:
     ancora: como
     linha1: "UM FUNCIONÁRIO"
     linha2: "DIGITAL SÓ SEU"
-    painel: {titulo: "SÓ SEU", texto: "trabalha do\njeito que você\nensinar"}
-    cena: "empty home office at dawn, computer screen glowing warm golden, first sunlight entering through the window, peaceful"
+    destaque: {titulo: "SEU JEITO", texto: "trabalha como\nvocê ensinar"}
+    camera: pan_esq
+    foco: [0.45, 0.45]
+    cena: "Amanhecer em casa. Uma pessoa de roupão, com uma xícara de café, sorri olhando para o notebook, que mostra uma lista de tarefas toda marcada com checks verdes. Luz do sol dourada entrando pela janela. Clima de tranquilidade."
   - id: comentario
     nome: COMENTÁRIO
-    gatilho: "uma palavra para comentar"
-    por_que: "ação pequena e fácil: comentar uma palavra abre a conversa (e o alcance)"
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (o site) e uma ação pequena e fácil: comentar uma palavra"
     ancora: inema
     linha1: "TUDO NO"
     linha2: "INEMA.CLUB"
-    painel: {titulo: "INEMA.CLUB", texto: "vídeos + material\npara começar\ndo zero"}
-    depois: {ancora: comenta, linha1: "COMENTA", linha2: "JARVIS", painel: {titulo: "COMENTA", texto: "JARVIS", grande: true}}
-    cena: "hand holding a smartphone at night, glowing screen, warm golden bokeh city lights in the background"
-final: ["COMENTA JARVIS", "INEMA.CLUB", "cursos e material gratuitos"]
-legenda_envio: "SEU PRÓPRIO JARVIS — reel no modelo de 7 etapas (gancho → desejo → medo → facilidade → descoberta → benefício → comentário)."
+    destaque: {titulo: "GRÁTIS", texto: "vídeos, explicações\ne material\ndo zero"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical, numa sala escura com bokeh dourado. Na tela do celular, no alto, um vídeo vertical mostrando um computador brilhando em dourado numa mesa à noite; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada."
+# CTA (entra na palavra 'ancora' da última etapa). Padrão das próximas falas:
+#   "Tá tudo no inema ponto club. Ou comenta <PALAVRA> que eu te mando o link."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "JARVIS", linha2: "que eu te mostro o caminho"}
+legenda_envio: "SEU PRÓPRIO JARVIS (v2) — reel no modelo de 7 etapas (gancho → desejo → medo → facilidade → descoberta → benefício → comentário)."
+canal: lives1
 youtube: https://www.youtube.com/shorts/PIa_eXWFk7s  # publicado no lives1 em 11/10/2026
+youtube_20261011: https://www.youtube.com/shorts/V92t50ceCRg

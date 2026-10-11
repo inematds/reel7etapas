@@ -7,3 +7,4 @@ edicoes/*/video.mp4
 __pycache__/
 node_modules
 .claude/
+edicoes/*/img-v*/

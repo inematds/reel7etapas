@@ -142,7 +142,7 @@
 
 <section id="resumo" class="resumo"><div class="wrap">
   <span class="chip">En resumen</span>
-  <p>reel7etapas es un modelo para escribir videos cortos (Reels, Shorts, TikTok) y una herramienta que monta esos videos sola. El guion sigue siempre el mismo orden de 7 etapas, pensado para retener a quien está deslizando la pantalla y terminar con un pedido simple: comentar una palabra. Sirve para quien crea contenido y quiere un camino repetible, en lugar de empezar de cero en cada video. Para usar solo el modelo, basta leer la tabla de las 7 etapas; para generar el video, la herramienta usa el avatar de Nei en HeyGen, imágenes hechas en el computador y un script en Python.</p>
+  <p>reel7etapas es un modelo para escribir videos cortos (Reels, Shorts, TikTok) y una herramienta que monta esos videos sola. El guion sigue siempre el mismo orden de 7 etapas, pensado para retener a quien está deslizando la pantalla y terminar con un pedido simple: comentar una palabra. Sirve para quien crea contenido y quiere un camino repetible, en lugar de empezar de cero en cada video. Para usar solo el modelo, basta leer la tabla de las 7 etapas; para generar el video, la herramienta usa el avatar de Nei en HeyGen, imágenes generadas por Codex y un script en Python.</p>
 </div></section>
 
 <section id="oque"><div class="wrap">
@@ -152,7 +152,7 @@
   <figure style="margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img src="../assets/banner-grade-es.jpg" alt="Las etapas del modelo en tarjetas" loading="lazy" style="width:100%;display:block"></figure>
   <div class="grid g3">
     <div class="card"><h3>🧭 Guion en orden</h3><p>Siete etapas, siempre en la misma secuencia. Cambias el tema, la estructura se queda.</p></div>
-    <div class="card"><h3>🎞️ Video montado</h3><p>Avatar hablando, una imagen por etapa, titular y panel que entran en la palabra exacta y subtítulos palabra por palabra, en 9:16.</p></div>
+    <div class="card"><h3>🎞️ Video montado</h3><p>Avatar hablando, una imagen por etapa con movimiento de cámara, titular y destacado que entran en la palabra exacta y subtítulo corto, todo dentro de la zona segura del 9:16.</p></div>
     <div class="card"><h3>🗺️ Mapa para enseñar</h3><p>El comando <code>mapa</code> genera una hoja con las 7 etapas lado a lado: el cuadro del video, el gatillo y el porqué.</p></div>
   </div>
 </div></section>
@@ -182,79 +182,71 @@
   <h2>Qué debe estar funcionando</h2>
   <p class="sub">Para usar solo el modelo, nada: es el guion. Para generar el video con la herramienta:</p>
   <div class="grid g3">
-    <div class="card"><h3>reelcomenta + cardshorts</h3><p>El motor reutiliza la transcripción, el recorte del rostro, el estudio de HeyGen y el envío a Telegram de reelcomenta, y el MusicGen de cardshorts.</p><pre><span class="k">git clone</span> https://github.com/inematds/reelcomenta ~/projetos/reelcomenta</pre></div>
-    <div class="card"><h3>Imágenes locales</h3><p>Servidor de imágenes con FLUX.2 klein respondiendo en <code>localhost:8000/generate</code>.</p><pre><span class="c"># ¿otra dirección?</span>
-<span class="k">export</span> R7_IMAGEM_API=http://host:8000/generate</pre></div>
+    <div class="card"><h3>reelcomenta + makeshorts</h3><p>El motor reutiliza la transcripción, el recorte del rostro, el estudio de HeyGen y el envío a Telegram de reelcomenta, y el portón de calidad <code>qa_short.py</code> de makeshorts.</p><pre><span class="k">git clone</span> https://github.com/inematds/reelcomenta ~/projetos/reelcomenta</pre></div>
+    <div class="card"><h3>Codex CLI</h3><p>Las imágenes salen del generador de imágenes de Codex (<code>image_gen</code>), mediante la suscripción. Si falla, el servidor local de FLUX.2 klein entra como respaldo.</p><pre><span class="k">codex</span> --version</pre></div>
     <div class="card"><h3>Python + ffmpeg</h3><p>Pillow, OpenCV, PyYAML y ffmpeg. El avatar sale del estudio de HeyGen mediante la suscripción, con aprobación registrada.</p><pre><span class="k">pip install</span> pillow opencv-python pyyaml</pre></div>
   </div>
 </div></section>
 
 <section id="guia"><div class="wrap">
   <span class="chip">Guía de uso · paso a paso</span>
-  <h2>Del texto al reel entregado</h2>
-  <p class="sub">Todo corre con <code>reel7etapas.py</code>. Cada edición vive en <code>edicoes/&lt;fecha&gt;-&lt;tema&gt;/</code>.</p>
+  <h2>Del texto al reel publicado</h2>
+  <p class="sub">Todo corre con <code>reel7etapas.py</code>. Cada edición vive en <code>edicoes/&lt;fecha&gt;-&lt;tema&gt;/</code>. Ningún paso pide aprobación: el motor tiene portones que reprueban y explican qué falló.</p>
 
   <div class="step"><div class="b">1</div><div>
     <h3>Crear la edición</h3>
-    <p>Copia el guion del ejemplo JARVIS a una carpeta nueva. Reescribe el discurso (550–700 caracteres, unos 40 s) y las 7 etapas.</p>
+    <p>Copia el guion del ejemplo JARVIS a una carpeta nueva. Reescribe el habla (550–700 caracteres, unos 40 s), terminando con "Tá tudo no inema ponto club. Ou comenta &lt;PALAVRA&gt; que eu te mando o link." (Está todo en inema punto club. O comenta &lt;PALABRA&gt; y te mando el enlace.)</p>
 <pre><span class="k">python3 reel7etapas.py novo</span> meu-assunto  <span class="c"># edicoes/2026-10-11-meu-assunto/roteiro.yaml</span></pre>
   </div></div>
 
   <div class="step"><div class="b">2</div><div>
-    <h3>Escribir las etapas</h3>
-    <p>Cada etapa tiene una <code>ancora</code> (palabra del discurso que hace entrar la etapa), titular, panel y la <code>cena</code> de la imagen. <code>gatilho</code> y <code>por_que</code> solo aparecen en el mapa.</p>
+    <h3>Escribir las 7 etapas</h3>
+    <p>Cada etapa tiene la <code>ancora</code> (ancla: la palabra del habla que hace entrar la etapa), el titular, un <code>destaque</code> opcional (destacado: una tarjeta al lado del avatar), la <code>camera</code> y la <code>cena</code> (escena) de la imagen. <code>gatilho</code> (gatillo) y <code>por_que</code> (porqué) solo aparecen en el mapa. El <code>cta</code> cierra con la palabra para comentar.</p>
 <pre>  - id: medo
     ancora: gente
     linha1: <span class="s">"TEM GENTE PAGANDO"</span>
     linha2: <span class="s">"UMA FORTUNA"</span>
-    painel: {titulo: <span class="s">"R$ $$$"</span>, texto: <span class="s">"por algo que\nvocê monta\nem casa"</span>}
-    cena: <span class="s">"stack of expensive bills on a dark desk, golden rim light"</span></pre>
+    destaque: {titulo: <span class="s">"CARO"</span>, texto: <span class="s">"por algo que\nvocê monta\nem casa"</span>}
+    camera: pan_dir
+    cena: <span class="s">"Mesa escura com notas de real, faturas e uma calculadora..."</span></pre>
   </div></div>
 
   <div class="step"><div class="b">3</div><div>
-    <h3>Imágenes y banda sonora</h3>
-    <p>Una imagen por etapa con FLUX.2 klein local y una banda sonora instrumental con MusicGen local.</p>
-<pre><span class="k">python3 reel7etapas.py imagens</span> edicoes/&lt;pasta&gt;
-<span class="k">python3</span> ~/projetos/cardshorts/cardshorts.py musica edicoes/&lt;pasta&gt;/build/trilha.wav <span class="s">"warm hopeful cinematic underscore"</span></pre>
+    <h3>Hacerlo todo de una vez</h3>
+    <p>Genera las 7 imágenes en Codex, graba el avatar si todavía no existe, monta, valida y hace el mapa. Una imagen oscura, con orientación vertical equivocada o parecida a otra se rehace sola.</p>
+<pre><span class="k">python3 reel7etapas.py fazer</span> edicoes/&lt;pasta&gt;</pre>
   </div></div>
 
   <div class="step"><div class="b">4</div><div>
-    <h3>Vista previa antes del avatar</h3>
-    <p>Genera una hoja con un cuadro de cada etapa, en el tiempo estimado del discurso. Revisa texto cortado e imagen equivocada.</p>
-<pre><span class="k">python3 reel7etapas.py previa</span> edicoes/&lt;pasta&gt;  <span class="c"># previa.jpg</span></pre>
+    <h3>Los portones</h3>
+    <p>Nada fuera de la zona segura de Reels/Shorts (arriba 10%, abajo 20%, columna de botones), subtítulo de máximo 3 palabras y fuente de 64 px o más, imagen que cambia como máximo cada 3,5 s, habla igual al guion, −14 LUFS y el <code>qa_short.py</code> de makeshorts aprobado.</p>
+<pre><span class="k">python3 reel7etapas.py validar</span> edicoes/&lt;pasta&gt;  <span class="c"># + build/revisao/folha-*.jpg en tamaño real</span></pre>
   </div></div>
 
   <div class="step"><div class="b">5</div><div>
-    <h3>Avatar en el estudio de HeyGen</h3>
-    <p>Solo corre con la aprobación registrada. Espera la cola del estudio y descarga el MP4.</p>
-<pre><span class="k">echo</span> <span class="s">"aprovado"</span> &gt; edicoes/&lt;pasta&gt;/avatar/APROVADO_HEYGEN
-<span class="k">python3 reel7etapas.py avatar</span> edicoes/&lt;pasta&gt;</pre>
+    <h3>Correr por partes (cuando quieras)</h3>
+    <p>Cada etapa también corre sola. <code>imagens</code> acepta los números de las etapas para rehacer solo esas.</p>
+<pre><span class="k">python3 reel7etapas.py imagens</span> edicoes/&lt;pasta&gt; 3 7  <span class="c"># rehace las imágenes 3 y 7</span>
+<span class="k">python3 reel7etapas.py avatar</span> edicoes/&lt;pasta&gt;       <span class="c"># exige avatar/APROVADO_HEYGEN</span>
+<span class="k">python3 reel7etapas.py montar</span> edicoes/&lt;pasta&gt;
+<span class="k">python3 reel7etapas.py mapa</span> edicoes/&lt;pasta&gt;         <span class="c"># mapa.jpg + capa.jpg</span></pre>
   </div></div>
 
   <div class="step"><div class="b">6</div><div>
-    <h3>Montar, revisar y mapear</h3>
-    <p>El montaje busca las anclas en el discurso real del avatar y se detiene si este difiere del guion. El mapa se convierte en material para enseñar el modelo.</p>
-<pre><span class="k">python3 reel7etapas.py montar</span> edicoes/&lt;pasta&gt;    <span class="c"># video.mp4</span>
-<span class="k">python3 reel7etapas.py conferir</span> edicoes/&lt;pasta&gt;  <span class="c"># conferencia.jpg + volume</span>
-<span class="k">python3 reel7etapas.py mapa</span> edicoes/&lt;pasta&gt;      <span class="c"># mapa.jpg + capa.jpg</span></pre>
-  </div></div>
-
-  <div class="step"><div class="b">7</div><div>
-    <h3>Entregar</h3>
-    <p>Envía el video por el bot de Telegram. Para YouTube, yt-pubx lo publica como Short.</p>
-<pre><span class="k">python3 reel7etapas.py enviar</span> edicoes/&lt;pasta&gt; <span class="s">"legenda"</span>
-<span class="k">./yt-pubx publicar</span> edicoes/&lt;pasta&gt;/video.mp4 --canal lives1 --contexto <span class="s">"..."</span> --dry-run</pre>
+    <h3>Publicar</h3>
+    <p>Envía el video por el bot de Telegram y lo publica como Short en YouTube con yt-pubx (canal del guion; por defecto lives1). Solo corre si <code>validar</code> pasó después del último montaje.</p>
+<pre><span class="k">python3 reel7etapas.py publicar</span> edicoes/&lt;pasta&gt;</pre>
   </div></div>
 </div></section>
 
 <section id="exemplos"><div class="wrap">
   <span class="chip">Ejemplo</span>
   <h2>Tu propio JARVIS</h2>
-  <p class="sub">El primer reel hecho con el modelo. Guion completo en <a href="https://github.com/inematds/reel7etapas/blob/main/edicoes/2026-10-11-jarvis/roteiro.yaml" target="_blank" rel="noopener">edicoes/2026-10-11-jarvis/roteiro.yaml</a>. <a href="https://www.youtube.com/shorts/PIa_eXWFk7s" target="_blank" rel="noopener">▶ Ver en YouTube</a></p>
+  <p class="sub">El primer reel hecho con el modelo. Guion completo en <a href="https://github.com/inematds/reel7etapas/blob/main/edicoes/2026-10-11-jarvis/roteiro.yaml" target="_blank" rel="noopener">edicoes/2026-10-11-jarvis/roteiro.yaml</a>. <a href="https://www.youtube.com/shorts/V92t50ceCRg" target="_blank" rel="noopener">▶ Ver en YouTube</a></p>
   <figure style="margin:0 0 22px;border-radius:16px;overflow:hidden;border:1px solid var(--line)"><img src="../assets/mapa.jpg" alt="Mapa de las 7 etapas en el reel JARVIS" loading="lazy" style="width:100%;display:block"></figure>
   <div class="ex">
     <figure><img src="../assets/capa.jpg" alt="Portada del reel: Você dorme. Ele trabalha. (Tú duermes. Él trabaja.)"><figcaption>Etapa 1 — el gancho: el resultado antes de la tecnología.</figcaption></figure>
-    <figure><img src="../assets/conferencia.jpg" alt="Cuadros del video final"><figcaption>Diez cuadros del video final, del gancho al "COMENTA JARVIS".</figcaption></figure>
+    <figure><img src="../assets/conferencia.jpg" alt="Cuadros del video final"><figcaption>Cuadros del video final, del gancho al "ou comenta JARVIS" (o comenta JARVIS).</figcaption></figure>
   </div>
 </div></section>
 
@@ -262,14 +254,14 @@
   <span class="chip">Roadmap</span>
   <h2>Próximos pasos</h2>
   <p class="sub">Lo que existe hoy y lo que viene.</p>
-  <div class="phase"><div class="tag">Hecho</div><div class="d"><strong>Modelo + motor</strong><span>7 etapas, imágenes locales, avatar de HeyGen, montaje 9:16, mapa y envío al bot.</span></div></div>
+  <div class="phase"><div class="tag">Hecho</div><div class="d"><strong>Modelo + motor</strong><span>7 etapas, imágenes en Codex, cámara por etapa, zona segura, subtítulo por frase, portones de calidad, mapa, bot y YouTube.</span></div></div>
   <div class="phase"><div class="tag">Próximo</div><div class="d"><strong>Más ejemplos</strong><span>Nuevas ediciones con otros temas, para comparar qué ganchos generan más comentarios.</span></div></div>
   <div class="phase"><div class="tag">Después</div><div class="d"><strong>Respuesta al comentario</strong><span>Conectar el "COMENTA &lt;PALABRA&gt;" a un mensaje automático con el enlace del material.</span></div></div>
 </div></section>
 
 <footer>
   <div class="wrap">
-    <div class="pill">Python</div><div class="pill">FLUX.2 klein</div><div class="pill">HeyGen</div><div class="pill">ffmpeg</div>
+    <div class="pill">Python</div><div class="pill">Codex image_gen</div><div class="pill">HeyGen</div><div class="pill">ffmpeg</div>
     <p style="margin-top:18px">reel7etapas · modelo abierto y gratuito ·
       <a href="https://github.com/inematds/reel7etapas">inematds/reel7etapas</a> ·
       <a href="https://inema.club">INEMA.CLUB</a></p>
