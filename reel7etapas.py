@@ -651,7 +651,10 @@ def cmd_publicar(pasta):
     if not (r["_b"] / "qa.json").exists() or (r["_b"] / "qa.json").stat().st_mtime < v.stat().st_mtime:
         falha("publicar", "rode 'validar' depois do último 'montar'")
     rc.cmd_enviar(pasta, r.get("legenda_envio"))
-    ctx = r.get("contexto_youtube") or f"Short vertical do INEMA.CLUB: {r.get('tema', '')}. Fala: {r['fala'].strip()} Material gratuito em https://inema.club. Português do Brasil."
+    ctx = (r.get("contexto_youtube") or f"Short vertical do INEMA.CLUB: {r.get('tema', '')}. Fala: {r['fala'].strip()}") + (
+        " Material gratuito em https://inema.club. Na descrição, inclua: 'Este reel foi feito com o modelo reel7etapas "
+        "(gancho, desejo, medo, facilidade, descoberta, benefício e comentário). Guia do modelo: "
+        "https://inematds.github.io/reel7etapas/guia/'. Português do Brasil.")
     canal = r.get("canal", "lives1")
     seco = subprocess.run([str(YT_PUBX), "publicar", str(v), "--canal", canal, "--contexto", ctx, "--dry-run"],
                           cwd=YT_PUBX.parent, capture_output=True, text=True, timeout=900).stdout
@@ -674,7 +677,7 @@ def cmd_novo(ident):
     if (pasta / "roteiro.yaml").exists():
         sys.exit(f"já existe: {pasta / 'roteiro.yaml'}")
     (pasta / "avatar").mkdir(parents=True, exist_ok=True)
-    txt = re.sub(r"(?m)^youtube.*\n", "", EXEMPLO.read_text())
+    txt = re.sub(r"(?m)^(youtube.*|# v1 .*)\n", "", EXEMPLO.read_text())
     (pasta / "roteiro.yaml").write_text(txt)
     log("criado", pasta / "roteiro.yaml", "— reescreva fala, âncoras, manchetes, destaques e cenas mantendo as 7 etapas")
 
