@@ -1,0 +1,90 @@
+# reel7etapas — edição 2026-10-11-videos-com-ia (área Vídeos com IA: https://eventos.inema.pro/videos/)
+tema: "Crie vídeo automático com uma frase"
+data: "11/10/2026"
+palavra: VÍDEO
+fala: |
+  Crie vídeo automático com uma frase. Imagina ter vídeo novo no seu canal toda semana, ou até todo dia. Hoje todo mundo edita no PC ou no celular, mas dá trabalho, toma horas, e programa bom de edição custa caro. E você não precisa saber editar nem aparecer na câmera. O INEMA juntou todos os sistemas de vídeo num lugar só: explicativo com avatar, documentário, reel, filme a partir de fotos, anúncio e até clipe de música. Você escreve uma frase, e o sistema faz o roteiro, a voz, a montagem e publica. Simples, em escala, com projetos abertos e gratuitos. Tá tudo no inema ponto club. Ou comenta VÍDEO que eu te mando o link.
+# As 7 etapas: cada uma entra na palavra 'ancora' da fala (minúscula, sem acento) e troca imagem, câmera, manchete e destaque.
+# camera: push | pull | pan_dir | pan_esq | sobe   ·   foco: [x, y] (0–1) do plano fechado   ·   destaque: cartão à direita do avatar
+# 'gatilho' e 'por_que' não aparecem no vídeo: vão para o mapa.jpg (a explicação do modelo).
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "resultado em 2 segundos: uma frase vira vídeo"
+    por_que: "mostra o resultado e o esforço mínimo (uma frase) antes de qualquer tecnologia"
+    capa: {linha1: "CRIE VÍDEO", linha2: "AUTOMÁTICO", sub: "COM UMA FRASE"}
+    camera: push
+    foco: [0.5, 0.55]
+    cena: "Escrivaninha em casa à noite. Uma pessoa adulta digita uma frase curta num notebook aberto; ao lado, apoiado num suporte, um celular na vertical mostra um vídeo pronto, colorido, com botão de play. A tela do notebook e o celular brilham em dourado, iluminando as mãos e o rosto da pessoa. Pessoa, notebook e celular nítidos no centro da imagem."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "ter um canal que não para"
+    por_que: "a pessoa se imagina com vídeo novo saindo sempre, sem esforço"
+    ancora: imagina
+    linha1: "VÍDEO NOVO"
+    linha2: "TODO DIA"
+    destaque: {titulo: "SEMPRE", texto: "toda semana\nou todo dia"}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala aconchegante com bokeh dourado. Na tela, um canal de vídeos com uma grade de miniaturas novas e coloridas e várias notificações de vídeo publicado, sem letras legíveis. Tela bem iluminada no centro da imagem."
+  - id: medo
+    nome: MEDO
+    gatilho: "editar sozinho cansa e software bom é caro"
+    por_que: "a dor real de hoje: todo mundo edita, mas perde horas e paga programa"
+    ancora: hoje
+    linha1: "EDITAR DÁ TRABALHO"
+    linha2: "PROGRAMA BOM CUSTA"
+    cor: vermelho
+    destaque: {titulo: "HORAS", texto: "por vídeo,\nmais a assinatura\ndo programa", cor: vermelho}
+    camera: sobe
+    foco: [0.5, 0.5]
+    cena: "Pessoa de uns 40 anos, cansada, com a mão na testa, editando um vídeo num escritório de casa bem iluminado à tarde: no monitor grande uma linha do tempo de edição longa e cheia de faixas coloridas, e na outra mão um celular também com um app de edição aberto. Várias xícaras de café vazias na mesa. Luz clara de janela no rosto, tons quentes avermelhados e dourados, imagem clara."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa editar nem aparecer"
+    por_que: "derruba as duas objeções que fazem desistir: saber editar e ter vergonha da câmera"
+    ancora: precisa
+    linha1: "SEM EDITAR."
+    linha2: "SEM APARECER."
+    destaque: {titulo: "FÁCIL", texto: "nem edição,\nnem câmera"}
+    camera: pull
+    foco: [0.5, 0.45]
+    cena: "Sala clara e iluminada de dia, com luz do sol entrando pela janela. Mulher de uns 45 anos, sorrindo e relaxada no sofá claro, com o notebook no colo. Ao lado dela, uma câmera num tripé, desligada e coberta com a tampa da lente. Rosto bem iluminado, imagem clara e luminosa."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "existe um lugar com todos os sistemas"
+    por_que: "dá nome à solução e mostra a variedade em exemplos concretos"
+    ancora: juntou
+    linha1: "TODOS OS SISTEMAS"
+    linha2: "NUM LUGAR SÓ"
+    destaque: {titulo: "FAZ", texto: "explicativo, reel,\nfilme, anúncio\ne até clipe"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Monitor grande numa escrivaninha à noite mostrando um painel organizado com seis cartões coloridos, cada um com um ícone simples: um avatar falando, um rolo de filme, um celular vertical, uma câmera de fotos, uma sacola de compras e uma nota musical. Sem letras legíveis. Luz dourada da tela no ambiente."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "simples, em escala, de graça"
+    por_que: "fecha a imagem: uma frase vira vários vídeos, sem pagar software"
+    ancora: escreve
+    linha1: "SIMPLES E EM ESCALA"
+    linha2: "SEM PAGAR SOFTWARE"
+    destaque: {titulo: "ABERTO", texto: "projetos\ngratuitos,\ncom guia"}
+    camera: pan_esq
+    foco: [0.5, 0.5]
+    cena: "Pequeno estúdio caseiro de manhã: uma pessoa com uma xícara de café sorri diante de três monitores lado a lado, cada um mostrando um vídeo diferente pronto, com barras de progresso completas e checks verdes. Luz do sol dourada entrando pela janela."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (o site) e uma ação pequena e fácil: comentar uma palavra"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "sistemas,\nguias e cursos\nde vídeo"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical, numa sala clara e iluminada de dia com bokeh dourado e luminoso ao fundo. Na tela do celular, no alto, um vídeo vertical mostrando uma claquete de cinema dourada brilhando; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Imagem clara e luminosa."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "VÍDEO", linha2: "que eu te mando o link"}
+legenda_envio: "CRIE VÍDEO AUTOMÁTICO COM UMA FRASE — reel 7 etapas sobre a área Vídeos com IA (https://eventos.inema.pro/videos/)."
+contexto_youtube: "Short vertical do INEMA.CLUB: Crie vídeo automático com uma frase. Apresenta a área Vídeos com IA do INEMA (https://eventos.inema.pro/videos/), que reúne num lugar só todos os sistemas de vídeo abertos e gratuitos: explicativo com avatar, documentário, reel, filme a partir de fotos, anúncio e clipe de música, cada um com guia. Inclua o link https://eventos.inema.pro/videos/ no topo da descrição."
+canal: lives1
+youtube_20261011: https://www.youtube.com/shorts/IXet6B0PzZI

@@ -234,7 +234,8 @@ def blocos_legenda(pal, desde):
 
 def srt(blocos, arq):
     def ts(s):
-        return f"{int(s // 3600):02d}:{int(s % 3600 // 60):02d}:{int(s % 60):02d},{int(round(s % 1 * 1000)) % 1000:03d}"
+        ms = int(round(s * 1000))                 # arredonda antes de separar (3,9999… viraria 03,000)
+        return f"{ms // 3600000:02d}:{ms // 60000 % 60:02d}:{ms // 1000 % 60:02d},{ms % 1000:03d}"
     linhas = []
     for k, b in enumerate(blocos):
         fim = max(b[-1]["f"] + 0.25, b[0]["t"] + 0.3)
@@ -650,6 +651,9 @@ def cmd_publicar(pasta):
     r = carregar(pasta); v = r["_dir"] / "video.mp4"
     if not (r["_b"] / "qa.json").exists() or (r["_b"] / "qa.json").stat().st_mtime < v.stat().st_mtime:
         falha("publicar", "rode 'validar' depois do último 'montar'")
+    m = r["_dir"] / "mapa.jpg"
+    if not m.exists() or m.stat().st_mtime < v.stat().st_mtime:   # 'fazer' parado num portão não chega ao mapa
+        cmd_mapa(pasta)
     rc.cmd_enviar(pasta, r.get("legenda_envio"))
     ctx = (r.get("contexto_youtube") or f"Short vertical do INEMA.CLUB: {r.get('tema', '')}. Fala: {r['fala'].strip()}") + (
         " Material gratuito em https://inema.club. Na descrição, inclua: 'Este reel foi feito com o modelo reel7etapas "
