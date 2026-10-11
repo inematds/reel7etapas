@@ -26,6 +26,8 @@ O reel7etapas é um modelo para escrever vídeos curtos (Reels, Shorts, TikTok) 
 | 6 | Benefício | como fica a vida depois | um funcionário digital só seu |
 | 7 | Comentário | uma ação pequena: comentar uma palavra | COMENTA JARVIS |
 
+▶ Reel: https://www.youtube.com/shorts/PIa_eXWFk7s
+
 ## Uso
 
 ```bash

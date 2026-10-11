@@ -26,6 +26,8 @@ reel7etapas is a template for writing short videos (Reels, Shorts, TikTok) and a
 | 6 | Benefit | how life looks afterwards | a digital employee that's all yours |
 | 7 | Comment | one small action: comment a word | COMENTA JARVIS (COMMENT JARVIS) |
 
+▶ Reel: https://www.youtube.com/shorts/PIa_eXWFk7s
+
 ## Usage
 
 ```bash
