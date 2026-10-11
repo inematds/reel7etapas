@@ -1,0 +1,101 @@
+Running as unit: run-r06ac4e9ea79747548d6ee13c900ea95d.scope; invocation ID: e940a5c7df314affbe027ea62603666d
+[reel7etapas] portão das imagens: OK (vertical, clara, sem repetição)
+[reelcomenta] 12:49 pending
+[reelcomenta] 12:50 pending
+[reelcomenta] 12:51 pending
+[reelcomenta] 12:53 pending
+[reelcomenta] 12:54 pending
+[reelcomenta] 12:55 pending
+[reelcomenta] 12:56 pending
+[reelcomenta] 12:57 pending
+[reelcomenta] 12:58 pending
+[reelcomenta] 12:59 pending
+[reelcomenta] 13:00 pending
+[reelcomenta] 13:01 pending
+[reelcomenta] 13:02 pending
+[reelcomenta] 13:03 pending
+[reelcomenta] 13:04 pending
+[reelcomenta] 13:05 pending
+[reelcomenta] 13:06 pending
+[reelcomenta] 13:07 pending
+[reelcomenta] 13:08 pending
+[reelcomenta] 13:09 pending
+[reelcomenta] 13:10 pending
+[reelcomenta] 13:11 pending
+[reelcomenta] 13:12 pending
+[reelcomenta] 13:13 pending
+[reelcomenta] 13:14 pending
+[reelcomenta] 13:15 pending
+[reelcomenta] 13:16 pending
+[reelcomenta] 13:17 pending
+[reelcomenta] 13:18 pending
+[reelcomenta] 13:19 pending
+[reelcomenta] 13:20 pending
+[reelcomenta] 13:21 pending
+[reelcomenta] 13:22 pending
+[reelcomenta] 13:23 pending
+[reelcomenta] 13:24 pending
+[reelcomenta] 13:25 pending
+[reelcomenta] 13:26 pending
+[reelcomenta] 13:27 pending
+[reelcomenta] 13:28 pending
+[reelcomenta] 13:29 pending
+[reelcomenta] 13:30 pending
+[reelcomenta] 13:31 pending
+[reelcomenta] 13:32 pending
+[reelcomenta] 13:33 pending
+[reelcomenta] 13:34 pending
+[reelcomenta] 13:35 pending
+[reelcomenta] 13:36 pending
+[reelcomenta] 13:37 pending
+[reelcomenta] 13:38 pending
+[reelcomenta] 13:39 pending
+[reelcomenta] 13:40 pending
+[reelcomenta] 13:41 pending
+[reelcomenta] 13:42 pending
+[reelcomenta] 13:43 pending
+[reelcomenta] 13:44 pending
+[reelcomenta] 13:45 pending
+[reelcomenta] 13:46 pending
+[reelcomenta] 13:47 pending
+[reelcomenta] 13:48 pending
+[reelcomenta] 13:49 pending
+[reelcomenta] 13:50 pending
+[reelcomenta] 13:51 pending
+[reelcomenta] 13:52 pending
+[reelcomenta] 13:53 pending
+[reelcomenta] 13:54 pending
+[reelcomenta] 13:55 pending
+[reelcomenta] 13:56 processing
+[reelcomenta] 13:57 completed
+[reelcomenta] avatar baixado /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-11-intelecto-instalacao/avatar/avatar.mp4
+[reel7etapas] fala do avatar × roteiro: 98%
+[reel7etapas] 1:0.0 · 2:4.5 · 3:10.0 · 4:15.9 · 5:20.9 · 6:26.0 · 7:32.5 · cta 33.6 · fim 35.3 · total 38.4
+[reel7etapas] quadro 0/1152
+[reel7etapas] quadro 300/1152
+[reel7etapas] quadro 600/1152
+[reel7etapas] quadro 900/1152
+[reel7etapas] portão zona segura + fonte mínima: OK
+[reel7etapas] vídeo /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-11-intelecto-instalacao/video.mp4 38.4 s 13.5 MB
+[reel7etapas] ritmo: maior trecho sem troca de imagem 3.2 s
+✅ duração                  38.4s
+✅ formato                  1080x1920
+✅ fps                      30.00
+✅ codec vídeo              h264
+✅ codec áudio              aac
+✅ loudness                 -14.5 LUFS
+✅ sem tela preta inicial   imagem desde o frame 0
+✅ frame 0 (informação)     0.133 de bordas
+✅ trechos parados          nenhum acima de 4 s
+✅ legendas (estrutura)     50 cues
+✅ legendas (palavras)      0 de 50 cues com mais de 3 palavras
+✅ legendas (sobreposição)  0 sobreposições
+✅ folha de quadros         /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-11-intelecto-instalacao/build/qa.png (0.0s, 2.0s, 5.0s, 19.2s, 37.4s)
+
+perfil divulgacao · contrato 1.2.1
+RESULTADO: APROVADO (falta a revisão humana: gancho, prova, pronúncia)
+
+[reel7etapas] validar: OK — revise as folhas em /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-11-intelecto-instalacao/build/revisao
+[reel7etapas] mapa /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-11-intelecto-instalacao/mapa.jpg
+[reel7etapas] capa /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-11-intelecto-instalacao/capa.jpg
+[reel7etapas] Terminei: reel pronto e validado — /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-11-intelecto-instalacao/video.mp4

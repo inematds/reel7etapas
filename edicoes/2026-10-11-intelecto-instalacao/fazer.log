@@ -1,0 +1,24 @@
+Running as unit: run-r2590c3549f324c88a07bc7fc84e4b268.scope; invocation ID: 2de8e1c2298c4fce99679d892c27a597
+[reel7etapas] gerando 7 imagem(ns) no Codex: 1, 2, 3, 4, 5, 6, 7
+[reel7etapas]   1 gancho: codex
+[reel7etapas]   2 desejo: codex
+[reel7etapas]   3 medo: codex
+[reel7etapas]   4 facilidade: codex
+[reel7etapas]   5 descoberta: codex
+[reel7etapas]   6 beneficio: codex
+[reel7etapas]   7 comentario: codex
+[reel7etapas]   etapa 2: escura demais (luz 44/255)
+[reel7etapas]   etapa 3: escura demais (luz 46/255)
+[reel7etapas]   etapa 5: escura demais (luz 46/255)
+[reel7etapas] gerando 3 imagem(ns) no Codex: 2, 3, 5
+[reel7etapas]   2 desejo: codex
+[reel7etapas]   3 medo: codex
+[reel7etapas]   5 descoberta: codex
+[reel7etapas]   etapa 3: escura demais (luz 51/255)
+[reel7etapas]   etapa 5: escura demais (luz 43/255)
+[reel7etapas] gerando 2 imagem(ns) no Codex: 3, 5
+[reel7etapas]   3 medo: codex
+[reel7etapas]   5 descoberta: codex
+[reel7etapas]   etapa 3: escura demais (luz 54/255)
+[reel7etapas]   etapa 5: escura demais (luz 37/255)
+[reel7etapas] PORTÃO 'imagens' REPROVOU: 3: escura demais (luz 54/255); 5: escura demais (luz 37/255)

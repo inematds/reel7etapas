@@ -1,0 +1,92 @@
+# reel7etapas — edição 2026-10-11-intelecto-instalacao (vídeo 9 do INTELECTO, "instale o seu Jarvis", refeito em 7 etapas)
+# Fonte dos fatos: ~/projetos/output/intelecto-instalacao (mercearia com mais de 140 itens, briefing exportado,
+# agente de programação constrói com testes). Telegram/WhatsApp/servidor = caminho possível ("você leva"), não promessa de pronto.
+tema: "Você escolhe, ele constrói"
+data: "11/10/2026"
+palavra: INTELECTO
+fala: |
+  Você escolhe numa lista, e o seu assistente fica pronto. Sem escrever uma linha de código. Imagina ter um ajudante que responde no seu celular, lembra do seu nome e trabalha por você o dia inteiro. O problema é que quase todo mundo trava achando que precisa programar, ou paga caro por uma ferramenta que não faz o que quer. Calma: é só marcar o que você quer, como numa mercearia, e baixar a lista. Depois você entrega essa lista ao agente de programação, e ele constrói tudo, com testes, enquanto você olha. Pronto: um assistente do seu jeito, que você leva para o Telegram, o WhatsApp ou um servidor ligado dia e noite. Tá tudo no inema ponto club. Ou comenta INTELECTO que eu te mando o link.
+# As 7 etapas: cada uma entra na palavra 'ancora' da fala (minúscula, sem acento) e troca imagem, câmera, manchete e destaque.
+# camera: push | pull | pan_dir | pan_esq | sobe   ·   foco: [x, y] (0–1) do plano fechado   ·   destaque: cartão à direita do avatar
+# 'gatilho' e 'por_que' não aparecem no vídeo: vão para o mapa.jpg (a explicação do modelo).
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "resultado em 2 segundos: escolher e ficar pronto"
+    por_que: "mostra o fim (assistente pronto) e a facilidade (escolher numa lista) antes de qualquer tecnologia"
+    capa: {linha1: "VOCÊ ESCOLHE.", linha2: "ELE CONSTRÓI.", sub: "SEU ASSISTENTE, SEM CÓDIGO"}
+    camera: push
+    foco: [0.5, 0.55]
+    cena: "Mesa de madeira à noite. Uma mão adulta marca com uma caneta itens de uma lista de compras em papel; ao lado, um notebook aberto cuja tela brilha em dourado mostrando janelas de um assistente sendo montado, peça por peça, como blocos que se encaixam. A mão, a lista e a tela nítidas e iluminadas por um abajur quente."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "um ajudante que responde no celular"
+    por_que: "a pessoa se imagina sendo atendida pelo próprio ajudante, no aparelho que já usa"
+    ancora: imagina
+    linha1: "UM AJUDANTE"
+    linha2: "NO SEU CELULAR"
+    destaque: {titulo: "SÓ SEU", texto: "responde\ne lembra\nde você"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Homem de uns 50 anos sentado num café, sorrindo enquanto lê o celular na mão. Na tela do celular, uma conversa de mensagens com balões dourados de um ajudante pessoal respondendo, sem letras legíveis. Luz quente da tarde pela janela; rosto e celular bem iluminados."
+  - id: medo
+    nome: MEDO
+    gatilho: "travar ou pagar caro por algo que não serve"
+    por_que: "o medo de desperdiçar dinheiro e tempo prende mais que a promessa"
+    ancora: problema
+    linha1: "TRAVA OU"
+    linha2: "PAGA CARO"
+    cor: vermelho
+    destaque: {titulo: "CARO", texto: "e não faz\no que você\nquer", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "Mulher de uns 40 anos à mesa de uma cozinha clara durante o dia, mão na testa, frustrada diante de um notebook cuja tela mostra uma cobrança de assinatura com um valor alto em vermelho, sem letras legíveis. Ao lado, faturas de papel empilhadas. Cozinha bem iluminada pela luz do dia entrando pela janela, rosto e tela claros e nítidos, com toques avermelhados e dourados."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "é só marcar, como numa mercearia"
+    por_que: "derruba a objeção 'preciso programar' com um gesto que todo mundo conhece"
+    ancora: calma
+    linha1: "É SÓ MARCAR"
+    linha2: "COMO NA MERCEARIA"
+    destaque: {titulo: "+140", texto: "itens para\nescolher"}
+    camera: push
+    foco: [0.5, 0.45]
+    cena: "Corredor de uma mercearia de bairro aconchegante, com prateleiras de madeira iluminadas em dourado; nas prateleiras, em vez de produtos, caixinhas com ícones simples (balão de conversa, cadeado, relógio, cérebro, telefone). Uma pessoa sorridente com uma cestinha de compras escolhe uma caixinha. Visual realista e caloroso."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "o agente de programação constrói, com testes"
+    por_que: "dá nome à solução e mostra o que ela faz: recebe a lista e constrói"
+    ancora: entrega
+    linha1: "O AGENTE"
+    linha2: "CONSTRÓI TUDO"
+    destaque: {titulo: "COM TESTES", texto: "enquanto\nvocê olha"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Escritório em casa claro, de dia, com luz do sol entrando por uma janela grande. Uma pessoa assiste, com o queixo apoiado na mão e expressão curiosa, à tela de um notebook onde pastas e arquivos dourados vão surgindo um a um, como se fossem montados sozinhos, com pequenos sinais de check verdes ao lado. Ambiente bem iluminado, pessoa e tela claras e nítidas."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "do seu jeito, ligado dia e noite"
+    por_que: "fecha a imagem do resultado: um assistente sob medida, sempre disponível"
+    ancora: pronto
+    linha1: "DO SEU JEITO,"
+    linha2: "DIA E NOITE"
+    destaque: {titulo: "24 H", texto: "Telegram\nWhatsApp\nservidor"}
+    camera: pan_esq
+    foco: [0.45, 0.45]
+    cena: "Amanhecer numa varanda. Uma pessoa de roupão, com uma xícara de café, sorri olhando o celular, que mostra uma conversa com o seu ajudante; ao fundo, pela porta aberta, um pequeno servidor com luzinhas douradas acesas numa estante. Luz do sol dourada. Clima tranquilo."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (o site) e uma ação pequena: comentar uma palavra"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "vídeo, guia\ne curso\ndo zero"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical, numa sala escura com bokeh dourado. Na tela do celular, no alto, um vídeo vertical mostrando uma mercearia dourada de ícones; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada."
+# CTA (entra na palavra 'ancora' da última etapa).
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "INTELECTO", linha2: "que eu te mando o link"}
+legenda_envio: "INTELECTO: você escolhe, ele constrói — reel do vídeo 9 (instale o seu Jarvis) no modelo de 7 etapas (gancho → desejo → medo → facilidade → descoberta → benefício → comentário)."
+canal: lives1
+youtube_20261011: https://www.youtube.com/shorts/RnYMmOKXR3c
