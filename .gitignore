@@ -1,0 +1,9 @@
+edicoes/*/avatar/*.mp4
+edicoes/*/avatar/*.wav
+edicoes/*/avatar/studio.log
+edicoes/*/build/
+edicoes/*/img/
+edicoes/*/video.mp4
+__pycache__/
+node_modules
+.claude/

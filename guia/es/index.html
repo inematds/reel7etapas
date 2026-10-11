@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>reel7etapas — Reel en 7 etapas de gatillo</title>
+<meta name="description" content="Modelo y motor para convertir una idea en un reel 9:16 en 7 etapas de gatillo: gancho, deseo, miedo, facilidad, descubrimiento, beneficio y comentario. Ejemplo: Tu propio JARVIS.">
+<link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/reel7etapas/guia/">
+<link rel="alternate" hreflang="en" href="https://inematds.github.io/reel7etapas/guia/en/">
+<link rel="alternate" hreflang="es" href="https://inematds.github.io/reel7etapas/guia/es/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0c10; --bg2:#14141b; --card:#16161e; --line:#272730;
+    --txt:#e9e9ee; --mut:#9a9aa6; --amb:#E2A23B; --amb2:#f0c070; --sky:#38bdf8; --pro:#cbd5e1;
+    color-scheme:dark;
+  }
+  body.light{
+    --bg:#f6f7f9; --bg2:#eceef2; --card:#ffffff; --line:#e1e3ea;
+    --txt:#1a1a22; --mut:#5b5b68; --amb:#b9791d; --amb2:#a16207; --sky:#0369a1; --pro:#b45309;
+    color-scheme:light;
+  }
+  body.light .hero .glow{opacity:.5}
+  body.light pre{background:#0e0e14;color:#d6d6e0}
+  body.light pre .c{color:#8a8a98}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Sora,sans-serif;line-height:1.15;margin:0}
+  a{color:var(--amb);text-decoration:none}
+  code,pre{font-family:"JetBrains Mono",monospace}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .mut{color:var(--mut)} .amb{color:var(--amb)}
+  .chip{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);font-weight:600;font-family:Sora}
+  nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:rgba(12,12,16,.78);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
+  nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora;font-weight:800;letter-spacing:-.02em;color:var(--amb)}
+  nav .brand .emoji{font-size:1.25rem}
+  nav .sep{color:var(--mut);opacity:.45}
+  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .inema:hover{filter:brightness(1.15)}
+  nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .pro:hover{filter:brightness(1.15)}
+  nav .clubpro{display:inline-flex;align-items:center;gap:6px}
+  nav .links{margin-left:auto;display:flex;align-items:center;gap:20px;font-size:.92rem}
+  nav .links a.sec{color:var(--mut)} nav .links a.sec:hover{color:var(--txt)}
+  .lang{display:inline-flex;gap:2px;font-family:Sora;font-size:.78rem}
+  .lang a{color:var(--mut);padding:.2em .45em;border-radius:6px} .lang a.on{color:var(--amb);background:rgba(226,162,59,.12)}
+  .tgl{background:var(--bg2);border:1px solid var(--line);color:var(--txt);width:38px;height:38px;border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:1.05rem}
+  .tgl:hover{border-color:var(--amb)}
+  .btn{display:inline-block;background:var(--amb);color:#1a1206;font-weight:600;padding:.6em 1.05em;border-radius:10px;font-family:Sora}
+  .btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+  @media(max-width:760px){nav .links a.sec{display:none}}
+  @media(max-width:520px){nav .wrap{gap:8px;padding:8px 14px;height:auto;flex-wrap:wrap} nav .links{gap:8px;margin-left:0;width:100%;justify-content:space-between} nav .btn{padding:.45em .7em;font-size:.82rem} .tgl{width:34px;height:34px}}
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .glow{position:absolute;inset:-40% -20% auto auto;width:70%;height:600px;background:radial-gradient(closest-side,rgba(226,162,59,.22),transparent 70%);pointer-events:none}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:74px 22px}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;letter-spacing:-.025em}
+  .hero p.lead{font-size:1.18rem;color:var(--mut);margin:1.1em 0 1.6em;max-width:34ch}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000}
+  .hero figure img{width:100%;display:block}
+  .resumo{padding:38px 0 34px;border-bottom:1px solid var(--line)}
+  .resumo p{font-size:1.12rem;line-height:1.7;max-width:74ch;margin:.55em 0 0}
+  @media(max-width:780px){.hero .wrap{grid-template-columns:1fr;padding:48px 22px}}
+  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.02em}
+  section .sub{color:var(--mut);margin:.6em 0 2em;max-width:62ch}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:820px){.g3,.g4{grid-template-columns:1fr 1fr}}
+  @media(max-width:540px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card h3{font-size:1.05rem;margin-bottom:.4em}
+  .card p{color:var(--mut);font-size:.92rem;margin:0}
+  .num{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;border-radius:8px;background:rgba(226,162,59,.14);color:var(--amb);font-family:Sora;font-weight:800;font-size:.9rem;margin-bottom:.7em}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+  .flow span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;font-size:.85rem;font-family:Sora;font-weight:600}
+  .flow .arr{color:var(--amb);border:none;background:none;padding:0 .1em}
+  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0}
+  pre .c{color:#6f6f7c} pre .k{color:var(--amb2)} pre .s{color:#9ece6a}
+  .step{display:grid;grid-template-columns:46px minmax(0,1fr);gap:16px;margin-bottom:26px}
+  .step>div,.card{min-width:0}
+  p code,li code,td code{overflow-wrap:anywhere}
+  .step .b{width:46px;height:46px;border-radius:12px;background:var(--amb);color:#1a1206;font-family:Sora;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center}
+  .step h3{font-size:1.12rem;margin-bottom:.3em}
+  .step p{color:var(--mut);margin:.2em 0 .7em}
+  .ex{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:680px){.ex{grid-template-columns:1fr}}
+  .ex figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+  .ex figure img{width:100%;display:block}
+  .ex figcaption{padding:12px 14px;font-size:.88rem;color:var(--mut);background:var(--card)}
+  .phase{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .phase:last-child{border:none}
+  .phase .tag{flex:0 0 92px;font-family:Sora;font-weight:800;color:var(--amb)}
+  .phase .d strong{display:block;margin-bottom:.2em}
+  .phase .d span{color:var(--mut);font-size:.92rem}
+  footer{padding:46px 0;text-align:center;color:var(--mut);font-size:.9rem}
+  .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.3em .8em;font-size:.78rem;color:var(--mut);margin:0 4px}
+</style>
+</head>
+
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top"><span class="emoji">🎬</span> reel7etapas</a>
+  <span class="sep">|</span>
+  <span class="clubpro">
+    <a class="inema" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a>
+    <span class="sep">-</span>
+    <a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a>
+  </span>
+  <div class="links">
+    <a class="sec" href="#oque">Qué es</a>
+    <a class="sec" href="#modelo">Las 7 etapas</a>
+    <a class="sec" href="#guia">Guía de uso</a>
+    <a class="sec" href="#exemplos">Ejemplo</a>
+    <a class="sec" href="#roadmap">Roadmap</a>
+    <span class="lang"><a href="../">PT</a><a href="../en/">EN</a><a class="on" href="./">ES</a></span>
+    <button class="tgl" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema">🌙</button>
+    <a class="btn" href="https://github.com/inematds/reel7etapas" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="glow"></div>
+  <div class="wrap">
+    <div>
+      <span class="chip">Modelo de guion + motor de video</span>
+      <h1>Una idea se convierte en un reel en <span class="amb">7 etapas</span> de gatillo</h1>
+      <p class="lead">Gancho, deseo, miedo, facilidad, descubrimiento, beneficio y comentario — cada etapa entra en la palabra justa del discurso, con imagen, titular y panel propios. Termina con un "COMENTA &lt;PALABRA&gt;".</p>
+      <div class="cta">
+        <a class="btn" href="#guia">Empezar la guía</a>
+        <a class="btn ghost" href="https://github.com/inematds/reel7etapas" target="_blank" rel="noopener">Ver en GitHub</a>
+      </div>
+    </div>
+    <figure><img src="../assets/banner-es.jpg" alt="Banner: reel en 7 etapas de gatillo"></figure>
+  </div>
+</header>
+
+<section id="resumo" class="resumo"><div class="wrap">
+  <span class="chip">En resumen</span>
+  <p>reel7etapas es un modelo para escribir videos cortos (Reels, Shorts, TikTok) y una herramienta que monta esos videos sola. El guion sigue siempre el mismo orden de 7 etapas, pensado para retener a quien está deslizando la pantalla y terminar con un pedido simple: comentar una palabra. Sirve para quien crea contenido y quiere un camino repetible, en lugar de empezar de cero en cada video. Para usar solo el modelo, basta leer la tabla de las 7 etapas; para generar el video, la herramienta usa el avatar de Nei en HeyGen, imágenes hechas en el computador y un script en Python.</p>
+</div></section>
+
+<section id="oque"><div class="wrap">
+  <span class="chip">Qué es</span>
+  <h2>Una forma fija de captar la atención</h2>
+  <p class="sub">Mostrar el resultado antes de explicar la tecnología. La persona entiende el beneficio en 2 segundos y se queda para saber cómo conseguirlo.</p>
+  <figure style="margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img src="../assets/banner-grade-es.jpg" alt="Las etapas del modelo en tarjetas" loading="lazy" style="width:100%;display:block"></figure>
+  <div class="grid g3">
+    <div class="card"><h3>🧭 Guion en orden</h3><p>Siete etapas, siempre en la misma secuencia. Cambias el tema, la estructura se queda.</p></div>
+    <div class="card"><h3>🎞️ Video montado</h3><p>Avatar hablando, una imagen por etapa, titular y panel que entran en la palabra exacta y subtítulos palabra por palabra, en 9:16.</p></div>
+    <div class="card"><h3>🗺️ Mapa para enseñar</h3><p>El comando <code>mapa</code> genera una hoja con las 7 etapas lado a lado: el cuadro del video, el gatillo y el porqué.</p></div>
+  </div>
+</div></section>
+
+<section id="modelo"><div class="wrap">
+  <span class="chip">Las 7 etapas</span>
+  <h2>El orden que hace que la persona comente</h2>
+  <p class="sub">Deseo → miedo de estar gastando en vano → facilidad → descubrimiento → beneficio → comentario, abiertos por un gancho visual. Los ejemplos son del reel "Seu próprio JARVIS" (Tu propio JARVIS).</p>
+  <div class="flow">
+    <span>1 Gancho</span><span class="arr">→</span><span>2 Deseo</span><span class="arr">→</span><span>3 Miedo</span><span class="arr">→</span><span>4 Facilidad</span><span class="arr">→</span><span>5 Descubrimiento</span><span class="arr">→</span><span>6 Beneficio</span><span class="arr">→</span><span>7 Comentario</span>
+  </div>
+  <div class="grid g3" style="margin-top:26px">
+    <div class="card"><h3>1 · Gancho</h3><p>El resultado que cualquiera quiere, en 2 segundos, en una frase enorme. <em>"VOCÊ DORME. ELE TRABALHA." (TÚ DUERMES. ÉL TRABAJA.)</em> y la frase hablada "Você sabia que o seu computador já pode trabalhar enquanto você dorme?" (¿Sabías que tu computador ya puede trabajar mientras duermes?)</p></div>
+    <div class="card"><h3>2 · Deseo</h3><p>La persona se imagina con lo que quiere. <em>"Já pensou em ter um funcionário dentro do seu computador?" (¿Ya pensaste en tener un empleado dentro de tu computador?)</em></p></div>
+    <div class="card"><h3>3 · Miedo</h3><p>El riesgo de perder dinero retiene más que la promesa de ganar. <em>"Tem gente pagando uma fortuna por coisas que você já pode montar em casa." (Hay gente pagando una fortuna por cosas que ya puedes armar en casa.)</em></p></div>
+    <div class="card"><h3>4 · Facilidad</h3><p>Derriba la objeción que hace desistir antes de intentarlo. <em>"E o melhor: não precisa ser programador!" (¡Y lo mejor: no hace falta ser programador!)</em></p></div>
+    <div class="card"><h3>5 · Descubrimiento</h3><p>Ponle nombre a la solución y di qué hace, con verbos simples. <em>"Você pode criar o seu próprio JARVIS… conversa, lembra, pesquisa e executa." (Puedes crear tu propio JARVIS… conversa, recuerda, investiga y ejecuta.)</em></p></div>
+    <div class="card"><h3>6 · Beneficio</h3><p>Cierra la imagen de cómo queda la vida después. <em>"Um funcionário digital só seu, trabalhando do jeito que você ensinar." (Un empleado digital solo tuyo, trabajando como tú le enseñes.)</em></p></div>
+    <div class="card"><h3>7 · Comentario</h3><p>Una acción pequeña y fácil: comentar una palabra. <em>"No inema.club tem vídeos e material… Comenta JARVIS que eu te mostro o caminho." (En inema.club hay videos y material… Comenta JARVIS y te muestro el camino.)</em></p></div>
+    <div class="card"><h3>🎨 Visual</h3><p>Fondo oscuro, luz dorada, el computador en destaque, letras amarillas y blancas. Sin robots futuristas ni aire de ciencia ficción.</p></div>
+    <div class="card"><h3>🚫 Evita</h3><p>Jerga (IA, agente, modelo) antes de la etapa 5, dos tesis en el mismo video y un CTA largo. Una palabra para comentar basta.</p></div>
+  </div>
+</div></section>
+
+<section id="pre"><div class="wrap">
+  <span class="chip">Requisitos previos</span>
+  <h2>Qué debe estar funcionando</h2>
+  <p class="sub">Para usar solo el modelo, nada: es el guion. Para generar el video con la herramienta:</p>
+  <div class="grid g3">
+    <div class="card"><h3>reelcomenta + cardshorts</h3><p>El motor reutiliza la transcripción, el recorte del rostro, el estudio de HeyGen y el envío a Telegram de reelcomenta, y el MusicGen de cardshorts.</p><pre><span class="k">git clone</span> https://github.com/inematds/reelcomenta ~/projetos/reelcomenta</pre></div>
+    <div class="card"><h3>Imágenes locales</h3><p>Servidor de imágenes con FLUX.2 klein respondiendo en <code>localhost:8000/generate</code>.</p><pre><span class="c"># ¿otra dirección?</span>
+<span class="k">export</span> R7_IMAGEM_API=http://host:8000/generate</pre></div>
+    <div class="card"><h3>Python + ffmpeg</h3><p>Pillow, OpenCV, PyYAML y ffmpeg. El avatar sale del estudio de HeyGen mediante la suscripción, con aprobación registrada.</p><pre><span class="k">pip install</span> pillow opencv-python pyyaml</pre></div>
+  </div>
+</div></section>
+
+<section id="guia"><div class="wrap">
+  <span class="chip">Guía de uso · paso a paso</span>
+  <h2>Del texto al reel entregado</h2>
+  <p class="sub">Todo corre con <code>reel7etapas.py</code>. Cada edición vive en <code>edicoes/&lt;fecha&gt;-&lt;tema&gt;/</code>.</p>
+
+  <div class="step"><div class="b">1</div><div>
+    <h3>Crear la edición</h3>
+    <p>Copia el guion del ejemplo JARVIS a una carpeta nueva. Reescribe el discurso (550–700 caracteres, unos 40 s) y las 7 etapas.</p>
+<pre><span class="k">python3 reel7etapas.py novo</span> meu-assunto  <span class="c"># edicoes/2026-10-11-meu-assunto/roteiro.yaml</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">2</div><div>
+    <h3>Escribir las etapas</h3>
+    <p>Cada etapa tiene una <code>ancora</code> (palabra del discurso que hace entrar la etapa), titular, panel y la <code>cena</code> de la imagen. <code>gatilho</code> y <code>por_que</code> solo aparecen en el mapa.</p>
+<pre>  - id: medo
+    ancora: gente
+    linha1: <span class="s">"TEM GENTE PAGANDO"</span>
+    linha2: <span class="s">"UMA FORTUNA"</span>
+    painel: {titulo: <span class="s">"R$ $$$"</span>, texto: <span class="s">"por algo que\nvocê monta\nem casa"</span>}
+    cena: <span class="s">"stack of expensive bills on a dark desk, golden rim light"</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">3</div><div>
+    <h3>Imágenes y banda sonora</h3>
+    <p>Una imagen por etapa con FLUX.2 klein local y una banda sonora instrumental con MusicGen local.</p>
+<pre><span class="k">python3 reel7etapas.py imagens</span> edicoes/&lt;pasta&gt;
+<span class="k">python3</span> ~/projetos/cardshorts/cardshorts.py musica edicoes/&lt;pasta&gt;/build/trilha.wav <span class="s">"warm hopeful cinematic underscore"</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">4</div><div>
+    <h3>Vista previa antes del avatar</h3>
+    <p>Genera una hoja con un cuadro de cada etapa, en el tiempo estimado del discurso. Revisa texto cortado e imagen equivocada.</p>
+<pre><span class="k">python3 reel7etapas.py previa</span> edicoes/&lt;pasta&gt;  <span class="c"># previa.jpg</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">5</div><div>
+    <h3>Avatar en el estudio de HeyGen</h3>
+    <p>Solo corre con la aprobación registrada. Espera la cola del estudio y descarga el MP4.</p>
+<pre><span class="k">echo</span> <span class="s">"aprovado"</span> &gt; edicoes/&lt;pasta&gt;/avatar/APROVADO_HEYGEN
+<span class="k">python3 reel7etapas.py avatar</span> edicoes/&lt;pasta&gt;</pre>
+  </div></div>
+
+  <div class="step"><div class="b">6</div><div>
+    <h3>Montar, revisar y mapear</h3>
+    <p>El montaje busca las anclas en el discurso real del avatar y se detiene si este difiere del guion. El mapa se convierte en material para enseñar el modelo.</p>
+<pre><span class="k">python3 reel7etapas.py montar</span> edicoes/&lt;pasta&gt;    <span class="c"># video.mp4</span>
+<span class="k">python3 reel7etapas.py conferir</span> edicoes/&lt;pasta&gt;  <span class="c"># conferencia.jpg + volume</span>
+<span class="k">python3 reel7etapas.py mapa</span> edicoes/&lt;pasta&gt;      <span class="c"># mapa.jpg + capa.jpg</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">7</div><div>
+    <h3>Entregar</h3>
+    <p>Envía el video por el bot de Telegram. Para YouTube, yt-pubx lo publica como Short.</p>
+<pre><span class="k">python3 reel7etapas.py enviar</span> edicoes/&lt;pasta&gt; <span class="s">"legenda"</span>
+<span class="k">./yt-pubx publicar</span> edicoes/&lt;pasta&gt;/video.mp4 --canal lives1 --contexto <span class="s">"..."</span> --dry-run</pre>
+  </div></div>
+</div></section>
+
+<section id="exemplos"><div class="wrap">
+  <span class="chip">Ejemplo</span>
+  <h2>Tu propio JARVIS</h2>
+  <p class="sub">El primer reel hecho con el modelo. Guion completo en <a href="https://github.com/inematds/reel7etapas/blob/main/edicoes/2026-10-11-jarvis/roteiro.yaml" target="_blank" rel="noopener">edicoes/2026-10-11-jarvis/roteiro.yaml</a>.<!--YT--></p>
+  <figure style="margin:0 0 22px;border-radius:16px;overflow:hidden;border:1px solid var(--line)"><img src="../assets/mapa.jpg" alt="Mapa de las 7 etapas en el reel JARVIS" loading="lazy" style="width:100%;display:block"></figure>
+  <div class="ex">
+    <figure><img src="../assets/capa.jpg" alt="Portada del reel: Você dorme. Ele trabalha. (Tú duermes. Él trabaja.)"><figcaption>Etapa 1 — el gancho: el resultado antes de la tecnología.</figcaption></figure>
+    <figure><img src="../assets/conferencia.jpg" alt="Cuadros del video final"><figcaption>Diez cuadros del video final, del gancho al "COMENTA JARVIS".</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="roadmap"><div class="wrap">
+  <span class="chip">Roadmap</span>
+  <h2>Próximos pasos</h2>
+  <p class="sub">Lo que existe hoy y lo que viene.</p>
+  <div class="phase"><div class="tag">Hecho</div><div class="d"><strong>Modelo + motor</strong><span>7 etapas, imágenes locales, avatar de HeyGen, montaje 9:16, mapa y envío al bot.</span></div></div>
+  <div class="phase"><div class="tag">Próximo</div><div class="d"><strong>Más ejemplos</strong><span>Nuevas ediciones con otros temas, para comparar qué ganchos generan más comentarios.</span></div></div>
+  <div class="phase"><div class="tag">Después</div><div class="d"><strong>Respuesta al comentario</strong><span>Conectar el "COMENTA &lt;PALABRA&gt;" a un mensaje automático con el enlace del material.</span></div></div>
+</div></section>
+
+<footer>
+  <div class="wrap">
+    <div class="pill">Python</div><div class="pill">FLUX.2 klein</div><div class="pill">HeyGen</div><div class="pill">ffmpeg</div>
+    <p style="margin-top:18px">reel7etapas · modelo abierto y gratuito ·
+      <a href="https://github.com/inematds/reel7etapas">inematds/reel7etapas</a> ·
+      <a href="https://inema.club">INEMA.CLUB</a></p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var KEY='reel7etapas-theme';
+    var b=document.body, t=document.getElementById('themeToggle');
+    if(localStorage.getItem(KEY)==='light'){ b.classList.add('light'); t.textContent='☀️'; }
+    t.addEventListener('click',function(){
+      var light=b.classList.toggle('light');
+      t.textContent=light?'☀️':'🌙';
+      localStorage.setItem(KEY, light?'light':'dark');
+    });
+  })();
+</script>
+</body>
+</html>

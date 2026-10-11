@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>reel7etapas — Reel in 7 trigger steps</title>
+<meta name="description" content="Template and engine to turn an idea into a 9:16 reel in 7 trigger steps: hook, desire, fear, ease, discovery, benefit and comment. Example: Your own JARVIS.">
+<link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/reel7etapas/guia/">
+<link rel="alternate" hreflang="en" href="https://inematds.github.io/reel7etapas/guia/en/">
+<link rel="alternate" hreflang="es" href="https://inematds.github.io/reel7etapas/guia/es/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0c10; --bg2:#14141b; --card:#16161e; --line:#272730;
+    --txt:#e9e9ee; --mut:#9a9aa6; --amb:#E2A23B; --amb2:#f0c070; --sky:#38bdf8; --pro:#cbd5e1;
+    color-scheme:dark;
+  }
+  body.light{
+    --bg:#f6f7f9; --bg2:#eceef2; --card:#ffffff; --line:#e1e3ea;
+    --txt:#1a1a22; --mut:#5b5b68; --amb:#b9791d; --amb2:#a16207; --sky:#0369a1; --pro:#b45309;
+    color-scheme:light;
+  }
+  body.light .hero .glow{opacity:.5}
+  body.light pre{background:#0e0e14;color:#d6d6e0}
+  body.light pre .c{color:#8a8a98}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Sora,sans-serif;line-height:1.15;margin:0}
+  a{color:var(--amb);text-decoration:none}
+  code,pre{font-family:"JetBrains Mono",monospace}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .mut{color:var(--mut)} .amb{color:var(--amb)}
+  .chip{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);font-weight:600;font-family:Sora}
+  nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:rgba(12,12,16,.78);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
+  nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora;font-weight:800;letter-spacing:-.02em;color:var(--amb)}
+  nav .brand .emoji{font-size:1.25rem}
+  nav .sep{color:var(--mut);opacity:.45}
+  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .inema:hover{filter:brightness(1.15)}
+  nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .pro:hover{filter:brightness(1.15)}
+  nav .clubpro{display:inline-flex;align-items:center;gap:6px}
+  nav .links{margin-left:auto;display:flex;align-items:center;gap:20px;font-size:.92rem}
+  nav .links a.sec{color:var(--mut)} nav .links a.sec:hover{color:var(--txt)}
+  .lang{display:inline-flex;gap:2px;font-family:Sora;font-size:.78rem}
+  .lang a{color:var(--mut);padding:.2em .45em;border-radius:6px} .lang a.on{color:var(--amb);background:rgba(226,162,59,.12)}
+  .tgl{background:var(--bg2);border:1px solid var(--line);color:var(--txt);width:38px;height:38px;border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:1.05rem}
+  .tgl:hover{border-color:var(--amb)}
+  .btn{display:inline-block;background:var(--amb);color:#1a1206;font-weight:600;padding:.6em 1.05em;border-radius:10px;font-family:Sora}
+  .btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+  @media(max-width:760px){nav .links a.sec{display:none}}
+  @media(max-width:520px){nav .wrap{gap:8px;padding:8px 14px;height:auto;flex-wrap:wrap} nav .links{gap:8px;margin-left:0;width:100%;justify-content:space-between} nav .btn{padding:.45em .7em;font-size:.82rem} .tgl{width:34px;height:34px}}
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .glow{position:absolute;inset:-40% -20% auto auto;width:70%;height:600px;background:radial-gradient(closest-side,rgba(226,162,59,.22),transparent 70%);pointer-events:none}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:74px 22px}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;letter-spacing:-.025em}
+  .hero p.lead{font-size:1.18rem;color:var(--mut);margin:1.1em 0 1.6em;max-width:34ch}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000}
+  .hero figure img{width:100%;display:block}
+  .resumo{padding:38px 0 34px;border-bottom:1px solid var(--line)}
+  .resumo p{font-size:1.12rem;line-height:1.7;max-width:74ch;margin:.55em 0 0}
+  @media(max-width:780px){.hero .wrap{grid-template-columns:1fr;padding:48px 22px}}
+  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.02em}
+  section .sub{color:var(--mut);margin:.6em 0 2em;max-width:62ch}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:820px){.g3,.g4{grid-template-columns:1fr 1fr}}
+  @media(max-width:540px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card h3{font-size:1.05rem;margin-bottom:.4em}
+  .card p{color:var(--mut);font-size:.92rem;margin:0}
+  .num{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;border-radius:8px;background:rgba(226,162,59,.14);color:var(--amb);font-family:Sora;font-weight:800;font-size:.9rem;margin-bottom:.7em}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+  .flow span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;font-size:.85rem;font-family:Sora;font-weight:600}
+  .flow .arr{color:var(--amb);border:none;background:none;padding:0 .1em}
+  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0}
+  pre .c{color:#6f6f7c} pre .k{color:var(--amb2)} pre .s{color:#9ece6a}
+  .step{display:grid;grid-template-columns:46px minmax(0,1fr);gap:16px;margin-bottom:26px}
+  .step>div,.card{min-width:0}
+  p code,li code,td code{overflow-wrap:anywhere}
+  .step .b{width:46px;height:46px;border-radius:12px;background:var(--amb);color:#1a1206;font-family:Sora;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center}
+  .step h3{font-size:1.12rem;margin-bottom:.3em}
+  .step p{color:var(--mut);margin:.2em 0 .7em}
+  .ex{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:680px){.ex{grid-template-columns:1fr}}
+  .ex figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+  .ex figure img{width:100%;display:block}
+  .ex figcaption{padding:12px 14px;font-size:.88rem;color:var(--mut);background:var(--card)}
+  .phase{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .phase:last-child{border:none}
+  .phase .tag{flex:0 0 92px;font-family:Sora;font-weight:800;color:var(--amb)}
+  .phase .d strong{display:block;margin-bottom:.2em}
+  .phase .d span{color:var(--mut);font-size:.92rem}
+  footer{padding:46px 0;text-align:center;color:var(--mut);font-size:.9rem}
+  .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.3em .8em;font-size:.78rem;color:var(--mut);margin:0 4px}
+</style>
+</head>
+
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top"><span class="emoji">🎬</span> reel7etapas</a>
+  <span class="sep">|</span>
+  <span class="clubpro">
+    <a class="inema" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a>
+    <span class="sep">-</span>
+    <a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a>
+  </span>
+  <div class="links">
+    <a class="sec" href="#oque">What it is</a>
+    <a class="sec" href="#modelo">The 7 steps</a>
+    <a class="sec" href="#guia">User guide</a>
+    <a class="sec" href="#exemplos">Example</a>
+    <a class="sec" href="#roadmap">Roadmap</a>
+    <span class="lang"><a href="../">PT</a><a class="on" href="./">EN</a><a href="../es/">ES</a></span>
+    <button class="tgl" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
+    <a class="btn" href="https://github.com/inematds/reel7etapas" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="glow"></div>
+  <div class="wrap">
+    <div>
+      <span class="chip">Script template + video engine</span>
+      <h1>An idea becomes a reel in <span class="amb">7 trigger</span> steps</h1>
+      <p class="lead">Hook, desire, fear, ease, discovery, benefit and comment — each step lands on the right word of the speech, with its own image, headline and panel. It ends with a "COMMENT &lt;WORD&gt;".</p>
+      <div class="cta">
+        <a class="btn" href="#guia">Start the guide</a>
+        <a class="btn ghost" href="https://github.com/inematds/reel7etapas" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </div>
+    <figure><img src="../assets/banner-en.jpg" alt="Banner: reel in 7 trigger steps"></figure>
+  </div>
+</header>
+
+<section id="resumo" class="resumo"><div class="wrap">
+  <span class="chip">In short</span>
+  <p>reel7etapas is a template for writing short videos (Reels, Shorts, TikTok) and a tool that assembles those videos on its own. The script always follows the same 7-step order, designed to hold someone who is scrolling and to end with a simple ask: comment one word. It is for creators who want a repeatable path instead of starting from scratch with every video. To just use the template, reading the 7-step table is enough; to generate the video, the tool uses Nei's avatar in HeyGen, images made on your own computer and a Python script.</p>
+</div></section>
+
+<section id="oque"><div class="wrap">
+  <span class="chip">What it is</span>
+  <h2>A fixed way to hold attention</h2>
+  <p class="sub">Show the result before explaining the technology. People grasp the benefit in 2 seconds and stay to learn how to get it.</p>
+  <figure style="margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img src="../assets/banner-grade-en.jpg" alt="The template's steps on cards" loading="lazy" style="width:100%;display:block"></figure>
+  <div class="grid g3">
+    <div class="card"><h3>🧭 Ordered script</h3><p>Seven steps, always in the same sequence. You change the topic, the structure stays.</p></div>
+    <div class="card"><h3>🎞️ Assembled video</h3><p>Talking avatar, one image per step, headline and panel that land on the exact word, and word-by-word captions, in 9:16.</p></div>
+    <div class="card"><h3>🗺️ Map for teaching</h3><p>The <code>mapa</code> command generates a sheet with the 7 steps side by side: the video frame, the trigger and the why.</p></div>
+  </div>
+</div></section>
+
+<section id="modelo"><div class="wrap">
+  <span class="chip">The 7 steps</span>
+  <h2>The order that makes people comment</h2>
+  <p class="sub">Desire → fear of wasting money → ease → discovery → benefit → comment, opened by a visual hook. The examples come from the reel "Your own JARVIS" (Seu próprio JARVIS).</p>
+  <div class="flow">
+    <span>1 Hook</span><span class="arr">→</span><span>2 Desire</span><span class="arr">→</span><span>3 Fear</span><span class="arr">→</span><span>4 Ease</span><span class="arr">→</span><span>5 Discovery</span><span class="arr">→</span><span>6 Benefit</span><span class="arr">→</span><span>7 Comment</span>
+  </div>
+  <div class="grid g3" style="margin-top:26px">
+    <div class="card"><h3>1 · Hook</h3><p>The result anyone wants, in 2 seconds, in one huge sentence. <em>"VOCÊ DORME. ELE TRABALHA." (YOU SLEEP. HE WORKS.)</em> and the spoken line "Você sabia que o seu computador já pode trabalhar enquanto você dorme?" (Did you know your computer can already work while you sleep?)</p></div>
+    <div class="card"><h3>2 · Desire</h3><p>The person pictures themselves with what they want. <em>"Já pensou em ter um funcionário dentro do seu computador?" (Ever thought about having an employee inside your computer?)</em></p></div>
+    <div class="card"><h3>3 · Fear</h3><p>The risk of losing money holds people more than the promise of gain. <em>"Tem gente pagando uma fortuna por coisas que você já pode montar em casa." (Some people are paying a fortune for things you can already build at home.)</em></p></div>
+    <div class="card"><h3>4 · Ease</h3><p>Knock down the objection that makes people give up before trying. <em>"E o melhor: não precisa ser programador!" (And the best part: you don't need to be a programmer!)</em></p></div>
+    <div class="card"><h3>5 · Discovery</h3><p>Name the solution and say what it does, in simple verbs. <em>"Você pode criar o seu próprio JARVIS… conversa, lembra, pesquisa e executa." (You can create your own JARVIS… it talks, remembers, researches and executes.)</em></p></div>
+    <div class="card"><h3>6 · Benefit</h3><p>Close the picture of how life looks afterwards. <em>"Um funcionário digital só seu, trabalhando do jeito que você ensinar." (A digital employee that's all yours, working the way you teach it.)</em></p></div>
+    <div class="card"><h3>7 · Comment</h3><p>One small, easy action: comment a word. <em>"No inema.club tem vídeos e material… Comenta JARVIS que eu te mostro o caminho." (On inema.club there are videos and material… Comment JARVIS and I'll show you the way.)</em></p></div>
+    <div class="card"><h3>🎨 Visual</h3><p>Dark background, golden light, the computer front and center, yellow and white lettering. No futuristic robots, no sci-fi look.</p></div>
+    <div class="card"><h3>🚫 Avoid</h3><p>Jargon (AI, agent, model) before step 5, two theses in the same video, and a long CTA. One word to comment is enough.</p></div>
+  </div>
+</div></section>
+
+<section id="pre"><div class="wrap">
+  <span class="chip">Prerequisites</span>
+  <h2>What needs to be up and running</h2>
+  <p class="sub">To use only the template, nothing: it is the script. To generate the video with the tool:</p>
+  <div class="grid g3">
+    <div class="card"><h3>reelcomenta + cardshorts</h3><p>The engine reuses reelcomenta's transcription, face crop, HeyGen studio and Telegram delivery, and cardshorts' MusicGen.</p><pre><span class="k">git clone</span> https://github.com/inematds/reelcomenta ~/projetos/reelcomenta</pre></div>
+    <div class="card"><h3>Local images</h3><p>Image server running FLUX.2 klein, answering at <code>localhost:8000/generate</code>.</p><pre><span class="c"># different address?</span>
+<span class="k">export</span> R7_IMAGEM_API=http://host:8000/generate</pre></div>
+    <div class="card"><h3>Python + ffmpeg</h3><p>Pillow, OpenCV, PyYAML and ffmpeg. The avatar comes out of the HeyGen studio through the subscription, with a recorded approval.</p><pre><span class="k">pip install</span> pillow opencv-python pyyaml</pre></div>
+  </div>
+</div></section>
+
+<section id="guia"><div class="wrap">
+  <span class="chip">User guide · step by step</span>
+  <h2>From text to delivered reel</h2>
+  <p class="sub">Everything runs through <code>reel7etapas.py</code>. Each edition lives in <code>edicoes/&lt;date&gt;-&lt;topic&gt;/</code>.</p>
+
+  <div class="step"><div class="b">1</div><div>
+    <h3>Create the edition</h3>
+    <p>Copies the JARVIS example script into a new folder. Rewrite the speech (550–700 characters, about 40 s) and the 7 steps.</p>
+<pre><span class="k">python3 reel7etapas.py novo</span> meu-assunto  <span class="c"># edicoes/2026-10-11-meu-assunto/roteiro.yaml</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">2</div><div>
+    <h3>Write the steps</h3>
+    <p>Each step has an <code>ancora</code> (anchor: the word in the speech that makes the step come in), headline, panel and the image <code>cena</code> (scene). <code>gatilho</code> (trigger) and <code>por_que</code> (why) only show up on the map.</p>
+<pre>  - id: medo
+    ancora: gente
+    linha1: <span class="s">"TEM GENTE PAGANDO"</span>
+    linha2: <span class="s">"UMA FORTUNA"</span>
+    painel: {titulo: <span class="s">"R$ $$$"</span>, texto: <span class="s">"por algo que\nvocê monta\nem casa"</span>}
+    cena: <span class="s">"stack of expensive bills on a dark desk, golden rim light"</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">3</div><div>
+    <h3>Images and soundtrack</h3>
+    <p>One image per step on the local FLUX.2 klein and an instrumental track on the local MusicGen.</p>
+<pre><span class="k">python3 reel7etapas.py imagens</span> edicoes/&lt;pasta&gt;
+<span class="k">python3</span> ~/projetos/cardshorts/cardshorts.py musica edicoes/&lt;pasta&gt;/build/trilha.wav <span class="s">"warm hopeful cinematic underscore"</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">4</div><div>
+    <h3>Preview before the avatar</h3>
+    <p>Generates a sheet with one frame per step, at the estimated speech timing. Check for cropped text and wrong images.</p>
+<pre><span class="k">python3 reel7etapas.py previa</span> edicoes/&lt;pasta&gt;  <span class="c"># previa.jpg</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">5</div><div>
+    <h3>Avatar in the HeyGen studio</h3>
+    <p>Only runs with the recorded approval. Waits for the studio queue and downloads the MP4.</p>
+<pre><span class="k">echo</span> <span class="s">"aprovado"</span> &gt; edicoes/&lt;pasta&gt;/avatar/APROVADO_HEYGEN
+<span class="k">python3 reel7etapas.py avatar</span> edicoes/&lt;pasta&gt;</pre>
+  </div></div>
+
+  <div class="step"><div class="b">6</div><div>
+    <h3>Assemble, check and map</h3>
+    <p>Assembly finds the anchors in the avatar's actual speech and stops if it diverges from the script. The map becomes material for teaching the template.</p>
+<pre><span class="k">python3 reel7etapas.py montar</span> edicoes/&lt;pasta&gt;    <span class="c"># video.mp4</span>
+<span class="k">python3 reel7etapas.py conferir</span> edicoes/&lt;pasta&gt;  <span class="c"># conferencia.jpg + volume</span>
+<span class="k">python3 reel7etapas.py mapa</span> edicoes/&lt;pasta&gt;      <span class="c"># mapa.jpg + capa.jpg</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">7</div><div>
+    <h3>Deliver</h3>
+    <p>Sends the video through the Telegram bot. For YouTube, yt-pubx publishes it as a Short.</p>
+<pre><span class="k">python3 reel7etapas.py enviar</span> edicoes/&lt;pasta&gt; <span class="s">"legenda"</span>
+<span class="k">./yt-pubx publicar</span> edicoes/&lt;pasta&gt;/video.mp4 --canal lives1 --contexto <span class="s">"..."</span> --dry-run</pre>
+  </div></div>
+</div></section>
+
+<section id="exemplos"><div class="wrap">
+  <span class="chip">Example</span>
+  <h2>Your own JARVIS</h2>
+  <p class="sub">The first reel made with the template. Full script at <a href="https://github.com/inematds/reel7etapas/blob/main/edicoes/2026-10-11-jarvis/roteiro.yaml" target="_blank" rel="noopener">edicoes/2026-10-11-jarvis/roteiro.yaml</a>.<!--YT--></p>
+  <figure style="margin:0 0 22px;border-radius:16px;overflow:hidden;border:1px solid var(--line)"><img src="../assets/mapa.jpg" alt="Map of the 7 steps in the JARVIS reel" loading="lazy" style="width:100%;display:block"></figure>
+  <div class="ex">
+    <figure><img src="../assets/capa.jpg" alt="Reel cover: Você dorme. Ele trabalha. (You sleep. He works.)"><figcaption>Step 1 — the hook: the result before the technology.</figcaption></figure>
+    <figure><img src="../assets/conferencia.jpg" alt="Frames of the final video"><figcaption>Ten frames of the final video, from the hook to the "COMENTA JARVIS" (COMMENT JARVIS).</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="roadmap"><div class="wrap">
+  <span class="chip">Roadmap</span>
+  <h2>Next steps</h2>
+  <p class="sub">What exists today and what's coming.</p>
+  <div class="phase"><div class="tag">Done</div><div class="d"><strong>Template + engine</strong><span>7 steps, local images, HeyGen avatar, 9:16 assembly, map and delivery to the bot.</span></div></div>
+  <div class="phase"><div class="tag">Next</div><div class="d"><strong>More examples</strong><span>New editions on other topics, to compare which hooks generate more comments.</span></div></div>
+  <div class="phase"><div class="tag">Later</div><div class="d"><strong>Reply to the comment</strong><span>Link the "COMMENT &lt;WORD&gt;" to an automatic message with the link to the material.</span></div></div>
+</div></section>
+
+<footer>
+  <div class="wrap">
+    <div class="pill">Python</div><div class="pill">FLUX.2 klein</div><div class="pill">HeyGen</div><div class="pill">ffmpeg</div>
+    <p style="margin-top:18px">reel7etapas · open and free template ·
+      <a href="https://github.com/inematds/reel7etapas">inematds/reel7etapas</a> ·
+      <a href="https://inema.club">INEMA.CLUB</a></p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var KEY='reel7etapas-theme';
+    var b=document.body, t=document.getElementById('themeToggle');
+    if(localStorage.getItem(KEY)==='light'){ b.classList.add('light'); t.textContent='☀️'; }
+    t.addEventListener('click',function(){
+      var light=b.classList.toggle('light');
+      t.textContent=light?'☀️':'🌙';
+      localStorage.setItem(KEY, light?'light':'dark');
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+# reel7etapas — edição 2026-10-11-jarvis (exemplo: o primeiro reel feito neste modelo)
+tema: "Seu próprio JARVIS"
+data: "11/10/2026"
+palavra: JARVIS
+fala: |
+  Você sabia que o seu computador já pode trabalhar enquanto você dorme? Já pensou em ter um funcionário dentro do seu computador, trabalhando por você? Tem gente pagando uma fortuna por coisas que você já pode montar em casa. E o melhor: não precisa ser programador! Você pode criar o seu próprio JARVIS. Um ajudante de inteligência artificial que conversa com você, lembra das coisas, pesquisa e executa tarefas. É como ter um funcionário digital só seu, trabalhando do jeito que você ensinar. No inema ponto club tem vídeos, explicações e material para você começar do zero. Comenta JARVIS que eu te mostro o caminho.
+# As 7 etapas: cada uma entra na palavra 'ancora' da fala (minúscula, sem acento) e troca imagem, manchete e painel.
+# 'gatilho' e 'por_que' não aparecem no vídeo: vão para o mapa.jpg (a explicação do modelo).
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "resultado desejado em 2 segundos"
+    por_que: "mostra o sonho (dormir enquanto o PC trabalha) antes de falar de tecnologia"
+    capa: {linha1: "VOCÊ DORME.", linha2: "ELE TRABALHA.", sub: "SEU PRÓPRIO JARVIS!"}
+    cena: "a person sleeping peacefully in a dark bedroom at night, in the foreground a desk with a glowing computer monitor working by itself, warm golden light from the screen"
+  - id: desejo
+    nome: DESEJO
+    gatilho: "ter um funcionário só seu"
+    por_que: "a pessoa se imagina com ajuda sem pagar salário"
+    ancora: pensou
+    linha1: "UM FUNCIONÁRIO"
+    linha2: "DENTRO DO PC"
+    painel: {titulo: "24 HORAS", texto: "trabalhando\npor você"}
+    cena: "close-up of a modern desktop computer on a wooden desk at night, screen glowing with warm golden light, cozy dark home office"
+  - id: medo
+    nome: MEDO
+    gatilho: "estar gastando à toa"
+    por_que: "medo de perder dinheiro prende mais que promessa de ganho"
+    ancora: gente
+    linha1: "TEM GENTE PAGANDO"
+    linha2: "UMA FORTUNA"
+    cor: vermelho
+    painel: {titulo: "R$ $$$", texto: "por algo que\nvocê monta\nem casa", cor: vermelho}
+    cena: "stack of expensive bills and invoices on a dark desk, a hand holding a calculator, dramatic red and golden rim light"
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa ser programador"
+    por_que: "derruba a objeção que faz a pessoa desistir antes de tentar"
+    ancora: melhor
+    linha1: "NÃO PRECISA SER"
+    linha2: "PROGRAMADOR"
+    painel: {titulo: "SEM CÓDIGO", texto: "do zero,\npasso a passo"}
+    cena: "relaxed middle-aged person smiling while using a laptop on a sofa in a cozy living room at night, warm golden lamp light"
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "existe um jeito: o seu JARVIS"
+    por_que: "dá nome à solução e mostra o que ela faz, em verbos simples"
+    ancora: criar
+    linha1: "CRIE O SEU"
+    linha2: "PRÓPRIO JARVIS"
+    painel: {titulo: "JARVIS", texto: "conversa · lembra\npesquisa · executa"}
+    cena: "home office at night, a soft glowing golden circular light interface floating above the computer monitor like a personal assistant, realistic, no robot"
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "do jeito que você ensinar"
+    por_que: "fecha a imagem do resultado: um ajudante sob medida"
+    ancora: como
+    linha1: "UM FUNCIONÁRIO"
+    linha2: "DIGITAL SÓ SEU"
+    painel: {titulo: "SÓ SEU", texto: "trabalha do\njeito que você\nensinar"}
+    cena: "empty home office at dawn, computer screen glowing warm golden, first sunlight entering through the window, peaceful"
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "uma palavra para comentar"
+    por_que: "ação pequena e fácil: comentar uma palavra abre a conversa (e o alcance)"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    painel: {titulo: "INEMA.CLUB", texto: "vídeos + material\npara começar\ndo zero"}
+    depois: {ancora: comenta, linha1: "COMENTA", linha2: "JARVIS", painel: {titulo: "COMENTA", texto: "JARVIS", grande: true}}
+    cena: "hand holding a smartphone at night, glowing screen, warm golden bokeh city lights in the background"
+final: ["COMENTA JARVIS", "INEMA.CLUB", "cursos e material gratuitos"]
+legenda_envio: "SEU PRÓPRIO JARVIS — reel no modelo de 7 etapas (gancho → desejo → medo → facilidade → descoberta → benefício → comentário)."
