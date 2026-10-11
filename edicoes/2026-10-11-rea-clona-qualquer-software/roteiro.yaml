@@ -1,0 +1,90 @@
+# reel7etapas — edição 2026-10-11-rea-clona-qualquer-software (REA: qualquer um pode clonar software)
+tema: "Qualquer um pode clonar qualquer software"
+data: "11/10/2026"
+palavra: CLONAR
+fala: |
+  Agora qualquer um pode clonar, ou seja, copiar e fazer qualquer software. Vou te mostrar como. Pensa naquele aplicativo que você usa todo dia, e agora ter a sua própria versão, do seu jeito. Tem gente pagando assinatura cara, todo mês, por programa que dá pra recriar em casa. E o melhor: você não precisa saber programar. Você só pede. Existe uma ferramenta chamada REA: o seu agente de inteligência artificial desmonta o programa, entende como ele funciona e reconstrói. Num teste, dois agentes recriaram o visualizador de imagens do Mac, e saiu praticamente igual. É software sob medida, pra você aprender e criar o seu. Tá tudo no inema ponto club. Ou comenta CLONAR que eu te mando o link.
+# As 7 etapas: cada uma entra na palavra 'ancora' da fala (minúscula, sem acento) e troca imagem, câmera, manchete e destaque.
+# camera: push | pull | pan_dir | pan_esq | sobe   ·   foco: [x, y] (0–1) do plano fechado   ·   destaque: cartão à direita do avatar
+# 'gatilho' e 'por_que' não aparecem no vídeo: vão para o mapa.jpg (a explicação do modelo).
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "qualquer um copia qualquer software"
+    por_que: "promete o poder (ter o app que quiser) antes de dizer qual tecnologia"
+    capa: {linha1: "CLONE QUALQUER", linha2: "SOFTWARE", sub: "VOU TE MOSTRAR COMO"}
+    camera: push
+    foco: [0.5, 0.55]
+    cena: "Escrivaninha clara de home office de dia, com luz do sol entrando pela janela. Dois notebooks lado a lado, no centro da imagem: o da esquerda mostra a tela de um aplicativo colorido; o da direita mostra a mesma tela sendo montada, peça por peça, com blocos dourados de luz se encaixando, como uma cópia nascendo. Entre os dois, um fio de luz dourada ligando as telas. Ambiente iluminado, cores quentes."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "ter a sua própria versão do app"
+    por_que: "a pessoa se imagina dona do aplicativo que usa todo dia"
+    ancora: pensa
+    linha1: "O SEU APP"
+    linha2: "DO SEU JEITO"
+    destaque: {titulo: "SEU", texto: "a sua própria\nversão"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Pessoa de uns 40 anos segurando um smartphone na vertical, sorrindo, numa sala aconchegante à noite. Na tela do celular, um aplicativo com ícones e botões coloridos, e um pequeno pincel dourado pintando um dos botões, como se ela personalizasse o app. Luz dourada quente no rosto."
+  - id: medo
+    nome: MEDO
+    gatilho: "pagar caro todo mês"
+    por_que: "a dor da assinatura recorrente prende mais que a promessa"
+    ancora: gente
+    linha1: "ASSINATURA CARA"
+    linha2: "TODO MÊS"
+    cor: vermelho
+    destaque: {titulo: "TODO MÊS", texto: "por programa\nque dá pra\nrecriar", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.55]
+    cena: "Mesa escura com um calendário de parede aberto, vários dias marcados em vermelho, faturas de cartão de crédito empilhadas e cédulas de real (notas de 100 e 50) espalhadas; a mão de um homem de meia-idade segura uma fatura com tensão. Luz lateral dramática, avermelhada e dourada."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa saber programar"
+    por_que: "derruba a objeção 'isso é coisa de programador'"
+    ancora: melhor
+    linha1: "SEM SABER"
+    linha2: "PROGRAMAR"
+    destaque: {titulo: "SÓ PEDE", texto: "você pede,\nele faz"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Mulher de uns 50 anos, relaxada à mesa da cozinha à noite, digitando tranquila num notebook com uma xícara de chá ao lado. A tela mostra uma janela de conversa simples com uma frase curta, sem código. Luz dourada quente, rosto bem iluminado e sorridente."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "existe uma ferramenta: o REA"
+    por_que: "dá nome à solução e mostra o que ela faz, em três verbos"
+    ancora: ferramenta
+    linha1: "O AGENTE"
+    linha2: "DESMONTA E REFAZ"
+    destaque: {titulo: "REA", texto: "desmonta\nentende\nreconstrói"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Bancada de oficina à noite. Um aplicativo representado como uma caixa de vidro aberta, com suas peças (botões, janelas, engrenagens pequenas) flutuando para fora, explodidas e organizadas no ar; mãos robóticas douradas e delicadas encaixando as peças de volta numa caixa nova ao lado. Visual limpo, luz dourada, fundo escuro."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "funciona: saiu praticamente igual"
+    por_que: "prova o resultado e fecha a imagem: software sob medida"
+    ancora: teste
+    linha1: "SAIU"
+    linha2: "PRATICAMENTE IGUAL"
+    destaque: {titulo: "SOB MEDIDA", texto: "aprenda e\ncrie o seu"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Dois monitores lado a lado numa mesa, mostrando o mesmo visualizador de fotos com a mesma foto de paisagem de montanha aberta, idênticos; uma pessoa ao centro, de costas, olha de um para o outro, impressionada. Uma pequena bandeira de chegada xadrez no canto da mesa. Escritório claro de dia, luz do sol entrando pela janela, ambiente bem iluminado."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (o site) e uma ação pequena: comentar CLONAR"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "cursos e\nprojetos\nabertos"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical, numa sala escura com bokeh dourado. Na tela do celular, no alto, um vídeo vertical mostrando dois notebooks com telas iguais brilhando em dourado; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "CLONAR", linha2: "que eu te mando o link"}
+legenda_envio: "QUALQUER UM PODE CLONAR QUALQUER SOFTWARE — reel REA no modelo de 7 etapas (gancho → desejo → medo → facilidade → descoberta → benefício → comentário)."
+canal: lives1
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner): agora qualquer um pode clonar, ou seja, copiar e fazer qualquer software, e o vídeo mostra como. Ferramenta REA (Reverse Engineer Anything): o agente de IA desmonta o programa, entende como funciona e reconstrói; num teste, dois agentes recriaram o visualizador de imagens do Mac e saiu praticamente igual. Não precisa saber programar. Clonar para aprender e criar o seu. CTA: tudo no inema.club ou comente CLONAR. Título com gancho forte, começando por 'Agora QUALQUER UM pode clonar qualquer software', com #shorts. Sem citar autores ou canais de origem."
+youtube_20261011: https://www.youtube.com/shorts/Hlmma9RB-UM
