@@ -1,0 +1,86 @@
+# reel7etapas — edição 2026-10-12-oswork-antes-jarvis
+tema: "Antes do seu Jarvis, aprenda o OSWork"
+data: "12/10/2026"
+palavra: OSWORK
+fala: |
+  Quer ter o seu próprio Jarvis? Então faz isso antes. Imagina um assistente que trabalha por você, dentro do seu computador. Só que muita gente tenta montar direto, trava logo no começo, perde horas e desiste. E o melhor: não precisa ser programador! Primeiro, aprende o OSWork: você abre o terminal, cria a pasta do projeto, coloca o Claude Code ou o Codex para trabalhar nela, guarda tudo no GitHub e sobe para um servidor. Depois disso, montar o seu Jarvis fica fácil, porque você já sabe onde cada coisa mora. E o curso é de graça. Tá tudo no inema ponto club. Ou comenta OSWORK que eu te mando o link.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "o passo que vem antes do resultado desejado"
+    por_que: "quem quer um Jarvis para na hora: tem algo que eu preciso fazer antes?"
+    capa: {linha1: "SEU JARVIS", linha2: "COMEÇA AQUI", sub: "APRENDA ISSO ANTES!"}
+    camera: push
+    foco: [0.5, 0.6]
+    cena: "Home office claro de dia, luz de janela. Em primeiro plano, na metade de baixo da imagem, um notebook aberto numa escrivaninha de madeira com uma janela de terminal preta e linhas de texto verdes; acima do notebook, flutuando, uma esfera de luz dourada suave como um assistente pessoal. Uma pessoa adulta sorrindo, sentada diante do notebook, rosto bem iluminado."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "um assistente que trabalha por você"
+    por_que: "a pessoa se imagina com ajuda dentro do próprio computador"
+    ancora: assistente
+    linha1: "UM ASSISTENTE"
+    linha2: "SÓ SEU"
+    destaque: {titulo: "24 H", texto: "trabalhando\npor você"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Escrivaninha clara de dia com um monitor grande. Dentro da tela, como se morasse ali, um assistente em miniatura de camisa social organizando pastas e documentos minúsculos, concentrado. Luz de janela, plantas ao fundo. Visual divertido e realista."
+  - id: medo
+    nome: MEDO
+    gatilho: "travar no começo e desistir"
+    por_que: "quase todo mundo já tentou algo técnico e travou; medo de perder horas"
+    ancora: muita
+    linha1: "TRAVA NO COMEÇO"
+    linha2: "E DESISTE"
+    cor: vermelho
+    destaque: {titulo: "HORAS", texto: "perdidas\nsem sair\ndo lugar", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "Homem de uns 45 anos num escritório em casa de dia, com as mãos na cabeça, frustrado, olhando para o notebook que mostra uma janela vermelha de erro. Xícaras de café vazias e papéis espalhados na mesa. Luz de janela forte no rosto."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa ser programador"
+    por_que: "derruba a objeção que faz a pessoa desistir antes de tentar"
+    ancora: melhor
+    linha1: "NÃO PRECISA SER"
+    linha2: "PROGRAMADOR"
+    destaque: {titulo: "PASSO A PASSO", texto: "comando por\ncomando"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Mulher de uns 50 anos, sorrindo e confiante, na mesa da cozinha clara de dia, digitando num notebook com uma janela de terminal simples aberta; ao lado, um caderno com anotações e uma xícara de café. Luz de janela no rosto."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "existe um caminho: o OSWork"
+    por_que: "dá nome à solução e mostra os passos em verbos simples"
+    ancora: primeiro
+    linha1: "APRENDA"
+    linha2: "O OSWORK"
+    destaque: {titulo: "VOCÊ", texto: "abre o terminal\ncria a pasta\nGitHub · servidor"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Notebook numa mesa clara de dia mostrando uma janela de terminal preta; ao redor do notebook, flutuando como ícones simples e dourados, uma pasta de arquivos, um gato estilizado sem marca, uma nuvem e um pequeno servidor, ligados por linhas de luz. Ambiente de escritório iluminado por janela. Nenhum logotipo real."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "depois, o Jarvis fica fácil"
+    por_que: "fecha a imagem do resultado: a base pronta para o assistente"
+    ancora: depois
+    linha1: "AÍ O JARVIS"
+    linha2: "FICA FÁCIL"
+    destaque: {titulo: "BASE", texto: "você sabe onde\ncada coisa mora"}
+    camera: pan_esq
+    foco: [0.45, 0.45]
+    cena: "Manhã ensolarada em casa. Uma pessoa sorri olhando o celular, que mostra uma conversa com um assistente respondendo; ao lado, o notebook aberto com uma lista de tarefas marcada com checks verdes. Luz do sol dourada entrando pela janela. Clima de tranquilidade."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "grátis no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (o site) e uma ação pequena e fácil: comentar uma palavra"
+    ancora: curso
+    linha1: "CURSO GRÁTIS NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "OSWork\ndo zero"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia, com plantas e luz de janela ao fundo desfocado. Na tela do celular, no alto, um vídeo vertical mostrando um notebook com terminal numa mesa; embaixo, a área de comentários com avatares redondos, corações e balões, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "OSWORK", linha2: "que eu te mando o link"}
+legenda_envio: "ANTES DO SEU JARVIS, APRENDA O OSWORK — reel no modelo de 7 etapas (gancho → desejo → medo → facilidade → descoberta → benefício → comentário). Curso grátis no inema.club."
+canal: lives1
+youtube_20261012: https://www.youtube.com/shorts/W2Vh3XlKs_s
