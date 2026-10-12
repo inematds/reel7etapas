@@ -82,6 +82,7 @@ LAYOUTS = {
 }
 LAY = None          # layout ativo (None = padrão)
 AV_CAPA = True      # avatar já no quadro 0 (pedido do Nei 12/10: o rosto dele é autoridade); capa.avatar: false desliga
+AVC = (190, 740, 700, 794)   # avatar GRANDE na capa (x, y, w, h; mesma proporção da caixa pequena); encolhe para AVX/AVY na etapa 2
 
 
 def carregar(pasta):
@@ -465,26 +466,30 @@ class Desenho:
             bb = d.textbbox((cx, y), ln, font=f, anchor="ma")
             self._reg(0.0 if self._t is not None else None, "ganho", bb, tam)
             d.text((cx, y), ln, font=f, fill=ESC + (255,), anchor="ma"); y += alt
+        return y1
 
     def manchete(self, base, d, t, e, t0, capa=False):
         if capa:
             c = e["capa"]; y = c.get("y", 880); cx = (SAFE[0] + SAFE[2]) / 2   # texto embaixo, cena visível
-            if AV_CAPA:                        # avatar no quadro 0 (caixa do padrão): o bloco de texto sobe até caber acima dele
-                larg = SAFE[2] - SAFE[0] - 30
-                alt = sum(_alt_linha(c[k], ANTON, 172, larg) for k in ("linha1", "linha2")) + 16
-                if c.get("sub"):
-                    tc = 60
-                    while fnt(MBLK, tc).getlength(c["sub"]) > (SAFE[2] - SAFE[0]) - 70:
-                        tc -= 2
-                    alt += 46 + tc + 40
-                y = min(y, AVY - 28 - alt)
-            h1 = self.linha(base, t, t0, cx, y, c["linha1"], ANTON, 172, BRANCO, SAFE[2] - SAFE[0] - 30, "capa1", anim=False, centro=True)
+            topo = self.ganho(d, c["ganho"]) if c.get("ganho") else HEAD_Y + 40
+            tam, tc = 172, 60
+            if AV_CAPA:                        # avatar grande no quadro 0: o texto encolhe e fica entre o ganho e o avatar
+                larg = SAFE[2] - SAFE[0] - 30; vao = AVC[1] - 24 - (topo + 24)
+                def altura(tm):
+                    k = max(40, int(60 * tm / 172))
+                    while c.get("sub") and fnt(MBLK, k).getlength(c["sub"]) > (SAFE[2] - SAFE[0]) - 70:
+                        k -= 2
+                    h = sum(_alt_linha(c[n], ANTON, tm, larg) for n in ("linha1", "linha2")) + 16
+                    return h + (30 + k + 40 if c.get("sub") else 0), k
+                while tam > 64 and altura(tam)[0] > vao:
+                    tam -= 4
+                alt, tc = altura(tam)
+                y = topo + 24 + max(0, (vao - alt) / 2)
+            h1 = self.linha(base, t, t0, cx, y, c["linha1"], ANTON, tam, BRANCO, SAFE[2] - SAFE[0] - 30, "capa1", anim=False, centro=True)
             y += h1 + 16
-            h2 = self.linha(base, t, t0, cx, y, c["linha2"], ANTON, 172, AMB, SAFE[2] - SAFE[0] - 30, "capa2", anim=False, centro=True)
+            h2 = self.linha(base, t, t0, cx, y, c["linha2"], ANTON, tam, AMB, SAFE[2] - SAFE[0] - 30, "capa2", anim=False, centro=True)
             if c.get("sub"):
-                self.chip(base, d, t + 1, t0, cx, y + h2 + 46, c["sub"], "capa-sub", centro=True, tam=60)
-            if c.get("ganho"):
-                self.ganho(d, c["ganho"])
+                self.chip(base, d, t + 1, t0, cx, y + h2 + (30 if AV_CAPA else 46), c["sub"], "capa-sub", centro=True, tam=tc)
             return
         y = HEAD_Y
         h1 = self.linha(base, t, t0, SAFE[0], y, e["linha1"], ANTON, 128, BRANCO, SAFE[2] - SAFE[0], "manchete1")
@@ -611,7 +616,7 @@ def preparar(r):
 def portao_desenho(D):
     erros = []
     for t, nome, (x0, y0, x1, y1), tam in D.caixas:
-        if AV_CAPA and t < D.L.ini[1] and x1 > AVX and x0 < AVX + AVW and y1 > AVY and y0 < AVY + AVH:
+        if AV_CAPA and t < D.L.ini[1] and x1 > AVC[0] and x0 < AVC[0] + AVC[2] and y1 > AVC[1] and y0 < AVC[1] + AVC[3]:
             erros.append(f"{t:.1f}s {nome} da capa cobre o avatar {(x0, y0, x1, y1)}")
         if x0 < SAFE[0] - 1 or y0 < SAFE[1] - 1 or x1 > SAFE[2] + 1 or y1 > SAFE[3] + 1:
             erros.append(f"{t:.1f}s {nome} fora da zona segura {(x0, y0, x1, y1)}")
@@ -686,8 +691,6 @@ def cmd_montar(pasta):
     tag = B / "tag.txt"; tag.write_text(r.get("tag", "NEI MALDANER  |  INEMA"))
     yexp = f"if(lt(t,{i0 + 0.35:.2f}),{ay}+(1-(t-{i0:.2f})/0.35)*140,{ay})" if (LAY is None or LAY["forma"] == "ret") else str(ay)
     en = f"gte(t,{i0:.2f})"
-    if AV_CAPA and LAY is None:          # mesma caixa do começo ao fim: entra no 0 s, sem subir
-        yexp, en, i0 = str(ay), "gte(t,0)", 0.0
     if LAY is not None and LAY["forma"] == "circulo":
         mask = B / "mascara.png"; mk = Image.new("L", (aw, ah), 0); ImageDraw.Draw(mk).ellipse((0, 0, aw - 1, ah - 1), fill=255); mk.save(mask)
         moldura = f"format=rgba[avr];movie={mask},format=gray,scale={aw}:{ah}[mk];[avr][mk]alphamerge[av];"
@@ -698,13 +701,14 @@ def cmd_montar(pasta):
     fc = (f"[1:v]trim=start={i0:.3f},setpts=PTS-STARTPTS+{i0:.3f}/TB,crop={crop},scale={aw}:{ah},setsar=1,fps={FPS},"
           f"tpad=stop_mode=clone:stop_duration=10,{moldura}"
           f"[0:v][av]overlay=x={ax}:y='{yexp}':enable='{en}':eof_action=repeat,format=yuv420p[v]")
-    if AV_CAPA and LAY is not None:      # layout: na capa o avatar fica na caixa do padrão; o layout entra na etapa 2
+    if AV_CAPA:                          # capa: avatar GRANDE (AVC) até a etapa 2; daí a caixa normal entra subindo
+        cx_, cy_, cw_, ch_ = AVC
         fc = fc.replace("[1:v]", "[a2]", 1).replace("[0:v][av]", "[cap][av]", 1)
-        fc = (f"[1:v]split[a1][a2];[a1]crop={crop_capa},scale={AVW}:{AVH},setsar=1,fps={FPS},"
-              f"drawbox=x=0:y=0:w=iw:h=ih:color=0xE2A23B@1:t=6,"
-              f"drawbox=x=6:y={AVH - 44}:w={AVW - 12}:h=38:color=0x0b0f14@0.85:t=fill,"
-              f"drawtext=fontfile={DEJAVU}:textfile={tag}:x=18:y={AVH - 34}:fontsize=19:fontcolor=white[avc];"
-              f"[0:v][avc]overlay=x={AVX}:y={AVY}:enable='lt(t,{L.ini[1]:.3f})'[cap];" + fc)
+        fc = (f"[1:v]split[a1][a2];[a1]crop={crop_capa},scale={cw_}:{ch_},setsar=1,fps={FPS},"
+              f"drawbox=x=0:y=0:w=iw:h=ih:color=0xE2A23B@1:t=10,"
+              f"drawbox=x=10:y={ch_ - 66}:w={cw_ - 20}:h=56:color=0x0b0f14@0.85:t=fill,"
+              f"drawtext=fontfile={DEJAVU}:textfile={tag}:x=30:y={ch_ - 52}:fontsize=30:fontcolor=white[avc];"
+              f"[0:v][avc]overlay=x={cx_}:y={cy_}:enable='lt(t,{i0:.3f})'[cap];" + fc)
     saida = r["_dir"] / "video.mp4"
     run(["ffmpeg", "-v", "error", "-y", "-i", base, "-i", r["_av"], "-i", B / "mix_norm.wav", "-filter_complex", fc,
          "-map", "[v]", "-map", "2:a", "-t", f"{L.total:.3f}", "-c:v", "libx264", "-crf", "20", "-preset", "slow", "-r", str(FPS),
