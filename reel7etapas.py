@@ -14,7 +14,7 @@ Cada etapa entra numa palavra da fala do avatar do Nei e troca imagem (com câme
   reel7etapas.py enviar <pasta> [texto]  só o bot
 
 Contrato visual (perfil 'divulgacao' do makeshorts): 1080x1920, 30 fps, −14 LUFS, legenda ≤ 3 palavras / 22 caracteres
-com fonte ≥ 64 px, imagem mudando a cada ≤ 3,5 s, nada fora da zona segura (topo 6%, base 15%, lados 6%, coluna de botões 12%).
+com fonte ≥ 64 px, imagem mudando a cada ≤ 3,5 s, nada fora da zona segura (topo ~1%, base ~7%, lados 6%, coluna de botões 12%).
 """
 import base64, concurrent.futures as cf, hashlib, json, math, os, re, shutil, subprocess, sys, urllib.request
 from datetime import date
@@ -35,11 +35,11 @@ FLUX_API = os.environ.get("R7_IMAGEM_API", "http://localhost:8000/generate")
 EXEMPLO = RAIZ / "edicoes/2026-10-11-jarvis/roteiro.yaml"
 
 # ---- geometria: tudo que é texto ou caixa precisa caber em SAFE (x0, y0, x1, y1)
-SAFE = (65, 110, 950, 1636)
-HEAD_Y = 160                                  # topo da manchete (colada no alto: não cobre a cena)
-LEG_Y = 1130                                  # centro vertical da legenda
-AVX, AVY, AVW, AVH = 700, 1212, 360, 408      # avatar (embaixo à direita; pode ficar sob os botões da plataforma)
-CARD = (65, 1212, 680, 1620)                  # destaque / CTA à esquerda do avatar
+SAFE = (65, 24, 950, 1790)
+HEAD_Y = 66                                  # topo da manchete (colada no alto: não cobre a cena)
+LEG_Y = 1280                                  # centro vertical da legenda
+AVX, AVY, AVW, AVH = 700, 1362, 360, 408      # avatar (embaixo à direita; pode ficar sob os botões da plataforma)
+CARD = (65, 1362, 680, 1770)                  # destaque / CTA à esquerda do avatar
 LEG_MIN, HEAD_MIN = 64, 80                    # fonte mínima (px)
 MAX_PAL, MAX_CAR = 3, 22                      # legenda
 MUDA_MAX = 3.3                                # imagem muda (corte de enquadramento) a cada ≤ 3,3 s
