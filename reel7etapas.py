@@ -14,7 +14,7 @@ Cada etapa entra numa palavra da fala do avatar do Nei e troca imagem (com câme
   reel7etapas.py enviar <pasta> [texto]  só o bot
 
 Contrato visual (perfil 'divulgacao' do makeshorts): 1080x1920, 30 fps, −14 LUFS, legenda ≤ 3 palavras / 22 caracteres
-com fonte ≥ 64 px, imagem mudando a cada ≤ 3,5 s, nada fora da zona segura (topo 10%, base 20%, lados 6%, coluna de botões 12%).
+com fonte ≥ 64 px, imagem mudando a cada ≤ 3,5 s, nada fora da zona segura (topo 6%, base 15%, lados 6%, coluna de botões 12%).
 """
 import base64, concurrent.futures as cf, hashlib, json, math, os, re, shutil, subprocess, sys, urllib.request
 from datetime import date
@@ -35,11 +35,11 @@ FLUX_API = os.environ.get("R7_IMAGEM_API", "http://localhost:8000/generate")
 EXEMPLO = RAIZ / "edicoes/2026-10-11-jarvis/roteiro.yaml"
 
 # ---- geometria: tudo que é texto ou caixa precisa caber em SAFE (x0, y0, x1, y1)
-SAFE = (65, 192, 950, 1536)
-HEAD_Y = 250                                  # topo da manchete
-LEG_Y = 1030                                  # centro vertical da legenda
-AVX, AVY, AVW, AVH = 65, 1112, 360, 408       # avatar (embaixo à esquerda, dentro da zona segura)
-CARD = (445, 1112, 945, 1520)                 # destaque / CTA à direita do avatar
+SAFE = (65, 110, 950, 1636)
+HEAD_Y = 160                                  # topo da manchete (colada no alto: não cobre a cena)
+LEG_Y = 1130                                  # centro vertical da legenda
+AVX, AVY, AVW, AVH = 700, 1212, 360, 408      # avatar (embaixo à direita; pode ficar sob os botões da plataforma)
+CARD = (65, 1212, 680, 1620)                  # destaque / CTA à esquerda do avatar
 LEG_MIN, HEAD_MIN = 64, 80                    # fonte mínima (px)
 MAX_PAL, MAX_CAR = 3, 22                      # legenda
 MUDA_MAX = 3.3                                # imagem muda (corte de enquadramento) a cada ≤ 3,3 s
@@ -51,7 +51,7 @@ FRACAS = {"de", "do", "da", "dos", "das", "o", "a", "os", "as", "e", "que", "seu
 ESTILO = ("Fotografia cinematográfica realista, vertical 9:16. Ambiente escuro e acolhedor com luz dourada quente, "
           "mas o assunto principal BEM ILUMINADO, nítido e fácil de entender num celular. COMPOSIÇÃO OBRIGATÓRIA: o assunto "
           "principal (rostos, mãos, tela, objeto-chave) fica inteiro na faixa central da imagem, entre 30% e 60% da altura; "
-          "os 28% de cima são fundo calmo (parede, teto, janela escura) porque ali entra o título, e os 40% de baixo são "
+          "os 20% de cima são fundo calmo (parede, teto, janela escura) porque ali entra o título, e os 40% de baixo são "
           "superfície ou fundo sem nada importante, porque ali entram o apresentador e um cartão. Sem texto, sem letras legíveis, sem números, sem logotipos, sem marcas, "
           "sem robôs, sem visual de ficção científica.")
 
