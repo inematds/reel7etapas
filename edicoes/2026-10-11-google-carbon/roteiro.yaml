@@ -1,0 +1,90 @@
+# reel7etapas — edição 2026-10-11-google-carbon (refaz curto: a IA secreta do Google que programa como o Opus 5.5)
+tema: "O programador secreto do Google"
+data: "11/10/2026"
+palavra: CARBON
+fala: |
+  O Google tem um programador secreto trabalhando lá dentro, e ninguém de fora pode usar. Imagina entregar um sistema inteiro e ele trabalhar sozinho por horas enquanto você cuida de outra coisa. O problema é que o modelo que o Google anunciou há duas semanas ainda nem chegou ao público. Mas calma, o nível que ele persegue você já pode usar hoje, sem esperar ninguém. Documentos vazados mostram que o novo Gemini, apelidado de Carbon, já programa como o Claude Opus cinco ponto cinco, e teria aprendido a melhorar a si mesmo. Quem aprende agora a dar trabalho para esses agentes sai na frente. Tá tudo no inema ponto club. Ou comenta CARBON que eu te mando o link.
+# As 7 etapas: cada uma entra na palavra 'ancora' da fala (minúscula, sem acento) e troca imagem, câmera, manchete e destaque.
+# camera: push | pull | pan_dir | pan_esq | sobe   ·   foco: [x, y] (0–1) do plano fechado   ·   destaque: cartão à direita do avatar
+# 'gatilho' e 'por_que' não aparecem no vídeo: vão para o mapa.jpg (a explicação do modelo).
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "um segredo guardado pelo Google"
+    por_que: "curiosidade: algo existe, funciona e está escondido de você"
+    capa: {linha1: "O PROGRAMADOR", linha2: "SECRETO", sub: "DO GOOGLE"}
+    camera: push
+    foco: [0.5, 0.55]
+    cena: "Corredor claro de um escritório moderno de tecnologia de dia, luz do sol entrando por janelas grandes. No fim do corredor, atrás de uma porta de vidro entreaberta com uma faixa amarela de acesso restrito, uma sala iluminada onde uma tela grande mostra linhas de código coloridas brilhando. Um engenheiro de uns 30 anos olha para a tela, surpreso. Cores vivas, tudo bem iluminado."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "trabalho feito sozinho por horas"
+    por_que: "a pessoa se imagina entregando o sistema e cuidando de outra coisa"
+    ancora: imagina
+    linha1: "TRABALHA SOZINHO"
+    linha2: "POR HORAS"
+    destaque: {titulo: "VOCÊ ENTREGA", texto: "o sistema\ninteiro\ne descansa"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Homem de uns 40 anos tomando café na varanda clara de casa de dia, relaxado, enquanto na mesa ao lado um notebook aberto mostra código sendo escrito sozinho, com uma barra de progresso e vários checks verdes. Plantas, luz natural do sol, clima tranquilo."
+  - id: medo
+    nome: MEDO
+    gatilho: "anunciado e ninguém pode usar"
+    por_que: "frustração de esperar algo prometido que não chega"
+    ancora: problema
+    linha1: "ANUNCIADO"
+    linha2: "E NINGUÉM USA"
+    cor: vermelho
+    destaque: {titulo: "HÁ 2 SEMANAS", texto: "o Gemini 4\nainda não\nchegou ao público", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.55]
+    cena: "Pessoa de uns 35 anos em pé diante de uma vitrine de vidro trancada numa loja clara de dia, com a mão encostada no vidro; dentro da vitrine, numa base iluminada, um pequeno cubo brilhante com um chip dentro. Uma placa vermelha pendurada com um cadeado. Luz da rua entrando, expressão de frustração."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "o mesmo nível já está disponível"
+    por_que: "derruba a objeção de que é preciso esperar o Google"
+    ancora: calma
+    linha1: "VOCÊ JÁ USA"
+    linha2: "ESSE NÍVEL HOJE"
+    destaque: {titulo: "SEM ESPERAR", texto: "o nível que\no Google\npersegue"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Mulher de uns 45 anos sentada à mesa da cozinha clara de dia com um notebook, sorrindo e apontando para a tela, onde aparece uma janela de conversa simples e, ao lado, um aplicativo pronto. Xícara de café, luz do sol pela janela, rosto bem iluminado."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "nome da arma: Carbon, que melhora a si mesmo"
+    por_que: "dá nome à novidade e mostra o que ela faz em verbos simples"
+    ancora: vazados
+    linha1: "CARBON = NÍVEL"
+    linha2: "OPUS 5.5"
+    destaque: {titulo: "E MAIS", texto: "teria aprendido\na melhorar\na si mesmo"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Mesa clara de escritório de dia, vista de cima, com uma pasta de documentos aberta marcada com carimbo vermelho de confidencial, fotos impressas de telas de código, um crachá de funcionário e um celular mostrando uma conversa. No centro, um cristal escuro de carbono brilhando em dourado. Luz natural, visual limpo."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "quem aprende agora sai na frente"
+    por_que: "fecha a imagem do resultado: estar à frente quando todos chegarem"
+    ancora: aprende
+    linha1: "QUEM APRENDE"
+    linha2: "SAI NA FRENTE"
+    destaque: {titulo: "AGORA", texto: "dar trabalho\npara agentes\nde IA"}
+    camera: pan_esq
+    foco: [0.45, 0.45]
+    cena: "Corredor de largada de uma pista de corrida ao ar livre num dia de sol, uma mulher de uns 30 anos com notebook debaixo do braço já correndo à frente de um grupo de pessoas que ainda estão paradas na linha de largada. Céu azul, luz forte do sol, clima de vitória."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (o site) e uma ação pequena e fácil: comentar uma palavra"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "cursos para\nusar agentes\nde IA"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia, janela ao fundo desfocada. Na tela do celular, no alto, um vídeo vertical mostrando um cristal de carbono dourado sobre código colorido; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada."
+# CTA (entra na palavra 'ancora' da última etapa).
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "CARBON", linha2: "que eu te mando o link"}
+legenda_envio: "O PROGRAMADOR SECRETO DO GOOGLE — reel no modelo de 7 etapas (refaz curto: Carbon, o Gemini interno que programa como o Opus 5.5)."
+canal: lives1
+youtube_20261012: https://www.youtube.com/shorts/pGMJb5qrUsk
