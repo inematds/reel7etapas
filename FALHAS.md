@@ -2,6 +2,7 @@
 
 | data | o que quebrou | menor correção | prompt \| infra |
 |---|---|---|---|
+| 2026-10-12 | reel REA sem travas: as 7 imagens saíram amareladas/sépia (amarelo (R+G)/2−B de 23 a 53) — o ESTILO pedia "luz dourada quente" e o gerador já puxa pro quente; o portão só media luz | ESTILO com luz neutra + luz por etapa; `cor` neutraliza acima de 18 (alvo 12); portão reprova acima de 25 | prompt |
 | 2026-10-11 | reel videos-com-ia: qa_short reprovou cue do SRT "03,300 → 03,000" — `ts()` truncava 3,9999… em 3 s e arredondava ms para 000; depois, com o `fazer` parado no portão, `publicar` saiu sem mapa.jpg/capa.jpg | `ts()` arredonda para ms antes de separar os campos; `publicar` gera o mapa se faltar ou estiver velho | infra |
 | 2026-10-11 | reel REA (clonar software): REPETIU a falha do videos-com-ia — cenas 1 e 6 com "à noite"/"ambiente escuro" reprovaram 3× (luz 38–55/255); e a legenda saiu "CHAMADA RIA" (Whisper ouviu REA como "ria") e "inema .club" | regra na skill: cena de dia/clara salvo necessidade; nome próprio/sigla na fala → conferir `build/palavras.json` e corrigir antes do `montar` | prompt |
 | 2026-10-11 | reel videos-com-ia: portão 'imagens' reprovou as etapas 3, 4 e 7 três vezes (luz 36–53/255) porque as cenas pediam "noite"/"sala escura" em cima do ESTILO já escuro | cena com "de dia, luz de janela, imagem clara" quando o assunto não exige noite; passou na 1ª | prompt |

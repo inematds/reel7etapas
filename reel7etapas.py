@@ -5,7 +5,8 @@ Cada etapa entra numa palavra da fala do avatar do Nei e troca imagem (com câme
 
   reel7etapas.py novo <slug>             cria edicoes/<data>-<slug>/roteiro.yaml a partir do exemplo
   reel7etapas.py fazer <pasta>           tudo, com portões: imagens → avatar → montar → validar → mapa
-  reel7etapas.py imagens <pasta>         7 imagens no Codex image_gen (flux2-klein local só como reserva) + portão
+  reel7etapas.py imagens <pasta>         7 imagens no Codex image_gen (flux2-klein local só como reserva) + cor neutra + portão
+  reel7etapas.py cor <pasta>             tira o amarelado das imagens prontas (sem gerar de novo)
   reel7etapas.py avatar <pasta>          fala no estúdio do HeyGen (exige avatar/APROVADO_HEYGEN) — usa o reelcomenta
   reel7etapas.py montar <pasta>          monta <pasta>/video.mp4 (zona segura, legenda e loudness conferidos no render)
   reel7etapas.py validar <pasta>         portões finais + qa_short.py do makeshorts + folha de revisão em tamanho real
@@ -48,12 +49,20 @@ FIM_EXTRA = 2.6                               # cartão final depois da última 
 FRACAS = {"de", "do", "da", "dos", "das", "o", "a", "os", "as", "e", "que", "seu", "sua", "um", "uma", "no", "na", "em",
           "por", "para", "pra", "com", "te", "eu", "você", "ao", "se", "já", "é", "só", "mais"}
 
-ESTILO = ("Fotografia cinematográfica realista, vertical 9:16. Ambiente escuro e acolhedor com luz dourada quente, "
-          "mas o assunto principal BEM ILUMINADO, nítido e fácil de entender num celular. COMPOSIÇÃO OBRIGATÓRIA: o assunto "
+ESTILO = ("Fotografia realista natural, vertical 9:16, com cara de foto real (pele com textura, ambiente comum), sem brilho "
+          "de propaganda. LUZ NEUTRA E LIMPA: branco que parece branco, cores naturais, UMA cor forte de destaque no assunto; "
+          "sem tom amarelado, sem sépia, sem luz dourada, sem pôr do sol. UM assunto só, grande e nítido (rosto com emoção "
+          "forte ou objeto-símbolo ocupando 40 a 60% da largura), fácil de entender num celular em meio segundo. "
+          "COMPOSIÇÃO OBRIGATÓRIA: o assunto "
           "principal (rostos, mãos, tela, objeto-chave) fica inteiro na faixa central da imagem, entre 30% e 60% da altura; "
-          "os 20% de cima são fundo calmo (parede, teto, janela escura) porque ali entra o título, e os 40% de baixo são "
+          "os 20% de cima são fundo calmo (parede, teto, janela) porque ali entra o título, e os 40% de baixo são "
           "superfície ou fundo sem nada importante, porque ali entram o apresentador e um cartão. Sem texto, sem letras legíveis, sem números, sem logotipos, sem marcas, "
           "sem robôs, sem visual de ficção científica.")
+# a luz conta a história: o problema é frio, a solução é dia claro (o âmbar da marca fica só no texto desenhado por cima)
+LUZ = ["luz neutra e contrastada", "luz clara e neutra de dia", "luz fria levemente azulada, clima tenso (mas o assunto bem visível)",
+       "luz clara e neutra de dia", "luz neutra com o objeto-chave em destaque", "luz clara de dia, cores vivas e limpas",
+       "luz clara e neutra de dia"]
+AMARELO_CORRIGE, AMARELO_ALVO, AMARELO_MAX = 18.0, 12.0, 25.0   # (R+G)/2 - B da imagem inteira, escala 0-255
 
 
 def log(*a):
@@ -92,15 +101,35 @@ def _arq_img(r, i, e):
     return r["_dir"] / "img" / f"{i + 1}-{e['id']}.png"
 
 
-def _prompt(e):
-    return f"Cena: {e['cena'].strip()}\n\nEstilo: {ESTILO}"
+def _prompt(e, i=None):
+    luz = f" Luz desta etapa: {e.get('luz') or LUZ[i]}." if i is not None and not e.get("cor_livre") else ""
+    return f"Cena: {e['cena'].strip()}\n\nEstilo: {ESTILO}{luz}"
+
+
+def _amarelo(im):
+    r, g, b = ImageStat.Stat(im.convert("RGB").resize((256, 256))).mean
+    return (r + g) / 2 - b
+
+
+def neutralizar(a):
+    """tira o amarelado do gerador (puxa os canais para o cinza até o alvo, sem zerar o calor da pele); devolve (antes, depois)"""
+    im = Image.open(a).convert("RGB"); antes = _amarelo(im)
+    if antes <= AMARELO_CORRIGE:
+        return antes, antes
+    r, g, b = ImageStat.Stat(im.resize((256, 256))).mean; cinza = (r + g + b) / 3
+    for k in range(1, 21):
+        gs = [(cinza / c) ** (k / 20) for c in (r, g, b)]
+        out = Image.merge("RGB", [ch.point(lambda v, m=m: min(255, int(v * m + .5))) for ch, m in zip(im.split(), gs)])
+        if _amarelo(out) <= AMARELO_ALVO:
+            break
+    out.save(a); return antes, _amarelo(out)
 
 
 def _codex(r, i, e):
     dst = _arq_img(r, i, e); rel = dst.relative_to(r["_dir"])
     dst.unlink(missing_ok=True)
     pedido = (f"Use sua ferramenta de geração de imagem (image_gen) para criar UMA imagem no maior formato VERTICAL (retrato) "
-              f"disponível e salve o PNG em {rel} dentro deste diretório. Não edite nenhum outro arquivo.\n\n{_prompt(e)}")
+              f"disponível e salve o PNG em {rel} dentro deste diretório. Não edite nenhum outro arquivo.\n\n{_prompt(e, i)}")
     lg = r["_b"] / f"codex-{i + 1}.log"
     with open(lg, "w") as f:
         try:
@@ -137,6 +166,8 @@ def portao_imagens(r):
         lum = ImageStat.Stat(im.crop((int(w * .2), int(h * .2), int(w * .8), int(h * .8))).convert("L")).mean[0]
         if lum < e.get("luz_min", 55):
             ruins[i] = f"escura demais (luz {lum:.0f}/255)"
+        if not e.get("cor_livre") and _amarelo(im) > AMARELO_MAX:
+            ruins[i] = f"amarelada demais ({_amarelo(im):.0f} > {AMARELO_MAX:.0f})"
         hs.append(_dhash(im))
     for i in range(7):
         for j in range(i + 1, 7):
@@ -151,7 +182,7 @@ def cmd_imagens(pasta, refazer=()):
     reg = json.loads(reg_f.read_text()) if reg_f.exists() else {}
     falta = []
     for i, e in enumerate(r["etapas"]):
-        h = hashlib.md5(_prompt(e).encode()).hexdigest()[:10]
+        h = hashlib.md5(_prompt(e, i).encode()).hexdigest()[:10]
         if i in refazer or not _arq_img(r, i, e).exists() or reg.get(str(i + 1), {}).get("hash") != h:
             falta.append((i, e, h))
     for tentativa in range(3):
@@ -161,9 +192,10 @@ def cmd_imagens(pasta, refazer=()):
                 for (i, e, h), g in zip(falta, ex.map(lambda x: _codex(r, x[0], x[1]), falta)):
                     reg[str(i + 1)] = {"hash": h, "gerador": g}; log(f"  {i + 1} {e['id']}: {g}")
             reg_f.write_text(json.dumps(reg, ensure_ascii=False, indent=1))
+        cmd_cor(pasta, r)
         ruins = portao_imagens(r)
         if not ruins:
-            log("portão das imagens: OK (vertical, clara, sem repetição)"); return
+            log("portão das imagens: OK (vertical, clara, cor neutra, sem repetição)"); return
         for i, m in ruins.items():
             log(f"  etapa {i + 1}: {m}")
         falta = [(i, r["etapas"][i], reg.get(str(i + 1), {}).get("hash", "")) for i in ruins]
@@ -758,6 +790,17 @@ def cmd_novo(ident):
     log("criado", pasta / "roteiro.yaml", "— reescreva fala, âncoras, manchetes, destaques e cenas mantendo as 7 etapas")
 
 
+def cmd_cor(pasta, r=None):
+    """neutraliza o amarelado das imagens da edição (idempotente: só mexe acima de AMARELO_CORRIGE)"""
+    r = r or carregar(pasta)
+    for i, e in enumerate(r["etapas"]):
+        a = _arq_img(r, i, e)
+        if a.exists() and not e.get("cor_livre"):
+            antes, depois = neutralizar(a)
+            if depois < antes:
+                log(f"  {i + 1} {e['id']}: cor neutralizada (amarelo {antes:.0f} → {depois:.0f})")
+
+
 def cmd_fazer(pasta):
     r = carregar(pasta)
     cmd_imagens(pasta)
@@ -771,7 +814,7 @@ def cmd_fazer(pasta):
 
 def main(a):
     cmds = {"imagens": lambda p: cmd_imagens(p, tuple(int(x) - 1 for x in a[2:])), "avatar": rc.cmd_avatar, "montar": cmd_montar,
-            "validar": cmd_validar, "mapa": cmd_mapa, "publicar": cmd_publicar, "fazer": cmd_fazer}
+            "validar": cmd_validar, "mapa": cmd_mapa, "cor": cmd_cor, "publicar": cmd_publicar, "fazer": cmd_fazer}
     if len(a) < 2 or a[0] not in list(cmds) + ["novo", "enviar"]:
         sys.exit(__doc__)
     if a[0] == "novo":

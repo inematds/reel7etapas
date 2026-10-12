@@ -67,6 +67,7 @@ Se houver número na etapa Medo, com fonte.
 
 ## Regras
 
+- `cena` com luz NEUTRA: nunca "luz dourada", "cores quentes", "pôr do sol" nem objeto dourado em toda cena (o gerador do Codex já puxa para o amarelo). O âmbar da marca fica só no texto desenhado por cima. O motor pede luz por etapa (medo frio, benefício dia claro; troque com `luz:` na etapa) e o `cor` neutraliza o que vier acima de 18; acima de 25 depois disso o portão reprova. Imagem que precisa ser quente (fogo, pôr do sol): `cor_livre: true` na etapa. Aconteceu no REA sem travas (12/10): 7 imagens com amarelo 23–53.
 - Imagem: Codex `image_gen` pela assinatura; flux2-klein só reserva ou pedido explícito.
 - Avatar só pelo estúdio do HeyGen (assinatura), nunca API de geração; nunca aceitar troca de plano.
 - Falhou? Linha no `FALHAS.md` (data | o que quebrou | menor correção | prompt/infra).
