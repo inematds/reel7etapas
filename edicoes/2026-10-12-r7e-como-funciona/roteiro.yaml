@@ -1,0 +1,88 @@
+# reel7etapas — edição 2026-10-12-r7e-como-funciona (o próprio r7e: ideia vira vídeo viral, em escala)
+tema: "Faça vídeos virais direto, em escala"
+data: "12/10/2026"
+palavra: VIRAL
+fala: |
+  Você manda uma ideia e recebe um vídeo viral pronto, e dá pra fazer isso em escala. Imagina publicar vídeo todo dia no seu canal, sem travar na edição. Tem gente gastando horas, ou pagando editor caro, por cada vídeo curto. E o melhor: o projeto é aberto e de graça, qualquer um pode usar. Ele se chama reel sete etapas: um modelo com sete gatilhos, do gancho ao comentário. O agente escreve o roteiro, gera as imagens, coloca o avatar e confere tudo antes de publicar. Em dois dias, saíram dez vídeos com ele. Tá tudo no inema ponto club. Ou comenta VIRAL que eu te mando o link.
+# Prova da etapa BENEFÍCIO: 10 edições com youtube_ no roteiro.yaml, publicadas em 11 e 12/10/2026 (grep -l youtube_2026 edicoes/*/roteiro.yaml).
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "uma ideia vira vídeo viral pronto"
+    por_que: "o resultado (vídeo pronto, em escala) antes de dizer qual ferramenta"
+    capa: {ganho: "FAÇA VÍDEOS VIRAIS DIRETO, EM ESCALA", linha1: "UMA IDEIA VIRA", linha2: "VÍDEO VIRAL", sub: "EM 7 ETAPAS"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mesa clara de home office de dia, com luz do sol entrando pela janela. No centro, uma folha de papel com uma lâmpada desenhada a lápis; dela sobe um fluxo de luz dourada que se transforma numa fileira de smartphones verticais flutuando no ar, cada um mostrando um vídeo curto diferente e colorido, com corações e ícones de curtida saindo das telas. Cores quentes, ambiente bem iluminado."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "publicar vídeo todo dia"
+    por_que: "a pessoa se imagina com o canal ativo, sem o gargalo da edição"
+    ancora: imagina
+    linha1: "VÍDEO TODO DIA"
+    linha2: "NO SEU CANAL"
+    destaque: {titulo: "TODO DIA", texto: "sem travar\nna edição"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Mulher de uns 35 anos sorrindo numa sala clara de dia, segurando um smartphone na vertical; na parede atrás dela, um calendário grande com todos os dias da semana marcados com um visto verde e uma pequena miniatura de vídeo em cada dia. Luz natural da janela, cores quentes, rosto bem iluminado."
+  - id: medo
+    nome: MEDO
+    gatilho: "horas de edição ou editor caro"
+    por_que: "a dor do tempo e do dinheiro gastos em cada vídeo curto"
+    ancora: gente
+    linha1: "HORAS DE EDIÇÃO"
+    linha2: "POR VÍDEO"
+    cor: vermelho
+    destaque: {titulo: "CARO", texto: "horas ou\neditor pago\npor vídeo", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "Homem de uns 40 anos cansado diante de um computador com uma linha do tempo de edição de vídeo cheia de trilhas coloridas, numa escrivaninha clara de dia; ao lado, um relógio de mesa marcando muitas horas, xícaras de café vazias e uma pilha de notas de dinheiro. Luz natural da janela, toques vermelhos, ambiente iluminado."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "aberto, de graça, qualquer um usa"
+    por_que: "derruba a objeção do preço e do 'isso não é pra mim'"
+    ancora: melhor
+    linha1: "ABERTO"
+    linha2: "E DE GRAÇA"
+    destaque: {titulo: "GRÁTIS", texto: "qualquer um\npode usar"}
+    camera: push
+    foco: [0.5, 0.45]
+    cena: "Um baú de madeira aberto sobre uma mesa clara de dia, com luz da janela; de dentro sai uma luz dourada e peças de vídeo flutuando: claquete, rolo de filme, um pequeno microfone e um smartphone vertical. Várias mãos de pessoas diferentes se aproximam para pegar as peças. Cores quentes, bem iluminado."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "o reel7etapas: 7 gatilhos, do gancho ao comentário"
+    por_que: "dá nome ao projeto e mostra o que o agente faz, em verbos"
+    ancora: chama
+    linha1: "7 GATILHOS"
+    linha2: "DO GANCHO AO COMENTÁRIO"
+    destaque: {titulo: "O AGENTE", texto: "escreve, gera,\ncoloca o avatar\ne confere"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Uma escada de sete degraus dourados e iluminados subindo na diagonal numa sala clara de dia, com luz da janela; em cada degrau um pequeno ícone diferente brilhando (um anzol, um coração, um escudo, uma pena, uma lâmpada, uma estrela e um balão de comentário). No topo, um smartphone vertical brilhando. Visual limpo, cores quentes, sem letras."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "dez vídeos em dois dias"
+    por_que: "prova de escala com número conferido no próprio projeto"
+    ancora: dias
+    linha1: "10 VÍDEOS"
+    linha2: "EM 2 DIAS"
+    destaque: {titulo: "ESCALA", texto: "da ideia\nao vídeo\npublicado"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Uma parede clara de estúdio de dia, com luz da janela, coberta por uma grade de dez smartphones verticais pendurados lado a lado, cada um tocando um vídeo curto diferente e colorido; uma pessoa ao centro, de costas, olha para a parede com os braços abertos, comemorando. Cores quentes, ambiente bem iluminado."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (o site) e uma ação pequena: comentar VIRAL"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "cursos e\nprojetos\nabertos"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia, com luz da janela. Na tela do celular, no alto, um vídeo vertical com uma escada de sete degraus dourados; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada, cores quentes."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "VIRAL", linha2: "que eu te mando o link"}
+legenda_envio: "FAÇA VÍDEOS VIRAIS DIRETO, EM ESCALA — reel sobre o próprio reel7etapas (r7e): uma ideia vira vídeo viral em 7 etapas, aberto e de graça; 10 vídeos em 2 dias."
+canal: lives1
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner) sobre o projeto aberto reel7etapas: você manda uma ideia e recebe um vídeo viral pronto, em escala. Modelo com 7 gatilhos (gancho, desejo, medo, facilidade, descoberta, benefício, comentário); o agente escreve o roteiro, gera as imagens, coloca o avatar e confere tudo antes de publicar. Projeto aberto e gratuito (MIT), qualquer um pode usar: github.com/inematds/reel7etapas e guia https://inematds.github.io/reel7etapas/guia/. Em dois dias saíram 10 vídeos com ele. CTA: tudo no inema.club ou comente VIRAL. Título com gancho forte (ex.: 'Faça vídeos VIRAIS direto, em escala'), com #shorts."
+youtube_20261012: https://www.youtube.com/shorts/BWMvag01rSA
