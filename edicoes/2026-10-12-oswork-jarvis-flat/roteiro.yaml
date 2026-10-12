@@ -1,0 +1,142 @@
+tema: Antes do seu Jarvis, aprenda o OSWork (versão ilustrada)
+data: 12/10/2026
+palavra: OSWORK
+fala: 'Quer ter o seu próprio Jarvis? Então faz isso antes. Imagina um assistente que trabalha por você, dentro do seu computador. Só que muita gente tenta montar direto, trava logo no começo, perde horas
+  e desiste. E o melhor: não precisa ser programador! Primeiro, aprende o OSWork: você abre o terminal, cria a pasta do projeto, coloca o Claude Code ou o Codex para trabalhar nela, guarda tudo no GitHub
+  e sobe para um servidor. Depois disso, montar o seu Jarvis fica fácil, porque você já sabe onde cada coisa mora. E o curso é de graça. Tá tudo no inema ponto club. Ou comenta OSWORK que eu te mando o
+  link.
+
+  '
+etapas:
+- id: gancho
+  nome: GANCHO
+  gatilho: o passo que vem antes do resultado desejado
+  por_que: 'quem quer um Jarvis para na hora: tem algo que eu preciso fazer antes?'
+  capa:
+    linha1: SEU JARVIS
+    linha2: COMEÇA AQUI
+    sub: APRENDA ISSO ANTES!
+  camera: push
+  foco:
+  - 0.5
+  - 0.6
+  cena: Pessoa ilustrada em traço plano sentada com um notebook, e acima dela um balão de pensamento com uma esfera dourada de assistente.
+- id: desejo
+  nome: DESEJO
+  gatilho: um assistente que trabalha por você
+  por_que: a pessoa se imagina com ajuda dentro do próprio computador
+  ancora: assistente
+  linha1: UM ASSISTENTE
+  linha2: SÓ SEU
+  destaque:
+    titulo: 24 H
+    texto: 'trabalhando
+
+      por você'
+  camera: pull
+  foco:
+  - 0.5
+  - 0.5
+  cena: Uma tela de computador ilustrada com uma pessoinha dentro organizando pastas, ao lado de uma xícara de café.
+- id: medo
+  nome: MEDO
+  gatilho: travar no começo e desistir
+  por_que: quase todo mundo já tentou algo técnico e travou; medo de perder horas
+  ancora: muita
+  linha1: TRAVA NO COMEÇO
+  linha2: E DESISTE
+  cor: vermelho
+  destaque:
+    titulo: HORAS
+    texto: 'perdidas
+
+      sem sair
+
+      do lugar'
+    cor: vermelho
+  camera: pan_dir
+  foco:
+  - 0.5
+  - 0.5
+  cena: Pessoa ilustrada sentada no chão cercada de cabos embolados e um notebook com ponto de exclamação vermelho grande, expressão cansada.
+- id: facilidade
+  nome: FACILIDADE
+  gatilho: não precisa ser programador
+  por_que: derruba a objeção que faz a pessoa desistir antes de tentar
+  ancora: melhor
+  linha1: NÃO PRECISA SER
+  linha2: PROGRAMADOR
+  destaque:
+    titulo: PASSO A PASSO
+    texto: 'comando por
+
+      comando'
+  camera: push
+  foco:
+  - 0.5
+  - 0.42
+  cena: Mulher ilustrada sorridente com um notebook mostrando uma janela de terminal com poucas linhas, e um caderno aberto ao lado.
+- id: descoberta
+  nome: DESCOBERTA
+  gatilho: 'existe um caminho: o OSWork'
+  por_que: dá nome à solução e mostra os passos em verbos simples
+  ancora: primeiro
+  linha1: APRENDA
+  linha2: O OSWORK
+  destaque:
+    titulo: VOCÊ
+    texto: 'abre o terminal
+
+      cria a pasta
+
+      GitHub · servidor'
+  camera: sobe
+  foco:
+  - 0.5
+  - 0.48
+  cena: 'Escada ilustrada de quatro degraus subindo para a direita, cada degrau com um ícone simples: terminal, pasta, nuvem, servidor.'
+- id: beneficio
+  nome: BENEFÍCIO
+  gatilho: depois, o Jarvis fica fácil
+  por_que: 'fecha a imagem do resultado: a base pronta para o assistente'
+  ancora: depois
+  linha1: AÍ O JARVIS
+  linha2: FICA FÁCIL
+  destaque:
+    titulo: BASE
+    texto: 'você sabe onde
+
+      cada coisa mora'
+  camera: pan_esq
+  foco:
+  - 0.45
+  - 0.45
+  cena: Pessoa ilustrada caminhando tranquila olhando o celular com balões de mensagem, um notebook com checks verdes atrás.
+- id: comentario
+  nome: COMENTÁRIO
+  gatilho: grátis no inema.club ou uma palavra para comentar
+  por_que: 'dá o caminho (o site) e uma ação pequena e fácil: comentar uma palavra'
+  ancora: curso
+  linha1: CURSO GRÁTIS NO
+  linha2: INEMA.CLUB
+  destaque:
+    titulo: GRÁTIS
+    texto: 'OSWork
+
+      do zero'
+  camera: push
+  foco:
+  - 0.5
+  - 0.5
+  cena: Celular ilustrado grande na vertical com uma tela de vídeo e corações e balões de comentário saindo dele.
+cta:
+  ancora: comenta
+  linha1: ou comenta
+  palavra: OSWORK
+  linha2: que eu te mando o link
+legenda_envio: ANTES DO SEU JARVIS, APRENDA O OSWORK — versão ilustrada (mesma fala, outra apresentação). Curso grátis no inema.club.
+canal: lives1
+layout: invertido
+estilo: 'Ilustração editorial vetorial plana (flat design), formas geométricas simples, paleta clara com âmbar, laranja, azul-petróleo e creme, vertical 9:16, fundo claro. COMPOSIÇÃO OBRIGATÓRIA: o assunto
+  principal fica no LADO DIREITO da imagem, entre 45% e 75% da altura; a parte de cima e o lado esquerdo são fundo liso e calmo. Sem texto, sem letras, sem números, sem logotipos.'
+youtube_20261012: https://www.youtube.com/shorts/2o42FwJwSJg

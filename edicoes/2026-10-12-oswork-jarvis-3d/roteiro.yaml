@@ -1,0 +1,142 @@
+tema: Antes do seu Jarvis, aprenda o OSWork (versão animação 3D)
+data: 12/10/2026
+palavra: OSWORK
+fala: 'Quer ter o seu próprio Jarvis? Então faz isso antes. Imagina um assistente que trabalha por você, dentro do seu computador. Só que muita gente tenta montar direto, trava logo no começo, perde horas
+  e desiste. E o melhor: não precisa ser programador! Primeiro, aprende o OSWork: você abre o terminal, cria a pasta do projeto, coloca o Claude Code ou o Codex para trabalhar nela, guarda tudo no GitHub
+  e sobe para um servidor. Depois disso, montar o seu Jarvis fica fácil, porque você já sabe onde cada coisa mora. E o curso é de graça. Tá tudo no inema ponto club. Ou comenta OSWORK que eu te mando o
+  link.
+
+  '
+etapas:
+- id: gancho
+  nome: GANCHO
+  gatilho: o passo que vem antes do resultado desejado
+  por_que: 'quem quer um Jarvis para na hora: tem algo que eu preciso fazer antes?'
+  capa:
+    linha1: SEU JARVIS
+    linha2: COMEÇA AQUI
+    sub: APRENDA ISSO ANTES!
+  camera: push
+  foco:
+  - 0.5
+  - 0.6
+  cena: Personagem 3D simpático de uns 40 anos sentado diante de um notebook numa mesa de madeira, sorrindo; sobre o notebook flutua uma pequena esfera dourada brilhante como um assistente.
+- id: desejo
+  nome: DESEJO
+  gatilho: um assistente que trabalha por você
+  por_que: a pessoa se imagina com ajuda dentro do próprio computador
+  ancora: assistente
+  linha1: UM ASSISTENTE
+  linha2: SÓ SEU
+  destaque:
+    titulo: 24 H
+    texto: 'trabalhando
+
+      por você'
+  camera: pull
+  foco:
+  - 0.5
+  - 0.5
+  cena: Um pequeno assistente 3D de terno saindo da tela de um monitor e carregando uma pilha de pastas coloridas para o personagem, que sorri.
+- id: medo
+  nome: MEDO
+  gatilho: travar no começo e desistir
+  por_que: quase todo mundo já tentou algo técnico e travou; medo de perder horas
+  ancora: muita
+  linha1: TRAVA NO COMEÇO
+  linha2: E DESISTE
+  cor: vermelho
+  destaque:
+    titulo: HORAS
+    texto: 'perdidas
+
+      sem sair
+
+      do lugar'
+    cor: vermelho
+  camera: pan_dir
+  foco:
+  - 0.5
+  - 0.5
+  cena: Personagem 3D frustrado com as mãos na cabeça diante de um notebook com uma grande janela vermelha de erro; nuvenzinha de tempestade sobre a cabeça.
+- id: facilidade
+  nome: FACILIDADE
+  gatilho: não precisa ser programador
+  por_que: derruba a objeção que faz a pessoa desistir antes de tentar
+  ancora: melhor
+  linha1: NÃO PRECISA SER
+  linha2: PROGRAMADOR
+  destaque:
+    titulo: PASSO A PASSO
+    texto: 'comando por
+
+      comando'
+  camera: push
+  foco:
+  - 0.5
+  - 0.42
+  cena: Personagem 3D de uns 55 anos, cabelo grisalho, confiante, digitando num notebook com uma janela de terminal simples; caderno e xícara ao lado.
+- id: descoberta
+  nome: DESCOBERTA
+  gatilho: 'existe um caminho: o OSWork'
+  por_que: dá nome à solução e mostra os passos em verbos simples
+  ancora: primeiro
+  linha1: APRENDA
+  linha2: O OSWORK
+  destaque:
+    titulo: VOCÊ
+    texto: 'abre o terminal
+
+      cria a pasta
+
+      GitHub · servidor'
+  camera: sobe
+  foco:
+  - 0.5
+  - 0.48
+  cena: Caminho de pedras 3D saindo de um notebook com terminal e passando por uma pasta, uma nuvem e um pequeno servidor dourados, como degraus de uma trilha.
+- id: beneficio
+  nome: BENEFÍCIO
+  gatilho: depois, o Jarvis fica fácil
+  por_que: 'fecha a imagem do resultado: a base pronta para o assistente'
+  ancora: depois
+  linha1: AÍ O JARVIS
+  linha2: FICA FÁCIL
+  destaque:
+    titulo: BASE
+    texto: 'você sabe onde
+
+      cada coisa mora'
+  camera: pan_esq
+  foco:
+  - 0.45
+  - 0.45
+  cena: Personagem 3D feliz no sofá conversando com o celular, que mostra balões de mensagem; ao lado o notebook com uma lista de checks verdes.
+- id: comentario
+  nome: COMENTÁRIO
+  gatilho: grátis no inema.club ou uma palavra para comentar
+  por_que: 'dá o caminho (o site) e uma ação pequena e fácil: comentar uma palavra'
+  ancora: curso
+  linha1: CURSO GRÁTIS NO
+  linha2: INEMA.CLUB
+  destaque:
+    titulo: GRÁTIS
+    texto: 'OSWork
+
+      do zero'
+  camera: push
+  foco:
+  - 0.5
+  - 0.5
+  cena: Mão 3D segurando um celular com uma tela de vídeo e uma área de comentários cheia de corações e balões coloridos, sem letras.
+cta:
+  ancora: comenta
+  linha1: ou comenta
+  palavra: OSWORK
+  linha2: que eu te mando o link
+legenda_envio: ANTES DO SEU JARVIS, APRENDA O OSWORK — versão animação 3D (mesma fala, outra apresentação). Curso grátis no inema.club.
+canal: lives1
+layout: dividido
+estilo: 'Ilustração 3D estilo filme de animação (personagens 3D simpáticos, materiais macios, cores vivas e alegres), vertical 9:16, ambiente CLARO de dia com luz suave. COMPOSIÇÃO OBRIGATÓRIA: o assunto
+  principal fica inteiro entre 40% e 70% da altura; o terço de cima é fundo calmo (parede, céu, janela) porque ali entra o título. Sem texto, sem letras, sem números, sem logotipos, sem robôs.'
+youtube_20261012: https://www.youtube.com/shorts/K0iVpTUeqzI

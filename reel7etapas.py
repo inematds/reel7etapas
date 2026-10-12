@@ -64,10 +64,26 @@ def falha(portao, msg):
     sys.exit(f"[reel7etapas] PORTÃO '{portao}' REPROVOU: {msg}")
 
 
+# ---- layouts (roteiro 'layout:'): onde ficam a imagem da etapa, o avatar, a manchete, o cartão e a legenda.
+# 'padrao' é o original. Nos outros, a capa (etapa 1) continua em tela cheia e o layout entra na etapa 2.
+LAYOUTS = {
+    "dividido":  dict(img=(0, 0, 1080, 1100), av=(0, 1100, 1080, 820), forma="ret", head_y=66, card=(65, 590, 640, 998), leg_y=1050),
+    "invertido": dict(img=(0, 880, 1080, 1040), av=(0, 0, 1080, 880), forma="ret", head_y=895, card=(65, 1280, 640, 1688), leg_y=1742),
+    "circulo":   dict(img=None, av=(290, 1270, 500, 500), forma="circulo", head_y=66, card=(65, 640, 640, 1048), leg_y=1180),
+}
+LAY = None          # layout ativo (None = padrão)
+
+
 def carregar(pasta):
+    global ESTILO, LAY, HEAD_Y, LEG_Y, CARD
     r = rc.carregar(pasta)
     if len(r.get("etapas") or []) != 7:
         falha("roteiro", "o roteiro precisa de exatamente 7 etapas")
+    if r.get("estilo"):
+        ESTILO = r["estilo"].strip()
+    if r.get("layout", "padrao") != "padrao":
+        LAY = LAYOUTS[r["layout"]]
+        HEAD_Y, LEG_Y, CARD = LAY["head_y"], LAY["leg_y"], LAY["card"]
     return r
 
 
@@ -283,18 +299,34 @@ class Fundo:
         return im, z, cx, cy
 
     @staticmethod
-    def _render(im, z, cx, cy):
-        k = max(W / im.width, H / im.height) * z
-        ww, hh = W / k, H / k
+    def _render(im, z, cx, cy, tam=(W, H)):
+        w, h = tam
+        k = max(w / im.width, h / im.height) * z
+        ww, hh = w / k, h / k
         x0 = min(max(0, cx * im.width - ww / 2), im.width - ww); y0 = min(max(0, cy * im.height - hh / 2), im.height - hh)
-        return im.transform((W, H), Image.AFFINE, (1 / k, 0, x0, 0, 1 / k, y0), resample=Image.BICUBIC)
+        return im.transform((w, h), Image.AFFINE, (1 / k, 0, x0, 0, 1 / k, y0), resample=Image.BICUBIC)
+
+    def _tela(self, i, t):
+        """quadro da etapa i: tela cheia (padrão e capa) ou a imagem dentro da caixa do layout, com degradê próprio"""
+        if LAY is None or LAY["img"] is None or i == 0:
+            im = self._render(*self._janela(i, t)).convert("RGBA"); im.alpha_composite(self.grad); return im
+        x, y, w, h = LAY["img"]
+        if not hasattr(self, "grad_box"):
+            g = Image.new("RGBA", (w, h), (0, 0, 0, 0)); d = ImageDraw.Draw(g)
+            for yy in range(min(h, 480)):
+                d.line((0, yy, w, yy), fill=(0, 0, 0, int(200 * (1 - yy / 480) ** 1.3)))
+            for yy in range(max(0, h - 360), h):
+                d.line((0, yy, w, yy), fill=(0, 0, 0, int(215 * ((yy - (h - 360)) / 360) ** 1.2)))
+            self.grad_box = g
+        tela = Image.new("RGBA", (W, H), (8, 10, 14, 255))
+        im = self._render(*self._janela(i, t), tam=(w, h)).convert("RGBA"); im.alpha_composite(self.grad_box)
+        tela.paste(im, (x, y)); return tela
 
     def quadro(self, t):
         i = self.L.etapa(t)
-        im = self._render(*self._janela(i, t))
+        im = self._tela(i, t)
         if i > 0 and t - self.L.ini[i] < XF:
-            im = Image.blend(self._render(*self._janela(i - 1, t)), im, ease((t - self.L.ini[i]) / XF))
-        im = im.convert("RGBA"); im.alpha_composite(self.grad)
+            im = Image.blend(self._tela(i - 1, t), im, ease((t - self.L.ini[i]) / XF))
         return im
 
     def cortes(self):
@@ -486,6 +518,9 @@ class Desenho:
         f = fnt(MXB, 30)
         d.text((SAFE[0], SAFE[1] + 4), "INEMA.CLUB", font=f, fill=BRANCO + (220,))
         self._reg(t, "marca", (SAFE[0], SAFE[1] + 4, SAFE[0] + f.getlength("INEMA.CLUB"), SAFE[1] + 36))
+        if LAY is not None and LAY["forma"] == "circulo" and i > 0:      # aro dourado do avatar redondo
+            ax, ay, aw, ah = LAY["av"]
+            d.ellipse((ax - 10, ay - 10, ax + aw + 10, ay + ah + 10), fill=AMB + (255,))
         tt = t
         if i == 0:
             self.manchete(im, d, tt, e, 0.0, capa=True)
@@ -579,15 +614,28 @@ def cmd_montar(pasta):
     loudnorm(mix, B / "mix_norm.wav")
     # avatar: entra subindo na etapa 2, fica até o fim (último quadro congelado)
     crop = rc.recorte_rosto(r); i0 = L.ini[1]
+    ax, ay, aw, ah = (AVX, AVY, AVW, AVH) if LAY is None else LAY["av"]
+    if LAY is not None:                     # recorte na proporção da caixa do layout, centrado no rosto achado
+        cw0, ch0, x00 = (int(v) for v in crop.split(":")[:3]); centro = x00 + cw0 / 2
+        vw, vh = (int(v) for v in subprocess.check_output(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height",
+                                            "-of", "csv=p=0", str(r["_av"])], text=True).strip().split(","))
+        ch = vh; cw = int(round(ch * aw / ah))
+        if cw > vw:
+            cw = vw; ch = int(round(vw * ah / aw))
+        crop = f"{cw}:{ch}:{int(max(0, min(vw - cw, centro - cw / 2)))}:0"
     tag = B / "tag.txt"; tag.write_text(r.get("tag", "NEI MALDANER  |  INEMA"))
-    yexp = f"if(lt(t,{i0 + 0.35:.2f}),{AVY}+(1-(t-{i0:.2f})/0.35)*140,{AVY})"
+    yexp = f"if(lt(t,{i0 + 0.35:.2f}),{ay}+(1-(t-{i0:.2f})/0.35)*140,{ay})" if (LAY is None or LAY["forma"] == "ret") else str(ay)
     en = f"gte(t,{i0:.2f})"
-    fc = (f"[1:v]trim=start={i0:.3f},setpts=PTS-STARTPTS+{i0:.3f}/TB,crop={crop},scale={AVW}:{AVH},setsar=1,fps={FPS},"
-          f"tpad=stop_mode=clone:stop_duration=10,"
-          f"drawbox=x=0:y=0:w=iw:h=ih:color=0xE2A23B@1:t=6,"
-          f"drawbox=x=6:y={AVH - 44}:w={AVW - 12}:h=38:color=0x0b0f14@0.85:t=fill,"
-          f"drawtext=fontfile={DEJAVU}:textfile={tag}:x=18:y={AVH - 34}:fontsize=19:fontcolor=white[av];"
-          f"[0:v][av]overlay=x={AVX}:y='{yexp}':enable='{en}':eof_action=repeat,format=yuv420p[v]")
+    if LAY is not None and LAY["forma"] == "circulo":
+        mask = B / "mascara.png"; mk = Image.new("L", (aw, ah), 0); ImageDraw.Draw(mk).ellipse((0, 0, aw - 1, ah - 1), fill=255); mk.save(mask)
+        moldura = f"format=rgba[avr];movie={mask},format=gray,scale={aw}:{ah}[mk];[avr][mk]alphamerge[av];"
+    else:
+        moldura = (f"drawbox=x=0:y=0:w=iw:h=ih:color=0xE2A23B@1:t=6,"
+                   f"drawbox=x=6:y={ah - 44}:w={aw - 12}:h=38:color=0x0b0f14@0.85:t=fill,"
+                   f"drawtext=fontfile={DEJAVU}:textfile={tag}:x=18:y={ah - 34}:fontsize=19:fontcolor=white[av];")
+    fc = (f"[1:v]trim=start={i0:.3f},setpts=PTS-STARTPTS+{i0:.3f}/TB,crop={crop},scale={aw}:{ah},setsar=1,fps={FPS},"
+          f"tpad=stop_mode=clone:stop_duration=10,{moldura}"
+          f"[0:v][av]overlay=x={ax}:y='{yexp}':enable='{en}':eof_action=repeat,format=yuv420p[v]")
     saida = r["_dir"] / "video.mp4"
     run(["ffmpeg", "-v", "error", "-y", "-i", base, "-i", r["_av"], "-i", B / "mix_norm.wav", "-filter_complex", fc,
          "-map", "[v]", "-map", "2:a", "-t", f"{L.total:.3f}", "-c:v", "libx264", "-crf", "20", "-preset", "slow", "-r", str(FPS),
