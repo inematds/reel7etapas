@@ -10,7 +10,7 @@ etapas:
     nome: GANCHO
     gatilho: "uma loucura que explode a mente"
     por_que: "choque e novidade antes de dizer qual tecnologia; a promessa vem na frase seguinte"
-    capa: {linha1: "EXPLODE A MENTE", linha2: "E MUDA TUDO", sub: "COPIE QUALQUER SOFTWARE"}
+    capa: {ganho: "O SEU PRÓPRIO SOFTWARE, SEM PAGAR ASSINATURA", linha1: "EXPLODE A MENTE", linha2: "E MUDA TUDO", sub: "COPIE QUALQUER SOFTWARE"}
     camera: push
     foco: [0.5, 0.5]
     cena: "Homem de uns 45 anos sentado diante de um notebook numa sala clara de dia, com luz do sol entrando pela janela, levando as duas mãos à cabeça, boquiaberto e espantado. Da tela do notebook saem, como uma explosão suave, dezenas de pequenas janelas de aplicativos, botões e ícones coloridos voando no ar em volta dele. Cores quentes, ambiente bem iluminado."

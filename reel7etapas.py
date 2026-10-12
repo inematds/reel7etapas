@@ -37,9 +37,9 @@ EXEMPLO = RAIZ / "edicoes/2026-10-11-jarvis/roteiro.yaml"
 # ---- geometria: tudo que é texto ou caixa precisa caber em SAFE (x0, y0, x1, y1)
 SAFE = (65, 24, 950, 1790)
 HEAD_Y = 66                                  # topo da manchete (colada no alto: não cobre a cena)
-LEG_Y = 1280                                  # centro vertical da legenda
-AVX, AVY, AVW, AVH = 700, 1362, 360, 408      # avatar (embaixo à direita; pode ficar sob os botões da plataforma)
-CARD = (65, 1362, 680, 1770)                  # destaque / CTA à esquerda do avatar
+LEG_Y = 1220                                  # centro vertical da legenda
+AVX, AVY, AVW, AVH = 700, 1300, 360, 408      # avatar (embaixo à direita; 12/10: subiu 62 px a pedido do Nei)
+CARD = (65, 1300, 680, 1708)                  # destaque / CTA à esquerda do avatar (acompanha o avatar)
 LEG_MIN, HEAD_MIN = 64, 80                    # fonte mínima (px)
 MAX_PAL, MAX_CAR = 3, 22                      # legenda
 MUDA_MAX = 3.3                                # imagem muda (corte de enquadramento) a cada ≤ 3,3 s
@@ -363,6 +363,28 @@ class Desenho:
         d.rounded_rectangle(bb, 20, fill=rgb_fundo + (a,))
         d.text(((bb[0] + bb[2]) / 2, (bb[1] + bb[3]) / 2), s, font=f, fill=rgb_txt + (a,), anchor="mm")
 
+    def ganho(self, d, s):
+        """quadro 0: faixa no topo com o que a pessoa ganha (pedido do Nei 12/10); até 2 linhas, fixa (sem animar)"""
+        larg = SAFE[2] - SAFE[0] - 70; tam = 104
+        linhas = [s]
+        while tam > HEAD_MIN and fnt(ANTON, tam).getlength(s) > larg:
+            tam -= 2
+        if fnt(ANTON, tam).getlength(s) > larg and " " in s:
+            tam = 104; ws = s.split()
+            k = min(range(1, len(ws)), key=lambda k: max(fnt(ANTON, tam).getlength(" ".join(ws[:k])), fnt(ANTON, tam).getlength(" ".join(ws[k:]))))
+            linhas = [" ".join(ws[:k]), " ".join(ws[k:])]
+            while tam > HEAD_MIN and max(fnt(ANTON, tam).getlength(l) for l in linhas) > larg:
+                tam -= 2
+        f = fnt(ANTON, tam); alt = int(tam * 1.12)
+        y0 = HEAD_Y + 4; y1 = y0 + 36 + alt * len(linhas)
+        d.rounded_rectangle((SAFE[0], y0, SAFE[2], y1), 26, fill=AMB + (245,))
+        y = y0 + 18
+        for ln in linhas:
+            cx = (SAFE[0] + SAFE[2]) / 2
+            bb = d.textbbox((cx, y), ln, font=f, anchor="ma")
+            self._reg(0.0 if self._t is not None else None, "ganho", bb, tam)
+            d.text((cx, y), ln, font=f, fill=ESC + (255,), anchor="ma"); y += alt
+
     def manchete(self, base, d, t, e, t0, capa=False):
         if capa:
             c = e["capa"]; y = c.get("y", 880); cx = (SAFE[0] + SAFE[2]) / 2   # capa sem avatar: texto embaixo, cena visível
@@ -371,6 +393,8 @@ class Desenho:
             h2 = self.linha(base, t, t0, cx, y, c["linha2"], ANTON, 172, AMB, SAFE[2] - SAFE[0] - 30, "capa2", anim=False, centro=True)
             if c.get("sub"):
                 self.chip(base, d, t + 1, t0, cx, y + h2 + 46, c["sub"], "capa-sub", centro=True, tam=60)
+            if c.get("ganho"):
+                self.ganho(d, c["ganho"])
             return
         y = HEAD_Y
         h1 = self.linha(base, t, t0, SAFE[0], y, e["linha1"], ANTON, 128, BRANCO, SAFE[2] - SAFE[0], "manchete1")
