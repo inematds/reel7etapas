@@ -1,0 +1,89 @@
+# reel7etapas — edição 2026-10-12-rea-servidor (refaz provocativo de Vkcm5k7BtXw: o REA lê o app, não o servidor)
+tema: "O REA lê o app do seu banco, mas não o servidor"
+data: "12/10/2026"
+palavra: SERVIDOR
+fala: |
+  O REA consegue ler o aplicativo do seu banco. E mesmo assim não tira um centavo da sua conta. Imagina entender como qualquer aplicativo funciona por dentro. Tem gente com medo, achando que acabou o segredo de tudo. E o melhor: o que roda no servidor ele não alcança. Saldo, senha e transferência são decididos lá. O REA é uma ferramenta aberta que desmonta o que está no seu aparelho e mostra a prova. Quem deixa chave e regra dentro do app se expõe. Quem põe no servidor dorme tranquilo. Tá tudo no inema ponto club. Ou comenta SERVIDOR que eu te mando o link.
+# Fatos: README do morluto/rea 6.4.0 (alvos: binários, JavaScript/Electron, sites, capturas de rede, APK, firmware — tudo local, no aparelho);
+# o código do servidor não é entregue ao cliente. Ideia central do vídeo-fonte: "lê o app do banco, não mexe no banco".
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "ele lê o app do seu banco e não tira um centavo"
+    por_que: "provocação (medo do banco) com virada imediata (o servidor protege)"
+    capa: {ganho: "O REA LÊ O APP. O SERVIDOR, NÃO.", linha1: "ELE LÊ O APP", linha2: "DO SEU BANCO", sub: "E NÃO TIRA UM CENTAVO"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Smartphone em pé sobre uma mesa branca de escritório de dia, com luz neutra da janela; a tela do celular mostra um aplicativo bancário genérico, sem marca, e por cima dele uma lupa grande de vidro revela por trás da tela um emaranhado de peças e circuitos azuis; ao fundo, desfocado, um cofre de aço fechado e intacto. Cores neutras, azul e cinza, sem letras legíveis."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "entender qualquer app por dentro"
+    por_que: "a curiosidade de quem cria produto: ver como os outros fizeram"
+    ancora: imagina
+    linha1: "ENTENDA QUALQUER APP"
+    linha2: "POR DENTRO"
+    destaque: {titulo: "POR DENTRO", texto: "como cada\nbotão funciona"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Homem de uns 35 anos sentado numa mesa clara de dia, luz neutra da janela, segurando um celular na vertical; do celular sai, como num desenho técnico explodido, a estrutura do aplicativo em camadas transparentes flutuando no ar (telas, botões, engrenagens pequenas). Ele observa curioso e sorri. Cores neutras com toques de azul, sem letras."
+  - id: medo
+    nome: MEDO
+    gatilho: "acabou o segredo de tudo?"
+    por_que: "o pânico que circula nas redes, dito em voz alta"
+    ancora: medo
+    linha1: "ACABOU O SEGREDO"
+    linha2: "DE TUDO?"
+    cor: vermelho
+    destaque: {titulo: "PÂNICO", texto: "todo app\nvirou aberto?", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "Mulher de uns 40 anos preocupada olhando o celular numa sala de escritório clara de dia, luz fria da janela; atrás dela, uma parede de vidro com um cadeado grande aberto pendurado e alertas vermelhos brilhando em telas desfocadas. Toques vermelhos, ambiente bem iluminado, sem letras legíveis."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "o servidor ele não alcança"
+    por_que: "derruba o medo: quem decide saldo, senha e transferência é o servidor"
+    ancora: melhor
+    linha1: "O SERVIDOR"
+    linha2: "ELE NÃO ALCANÇA"
+    destaque: {titulo: "NO SERVIDOR", texto: "saldo, senha\ne transferência"}
+    camera: push
+    foco: [0.5, 0.45]
+    cena: "Sala de servidores limpa e bem iluminada de dia, corredor de racks metálicos com luzes azuis, atrás de uma porta de vidro grossa trancada; do lado de fora da porta, um pequeno robô de oficina segura uma lupa e só consegue olhar através do vidro. Luz neutra e fria, sem letras."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "REA: ferramenta aberta que desmonta o que está no aparelho"
+    por_que: "dá o nome e o que faz, em verbos, com o limite claro (aparelho)"
+    ancora: ferramenta
+    linha1: "DESMONTA O QUE ESTÁ"
+    linha2: "NO SEU APARELHO"
+    destaque: {titulo: "COM PROVA", texto: "mostra de onde\ntirou cada\nconclusão"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Bancada de oficina clara de dia com luz neutra da janela; um notebook aberto e, ao lado, um celular desmontado com as peças organizadas em fileiras sobre um tapete de corte verde, cada peça com uma etiquetinha em branco presa por fio; uma mão segura uma pinça. Visual limpo e técnico, sem letras legíveis."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "chave e regra no servidor, dorme tranquilo"
+    por_que: "a regra prática para quem cria app"
+    ancora: chave
+    linha1: "CHAVE E REGRA"
+    linha2: "NO SERVIDOR"
+    destaque: {titulo: "PROTEGIDO", texto: "o app só\nfaz o pedido"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Desenvolvedora de uns 30 anos relaxada, encostada na cadeira com as mãos atrás da cabeça, sorrindo, num escritório claro de dia com luz neutra; no monitor, um diagrama simples de um celular ligado por uma linha a um servidor com um escudo azul. Ambiente bem iluminado, sem letras legíveis."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "o guia de como usar o REA está no site; ação pequena: comentar SERVIDOR"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "guia de como\nusar o REA"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia, com luz neutra da janela. Na tela, no alto, um vídeo vertical com um cofre de aço e um escudo azul; embaixo, a área de comentários com avatares redondos e balões de comentário, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "SERVIDOR", linha2: "que eu te mando o link"}
+legenda_envio: "O REA LÊ O APP. O SERVIDOR, NÃO. — reel provocativo: o REA lê o aplicativo do seu banco, mas saldo, senha e transferência são decididos no servidor. Chave e regra no servidor, nunca no app."
+canal: lives1
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner), tom provocativo: o REA (Reverse Engineer Anything, ferramenta aberta de engenharia reversa com agentes de IA) consegue ler o aplicativo do seu banco, mas não tira um centavo da sua conta, porque saldo, senha e transferência são decididos no servidor, e o código do servidor nunca sai de lá. O REA desmonta o que está no seu aparelho (programas, apps Android, Electron, o código que o site manda ao navegador) e mostra a prova. Lição: chave e regra de negócio no servidor, nunca dentro do app. Guia grátis de como instalar e usar o REA: https://inematds.github.io/rea-engenharia-reversa/guia/ . CTA: tudo no inema.club ou comente SERVIDOR. Título com gancho forte (ex.: 'Ele LÊ o app do seu banco... e não tira 1 centavo'), com #shorts. Não citar autores nem canais de terceiros."
+youtube_20261012: https://www.youtube.com/shorts/Wz1XZyEyFI8
