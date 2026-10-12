@@ -43,7 +43,7 @@ Se houver número na etapa Medo, com fonte.
    Whisper erra), `linha1/linha2` (curtas), `destaque` opcional `{titulo, texto, cor}`, `camera`
    (`push|pull|pan_dir|pan_esq|sobe`, alterne), `foco` [x,y] do plano fechado, `cena` (prompt em
    português, concreto, com pessoas/objetos reais — o motor já impõe estilo e composição), `gatilho`
-   e `por_que` (só no mapa). Etapa 1 usa `capa` (`ganho:` = faixa no topo do quadro 0 com o que a pessoa ganha, ex. "O SEU PRÓPRIO SOFTWARE, SEM PAGAR ASSINATURA"; em teste desde 12/10). `cta: {ancora: comenta, palavra: X, linha2: ...}`.
+   e `por_que` (só no mapa). Etapa 1 usa `capa` (`ganho:` = faixa no topo do quadro 0 com o que a pessoa ganha, ex. "O SEU PRÓPRIO SOFTWARE, SEM PAGAR ASSINATURA"; em teste desde 12/10). Se o Nei disser "o ganho é X", X vai em `capa.ganho`, em MAIÚSCULAS, curto (≤ 2 linhas). Se ele não disser, escreva você o ganho a partir da promessa do reel; nunca deixe o quadro 0 sem ganho. `cta: {ancora: comenta, palavra: X, linha2: ...}`.
 2. **Trilha (opcional):** `python3 ~/projetos/cardshorts/cardshorts.py musica edicoes/<pasta>/build/trilha.wav "<prompt>"`.
 3. **Avatar:** grave `avatar/APROVADO_HEYGEN` (frase do pedido + data). `fazer` chama o estúdio se faltar
    o `avatar/avatar.mp4` (fila de 5 min a 1 h — rode em segundo plano).
