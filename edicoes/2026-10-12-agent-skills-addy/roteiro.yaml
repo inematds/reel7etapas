@@ -1,0 +1,91 @@
+# reel7etapas — edição 2026-10-12-agent-skills-addy (refaz curto: as 25 skills do Addy Osmani, github.com/addyosmani/agent-skills)
+tema: "O cérebro de um sênior do Google, de graça"
+data: "12/10/2026"
+palavra: SKILLS
+fala: |
+  Um engenheiro com mais de quatorze anos no Google acabou de dar o cérebro dele de presente, de graça. Imagina pedir um sistema e ele sair do jeito que um profissional sênior faria: planejado, testado e revisado. O problema é que quase todo mundo recebe código que funciona hoje e quebra amanhã. E você não precisa saber programar pra mudar isso. São vinte e cinco skills que ensinam o seu agente de IA a planejar, testar, revisar e até duvidar das próprias decisões. Cento e cinco mil pessoas já marcaram com estrela. Instala só o que o projeto pede e o trabalho sai certo da primeira vez. Tá tudo no inema ponto club. Ou comenta SKILLS que eu te mando o link.
+# As 7 etapas: cada uma entra na palavra 'ancora' da fala (minúscula, sem acento) e troca imagem, câmera, manchete e destaque.
+# camera: push | pull | pan_dir | pan_esq | sobe   ·   foco: [x, y] (0–1) do plano fechado   ·   destaque: cartão à direita do avatar
+# 'gatilho' e 'por_que' não aparecem no vídeo: vão para o mapa.jpg (a explicação do modelo).
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "o cérebro de um veterano do Google, de graça"
+    por_que: "curiosidade + ganho: algo valioso de quem é referência, sem pagar"
+    capa: {linha1: "O CÉREBRO DE UM", linha2: "SÊNIOR DO GOOGLE", sub: "DE GRAÇA"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Escritório moderno de tecnologia de dia, luz do sol entrando por janelas grandes. Sobre uma mesa clara, um cérebro holográfico dourado e brilhante flutua dentro de uma caixa de presente aberta com laço, feito de pequenos cartões de luz encaixados. Ao fundo, monitores com código colorido. Cores vivas, tudo bem iluminado."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "o sistema sai como um sênior faria"
+    por_que: "a pessoa se imagina recebendo trabalho de profissional experiente"
+    ancora: imagina
+    linha1: "SAI COMO UM"
+    linha2: "SÊNIOR FARIA"
+    destaque: {titulo: "SEU SISTEMA", texto: "planejado\ntestado\nrevisado"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Mulher de uns 40 anos sentada numa sala clara de dia com café, sorrindo diante de um notebook que mostra um aplicativo bonito e pronto, com três checks verdes grandes ao lado da tela. Plantas, luz natural da janela, clima de satisfação."
+  - id: medo
+    nome: MEDO
+    gatilho: "funciona hoje, quebra amanhã"
+    por_que: "o medo de perder tempo e dinheiro com algo que desmorona"
+    ancora: problema
+    linha1: "FUNCIONA HOJE"
+    linha2: "QUEBRA AMANHÃ"
+    cor: vermelho
+    destaque: {titulo: "SEM TESTE", texto: "sem revisão\nsem plano", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.55]
+    cena: "Homem de uns 35 anos num escritório claro de dia, mãos na cabeça, olhando um monitor com uma tela de erro vermelha e um aplicativo quebrado em pedaços; sobre a mesa, uma torre de blocos de montar desabando. Luz da janela, expressão de frustração."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa saber programar"
+    por_que: "derruba a objeção de que isso é só para programador"
+    ancora: precisa
+    linha1: "NÃO PRECISA"
+    linha2: "SABER PROGRAMAR"
+    destaque: {titulo: "VOCÊ PEDE", texto: "ele segue\no método\ndo sênior"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Senhor de uns 55 anos sentado à mesa da cozinha clara de dia com um notebook, digitando um pedido simples numa janela de conversa e sorrindo tranquilo. Xícara de café, luz do sol pela janela, rosto bem iluminado."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "25 skills que ensinam o agente a planejar, testar, revisar e duvidar"
+    por_que: "dá nome à solução e mostra o que ela faz em verbos simples"
+    ancora: vinte
+    linha1: "25 SKILLS"
+    linha2: "GRÁTIS"
+    destaque: {titulo: "ENSINAM A", texto: "testar\nrevisar\nduvidar"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Mesa clara de escritório de dia vista de cima, com vinte e cinco cartões brilhantes organizados em grade, cada um com um pequeno ícone (lupa, escudo, check, engrenagem, ponto de interrogação), e um pequeno robô amigável pegando um cartão. Luz natural, visual limpo e colorido."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "certo da primeira vez"
+    por_que: "fecha a imagem do resultado: trabalho que não precisa ser refeito"
+    ancora: instala
+    linha1: "CERTO DA"
+    linha2: "PRIMEIRA VEZ"
+    destaque: {titulo: "105 MIL", texto: "estrelas\nno GitHub"}
+    camera: pan_esq
+    foco: [0.45, 0.45]
+    cena: "Equipe pequena de três pessoas de idades variadas num escritório claro de dia comemorando diante de uma tela grande com um painel todo verde e um foguete decolando. Sol entrando pela janela, clima de vitória."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (o site) e uma ação pequena e fácil: comentar uma palavra"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "cursos para\ncriar suas\nskills"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia, janela ao fundo desfocada. Na tela do celular, no alto, um vídeo vertical mostrando cartões dourados brilhantes sobre código colorido; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada."
+# CTA (entra na palavra 'ancora' da última etapa).
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "SKILLS", linha2: "que eu te mando o link"}
+legenda_envio: "O CÉREBRO DE UM SÊNIOR DO GOOGLE, DE GRAÇA — reel no modelo de 7 etapas (refaz curto: as 25 skills do Addy Osmani)."
+canal: lives4
+youtube_20261012: https://www.youtube.com/shorts/ViO6SUHwBNo
+youtube_20261012: https://www.youtube.com/shorts/ViO6SUHwBNo
