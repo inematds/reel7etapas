@@ -81,10 +81,11 @@ LAYOUTS = {
     "circulo":   dict(img=None, av=(290, 1270, 500, 500), forma="circulo", head_y=66, card=(65, 640, 640, 1048), leg_y=1180),
 }
 LAY = None          # layout ativo (None = padrão)
+AV_CAPA = True      # avatar já no quadro 0 (pedido do Nei 12/10: o rosto dele é autoridade); capa.avatar: false desliga
 
 
 def carregar(pasta):
-    global ESTILO, LAY, HEAD_Y, LEG_Y, CARD
+    global ESTILO, LAY, HEAD_Y, LEG_Y, CARD, AV_CAPA
     r = rc.carregar(pasta)
     if len(r.get("etapas") or []) != 7:
         falha("roteiro", "o roteiro precisa de exatamente 7 etapas")
@@ -93,6 +94,7 @@ def carregar(pasta):
     if r.get("layout", "padrao") != "padrao":
         LAY = LAYOUTS[r["layout"]]
         HEAD_Y, LEG_Y, CARD = LAY["head_y"], LAY["leg_y"], LAY["card"]
+    AV_CAPA = (r["etapas"][0].get("capa") or {}).get("avatar", True) is not False
     return r
 
 
@@ -366,6 +368,14 @@ class Fundo:
 
 
 # ======================================================================= camada de texto
+def _alt_linha(s, fonte, tam_max, larg):
+    """altura que Desenho.linha vai usar para s (mesmo encolhimento de fonte)"""
+    tam = tam_max
+    while tam > 40 and fnt(fonte, tam).getlength(s) > larg:
+        tam -= 2
+    f = fnt(fonte, tam); return f.getbbox("Ág")[3] - f.getbbox("Ág")[1]
+
+
 class Desenho:
     def __init__(self, r, L, blocos):
         self.r, self.L, self.blocos = r, L, blocos
@@ -451,7 +461,16 @@ class Desenho:
 
     def manchete(self, base, d, t, e, t0, capa=False):
         if capa:
-            c = e["capa"]; y = c.get("y", 880); cx = (SAFE[0] + SAFE[2]) / 2   # capa sem avatar: texto embaixo, cena visível
+            c = e["capa"]; y = c.get("y", 880); cx = (SAFE[0] + SAFE[2]) / 2   # texto embaixo, cena visível
+            if AV_CAPA:                        # avatar no quadro 0 (caixa do padrão): o bloco de texto sobe até caber acima dele
+                larg = SAFE[2] - SAFE[0] - 30
+                alt = sum(_alt_linha(c[k], ANTON, 172, larg) for k in ("linha1", "linha2")) + 16
+                if c.get("sub"):
+                    tc = 60
+                    while fnt(MBLK, tc).getlength(c["sub"]) > (SAFE[2] - SAFE[0]) - 70:
+                        tc -= 2
+                    alt += 46 + tc + 40
+                y = min(y, AVY - 28 - alt)
             h1 = self.linha(base, t, t0, cx, y, c["linha1"], ANTON, 172, BRANCO, SAFE[2] - SAFE[0] - 30, "capa1", anim=False, centro=True)
             y += h1 + 16
             h2 = self.linha(base, t, t0, cx, y, c["linha2"], ANTON, 172, AMB, SAFE[2] - SAFE[0] - 30, "capa2", anim=False, centro=True)
@@ -585,6 +604,8 @@ def preparar(r):
 def portao_desenho(D):
     erros = []
     for t, nome, (x0, y0, x1, y1), tam in D.caixas:
+        if AV_CAPA and t < D.L.ini[1] and x1 > AVX and x0 < AVX + AVW and y1 > AVY and y0 < AVY + AVH:
+            erros.append(f"{t:.1f}s {nome} da capa cobre o avatar {(x0, y0, x1, y1)}")
         if x0 < SAFE[0] - 1 or y0 < SAFE[1] - 1 or x1 > SAFE[2] + 1 or y1 > SAFE[3] + 1:
             erros.append(f"{t:.1f}s {nome} fora da zona segura {(x0, y0, x1, y1)}")
         if nome.startswith("card:") and (x0 < CARD[0] or x1 > CARD[2] - 25 or y0 < CARD[1] or y1 > CARD[3] - 10):
@@ -644,8 +665,8 @@ def cmd_montar(pasta):
          f"[voz][md]amix=inputs=2:duration=first:normalize=0,afade=t=out:st={L.total - 1.2:.2f}:d=1.2[a]",
          "-map", "[a]", "-t", f"{L.total:.3f}", mix])
     loudnorm(mix, B / "mix_norm.wav")
-    # avatar: entra subindo na etapa 2, fica até o fim (último quadro congelado)
-    crop = rc.recorte_rosto(r); i0 = L.ini[1]
+    # avatar: já no quadro 0 (AV_CAPA, parado) ou entra subindo na etapa 2; fica até o fim (último quadro congelado)
+    crop = rc.recorte_rosto(r); crop_capa = crop; i0 = L.ini[1]
     ax, ay, aw, ah = (AVX, AVY, AVW, AVH) if LAY is None else LAY["av"]
     if LAY is not None:                     # recorte na proporção da caixa do layout, centrado no rosto achado
         cw0, ch0, x00 = (int(v) for v in crop.split(":")[:3]); centro = x00 + cw0 / 2
@@ -658,6 +679,8 @@ def cmd_montar(pasta):
     tag = B / "tag.txt"; tag.write_text(r.get("tag", "NEI MALDANER  |  INEMA"))
     yexp = f"if(lt(t,{i0 + 0.35:.2f}),{ay}+(1-(t-{i0:.2f})/0.35)*140,{ay})" if (LAY is None or LAY["forma"] == "ret") else str(ay)
     en = f"gte(t,{i0:.2f})"
+    if AV_CAPA and LAY is None:          # mesma caixa do começo ao fim: entra no 0 s, sem subir
+        yexp, en, i0 = str(ay), "gte(t,0)", 0.0
     if LAY is not None and LAY["forma"] == "circulo":
         mask = B / "mascara.png"; mk = Image.new("L", (aw, ah), 0); ImageDraw.Draw(mk).ellipse((0, 0, aw - 1, ah - 1), fill=255); mk.save(mask)
         moldura = f"format=rgba[avr];movie={mask},format=gray,scale={aw}:{ah}[mk];[avr][mk]alphamerge[av];"
@@ -668,6 +691,13 @@ def cmd_montar(pasta):
     fc = (f"[1:v]trim=start={i0:.3f},setpts=PTS-STARTPTS+{i0:.3f}/TB,crop={crop},scale={aw}:{ah},setsar=1,fps={FPS},"
           f"tpad=stop_mode=clone:stop_duration=10,{moldura}"
           f"[0:v][av]overlay=x={ax}:y='{yexp}':enable='{en}':eof_action=repeat,format=yuv420p[v]")
+    if AV_CAPA and LAY is not None:      # layout: na capa o avatar fica na caixa do padrão; o layout entra na etapa 2
+        fc = fc.replace("[1:v]", "[a2]", 1).replace("[0:v][av]", "[cap][av]", 1)
+        fc = (f"[1:v]split[a1][a2];[a1]crop={crop_capa},scale={AVW}:{AVH},setsar=1,fps={FPS},"
+              f"drawbox=x=0:y=0:w=iw:h=ih:color=0xE2A23B@1:t=6,"
+              f"drawbox=x=6:y={AVH - 44}:w={AVW - 12}:h=38:color=0x0b0f14@0.85:t=fill,"
+              f"drawtext=fontfile={DEJAVU}:textfile={tag}:x=18:y={AVH - 34}:fontsize=19:fontcolor=white[avc];"
+              f"[0:v][avc]overlay=x={AVX}:y={AVY}:enable='lt(t,{L.ini[1]:.3f})'[cap];" + fc)
     saida = r["_dir"] / "video.mp4"
     run(["ffmpeg", "-v", "error", "-y", "-i", base, "-i", r["_av"], "-i", B / "mix_norm.wav", "-filter_complex", fc,
          "-map", "[v]", "-map", "2:a", "-t", f"{L.total:.3f}", "-c:v", "libx264", "-crf", "20", "-preset", "slow", "-r", str(FPS),
