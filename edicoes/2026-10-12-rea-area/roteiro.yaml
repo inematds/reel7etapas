@@ -11,7 +11,7 @@ etapas:
     nome: GANCHO
     gatilho: "uma área inteira pronta pra clonar qualquer software"
     por_que: "o ganho inteiro na primeira frase, dito por quem a pessoa já reconhece (avatar no quadro 0)"
-    capa: {ganho: "REA: UMA ÁREA PRONTA PRA VOCÊ CLONAR QUALQUER SOFTWARE", linha1: "CLONE O APP", linha2: "QUE VOCÊ USA", sub: "PASSO A PASSO"}
+    capa: {ganho: "REA: CLONE QUALQUER SOFTWARE", linha1: "TUDO PRONTO", linha2: "NUMA ÁREA SÓ", sub: "PASSO A PASSO"}
     camera: push
     foco: [0.5, 0.5]
     cena: "Homem de uns 40 anos sentado diante de um notebook numa sala clara de dia, luz branca de janela, sorrindo surpreso. Da tela do notebook sai, flutuando no ar, uma cópia translúcida do próprio aplicativo aberto (janelas, botões e menus), como se o programa estivesse sendo duplicado ao lado. Cores naturais, uma cor de destaque azul nas janelas."
