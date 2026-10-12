@@ -1,0 +1,146 @@
+tema: Antes do seu Jarvis, aprenda o OSWork (versão executiva)
+data: 12/10/2026
+palavra: OSWORK
+fala: 'Quer ter o seu próprio Jarvis? Então faz isso antes. Imagina um assistente que trabalha por você, dentro do seu computador. Só que muita gente tenta montar direto, trava logo no começo, perde horas
+  e desiste. E o melhor: não precisa ser programador! Primeiro, aprende o OSWork: você abre o terminal, cria a pasta do projeto, coloca o Claude Code ou o Codex para trabalhar nela, guarda tudo no GitHub
+  e sobe para um servidor. Depois disso, montar o seu Jarvis fica fácil, porque você já sabe onde cada coisa mora. E o curso é de graça. Tá tudo no inema ponto club. Ou comenta OSWORK que eu te mando o
+  link.
+
+  '
+etapas:
+- id: gancho
+  nome: GANCHO
+  gatilho: o passo que vem antes do resultado desejado
+  por_que: 'quem quer um Jarvis para na hora: tem algo que eu preciso fazer antes?'
+  capa:
+    linha1: SEU JARVIS
+    linha2: COMEÇA AQUI
+    sub: APRENDA ISSO ANTES!
+  camera: push
+  foco:
+  - 0.5
+  - 0.6
+  cena: Executivo de uns 45 anos, terno azul-marinho, sentado à cabeceira de uma mesa de diretoria de madeira escura, diante de um notebook aberto; sobre a mesa, uma pequena esfera de luz dourada discreta
+    como um assistente. Sala envidraçada com vista da cidade de dia.
+- id: desejo
+  nome: DESEJO
+  gatilho: um assistente que trabalha por você
+  por_que: a pessoa se imagina com ajuda dentro do próprio computador
+  ancora: assistente
+  linha1: UM ASSISTENTE
+  linha2: SÓ SEU
+  destaque:
+    titulo: 24 H
+    texto: 'trabalhando
+
+      por você'
+  camera: pull
+  foco:
+  - 0.5
+  - 0.5
+  cena: Diretora de blazer cinza em pé diante de um grande monitor na parede que mostra painéis e gráficos organizados (sem texto legível), analisando com atenção; escritório executivo claro.
+- id: medo
+  nome: MEDO
+  gatilho: travar no começo e desistir
+  por_que: quase todo mundo já tentou algo técnico e travou; medo de perder horas
+  ancora: muita
+  linha1: TRAVA NO COMEÇO
+  linha2: E DESISTE
+  cor: vermelho
+  destaque:
+    titulo: HORAS
+    texto: 'perdidas
+
+      sem sair
+
+      do lugar'
+    cor: vermelho
+  camera: pan_dir
+  foco:
+  - 0.5
+  - 0.5
+  cena: Executivo sério de camisa social e gravata afrouxada olhando o relógio de pulso, preocupado, diante de um notebook com uma janela vermelha de erro; mesa com papéis e café frio; luz de janela.
+- id: facilidade
+  nome: FACILIDADE
+  gatilho: não precisa ser programador
+  por_que: derruba a objeção que faz a pessoa desistir antes de tentar
+  ancora: melhor
+  linha1: NÃO PRECISA SER
+  linha2: PROGRAMADOR
+  destaque:
+    titulo: PASSO A PASSO
+    texto: 'comando por
+
+      comando'
+  camera: push
+  foco:
+  - 0.5
+  - 0.42
+  cena: Executiva de uns 50 anos, cabelo grisalho curto, blazer escuro, digitando com segurança num notebook com uma janela de terminal simples, numa sala de reunião envidraçada e clara.
+- id: descoberta
+  nome: DESCOBERTA
+  gatilho: 'existe um caminho: o OSWork'
+  por_que: dá nome à solução e mostra os passos em verbos simples
+  ancora: primeiro
+  linha1: APRENDA
+  linha2: O OSWORK
+  destaque:
+    titulo: VOCÊ
+    texto: 'abre o terminal
+
+      cria a pasta
+
+      GitHub · servidor'
+  camera: sobe
+  foco:
+  - 0.5
+  - 0.48
+  cena: 'Quadro de vidro numa sala de reunião com um fluxo desenhado à mão em quatro ícones ligados por setas: uma janela de terminal, uma pasta, uma nuvem e um servidor; um executivo de terno aponta para
+    o fluxo. Sem letras.'
+- id: beneficio
+  nome: BENEFÍCIO
+  gatilho: depois, o Jarvis fica fácil
+  por_que: 'fecha a imagem do resultado: a base pronta para o assistente'
+  ancora: depois
+  linha1: AÍ O JARVIS
+  linha2: FICA FÁCIL
+  destaque:
+    titulo: BASE
+    texto: 'você sabe onde
+
+      cada coisa mora'
+  camera: pan_esq
+  foco:
+  - 0.45
+  - 0.45
+  cena: Executivo tranquilo em pé junto à janela do escritório ao amanhecer, segurando um tablet com uma lista de tarefas marcada com checks verdes; ao fundo, desfocada, a equipe trabalhando.
+- id: comentario
+  nome: COMENTÁRIO
+  gatilho: grátis no inema.club ou uma palavra para comentar
+  por_que: 'dá o caminho (o site) e uma ação pequena e fácil: comentar uma palavra'
+  ancora: curso
+  linha1: CURSO GRÁTIS NO
+  linha2: INEMA.CLUB
+  destaque:
+    titulo: GRÁTIS
+    texto: 'OSWork
+
+      do zero'
+  camera: push
+  foco:
+  - 0.5
+  - 0.5
+  cena: Mão de executivo com abotoadura segurando um smartphone na vertical sobre uma mesa de madeira escura; na tela, um vídeo vertical e a área de comentários com avatares redondos e corações, sem letras
+    legíveis.
+cta:
+  ancora: comenta
+  linha1: ou comenta
+  palavra: OSWORK
+  linha2: que eu te mando o link
+legenda_envio: ANTES DO SEU JARVIS, APRENDA O OSWORK — versão executiva (mesma fala, imagens corporativas). Curso grátis no inema.club.
+canal: lives1
+estilo: 'Fotografia corporativa realista e sóbria, como capa de revista de negócios, vertical 9:16. Escritório executivo moderno e CLARO de dia, luz natural de janela; tons neutros (cinza, azul-marinho,
+  grafite, madeira escura) com toques discretos de dourado. Pessoas de terno ou blazer, expressões sérias e confiantes, postura profissional. COMPOSIÇÃO OBRIGATÓRIA: o assunto principal (rostos, mãos, tela,
+  objeto-chave) fica inteiro na faixa central, entre 30% e 60% da altura; os 20% de cima são fundo calmo (parede, teto, vidro) porque ali entra o título, e os 40% de baixo são mesa ou fundo sem nada importante.
+  Sem texto, sem letras legíveis, sem números, sem logotipos, sem marcas, sem robôs, sem visual de ficção científica, nada caricato.'
+youtube_20261012: https://www.youtube.com/shorts/2Ugt9U6cyvE
