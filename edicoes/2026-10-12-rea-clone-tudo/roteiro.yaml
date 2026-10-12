@@ -1,0 +1,89 @@
+# reel7etapas — edição 2026-10-12-rea-clone-tudo (REA: clone tudo, de graça — olha o que deixamos pronto na área REA)
+# 2º reel da área REA; avatar no quadro 0 (motor 12/10).
+tema: "REA: clone tudo, de graça — olha só o que deixamos pronto para você na área REA"
+data: "12/10/2026"
+palavra: CLONE
+fala: |
+  Clone tudo, de graça. Olha só o que a gente deixou pronto pra você. Você quer ter o seu próprio programa, igual ao que usa todo dia, sem pagar nada por isso. O problema: sem ninguém pra mostrar o caminho, você trava logo no começo e desiste. Por isso você não começa do zero: é só abrir e seguir, passo a passo. Na área REA do eventos tem o guia em português, inglês e espanhol e o programa oficial que faz a engenharia reversa. E mais: o nosso teste real, cinco vídeos e os cuidados, sem pagar nada. Tá tudo no inema ponto club. Ou comenta CLONE que eu te mando o link.
+# Conteúdo conferido em eventos.inema.pro/rea/ (12/10/2026): guia PT/EN/ES, 4 passos, teste real 6.4.0, 5 vídeos, cuidados, repo morluto/rea.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "clone tudo, de graça"
+    por_que: "promessa máxima com preço zero, dita pelo rosto que a pessoa já reconhece (avatar no quadro 0)"
+    capa: {ganho: "REA: CLONE TUDO, DE GRAÇA", linha1: "OLHA SÓ O QUE", linha2: "TÁ PRONTO", sub: "PRA VOCÊ"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mesa de trabalho clara de dia, luz branca de janela. Sobre a mesa, uma caixa de presente aberta de onde saem, flutuando, várias janelas de aplicativos translúcidas e organizadas, com botões e menus; um homem de uns 40 anos abrindo a tampa, sorrindo surpreso. Cores naturais, destaque verde nas janelas."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "o seu próprio programa, sem pagar nada"
+    por_que: "a pessoa se imagina com o programa de todo dia, só que dela e sem custo"
+    ancora: próprio
+    linha1: "O SEU PRÓPRIO"
+    linha2: "PROGRAMA"
+    destaque: {titulo: "R$ 0", texto: "igual ao que\nvocê já usa"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Rapaz de uns 28 anos numa cozinha clara de dia, encostado na bancada, olhando o celular na vertical e sorrindo; na tela, um aplicativo com o nome dele no topo representado só por um círculo com a foto dele, sem letras. Luz neutra de janela, rosto bem iluminado."
+  - id: medo
+    nome: MEDO
+    gatilho: "trava logo no começo e desiste"
+    por_que: "a dor real de quem já tentou sozinho: travar no começo"
+    ancora: problema
+    linha1: "TRAVA NO"
+    linha2: "COMEÇO"
+    cor: vermelho
+    destaque: {titulo: "SOZINHO", texto: "sem caminho,\nvocê desiste", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "Mulher de uns 35 anos diante de um monitor, com os braços cruzados e expressão frustrada; na tela, um labirinto enorme sem saída visto de cima, e um bloco de notas ao lado cheio de rabiscos riscados. Luz fria e neutra, mas o rosto e a tela bem visíveis."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não começa do zero: abrir e seguir"
+    por_que: "derruba a objeção 'não sei por onde começar'"
+    ancora: zero
+    linha1: "NADA DO"
+    linha2: "ZERO"
+    destaque: {titulo: "SEGUIR", texto: "abre e vai\npasso a passo"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Senhor de uns 60 anos sorridente, de pé numa sala clara de dia, segurando um mapa dobrável aberto com um caminho desenhado em linha verde e quatro pontos marcados, sem letras. Luz de janela, ambiente claro e acolhedor."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "a área REA: guia em 3 idiomas e o programa oficial"
+    por_que: "dá nome ao lugar e diz o que tem: o guia e a ferramenta oficial"
+    ancora: área
+    linha1: "ÁREA REA"
+    linha2: "GUIA + OFICIAL"
+    destaque: {titulo: "3 IDIOMAS", texto: "português\ninglês\nespanhol"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Estante clara de biblioteca moderna de dia, luz de janela, com três livros grandes de capas coloridas lisas (azul, verde e vermelha) em destaque na frente, abertos em leque, e ao lado uma maleta de ferramentas de metal aberta e organizada. Visual limpo, cores naturais, sem letras."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "teste real, cinco vídeos e cuidados, sem pagar nada"
+    por_que: "mostra o pacote completo que a pessoa leva de graça"
+    ancora: teste
+    linha1: "5 VÍDEOS"
+    linha2: "+ TESTE REAL"
+    destaque: {titulo: "GRÁTIS", texto: "e os cuidados\nantes de\ncomeçar"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Duas pessoas, um homem e uma mulher de uns 30 anos, sentadas lado a lado num sofá claro de dia, rindo e apontando para uma TV grande na parede que mostra uma grade de cinco vídeos coloridos, sem letras. Luz clara de dia, cores vivas e limpas."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (o site) e uma ação pequena: comentar CLONE"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "área aberta\npra você"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical sobre uma mesa clara de dia, com luz de janela. Na tela do celular, no alto, uma caixa de presente aberta com janelas de aplicativo saindo; embaixo, a área de comentários com avatares redondos, corações e balões, sem letras legíveis. Tela bem iluminada, cores naturais."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "CLONE", linha2: "que eu te mando o link"}
+legenda_envio: "REA: clone tudo, de graça — olha o que deixamos pronto na área REA (guia em 3 idiomas, programa oficial, teste real, 5 vídeos e cuidados). Reel no modelo de 7 etapas."
+canal: lives1
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner): REA, clone tudo de graça — olha só o que deixamos pronto para você na área REA (eventos.inema.pro/rea). Ter o seu próprio programa, igual ao que você usa todo dia, sem pagar. Sozinho, sem caminho, a pessoa trava no começo e desiste; na área não precisa começar do zero, é abrir e seguir passo a passo. Tem o guia em português, inglês e espanhol, o programa oficial REA (Reverse Engineer Anything) de engenharia reversa, nosso teste real, 5 vídeos e os cuidados, tudo grátis. CTA: tudo no inema.club ou comente CLONE. Título com gancho forte (ex.: 'REA: clone TUDO de graça'), com #shorts. Sem citar autores ou canais de origem."
+youtube_20261012: https://www.youtube.com/shorts/8d5xyCz8i74

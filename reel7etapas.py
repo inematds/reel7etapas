@@ -449,6 +449,13 @@ class Desenho:
             linhas = [" ".join(ws[:k]), " ".join(ws[k:])]
             while tam > HEAD_MIN and max(fnt(ANTON, tam).getlength(l) for l in linhas) > larg:
                 tam -= 2
+        if max(fnt(ANTON, tam).getlength(l) for l in linhas) > larg and len(s.split()) > 2:   # frase longa do Nei: 3 linhas
+            tam = 104; ws = s.split(); fl = fnt(ANTON, tam).getlength
+            a, b = min(((a, b) for a in range(1, len(ws) - 1) for b in range(a + 1, len(ws))),
+                       key=lambda ab: max(fl(" ".join(ws[:ab[0]])), fl(" ".join(ws[ab[0]:ab[1]])), fl(" ".join(ws[ab[1]:]))))
+            linhas = [" ".join(ws[:a]), " ".join(ws[a:b]), " ".join(ws[b:])]
+            while tam > HEAD_MIN and max(fnt(ANTON, tam).getlength(l) for l in linhas) > larg:
+                tam -= 2
         f = fnt(ANTON, tam); alt = int(tam * 1.12)
         y0 = HEAD_Y + 4; y1 = y0 + 36 + alt * len(linhas)
         d.rounded_rectangle((SAFE[0], y0, SAFE[2], y1), 26, fill=AMB + (245,))

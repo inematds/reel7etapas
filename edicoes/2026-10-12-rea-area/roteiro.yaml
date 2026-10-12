@@ -1,0 +1,89 @@
+# reel7etapas — edição 2026-10-12-rea-area (Área REA no eventos: tudo pronto para clonar qualquer software)
+# 1º reel com o avatar já no quadro 0 (capa.avatar padrão true, motor 12/10).
+tema: "A área REA: tudo pronto num lugar só para você clonar qualquer software"
+data: "12/10/2026"
+palavra: CLONAR
+fala: |
+  Montei uma área inteira pra você clonar qualquer software. Imagina pegar o programa que você usa todo dia e ter a sua própria versão. Sozinho, você perde semanas no escuro e continua pagando assinatura todo mês. Mas você não precisa ser especialista: o seu agente faz o trabalho pesado, em quatro passos. A área se chama REA: tem o guia completo em três idiomas e o link do repositório oficial. Tem também o nosso teste real, cinco vídeos do básico ao técnico e os cuidados antes de começar. Tudo aberto e gratuito. Tá tudo no inema ponto club. Ou comenta CLONAR que eu te mando o link.
+# Conteúdo conferido em eventos.inema.pro/rea/ (12/10/2026): guia PT/EN/ES, 4 passos, teste real 6.4.0, 5 vídeos, cuidados, repo morluto/rea.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "uma área inteira pronta pra clonar qualquer software"
+    por_que: "o ganho inteiro na primeira frase, dito por quem a pessoa já reconhece (avatar no quadro 0)"
+    capa: {ganho: "REA: UMA ÁREA PRONTA PRA VOCÊ CLONAR QUALQUER SOFTWARE", linha1: "CLONE O APP", linha2: "QUE VOCÊ USA", sub: "PASSO A PASSO"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Homem de uns 40 anos sentado diante de um notebook numa sala clara de dia, luz branca de janela, sorrindo surpreso. Da tela do notebook sai, flutuando no ar, uma cópia translúcida do próprio aplicativo aberto (janelas, botões e menus), como se o programa estivesse sendo duplicado ao lado. Cores naturais, uma cor de destaque azul nas janelas."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "a sua própria versão do programa de todo dia"
+    por_que: "a pessoa se imagina dona da versão do programa que já usa"
+    ancora: imagina
+    linha1: "A SUA PRÓPRIA"
+    linha2: "VERSÃO"
+    destaque: {titulo: "SÓ SUA", texto: "do programa\nde todo dia"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Mulher de uns 35 anos numa mesa de trabalho clara de dia, segurando um tablet na vertical com as duas mãos, sorrindo. Na tela, dois aplicativos lado a lado quase iguais, o da direita com detalhes em verde personalizados por ela. Luz neutra de janela, rosto bem iluminado."
+  - id: medo
+    nome: MEDO
+    gatilho: "semanas no escuro e assinatura todo mês"
+    por_que: "a dor dupla: tempo perdido sozinho e dinheiro saindo todo mês"
+    ancora: sozinho
+    linha1: "SEMANAS"
+    linha2: "NO ESCURO"
+    cor: vermelho
+    destaque: {titulo: "TODO MÊS", texto: "e a assinatura\ncontinua\ncobrando", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "Homem de uns 30 anos cansado, com a mão na testa, diante de um monitor cheio de janelas confusas e emaranhadas, numa mesa de escritório. Ao lado do teclado, um calendário de mesa com muitas folhas arrancadas e uma pilha de faturas. Luz fria e neutra, mas o rosto e a tela bem visíveis."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa ser especialista, o agente faz o pesado"
+    por_que: "derruba a objeção 'engenharia reversa é coisa de especialista'"
+    ancora: especialista
+    linha1: "SEM SER"
+    linha2: "ESPECIALISTA"
+    destaque: {titulo: "4 PASSOS", texto: "o seu agente\nfaz o pesado"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Senhora de uns 55 anos, tranquila e sorridente, sentada à mesa da sala de dia com luz de janela, digitando uma frase curta num notebook, com uma xícara ao lado. Na mesa, quatro cartões grandes enfileirados, cada um com um ícone simples diferente (lupa, mapa, visto, chave), sem letras. Ambiente claro."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "a área se chama REA"
+    por_que: "dá nome à solução e mostra que está tudo reunido: guia em 3 idiomas + repositório oficial"
+    ancora: chama
+    linha1: "ÁREA REA"
+    linha2: "TUDO NUM LUGAR"
+    destaque: {titulo: "REA", texto: "guia em\n3 idiomas\n+ repo oficial"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Bancada clara de oficina de dia, luz de janela. Um aplicativo representado como uma caixa de vidro aberta, com suas peças (botões, janelas, pequenas engrenagens) flutuando para fora em ordem, organizadas no ar; duas mãos humanas montando as peças numa caixa nova ao lado. Visual limpo, cores naturais, destaque azul."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "teste real, cinco vídeos e cuidados, tudo gratuito"
+    por_que: "mostra o que a pessoa leva de graça: prova (teste real) e aula (vídeos do básico ao técnico)"
+    ancora: teste
+    linha1: "5 VÍDEOS"
+    linha2: "+ TESTE REAL"
+    destaque: {titulo: "GRÁTIS", texto: "do básico\nao técnico"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Jovem de uns 25 anos sorrindo num sofá claro de dia, com um notebook no colo; na parede atrás dele, uma grade de cinco telas de vídeo penduradas como quadros, cada uma mostrando uma cena diferente de pessoas trabalhando com computador, sem letras. Luz clara de dia, cores vivas e limpas."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (o site) e uma ação pequena: comentar CLONAR"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "área aberta\npra você"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia, com luz de janela. Na tela do celular, no alto, um aplicativo se desmontando em peças azuis organizadas; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada, cores naturais."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "CLONAR", linha2: "que eu te mando o link"}
+legenda_envio: "REA: uma área pronta pra você clonar qualquer software — guia em 3 idiomas, 4 passos, teste real, 5 vídeos e cuidados. Reel no modelo de 7 etapas (1º com avatar no quadro 0)."
+canal: lives1
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner): montei uma área inteira para você clonar qualquer software — a área REA (Reverse Engineer Anything) no eventos.inema.pro/rea. Imagina ter a sua própria versão do programa que você usa todo dia. Sozinho você perde semanas e continua pagando assinatura. Não precisa ser especialista: o agente de IA faz o trabalho pesado em 4 passos. Na área: guia completo em português, inglês e espanhol, link do repositório oficial, nosso teste real, 5 vídeos do básico ao técnico e os cuidados. Tudo aberto e gratuito. CTA: tudo no inema.club ou comente CLONAR. Título com gancho forte (ex.: 'Clone QUALQUER software: a área pronta e grátis'), com #shorts. Sem citar autores ou canais de origem."
+youtube_20261012: https://www.youtube.com/shorts/jz1lHYxc2ZA
