@@ -1,0 +1,90 @@
+# reel7etapas — edição 2026-10-11-repos-claude (refaz curto: 10 repositórios grátis para o Claude)
+tema: "Dez ferramentas grátis viram uma agência"
+data: "11/10/2026"
+palavra: AGÊNCIA
+fala: |
+  Dez ferramentas de graça transformam o seu computador numa agência inteira. Pensa em editar vídeo, criar site, fazer aplicativo e achar clientes, tudo sozinho, sem contratar ninguém. Tem gente pagando caro todo mês por ferramenta que existe de graça. E o melhor: você não precisa saber programar, você só pede em português. São dez repositórios gratuitos para a inteligência artificial do Claude: um edita vídeo, outro faz site com rolagem de cinema, outro tira a cara de robô do texto e outro testa tudo antes de entregar. O cliente não paga pela ferramenta, ele paga pelo problema que você resolve. Tá tudo no inema ponto club. Ou comenta AGÊNCIA que eu te mando o link.
+# As 7 etapas: cada uma entra na palavra 'ancora' da fala (minúscula, sem acento) e troca imagem, câmera, manchete e destaque.
+# camera: push | pull | pan_dir | pan_esq | sobe   ·   foco: [x, y] (0–1) do plano fechado   ·   destaque: cartão à direita do avatar
+# 'gatilho' e 'por_que' não aparecem no vídeo: vão para o mapa.jpg (a explicação do modelo).
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "uma agência inteira sem custo"
+    por_que: "promete o resultado (ter uma agência) antes de dizer qual tecnologia"
+    capa: {linha1: "10 FERRAMENTAS", linha2: "GRÁTIS", sub: "VIRAM UMA AGÊNCIA"}
+    camera: push
+    foco: [0.5, 0.55]
+    cena: "Escrivaninha clara de home office de dia, luz do sol entrando pela janela. No centro, um notebook aberto e, saindo da tela como hologramas dourados flutuando em leque, dez pequenas janelas de trabalho: uma claquete de vídeo, uma página de site, um celular com aplicativo, um gráfico de busca, uma lista com checks verdes. Um homem de uns 40 anos, sorrindo, olha impressionado. Cores quentes, tudo bem iluminado."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "fazer tudo sozinho"
+    por_que: "a pessoa se imagina entregando vídeo, site e app sem equipe"
+    ancora: pensa
+    linha1: "VÍDEO, SITE, APP"
+    linha2: "TUDO SOZINHO"
+    destaque: {titulo: "SEM EQUIPE", texto: "você entrega\no trabalho\nde uma agência"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Mulher de uns 35 anos numa mesa de trabalho clara de dia, com três telas à frente: na da esquerda um vídeo vertical sendo editado com legendas coloridas, na do meio um site elegante, na da direita a tela de um celular com um aplicativo. Ela sorri confiante, de braços cruzados. Luz natural da janela, ambiente moderno."
+  - id: medo
+    nome: MEDO
+    gatilho: "pagar caro pelo que é grátis"
+    por_que: "medo de estar gastando à toa prende mais que promessa"
+    ancora: gente
+    linha1: "PAGANDO CARO"
+    linha2: "TODO MÊS"
+    cor: vermelho
+    destaque: {titulo: "R$ / MÊS", texto: "por ferramenta\nque existe\nde graça", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.55]
+    cena: "Mesa de madeira de dia com várias faturas de assinatura de software empilhadas, um cartão de crédito, notas de real de 100 e de 50 espalhadas e uma calculadora. A mão de um homem de meia-idade segura uma fatura com expressão de preocupação. Luz da janela lateral, com um tom levemente avermelhado."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa programar"
+    por_que: "derruba a objeção que faz a pessoa desistir antes de tentar"
+    ancora: melhor
+    linha1: "SEM PROGRAMAR"
+    linha2: "VOCÊ SÓ PEDE"
+    destaque: {titulo: "EM PORTUGUÊS", texto: "você fala,\nele faz"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Homem de uns 50 anos, relaxado na sala de casa de dia, sentado no sofá com o notebook no colo, digitando uma frase curta numa janela de conversa simples, sem código. Ele sorri. Luz do sol entrando pela janela, plantas ao fundo, rosto bem iluminado."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "existe um kit: dez repositórios"
+    por_que: "dá nome à solução e mostra o que ela faz, em verbos simples"
+    ancora: repositorios
+    linha1: "10 REPOSITÓRIOS"
+    linha2: "PARA O CLAUDE"
+    destaque: {titulo: "ELES", texto: "editam vídeo\nfazem site\ntestam tudo"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Vista de cima de uma mesa clara de dia com dez caixas de ferramentas abertas, organizadas em duas fileiras, cada uma com um objeto que brilha em dourado: uma claquete, uma página de site, um celular, uma lupa, um cadeado, uma folha de texto, um cartão de pagamento, um gráfico de busca. Ao centro, um notebook aberto. Luz natural, visual limpo."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "o cliente paga pelo problema resolvido"
+    por_que: "fecha a imagem do resultado: ganhar dinheiro com o que é grátis"
+    ancora: cliente
+    linha1: "O CLIENTE PAGA"
+    linha2: "PELO RESULTADO"
+    destaque: {titulo: "VOCÊ VENDE", texto: "o problema\nresolvido"}
+    camera: pan_esq
+    foco: [0.45, 0.45]
+    cena: "Dona de uma padaria, de avental, sorrindo e apertando a mão de um jovem profissional dentro da padaria de dia; no balcão, um notebook mostra o site novo da padaria. Luz do sol entrando pela vitrine, pães ao fundo. Clima de negócio fechado."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (o site) e uma ação pequena e fácil: comentar uma palavra"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "a lista e\ncomo usar\ncada uma"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia, janela ao fundo desfocada. Na tela do celular, no alto, um vídeo vertical mostrando um notebook com janelas douradas; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada."
+# CTA (entra na palavra 'ancora' da última etapa).
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "AGÊNCIA", linha2: "que eu te mando o link"}
+legenda_envio: "10 FERRAMENTAS GRÁTIS VIRAM UMA AGÊNCIA — reel no modelo de 7 etapas (refaz curto dos 10 repositórios para o Claude)."
+canal: lives1
+youtube_20261011: https://www.youtube.com/shorts/s1LRge2Kz6o
