@@ -1,0 +1,88 @@
+# reel7etapas — edição 2026-10-12-rea-mundo-bilionario (REA: a loucura que muda o mundo bilionário dos softwares)
+tema: "Qualquer um pode copiar qualquer software, e isso muda tudo"
+data: "12/10/2026"
+palavra: COPIAR
+fala: |
+  Isso é mais uma loucura que explode a mente e muda tudo. Qualquer um de nós pode fazer a sua versão, uma cópia, de qualquer software. Imagina o que vai mudar no mundo bilionário dos softwares, com empresas cobrando caro, todo mês, por programa que agora dá pra refazer. E o melhor: você pode fazer isso já, sem saber programar. Eu publiquei faz tempo, mas está cada vez mais insano. A ferramenta se chama REA: o seu agente desmonta o programa, entende como funciona e reconstrói. Em seis meses, ela passou de cento e treze mil estrelas no GitHub. Tá tudo no inema ponto club. Ou comenta COPIAR que eu te mando o link.
+# Número da etapa BENEFÍCIO: gh api repos/morluto/rea em 12/10/2026 = 113.641 estrelas, 25.439 forks, criado em 14/04/2026.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "uma loucura que explode a mente"
+    por_que: "choque e novidade antes de dizer qual tecnologia; a promessa vem na frase seguinte"
+    capa: {linha1: "EXPLODE A MENTE", linha2: "E MUDA TUDO", sub: "COPIE QUALQUER SOFTWARE"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Homem de uns 45 anos sentado diante de um notebook numa sala clara de dia, com luz do sol entrando pela janela, levando as duas mãos à cabeça, boquiaberto e espantado. Da tela do notebook saem, como uma explosão suave, dezenas de pequenas janelas de aplicativos, botões e ícones coloridos voando no ar em volta dele. Cores quentes, ambiente bem iluminado."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "a sua versão de qualquer software"
+    por_que: "a pessoa se imagina dona da cópia do programa que quiser"
+    ancora: versao
+    linha1: "A SUA VERSÃO"
+    linha2: "DE QUALQUER SOFTWARE"
+    destaque: {titulo: "SUA", texto: "uma cópia\nsó sua"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Mulher de uns 35 anos sorrindo numa mesa de café clara de dia, segurando um tablet na vertical. Na tela, dois aplicativos lado a lado: o original e a cópia dela, quase iguais, mas a cópia com detalhes dourados personalizados. Luz natural da janela, cores quentes, rosto bem iluminado."
+  - id: medo
+    nome: MEDO
+    gatilho: "o mundo bilionário que cobra todo mês"
+    por_que: "a dor da assinatura cara mostra o tamanho da mudança"
+    ancora: imagina
+    linha1: "UM MUNDO"
+    linha2: "BILIONÁRIO"
+    cor: vermelho
+    destaque: {titulo: "TODO MÊS", texto: "cobrando caro\npor programa\nque dá pra refazer", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "Arranha-céus espelhados de grandes empresas de tecnologia numa avenida de dia, com céu claro; em primeiro plano, uma enorme pilha de faturas de assinatura mensal e cartões de crédito sobre uma mesa na calçada, e uma rachadura de luz dourada atravessando a fachada do prédio mais alto, como se ela começasse a se partir. Luz do sol forte, cores quentes com toques vermelhos."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "você pode fazer isso já, sem saber programar"
+    por_que: "derruba a objeção 'isso é coisa de programador' e dá urgência"
+    ancora: melhor
+    linha1: "SEM SABER"
+    linha2: "PROGRAMAR"
+    destaque: {titulo: "JÁ", texto: "você pede,\nele faz"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Senhor de uns 60 anos, tranquilo e sorridente, sentado à mesa da sala de dia com luz da janela, digitando uma frase curta num notebook, com uma xícara de café ao lado. A tela mostra uma janela de conversa simples, sem código. Ambiente claro e acolhedor, cores quentes."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "a ferramenta se chama REA"
+    por_que: "dá nome à solução e mostra o que ela faz em três verbos"
+    ancora: ferramenta
+    linha1: "O AGENTE"
+    linha2: "DESMONTA E REFAZ"
+    destaque: {titulo: "REA", texto: "desmonta\nentende\nreconstrói"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Bancada clara de oficina de dia, com luz da janela. Um aplicativo representado como uma caixa de vidro aberta, com suas peças (botões, janelas, pequenas engrenagens) flutuando para fora, organizadas no ar; mãos robóticas douradas e delicadas encaixando as peças numa caixa nova ao lado. Visual limpo, cores quentes, bem iluminado."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "cento e treze mil estrelas em seis meses"
+    por_que: "prova social com número conferido: o mundo inteiro já está usando"
+    ancora: meses
+    linha1: "113 MIL"
+    linha2: "ESTRELAS NO GITHUB"
+    destaque: {titulo: "6 MESES", texto: "e 25 mil\ncópias do\nprojeto"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Um grande telão numa praça clara de dia mostra um gráfico de linha subindo quase na vertical, com uma chuva de estrelas douradas saindo do topo do gráfico; uma pequena multidão de pessoas diversas olha para cima, impressionada, algumas apontando. Céu azul, luz do sol, cores quentes."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (o site) e uma ação pequena: comentar COPIAR"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "cursos e\nprojetos\nabertos"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia, com luz da janela. Na tela do celular, no alto, um vídeo vertical com um aplicativo se desmontando em peças douradas; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada, cores quentes."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "COPIAR", linha2: "que eu te mando o link"}
+legenda_envio: "ISSO EXPLODE A MENTE E MUDA TUDO — qualquer um pode copiar qualquer software (REA, 113 mil estrelas no GitHub em 6 meses). Reel no modelo de 7 etapas."
+canal: lives1
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner): isso é mais uma loucura que explode a mente e muda tudo — qualquer um pode fazer a sua versão, uma cópia, de qualquer software. Imagina o que muda no mundo bilionário dos softwares, que cobra assinatura cara todo mês. Dá para fazer já, sem saber programar. Ferramenta REA (Reverse Engineer Anything): o agente de IA desmonta o programa, entende como funciona e reconstrói. Em seis meses passou de 113 mil estrelas e 25 mil forks no GitHub. CTA: tudo no inema.club ou comente COPIAR. Título com gancho forte (ex.: 'Isso EXPLODE a mente: copie QUALQUER software'), com #shorts. Sem citar autores ou canais de origem."
+youtube_20261012: https://www.youtube.com/shorts/QWLSY0LfUAY
