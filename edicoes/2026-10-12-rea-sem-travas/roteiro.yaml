@@ -1,0 +1,90 @@
+# reel7etapas — edição 2026-10-12-rea-sem-travas (refaz de ScSDVV5xhww: modelo aberto sem trava + REA refaz o player de vídeo do Mac)
+tema: "Quando a IA diz não, quebre essa restrição"
+data: "12/10/2026"
+palavra: LIBERA
+fala: |
+  Quando a inteligência artificial diz não, tem um jeito de quebrar essa restrição. Vou te mostrar. Imagina o programa que você mais usa, com o botão que sempre faltou, do seu jeito. Só que os modelos famosos às vezes travam no meio e se recusam a desmontar o programa. E o melhor: não precisa programar. Você só descreve o que quer. Num teste, um modelo aberto, sem trava, junto com o REA, refez o player de vídeo do Mac com velocidade livre, por quatro dólares. É o seu agente trabalhando sem barreira, no seu computador. Tá tudo no inema ponto club. Ou comenta LIBERA que eu te mando o link.
+# Fato da etapa DESCOBERTA: na referência, um modelo aberto sem trava (GLM) com o REA refez o QuickTime ("Tempo", velocidade granular); a 1ª versão custou US$ 4 e saiu ~80% num pedido só.
+# As 7 etapas: cada uma entra na palavra 'ancora' da fala (minúscula, sem acento) e troca imagem, câmera, manchete e destaque.
+# camera: push | pull | pan_dir | pan_esq | sobe   ·   foco: [x, y] (0–1) do plano fechado   ·   destaque: cartão à direita do avatar
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "quando a IA diz não, dá para quebrar a restrição"
+    por_que: "todo mundo já levou um 'não posso ajudar com isso' de uma IA; promete o caminho"
+    capa: {ganho: "QUEBRE QUALQUER RESTRIÇÃO DO SEU AGENTE", linha1: "A IA DISSE NÃO?", linha2: "QUEBRE A TRAVA", sub: "NO SEU COMPUTADOR"}
+    camera: push
+    foco: [0.5, 0.55]
+    cena: "Mesa de trabalho clara de dia, luz do sol entrando pela janela. No centro, um notebook aberto; na frente da tela, um cadeado dourado grande se partindo ao meio, com faíscas de luz dourada saindo da fenda. Correntes soltas caindo sobre a mesa. Cores quentes, ambiente bem iluminado."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "o programa que você mais usa, com o botão que faltou"
+    por_que: "a pessoa se imagina com a própria versão do app do dia a dia"
+    ancora: imagina
+    linha1: "O BOTÃO"
+    linha2: "QUE SEMPRE FALTOU"
+    destaque: {titulo: "SEU", texto: "o programa\ndo seu jeito"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Homem de uns 40 anos numa sala clara de dia, sentado à mesa diante de um monitor que mostra um player de vídeo simples e elegante; com o dedo ele aponta para um botão novo, dourado e brilhante, que acabou de aparecer na barra de controles. Ele sorri. Luz natural da janela no rosto."
+  - id: medo
+    nome: MEDO
+    gatilho: "os modelos famosos travam e se recusam"
+    por_que: "a frustração de ver a IA parar no meio do trabalho"
+    ancora: famosos
+    linha1: "A IA TRAVA"
+    linha2: "NO MEIO"
+    cor: vermelho
+    destaque: {titulo: "RECUSADO", texto: "a IA se nega\na desmontar", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.55]
+    cena: "Mulher de uns 45 anos numa mesa clara de dia, olhando frustrada para o notebook; na tela, uma janela de conversa com um grande ícone vermelho de proibido e uma barra de progresso parada no meio, vermelha. Ela apoia a mão na testa. Luz natural da janela, tons quentes com destaque vermelho."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa programar"
+    por_que: "derruba a objeção 'isso é coisa de programador'"
+    ancora: melhor
+    linha1: "SEM"
+    linha2: "PROGRAMAR"
+    destaque: {titulo: "SÓ DESCREVE", texto: "o que você\nquer no app"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Mulher de uns 55 anos, tranquila, na mesa da cozinha clara de dia, com uma xícara de café ao lado, falando com um notebook. Na tela, uma janela de conversa simples com uma frase curta, sem código. Luz da janela, rosto bem iluminado e sorridente."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "modelo aberto sem trava + REA refez o player por 4 dólares"
+    por_que: "prova concreta, com custo pequeno e resultado visível"
+    ancora: teste
+    linha1: "SEM TRAVA"
+    linha2: "POR 4 DÓLARES"
+    destaque: {titulo: "US$ 4", texto: "a primeira\nversão"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Monitor grande numa mesa clara de dia mostrando um player de vídeo moderno com um controle deslizante de velocidade dourado bem destacado e uma onda de áudio colorida embaixo. Ao lado do monitor, um pequeno computador com luz azul e quatro moedas douradas empilhadas. Luz do sol pela janela."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "o seu agente sem barreira, no seu computador"
+    por_que: "fecha a imagem: autonomia, tudo na sua máquina"
+    ancora: barreira
+    linha1: "SEU AGENTE"
+    linha2: "SEM BARREIRA"
+    destaque: {titulo: "NO SEU PC", texto: "roda na\nsua máquina"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Homem de uns 35 anos num escritório claro de dia, sorrindo e de braços cruzados ao lado de um computador de mesa; da tela sai uma pequena figura robótica dourada e amigável, já sem correntes, com as correntes partidas no chão. Luz natural, cores quentes, ambiente bem iluminado."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (o site) e uma ação pequena: comentar LIBERA"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "cursos e\nprojetos\nabertos"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia, com luz da janela ao fundo desfocada. Na tela do celular, no alto, um vídeo vertical mostrando um cadeado dourado aberto; embaixo, a área de comentários com avatares redondos, corações e balões, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "LIBERA", linha2: "que eu te mando o link"}
+legenda_envio: "A IA DISSE NÃO? QUEBRE A TRAVA — reel no modelo de 7 etapas (gancho → desejo → medo → facilidade → descoberta → benefício → comentário)."
+canal: lives4
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner): quando a inteligência artificial diz não, tem um jeito de quebrar essa restrição. Imagine o programa que você mais usa com o botão que sempre faltou. Os modelos famosos às vezes travam e se recusam a desmontar o programa. Não precisa programar: você descreve o que quer. Num teste, um modelo aberto sem trava, junto com o REA (Reverse Engineer Anything), refez o player de vídeo do Mac com velocidade livre por quatro dólares. É o seu agente sem barreira, no seu computador. CTA: tudo no inema.club ou comente LIBERA. Título com gancho forte, começando por 'A IA disse NÃO? Quebre a trava', com #shorts. Sem citar autores ou canais de origem."
+youtube_20261012: https://www.youtube.com/shorts/hNwZMs_PSQc
