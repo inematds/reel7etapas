@@ -1,0 +1,91 @@
+# reel7etapas — edição 2026-10-12-rea-nem-precisa (refaz de dAzs_rU6080: o seu agente recria o app até sem o REA)
+tema: "Você nem precisa de ferramenta especial pra recriar um programa"
+data: "12/10/2026"
+palavra: RECRIAR
+fala: |
+  Você nem precisa de ferramenta especial pra recriar um programa. Vou te mostrar. Pensa no aplicativo que você mais usa, e você com a sua própria versão dele, do seu jeito. Só que a internet tá vendendo isso como mágica, e tem gente pagando caro por aplicativo que só embrulha a inteligência artificial. E o melhor: não precisa programar. Você só descreve o que gosta. Num teste, o agente sozinho, sem o REA, recriou o visualizador de fotos do Mac e terminou primeiro. O seu agente olha, entende e refaz. É você criando o seu, em vez de pagar pelo dos outros. Tá tudo no inema ponto club. Ou comenta RECRIAR que eu te mando o link.
+# Fato da etapa DESCOBERTA: na referência, o Claude sem biblioteca terminou o clone do Preview antes do agente com REA (o com REA saiu mais fiel).
+# As 7 etapas: cada uma entra na palavra 'ancora' da fala (minúscula, sem acento) e troca imagem, câmera, manchete e destaque.
+# camera: push | pull | pan_dir | pan_esq | sobe   ·   foco: [x, y] (0–1) do plano fechado   ·   destaque: cartão à direita do avatar
+# 'gatilho' e 'por_que' não aparecem no vídeo: vão para o mapa.jpg (a explicação do modelo).
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "nem precisa de ferramenta especial"
+    por_que: "contraria o que todo mundo está dizendo e promete mostrar o caminho"
+    capa: {linha1: "VOCÊ NEM PRECISA", linha2: "DE FERRAMENTA", sub: "PRA RECRIAR UM APP"}
+    camera: push
+    foco: [0.5, 0.55]
+    cena: "Mesa de trabalho clara de dia, luz do sol entrando pela janela. No centro, um notebook aberto; da tela sai, montando-se no ar, uma janela de aplicativo de fotos feita de blocos dourados de luz. Ao lado do notebook, uma caixa de ferramentas fechada e empoeirada, deixada de lado. Cores quentes, ambiente bem iluminado."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "a sua versão do app que você mais usa"
+    por_que: "a pessoa se imagina dona do aplicativo do dia a dia, do jeito dela"
+    ancora: pensa
+    linha1: "A SUA VERSÃO"
+    linha2: "DO SEU JEITO"
+    destaque: {titulo: "SEU", texto: "o app que\nvocê mais usa"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Homem de uns 40 anos numa sala clara de dia, sentado no sofá, segurando um tablet na vertical e sorrindo. Na tela do tablet, um aplicativo de fotos com botões coloridos; um pequeno pincel dourado de luz recolore um dos botões, como se ele personalizasse o app. Luz natural da janela no rosto."
+  - id: medo
+    nome: MEDO
+    gatilho: "pagar caro por app que só embrulha a IA"
+    por_que: "a dor de pagar por algo que é só uma casca"
+    ancora: internet
+    linha1: "PAGANDO CARO"
+    linha2: "POR EMBRULHO"
+    cor: vermelho
+    destaque: {titulo: "SÓ A CASCA", texto: "app que só\nembrulha\na IA", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.55]
+    cena: "Caixa de presente grande e brilhante, com laço vermelho, aberta sobre uma mesa clara de dia; dentro dela, só um pequeno chip simples. Ao lado, um cartão de crédito e uma pilha de faturas com valores em vermelho. A mão de uma mulher de uns 45 anos segura a tampa, decepcionada. Luz natural da janela, tons quentes com destaque vermelho."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa programar"
+    por_que: "derruba a objeção 'isso é coisa de programador'"
+    ancora: melhor
+    linha1: "SEM"
+    linha2: "PROGRAMAR"
+    destaque: {titulo: "SÓ DESCREVE", texto: "o que você\ngosta no app"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Mulher de uns 55 anos, tranquila, na mesa da cozinha clara de dia, com uma xícara de café ao lado, falando com um notebook. Na tela, uma janela de conversa simples com uma frase curta, sem código. Luz da janela, rosto bem iluminado e sorridente."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "o agente sozinho terminou primeiro"
+    por_que: "prova surpreendente: sem a ferramenta da moda, o agente ganhou a corrida"
+    ancora: teste
+    linha1: "SEM O REA"
+    linha2: "TERMINOU PRIMEIRO"
+    destaque: {titulo: "O AGENTE", texto: "olha\nentende\nrefaz"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Dois monitores lado a lado numa mesa clara de dia. No da esquerda, um visualizador de fotos já pronto, com uma foto de montanha aberta e uma pequena bandeira xadrez de chegada na borda da tela; no da direita, o mesmo aplicativo ainda sendo montado, com uma barra de progresso pela metade. Uma pessoa de costas, ao centro, olha para o da esquerda. Luz do sol pela janela."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "criar o seu em vez de pagar pelo dos outros"
+    por_que: "fecha a imagem: autonomia e economia"
+    ancora: criando
+    linha1: "CRIE O SEU"
+    linha2: "NÃO PAGUE O DOS OUTROS"
+    destaque: {titulo: "SEU", texto: "feito por\nvocê, do\nseu jeito"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Homem de uns 35 anos numa oficina-escritório clara de dia, sorrindo, mostrando no notebook o aplicativo que ele criou, com detalhes dourados personalizados; na mesa, uma tesoura cortando ao meio um cartão de assinatura de papel. Luz natural, cores quentes, ambiente bem iluminado."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (o site) e uma ação pequena: comentar RECRIAR"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "cursos e\nprojetos\nabertos"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia, com luz da janela ao fundo desfocada. Na tela do celular, no alto, um vídeo vertical mostrando um notebook com um aplicativo dourado sendo montado; embaixo, a área de comentários com avatares redondos, corações e balões, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "RECRIAR", linha2: "que eu te mando o link"}
+legenda_envio: "VOCÊ NEM PRECISA DE FERRAMENTA PRA RECRIAR UM APP — reel no modelo de 7 etapas (gancho → desejo → medo → facilidade → descoberta → benefício → comentário)."
+canal: lives1
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner): você nem precisa de ferramenta especial para recriar um programa. Pense no app que você mais usa e na sua própria versão dele. A internet vende isso como mágica e tem gente pagando caro por app que só embrulha a IA. Não precisa programar: você descreve o que gosta. Num teste, o agente sozinho, sem o REA (Reverse Engineer Anything), recriou o visualizador de fotos do Mac e terminou primeiro. Crie o seu em vez de pagar pelo dos outros. CTA: tudo no inema.club ou comente RECRIAR. Título com gancho forte, começando por 'Você NEM PRECISA de ferramenta pra recriar um app', com #shorts. Sem citar autores ou canais de origem."
+youtube_20261012: https://www.youtube.com/shorts/HwbWFVrWC4w
