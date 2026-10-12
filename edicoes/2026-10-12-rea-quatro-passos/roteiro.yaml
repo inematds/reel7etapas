@@ -1,0 +1,91 @@
+# reel7etapas — edição 2026-10-12-rea-quatro-passos (REA na prática: clonar app com IA em 4 passos)
+tema: "Clone um app com IA em 4 passos"
+data: "12/10/2026"
+palavra: PASSOS
+fala: |
+  Você pode ter a sua versão daquele aplicativo que usa todo dia, em quatro passos. Imagina a função que você mais gosta funcionando do seu jeito, no seu computador. O problema: quem tenta de qualquer jeito trava. No nosso teste, um arquivo gigante parou tudo por mais de vinte minutos. Mas calma, você não precisa programar, só seguir a ordem. Instala o REA com um comando, escolhe o seu agente, pede em português e confere cada função. Num projeto normal, a análise levou só vinte segundos, e o app fica do seu jeito. Tá tudo no inema ponto club. Ou comenta PASSOS que eu te mando o link.
+# Fatos: teste INEMA de 10/10/2026 (guia inematds/rea-engenharia-reversa): projeto normal 20 s; arquivo JS único gigante travou >20 min (só kill -9). Comando: npx rea-agents@latest setup.
+# As 7 etapas: cada uma entra na palavra 'ancora' da fala (minúscula, sem acento) e troca imagem, câmera, manchete e destaque.
+# camera: push | pull | pan_dir | pan_esq | sobe   ·   foco: [x, y] (0–1) do plano fechado   ·   destaque: cartão à direita do avatar
+# 'gatilho' e 'por_que' não aparecem no vídeo: vão para o mapa.jpg (a explicação do modelo).
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "o app que você usa, versão sua"
+    por_que: "resultado concreto e pessoal em 2 s, com número fechado (4 passos)"
+    capa: {linha1: "SEU PRÓPRIO APP", linha2: "EM 4 PASSOS", sub: "CLONADO COM IA"}
+    camera: push
+    foco: [0.5, 0.55]
+    cena: "Mesa clara de escritório de dia, luz de janela. Um notebook aberto mostra um aplicativo colorido; ao lado, saindo da tela como um holograma, uma cópia idêntica do mesmo aplicativo sendo montada peça por peça por pequenas mãos robóticas. Quatro degraus luminosos numerados de 1 a 4 sobem na frente do notebook. Cores vivas, tudo bem iluminado."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "a função favorita do seu jeito"
+    por_que: "a pessoa se vê usando a sua versão, personalizada"
+    ancora: imagina
+    linha1: "A FUNÇÃO QUE"
+    linha2: "VOCÊ MAIS GOSTA"
+    destaque: {titulo: "DO SEU JEITO", texto: "no seu\ncomputador"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Mulher de uns 35 anos sentada num sofá claro de dia, com notebook no colo, sorrindo enquanto fala num microfone pequeno e o texto aparece sozinho na tela. Plantas, luz natural do sol entrando pela janela, clima tranquilo."
+  - id: medo
+    nome: MEDO
+    gatilho: "quem tenta de qualquer jeito trava"
+    por_que: "medo de perder tempo e ver o computador travar"
+    ancora: problema
+    linha1: "DE QUALQUER JEITO"
+    linha2: "TRAVA"
+    cor: vermelho
+    destaque: {titulo: "+20 MIN", texto: "parado num\narquivo gigante", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.55]
+    cena: "Homem de uns 40 anos num escritório claro de dia, mãos na cabeça, olhando um notebook cuja tela mostra uma barra de progresso parada em vermelho e um ícone de ampulheta enorme. Ao lado, uma pilha gigante de papéis desabando sobre a mesa. Luz de janela, rosto bem iluminado, expressão de frustração."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa programar"
+    por_que: "derruba a objeção principal: 'isso é coisa de programador'"
+    ancora: calma
+    linha1: "NÃO PRECISA"
+    linha2: "PROGRAMAR"
+    destaque: {titulo: "SÓ A ORDEM", texto: "siga os\npassos"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Senhor de uns 55 anos sentado à mesa da cozinha clara de dia, sorrindo e seguindo com o dedo uma lista de quatro passos escrita num caderno, com um notebook aberto ao lado. Xícara de café, luz do sol pela janela, rosto bem iluminado."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "nome da ferramenta e os 4 verbos"
+    por_que: "dá nome (REA) e o caminho em verbos simples"
+    ancora: instala
+    linha1: "INSTALA O REA"
+    linha2: "E PEDE AO AGENTE"
+    destaque: {titulo: "4 PASSOS", texto: "instala, escolhe\npede, confere"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Vista de cima de uma mesa clara de dia: um notebook com um terminal de fundo escuro e letras verdes, ao lado quatro cartões de papel coloridos enfileirados com ícones simples (uma caixa sendo aberta, um robô, um balão de conversa, um check verde). Uma mão coloca o último cartão. Luz natural, visual limpo."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "vinte segundos e o app do seu jeito"
+    por_que: "resultado rápido e medido no nosso teste"
+    ancora: normal
+    linha1: "20 SEGUNDOS"
+    linha2: "DE ANÁLISE"
+    destaque: {titulo: "NOSSO TESTE", texto: "projeto normal\nanalisado"}
+    camera: pan_esq
+    foco: [0.45, 0.45]
+    cena: "Jovem de uns 30 anos num escritório claro de dia, comemorando com o punho erguido diante de um notebook que mostra um cronômetro marcando 20 segundos e um aplicativo pronto ao lado com checks verdes. Luz forte do sol pela janela, clima de vitória."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (o site) e uma ação pequena e fácil: comentar uma palavra"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "guia com\ntodos os\ncomandos"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia, janela ao fundo desfocada. Na tela do celular, no alto, um vídeo vertical mostrando quatro degraus luminosos e um aplicativo colorido; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada."
+# CTA (entra na palavra 'ancora' da última etapa).
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "PASSOS", linha2: "que eu te mando o link"}
+legenda_envio: "SEU PRÓPRIO APP EM 4 PASSOS — reel no modelo de 7 etapas (REA na prática: instala, escolhe o agente, pede em português e confere)."
+canal: lives1
+youtube_20261012: https://www.youtube.com/shorts/B9D1phZJXWM
