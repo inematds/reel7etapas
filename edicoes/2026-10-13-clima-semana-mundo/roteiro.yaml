@@ -1,0 +1,88 @@
+# reel7etapas — edição 2026-10-13-clima-semana-mundo (review da semana 06–13/10/2026; base: eventosextremospub/edicoes/2026-10-13-semana-mundo/pesquisa/levantamento.md)
+tema: "A semana mais grave no mundo: terremoto, furacões e enchente"
+data: "13/10/2026"
+palavra: CLIMA
+fala: |
+  Um terremoto, dois furacões e uma enchente com mais de três milhões de atingidos. Tudo numa semana só. Imagina saber do perigo antes de ele chegar na sua cidade. Na Flórida, o furacão Isaias deixou quatro mortos e novecentas mil casas sem luz. E no Panamá, a terra tremeu com magnitude sete vírgula sete. E o melhor: o alerta existe e é de graça. Cadastra o seu CEP na Defesa Civil e acompanha a chuva num painel em tempo real. Quem sabe antes, se protege. Tá tudo no inema ponto club. Ou comenta CLIMA que eu te mando o link.
+# Fatos: Tailândia 3,13 mi atingidos desde 16/09 (DDPM, 08/10); Isaias 09/10 Destin FL, 4 mortos, ~900 mil clientes sem luz (Weather.com/CBS/NBC, 10–12/10); Panamá M7,7 em 09/10 (AP/Reuters; USGS 7,6), alerta de tsunami em 6 países; Simon cat. 4 (AP, 11/10).
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "terremoto, dois furacões e enchente numa semana"
+    por_que: "acúmulo de tragédias em poucos dias prende pela escala"
+    capa: {ganho: "SAIBA DO PERIGO ANTES DELE CHEGAR", linha1: "1 SEMANA", linha2: "TERREMOTO + FURACÃO", sub: "O MUNDO DE 06 A 13/10"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Vista aérea de dia de uma cidade asiática alagada, com ruas transformadas em rios marrons, telhados e um barco de resgate laranja levando moradores. Céu nublado claro, luz neutra de dia, foto jornalística realista."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "saber do perigo antes de ele chegar"
+    por_que: "a pessoa quer proteger a família com antecedência"
+    ancora: imagina
+    linha1: "SABER ANTES"
+    linha2: "DO PERIGO CHEGAR"
+    destaque: {titulo: "ALERTA", texto: "no seu celular\nantes da hora"}
+    camera: pull
+    foco: [0.5, 0.45]
+    cena: "Mulher brasileira de uns 40 anos em pé perto da janela de uma sala clara de dia, olhando o celular com atenção; lá fora, nuvens carregadas se formando sobre a cidade. Luz neutra de janela, rosto bem iluminado."
+  - id: medo
+    nome: MEDO
+    gatilho: "4 mortos, 900 mil sem luz, terremoto 7,7"
+    por_que: "número com fonte mostra que é real e recente"
+    ancora: Flórida
+    linha1: "4 MORTOS"
+    linha2: "900 MIL SEM LUZ"
+    cor: vermelho
+    destaque: {titulo: "188 KM/H", texto: "furacão Isaias\n09/10 (NBC/CBS)", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.55]
+    cena: "Rua de uma cidade litorânea da Flórida de dia logo depois de um furacão: árvores caídas sobre carros, postes de luz tombados e fios no chão, telhados danificados. Céu cinza claro, luz neutra, foto jornalística realista."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "o alerta existe e é de graça"
+    por_que: "derruba a ideia de que proteção custa caro"
+    ancora: melhor
+    linha1: "O ALERTA"
+    linha2: "É DE GRAÇA"
+    destaque: {titulo: "GRÁTIS", texto: "alerta oficial\nno celular"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Homem brasileiro de uns 60 anos sentado no sofá de uma sala clara de dia, sorrindo, mostrando no celular um aviso com ícone de nuvem e raio, sem letras legíveis. Luz neutra de janela."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "CEP na Defesa Civil + painel de chuva em tempo real"
+    por_que: "dá a ferramenta concreta, com o número"
+    ancora: cadastra
+    linha1: "ALERTA NO CEP"
+    linha2: "+ PAINEL DE CHUVA"
+    destaque: {titulo: "40199", texto: "manda o CEP\npor mensagem"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Mão segurando um smartphone numa varanda clara de dia; na tela, um mapa de radar de chuva com manchas azuis e roxas sobre o contorno de um país, sem letras legíveis. Céu com nuvens ao fundo, luz neutra."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "quem sabe antes, se protege"
+    por_que: "fecha a imagem: família segura"
+    ancora: protege
+    linha1: "QUEM SABE ANTES"
+    linha2: "SE PROTEGE"
+    destaque: {titulo: "PRONTO", texto: "água, lanterna\ne documentos"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Família brasileira na cozinha clara de dia separando uma mochila de emergência com garrafas de água, lanterna, remédios e uma pasta de documentos; pai, mãe e duas crianças calmos e organizados. Luz neutra de janela."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou comenta CLIMA"
+    por_que: "dá o caminho (site) e uma ação pequena"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "painéis de\nchuva e alerta"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia, com a janela desfocada ao fundo. Na tela, no alto, um vídeo vertical de um mapa-múndi com tempestades marcadas; embaixo, a área de comentários com avatares redondos, corações e balões, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "CLIMA", linha2: "que eu te mando o link"}
+legenda_envio: "1 SEMANA: TERREMOTO + FURACÃO (o mais grave no mundo, 06 a 13/10) — reel 7 etapas."
+canal: lives10
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner): o mais grave da semana no mundo, 06 a 13/10/2026. Enchentes na Tailândia com mais de 3 milhões de atingidos desde 16/09 (DDPM); furacão Isaias entrou na Flórida em 09/10 com 4 mortos e ~900 mil clientes sem luz (NBC/CBS); terremoto de magnitude 7,7 no Panamá em 09/10 com alerta de tsunami em 6 países (AP); furacão Simon categoria 4 no México. Como se proteger: alerta da Defesa Civil no CEP (mensagem de texto para 40199) e painel de chuva em tempo real; projetos gratuitos no inema.club. CTA: comente CLIMA. Título com gancho, começando por 'Terremoto, furacão e enchente em 1 semana', com #shorts. Escreva 'mensagem de texto', nunca 'SMS'."
+youtube_20261013: https://www.youtube.com/shorts/DfdtX9HbkWg
