@@ -2,6 +2,7 @@
 
 | data | o que quebrou | menor correção | prompt \| infra |
 |---|---|---|---|
+| 2026-10-13 | série clima no mundo: `systemd-oomd` matou a cadeia r7e-clima às 00:57 com Japão/Tailândia ainda em "pending" no estúdio (avatares ficaram sem baixar, nada montado); e o Whisper ouviu "comenta a clima" no furacões (legenda com "A" a mais) | baixar pelo `heygen-estudio-baixar.mjs` com o video_id salvo e rodar montar/validar/mapa; corrigir `palavras.json` antes do `montar` | infra |
 | 2026-10-12 | amigos escala/vendas/agora: estúdio HeyGen "modal sem Enviar" parecia não enviar; na verdade o Generate passou a enviar direto (sem modal) e os vídeos só estavam na fila lenta (até ~2 h) | heygen-studio trata Generate sem modal como enviado (explicavideos); reelcomenta mantém o guard de ERRO | infra |
 | 2026-10-12 | reel rea-area: portão zona segura reprovou a faixa do ganho ("REA: UMA ÁREA PRONTA PRA VOCÊ CLONAR QUALQUER SOFTWARE", frase do Nei) — não cabia em 2 linhas nem com a fonte mínima, e o `ganho()` desenhava para fora; também "inema .club"/"R &A"/"a Clonar" na transcrição (de novo) | `ganho()` passa para 3 linhas equilibradas quando 2 não cabem (frase do Nei fica inteira); transcrição corrigida no `palavras.json` antes do `montar` | infra |
 | 2026-10-12 | reel REA sem travas: as 7 imagens saíram amareladas/sépia (amarelo (R+G)/2−B de 23 a 53) — o ESTILO pedia "luz dourada quente" e o gerador já puxa pro quente; o portão só media luz | ESTILO com luz neutra + luz por etapa; `cor` neutraliza acima de 18 (alvo 12); portão reprova acima de 25 | prompt |
