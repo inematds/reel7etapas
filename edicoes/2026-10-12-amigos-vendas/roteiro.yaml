@@ -1,0 +1,87 @@
+# reel7etapas — edição 2026-10-12-amigos-vendas (série "amigos empresários" 4/5: a nova era de vendas pelas redes)
+tema: "Seu cliente está no celular"
+data: "12/10/2026"
+palavra: VENDAS
+fala: |
+  O seu próximo cliente não vai passar na frente da sua porta. Ele está no celular, agora. Imagina o seu negócio aparecendo todo dia pra quem precisa exatamente do que você faz. Muita gente boa ainda espera o cliente chegar sozinho, e vê o concorrente, às vezes pior, vendendo pelas redes. E o melhor: não precisa virar influenciador nem dançar em vídeo. Com agentes de inteligência artificial, você cria conteúdo, responde mensagens e acompanha cada contato, com pouco tempo por dia. É a sua vitrine aberta vinte e quatro horas na internet. Tá tudo no inema ponto club, com o OSWork e a Gestão de Agentes. Ou comenta VENDAS que eu te mando o link.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "o próximo cliente está no celular, não na porta"
+    por_que: "vira a chave da venda de balcão para a venda pela internet em uma frase"
+    capa: {ganho: "CLIENTES TE ACHANDO PELAS REDES, TODO DIA", linha1: "SEU CLIENTE", linha2: "ESTÁ NO CELULAR", sub: "NÃO NA SUA PORTA"}
+    camera: push
+    foco: [0.5, 0.55]
+    cena: "Fachada de uma loja de rua de dia, luz natural neutra, com a calçada vazia e a porta aberta. Em primeiro plano, a mão de uma pessoa segurando um celular que mostra o perfil dessa mesma loja numa rede social, com fotos de produtos e corações. Celular nítido no centro da imagem."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "aparecer todo dia pra quem precisa do que você faz"
+    por_que: "a pessoa se imagina encontrada pelo cliente certo"
+    ancora: imagina
+    linha1: "APARECER"
+    linha2: "TODO DIA"
+    destaque: {titulo: "CLIENTE CERTO", texto: "quem precisa\ndo que você faz"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Sala de casa clara de dia, luz de janela neutra. Uma mulher de uns 40 anos, no sofá, rola o celular e para com interesse num vídeo de um profissional explicando algo; na tela aparecem botões de mensagem e de agendar. Rosto curioso e bem iluminado."
+  - id: medo
+    nome: MEDO
+    gatilho: "o concorrente, às vezes pior, vendendo pelas redes"
+    por_que: "a dor de ver alguém menos preparado ganhando o cliente"
+    ancora: gente
+    linha1: "O CONCORRENTE"
+    linha2: "VENDE PELAS REDES"
+    cor: vermelho
+    destaque: {titulo: "E VOCÊ?", texto: "esperando o\ncliente chegar", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.55]
+    cena: "Loja vazia de dia, luz neutra. Um comerciante de uns 55 anos, atrás do balcão, de braços cruzados olhando pela vitrine; do outro lado da rua, uma loja concorrente com movimento e entregadores saindo com pacotes. Expressão preocupada, rosto bem iluminado."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa virar influenciador"
+    por_que: "derruba a objeção 'não vou ficar dançando na internet'"
+    ancora: melhor
+    linha1: "SEM VIRAR"
+    linha2: "INFLUENCIADOR"
+    destaque: {titulo: "SEM DANCINHA", texto: "do seu jeito,\nsério e útil"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Advogado de uns 50 anos, de camisa social, no escritório claro de dia, sentado tranquilo diante de um notebook que mostra uma tela simples de agendar publicações com miniaturas de posts profissionais. Ele sorri, sério e confiante. Luz de janela neutra no rosto."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "agentes de IA criam conteúdo, respondem e acompanham contatos"
+    por_que: "dá nome à solução com verbos do dia a dia de vendas"
+    ancora: agentes
+    linha1: "AGENTES"
+    linha2: "QUE VENDEM"
+    destaque: {titulo: "ELES", texto: "criam conteúdo\nrespondem\nacompanham"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Mesa de escritório clara de dia com um monitor mostrando três colunas simples: posts prontos para publicar, conversas com clientes sendo respondidas e uma lista de contatos com etapas marcadas em verde. Pequenos ícones de robô amigável em cada coluna. Luz de janela neutra."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "uma vitrine aberta 24 h na internet"
+    por_que: "fecha a imagem: o negócio vendendo mesmo de porta fechada"
+    ancora: vitrine
+    linha1: "VITRINE"
+    linha2: "ABERTA 24 H"
+    destaque: {titulo: "24 H", texto: "vendendo\nna internet"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Dona de uma pequena confeitaria, mulher de uns 45 anos, de avental, sorrindo de dia na cozinha clara da loja enquanto confere no celular uma lista de pedidos novos com marcas verdes; sobre a bancada, caixas de doces prontas para entrega. Luz de janela neutra."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (OSWork e Gestão de Agentes) e uma ação pequena: comentar VENDAS"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "OSWork e\nGestão de\nAgentes"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia, com a janela desfocada ao fundo. Na tela do celular, no alto, um vídeo vertical mostrando uma vitrine de loja; embaixo, a área de comentários com avatares redondos, corações e balões, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "VENDAS", linha2: "que eu te mando o link"}
+legenda_envio: "SEU CLIENTE ESTÁ NO CELULAR — série amigos empresários 4/5, reel no modelo de 7 etapas."
+canal: lives1
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner) sobre a nova era de vendas pelas redes e pela internet: o seu próximo cliente não vai passar na frente da sua porta, ele está no celular. Muita gente boa espera o cliente chegar enquanto o concorrente vende pelas redes. Não precisa virar influenciador: com agentes de inteligência artificial você cria conteúdo, responde mensagens e acompanha cada contato, com pouco tempo por dia. Uma vitrine aberta 24 horas na internet. CTA: tudo no inema.club, com os cursos gratuitos OSWork e Gestão de Agentes, ou comente VENDAS. Título com gancho forte (ex.: 'Seu cliente está no celular'), com #shorts."
+youtube_20261013: https://www.youtube.com/shorts/rkKHPghiy4c

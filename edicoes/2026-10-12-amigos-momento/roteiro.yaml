@@ -1,0 +1,87 @@
+# reel7etapas — edição 2026-10-12-amigos-momento (série "amigos empresários" 1/5: não perca o momento)
+tema: "Não perca o momento"
+data: "12/10/2026"
+palavra: MOMENTO
+fala: |
+  Tem uma mudança acontecendo agora, e muita gente boa vai perder o momento. Imagina o seu negócio atendendo, vendendo e respondendo cliente o dia inteiro, mesmo com você ocupado. Eu converso com amigos empresários, médicos e profissionais liberais, e vejo muitos reclamando, sem perceber que a regra do jogo mudou. E o melhor: não precisa ser técnico pra entrar agora. Os agentes de inteligência artificial já trabalham como uma equipe digital, e dá pra aprender a gerenciar essa equipe. Quem entende isso cedo cresce na frente. Tá tudo no inema ponto club, com o OSWork e a Gestão de Agentes, de graça. Ou comenta MOMENTO que eu te mando o link.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "uma mudança acontecendo agora, e dá pra perder"
+    por_que: "urgência sem ameaça: o momento é agora e tem gente boa ficando de fora"
+    capa: {ganho: "ENTENDA A MUDANÇA ANTES DOS SEUS CONCORRENTES", linha1: "O JOGO MUDOU.", linha2: "VOCÊ PERCEBEU?", sub: "NÃO PERCA O MOMENTO"}
+    camera: push
+    foco: [0.5, 0.55]
+    cena: "Rua comercial de cidade brasileira de dia, luz natural neutra. Em primeiro plano, um empresário de uns 50 anos, de camisa social, parado na calçada olhando para o celular com expressão de surpresa; atrás dele, pessoas passando, todas olhando para seus celulares. Ele e o celular nítidos no centro da imagem."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "o negócio atendendo e vendendo o dia inteiro"
+    por_que: "a pessoa imagina o negócio funcionando mesmo quando ela está ocupada"
+    ancora: imagina
+    linha1: "SEU NEGÓCIO"
+    linha2: "ATENDENDO O DIA TODO"
+    destaque: {titulo: "SEMPRE", texto: "atende, vende\ne responde"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Pequena loja clara de dia, luz de janela. Atrás do balcão, um tablet num suporte mostra várias conversas de clientes sendo respondidas, com ícones de mensagens e de pedidos confirmados. A dona da loja, mulher de uns 45 anos, atende uma cliente sorrindo ao lado. Ambiente organizado e bem iluminado."
+  - id: medo
+    nome: MEDO
+    gatilho: "gente boa reclamando sem ver que a regra mudou"
+    por_que: "a pessoa se reconhece na reclamação sem ser acusada: a culpa é do momento"
+    ancora: converso
+    linha1: "A REGRA"
+    linha2: "MUDOU"
+    cor: vermelho
+    destaque: {titulo: "ATENÇÃO", texto: "muitos ainda\nnão perceberam", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.55]
+    cena: "Mesa de café de dia, luz neutra de janela. Três profissionais de uns 50 anos (um médico de jaleco, uma advogada de blazer e um comerciante de camisa polo) conversam preocupados, com papéis e contas sobre a mesa; um deles gesticula reclamando. Expressões tensas, rostos bem iluminados."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa ser técnico"
+    por_que: "derruba a objeção 'isso não é pra mim'"
+    ancora: melhor
+    linha1: "NÃO PRECISA"
+    linha2: "SER TÉCNICO"
+    destaque: {titulo: "SIMPLES", texto: "do zero,\nno seu ritmo"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Homem de uns 55 anos, de óculos, sentado tranquilo na mesa do escritório de casa, de dia com luz de janela, olhando um notebook com uma tela simples e limpa, sem código. Ele sorri, relaxado, com uma xícara de café ao lado. Rosto bem iluminado."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "agentes de IA trabalham como equipe digital, e dá pra aprender a gerenciar"
+    por_que: "dá nome à mudança e mostra o papel da pessoa: gestora, não programadora"
+    ancora: agentes
+    linha1: "UMA EQUIPE"
+    linha2: "DIGITAL"
+    destaque: {titulo: "AGENTES", texto: "você aprende\na gerenciar"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Escritório claro de dia. Uma empresária de uns 50 anos olha para um monitor grande que mostra um painel simples com cinco cartões, cada um com um pequeno robô amigável e uma tarefa (atendimento, agenda, vendas, financeiro, redes sociais), todos com sinal verde de concluído. Luz de janela neutra."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "quem entende cedo cresce na frente"
+    por_que: "fecha a imagem: sair na frente em vez de correr atrás"
+    ancora: cedo
+    linha1: "QUEM ENTENDE CEDO"
+    linha2: "CRESCE NA FRENTE"
+    destaque: {titulo: "NA FRENTE", texto: "enquanto\noutros esperam"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Empresário de uns 45 anos caminhando confiante por um corredor de escritório claro de dia, com um tablet na mão mostrando um gráfico subindo em verde. Atrás dele, colegas sorrindo. Luz natural neutra, ambiente moderno e organizado."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (o site, com OSWork e Gestão de Agentes) e uma ação pequena: comentar MOMENTO"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "OSWork e\nGestão de\nAgentes"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia, com a janela desfocada ao fundo. Na tela do celular, no alto, um vídeo vertical mostrando um empresário sorrindo diante de um computador; embaixo, a área de comentários com avatares redondos, corações e balões, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "MOMENTO", linha2: "que eu te mando o link"}
+legenda_envio: "O JOGO MUDOU. VOCÊ PERCEBEU? — série amigos empresários 1/5, reel no modelo de 7 etapas."
+canal: lives1
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner) para empresários, empreendedores, profissionais liberais e médicos: tem uma mudança acontecendo agora e muita gente boa vai perder o momento. O negócio pode atender, vender e responder cliente o dia inteiro. Muitos reclamam sem perceber que a regra do jogo mudou. Não precisa ser técnico: os agentes de inteligência artificial trabalham como uma equipe digital e dá pra aprender a gerenciar essa equipe. Quem entende cedo cresce na frente. CTA: tudo no inema.club, com os cursos gratuitos OSWork e Gestão de Agentes, ou comente MOMENTO. Título com gancho forte (ex.: 'O jogo mudou. Você percebeu?'), com #shorts."
+youtube_20261012: https://www.youtube.com/shorts/dfR_LXJHkYQ

@@ -1,0 +1,87 @@
+# reel7etapas — edição 2026-10-12-amigos-escala (série "amigos empresários" 3/5: crescer sem dobrar a folha)
+tema: "Cresça sem dobrar a equipe"
+data: "12/10/2026"
+palavra: ESCALA
+fala: |
+  Dá pra atender muito mais clientes sem dobrar a sua equipe. Imagina a sua loja, o seu escritório ou a sua clínica dando conta de muito mais trabalho, com as mesmas pessoas. Hoje, crescer quase sempre significa contratar, treinar e pagar mais salário, e o lucro some no caminho. E o melhor: as ferramentas já existem, e muitas são gratuitas. O segredo é a gestão de agentes de inteligência artificial: cada agente cuida de uma tarefa, e você gerencia como gerencia uma equipe. Sua equipe humana fica com o que só gente faz bem. Tá tudo no inema ponto club, com o OSWork e a Gestão de Agentes. Ou comenta ESCALA que eu te mando o link.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "atender muito mais sem dobrar a equipe"
+    por_que: "o sonho de todo dono de negócio: crescer sem aumentar o custo fixo"
+    capa: {ganho: "CRESÇA SEM DOBRAR A FOLHA DE PAGAMENTO", linha1: "MAIS CLIENTES.", linha2: "MESMA EQUIPE.", sub: "DÁ PRA ESCALAR"}
+    camera: push
+    foco: [0.5, 0.55]
+    cena: "Escritório pequeno e claro de dia, luz de janela neutra. Três funcionários tranquilos em suas mesas, enquanto um monitor grande na parede mostra um contador de atendimentos subindo e uma fila de pedidos sendo concluída com marcas verdes. A equipe calma no centro da imagem, bem iluminada."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "o negócio dando conta de muito mais"
+    por_que: "a pessoa se imagina crescendo sem caos"
+    ancora: imagina
+    linha1: "MUITO MAIS"
+    linha2: "TRABALHO FEITO"
+    destaque: {titulo: "MESMAS", texto: "pessoas,\nmais resultado"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Clínica pequena e organizada de dia, luz natural neutra. Na recepção, uma atendente de uns 40 anos sorri atendendo uma pessoa, enquanto atrás dela uma tela mostra muitas tarefas concluídas com marcas verdes. A sala de espera tem pacientes tranquilos, sem fila tumultuada."
+  - id: medo
+    nome: MEDO
+    gatilho: "crescer = contratar, e o lucro some"
+    por_que: "a dor real de quem já tentou crescer contratando"
+    ancora: hoje
+    linha1: "O LUCRO"
+    linha2: "SOME NO CAMINHO"
+    cor: vermelho
+    destaque: {titulo: "CUSTO", texto: "contratar,\ntreinar, pagar", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.55]
+    cena: "Mesa de escritório clara de dia, luz neutra. Um empresário de uns 50 anos, preocupado, segura uma folha de pagamento comprida com muitas linhas, ao lado de uma calculadora e de uma pilha de contratos. Na tela do notebook, um gráfico de lucro descendo em vermelho."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "as ferramentas já existem, muitas grátis"
+    por_que: "derruba a objeção 'isso é caro'"
+    ancora: melhor
+    linha1: "AS FERRAMENTAS"
+    linha2: "JÁ EXISTEM"
+    destaque: {titulo: "GRÁTIS", texto: "muitas\nnão custam nada"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Empresária de uns 45 anos, sentada à mesa da cozinha de dia com luz de janela, abrindo o notebook e sorrindo surpresa para uma tela simples com vários ícones de aplicativos organizados. Uma xícara de café ao lado. Rosto bem iluminado, clima leve."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "gestão de agentes: cada agente uma tarefa, você gerencia"
+    por_que: "dá nome à solução e mostra o papel do dono: gestor"
+    ancora: segredo
+    linha1: "GESTÃO"
+    linha2: "DE AGENTES"
+    destaque: {titulo: "1 AGENTE", texto: "1 tarefa,\nvocê gerencia"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Sala de reunião clara de dia. Um empresário de uns 50 anos, em pé, aponta para um quadro grande na parede com um organograma simples: no topo ele mesmo, embaixo cinco caixinhas com pequenos robôs amigáveis, cada um com uma tarefa (atendimento, agenda, vendas, financeiro, relatórios). Luz de janela neutra."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "a equipe humana fica com o que só gente faz bem"
+    por_que: "fecha sem ameaça de demissão: a equipe sobe de nível"
+    ancora: humana
+    linha1: "SUA EQUIPE"
+    linha2: "NO QUE IMPORTA"
+    destaque: {titulo: "GENTE", texto: "faz o que\nsó gente faz"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Loja clara de dia, luz natural neutra. Uma vendedora de uns 35 anos conversa atenciosa com um casal de clientes, mostrando um produto; ao fundo, o dono da loja sorri de braços cruzados. Ambiente acolhedor, organizado e bem iluminado."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (OSWork e Gestão de Agentes) e uma ação pequena: comentar ESCALA"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "OSWork e\nGestão de\nAgentes"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia, com a janela desfocada ao fundo. Na tela do celular, no alto, um vídeo vertical mostrando um organograma com pequenos robôs; embaixo, a área de comentários com avatares redondos, corações e balões, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "ESCALA", linha2: "que eu te mando o link"}
+legenda_envio: "MAIS CLIENTES. MESMA EQUIPE. — série amigos empresários 3/5, reel no modelo de 7 etapas."
+canal: lives1
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner) para donos de negócio, clínicas e escritórios: dá pra atender muito mais clientes sem dobrar a equipe. Hoje crescer quase sempre significa contratar, treinar e pagar mais salário, e o lucro some no caminho. As ferramentas já existem e muitas são gratuitas. O segredo é a gestão de agentes de inteligência artificial: cada agente cuida de uma tarefa e você gerencia como uma equipe; a equipe humana fica com o que só gente faz bem. CTA: tudo no inema.club, com os cursos gratuitos OSWork e Gestão de Agentes, ou comente ESCALA. Título com gancho forte (ex.: 'Mais clientes. Mesma equipe.'), com #shorts."
+youtube_20261013: https://www.youtube.com/shorts/C76hNNozYOU

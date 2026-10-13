@@ -1,0 +1,94 @@
+[reel7etapas] portão das imagens: OK (vertical, clara, cor neutra, sem repetição)
+[reelcomenta] 18:27 pending
+[reelcomenta] 18:28 pending
+[reelcomenta] 18:29 pending
+[reelcomenta] 18:30 pending
+[reelcomenta] 18:31 pending
+[reelcomenta] 18:32 pending
+[reelcomenta] 18:33 pending
+[reelcomenta] 18:34 pending
+[reelcomenta] 18:35 pending
+[reelcomenta] 18:36 pending
+[reelcomenta] 18:37 pending
+[reelcomenta] 18:38 pending
+[reelcomenta] 18:39 pending
+[reelcomenta] 18:40 pending
+[reelcomenta] 18:41 pending
+[reelcomenta] 18:42 pending
+[reelcomenta] 18:43 pending
+[reelcomenta] 18:44 pending
+[reelcomenta] 18:45 pending
+[reelcomenta] 18:46 pending
+[reelcomenta] 18:47 pending
+[reelcomenta] 18:48 pending
+[reelcomenta] 18:49 pending
+[reelcomenta] 18:50 pending
+[reelcomenta] 18:51 pending
+[reelcomenta] 18:52 pending
+[reelcomenta] 18:53 pending
+[reelcomenta] 18:54 pending
+[reelcomenta] 18:55 pending
+[reelcomenta] 18:56 pending
+[reelcomenta] 18:57 pending
+[reelcomenta] 18:58 pending
+[reelcomenta] 18:59 pending
+[reelcomenta] 19:00 pending
+[reelcomenta] 19:01 pending
+[reelcomenta] 19:02 pending
+[reelcomenta] 19:03 pending
+[reelcomenta] 19:04 pending
+[reelcomenta] 19:05 pending
+[reelcomenta] 19:06 pending
+[reelcomenta] 19:07 pending
+[reelcomenta] 19:09 pending
+[reelcomenta] 19:10 pending
+[reelcomenta] 19:11 pending
+[reelcomenta] 19:12 pending
+[reelcomenta] 19:13 pending
+[reelcomenta] 19:14 pending
+[reelcomenta] 19:15 pending
+[reelcomenta] 19:16 pending
+[reelcomenta] 19:17 pending
+[reelcomenta] 19:18 pending
+[reelcomenta] 19:19 pending
+[reelcomenta] 19:20 pending
+[reelcomenta] 19:21 pending
+[reelcomenta] 19:22 pending
+[reelcomenta] 19:23 pending
+[reelcomenta] 19:24 pending
+[reelcomenta] 19:25 pending
+[reelcomenta] 19:26 pending
+[reelcomenta] 19:27 pending
+[reelcomenta] 19:28 processing
+[reelcomenta] 19:29 completed
+[reelcomenta] avatar baixado /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-12-amigos-equipe/avatar/avatar.mp4
+[reel7etapas] fala do avatar × roteiro: 98%
+[reel7etapas] 1:0.0 · 2:3.8 · 3:8.8 · 4:14.8 · 5:19.1 · 6:26.9 · 7:30.0 · cta 33.3 · fim 34.8 · total 37.8
+[reel7etapas] quadro 0/1135
+[reel7etapas] quadro 300/1135
+[reel7etapas] quadro 600/1135
+[reel7etapas] quadro 900/1135
+[reel7etapas] portão zona segura + fonte mínima: OK
+[reel7etapas] vídeo /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-12-amigos-equipe/video.mp4 37.9 s 11.3 MB
+[reel7etapas] ritmo: maior trecho sem troca de imagem 3.0 s
+✅ duração                  37.9s
+✅ formato                  1080x1920
+✅ fps                      30.00
+✅ codec vídeo              h264
+✅ codec áudio              aac
+✅ loudness                 -14.3 LUFS
+✅ sem tela preta inicial   imagem desde o frame 0
+✅ frame 0 (informação)     0.199 de bordas
+✅ trechos parados          nenhum acima de 4 s
+✅ legendas (estrutura)     43 cues
+✅ legendas (palavras)      0 de 43 cues com mais de 3 palavras
+✅ legendas (sobreposição)  0 sobreposições
+✅ folha de quadros         /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-12-amigos-equipe/build/qa.png (0.0s, 2.0s, 5.0s, 18.9s, 36.9s)
+
+perfil divulgacao · contrato 1.2.1
+RESULTADO: APROVADO (falta a revisão humana: gancho, prova, pronúncia)
+
+[reel7etapas] validar: OK — revise as folhas em /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-12-amigos-equipe/build/revisao
+[reel7etapas] mapa /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-12-amigos-equipe/mapa.jpg
+[reel7etapas] capa /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-12-amigos-equipe/capa.jpg
+[reel7etapas] Terminei: reel pronto e validado — /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-12-amigos-equipe/video.mp4

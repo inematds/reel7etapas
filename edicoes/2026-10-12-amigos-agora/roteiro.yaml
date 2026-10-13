@@ -1,0 +1,87 @@
+# reel7etapas — edição 2026-10-12-amigos-agora (série "amigos empresários" 5/5: da reclamação à ação)
+tema: "Transforme a crise em oportunidade"
+data: "12/10/2026"
+palavra: AGORA
+fala: |
+  Reclamar da crise não traz cliente. Entender a mudança traz. Imagina olhar pra essa fase e enxergar oportunidade, não ameaça. Quem demorou pra entender a internet, lá nos anos dois mil, ficou pra trás. E a história está se repetindo, só que mais rápido. E o melhor: dá pra começar pequeno, no seu computador, uma tarefa por vez. O OSWork te mostra o primeiro passo, e a Gestão de Agentes te ensina a colocar a inteligência artificial pra trabalhar no seu negócio. Enquanto muitos reclamam, você já está construindo. Tá tudo no inema ponto club, de graça. Ou comenta AGORA que eu te mando o link.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "reclamar não traz cliente, entender traz"
+    por_que: "vira a chave da reclamação para a ação sem acusar ninguém"
+    capa: {ganho: "TRANSFORME A CRISE EM OPORTUNIDADE", linha1: "RECLAMAR", linha2: "NÃO VENDE.", sub: "ENTENDER, SIM"}
+    camera: push
+    foco: [0.5, 0.55]
+    cena: "Escritório claro de dia, luz de janela neutra. Um empresário de uns 50 anos, de camisa, em pé junto à janela, deixa de lado um jornal com manchete de crise e olha com interesse para o celular na outra mão, que mostra um gráfico subindo. Rosto bem iluminado, expressão de decisão."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "enxergar oportunidade, não ameaça"
+    por_que: "a pessoa se imagina do lado de quem aproveita a mudança"
+    ancora: imagina
+    linha1: "ENXERGAR"
+    linha2: "OPORTUNIDADE"
+    destaque: {titulo: "NÃO AMEAÇA", texto: "a mesma fase,\noutro olhar"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Empresária de uns 50 anos, de blazer, sentada numa sala de reunião clara de dia, olhando pela janela ampla para a cidade, com um caderno aberto cheio de ideias e setas desenhadas à mão. Ela sorri, confiante. Luz natural neutra."
+  - id: medo
+    nome: MEDO
+    gatilho: "quem demorou a entender a internet ficou pra trás"
+    por_que: "referência histórica que todo mundo viveu, sem número inventado"
+    ancora: demorou
+    linha1: "A HISTÓRIA"
+    linha2: "SE REPETE"
+    cor: vermelho
+    destaque: {titulo: "ANOS 2000", texto: "quem demorou\nficou pra trás", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.55]
+    cena: "Loja antiga de dia, luz neutra. Sobre o balcão de madeira, uma lista telefônica grossa, um fax e um computador de tubo dos anos 2000 cobertos de poeira; pela vitrine, vê-se a rua movimentada com pessoas usando celulares. Clima de algo que ficou para trás."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "começar pequeno, uma tarefa por vez"
+    por_que: "derruba a objeção 'é grande demais pra mim'"
+    ancora: melhor
+    linha1: "COMECE"
+    linha2: "PEQUENO"
+    destaque: {titulo: "1 TAREFA", texto: "por vez,\nno seu PC"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Homem de uns 55 anos sentado à mesa do escritório de casa de dia, com luz de janela neutra, diante de um notebook aberto mostrando uma lista curta de tarefas em que a primeira está marcada com um check verde. Ele sorri satisfeito. Rosto bem iluminado."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "OSWork dá o primeiro passo, Gestão de Agentes coloca a IA pra trabalhar"
+    por_que: "dá nome aos dois caminhos da oferta, na ordem"
+    ancora: primeiro
+    linha1: "OSWORK +"
+    linha2: "GESTÃO DE AGENTES"
+    destaque: {titulo: "O CAMINHO", texto: "1º passo,\ndepois a equipe\ndigital"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Escada de concreto clara num prédio moderno de dia, com luz natural neutra; um empresário de uns 45 anos sobe o primeiro degrau segurando um notebook; nos degraus acima, pequenos robôs amigáveis o esperam, cada um segurando uma placa com um ícone de tarefa (agenda, mensagens, vendas). Ele bem iluminado no centro."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "enquanto muitos reclamam, você constrói"
+    por_que: "fecha a imagem: a pessoa já do lado de quem age"
+    ancora: enquanto
+    linha1: "VOCÊ JÁ"
+    linha2: "ESTÁ CONSTRUINDO"
+    destaque: {titulo: "AÇÃO", texto: "enquanto\noutros reclamam"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Oficina de pequeno negócio clara de dia, luz de janela neutra. Uma empresária de uns 45 anos, de mangas arregaçadas, sorri diante de um monitor que mostra um painel simples de vendas crescendo, com colegas animados ao lado olhando a tela. Clima de construção e energia."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (o site, grátis) e uma ação pequena: comentar AGORA"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "OSWork e\nGestão de\nAgentes"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia, com a janela desfocada ao fundo. Na tela do celular, no alto, um vídeo vertical mostrando um empresário subindo uma escada; embaixo, a área de comentários com avatares redondos, corações e balões, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "AGORA", linha2: "que eu te mando o link"}
+legenda_envio: "RECLAMAR NÃO VENDE. — série amigos empresários 5/5, reel no modelo de 7 etapas."
+canal: lives1
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner) para empresários e profissionais que estão reclamando da crise: reclamar não traz cliente, entender a mudança traz. Quem demorou a entender a internet nos anos 2000 ficou para trás, e a história está se repetindo, mais rápido. Dá para começar pequeno, no seu computador, uma tarefa por vez: o OSWork mostra o primeiro passo e a Gestão de Agentes ensina a colocar a inteligência artificial para trabalhar no negócio. Enquanto muitos reclamam, você já está construindo. CTA: tudo no inema.club, de graça, ou comente AGORA. Título com gancho forte (ex.: 'Reclamar não vende. Entender, sim.'), com #shorts."
+youtube_20261013: https://www.youtube.com/shorts/ReesNzOPqVI

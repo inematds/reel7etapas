@@ -1,0 +1,87 @@
+# reel7etapas — edição 2026-10-12-amigos-equipe (série "amigos empresários" 2/5: a equipe que não dorme)
+tema: "Seu consultório atendendo dia e noite"
+data: "12/10/2026"
+palavra: EQUIPE
+fala: |
+  O seu consultório pode responder paciente às onze da noite, sem você acordar. Imagina chegar de manhã com a agenda organizada, as dúvidas respondidas e os retornos marcados. Enquanto isso, muita gente ainda perde paciente e cliente porque a mensagem ficou sem resposta até o dia seguinte. E o melhor: você não precisa entender de tecnologia, só saber o que quer delegar. São os agentes de inteligência artificial: uma equipe digital que atende, organiza e lembra, do jeito que você ensinar. E você volta a ter tempo pro que importa: as pessoas. Tá tudo no inema ponto club, com a Gestão de Agentes, de graça. Ou comenta EQUIPE que eu te mando o link.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "responder às onze da noite sem acordar"
+    por_que: "resultado concreto que todo profissional liberal quer, em 2 segundos"
+    capa: {ganho: "SEU CONSULTÓRIO ATENDENDO DIA E NOITE", linha1: "VOCÊ DESCANSA.", linha2: "ELE RESPONDE.", sub: "MESMO ÀS 23 H"}
+    camera: push
+    foco: [0.5, 0.55]
+    cena: "Recepção de consultório médico moderna e vazia, iluminada pela luz neutra de luminárias brancas. Sobre o balcão, um celular em pé num suporte mostra uma conversa com o paciente sendo respondida automaticamente, com o relógio da tela marcando 23:00. Ao fundo, cadeiras de espera vazias e organizadas. Celular nítido no centro."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "chegar de manhã com tudo organizado"
+    por_que: "a pessoa se imagina começando o dia sem a pilha de mensagens"
+    ancora: imagina
+    linha1: "AGENDA"
+    linha2: "JÁ ORGANIZADA"
+    destaque: {titulo: "DE MANHÃ", texto: "dúvidas e\nretornos prontos"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Médica de uns 50 anos, de jaleco branco, chegando ao consultório de manhã, luz de janela clara e neutra, segurando uma xícara de café e olhando sorridente para o monitor sobre a mesa, que mostra uma agenda do dia toda preenchida, com marcas verdes de confirmado."
+  - id: medo
+    nome: MEDO
+    gatilho: "perder paciente por mensagem sem resposta"
+    por_que: "perda concreta e frequente, sem número inventado"
+    ancora: enquanto
+    linha1: "MENSAGEM"
+    linha2: "SEM RESPOSTA"
+    cor: vermelho
+    destaque: {titulo: "PERDIDO", texto: "o paciente\nfoi pra outro", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.55]
+    cena: "Close de um celular sobre uma mesa clara de escritório, de dia, luz neutra. A tela mostra uma lista de conversas com várias bolinhas vermelhas de mensagens não lidas e um aviso de 'visto há 14 horas'. Ao lado, uma agenda de papel com horários riscados. Clima de preocupação."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "só saber o que quer delegar"
+    por_que: "derruba a objeção 'não entendo de tecnologia'"
+    ancora: melhor
+    linha1: "SÓ SABER"
+    linha2: "O QUE DELEGAR"
+    destaque: {titulo: "SEM TÉCNICA", texto: "você explica,\nele faz"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Médico de uns 55 anos, de camisa e estetoscópio no pescoço, sentado no consultório claro de dia, falando com naturalidade diante de um notebook que mostra uma janela de conversa simples, sem código. Expressão tranquila. Luz de janela neutra no rosto."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "agentes de IA: equipe digital que atende, organiza e lembra"
+    por_que: "dá nome à solução com verbos simples"
+    ancora: agentes
+    linha1: "UMA EQUIPE"
+    linha2: "QUE NÃO DORME"
+    destaque: {titulo: "AGENTES", texto: "atendem\norganizam · lembram"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Monitor numa mesa de consultório claro de dia mostrando três janelas lado a lado: uma conversa com paciente, uma agenda semanal e uma lista de lembretes, cada janela com um pequeno ícone de robô amigável no canto. Luz de janela neutra, ambiente limpo e profissional."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "tempo de volta para as pessoas"
+    por_que: "fecha a imagem: menos burocracia, mais atenção humana"
+    ancora: tempo
+    linha1: "TEMPO PRO"
+    linha2: "QUE IMPORTA"
+    destaque: {titulo: "AS PESSOAS", texto: "menos tela,\nmais atenção"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Consultório claro de dia, luz de janela neutra. Uma médica de uns 50 anos conversa olhando nos olhos de uma paciente idosa, as duas sorrindo, sentadas frente a frente; o notebook está fechado sobre a mesa. Clima humano e acolhedor."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (Gestão de Agentes grátis) e uma ação pequena: comentar EQUIPE"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "curso de\nGestão de\nAgentes"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia, com a janela desfocada ao fundo. Na tela do celular, no alto, um vídeo vertical mostrando uma recepção de consultório organizada; embaixo, a área de comentários com avatares redondos, corações e balões, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "EQUIPE", linha2: "que eu te mando o link"}
+legenda_envio: "VOCÊ DESCANSA. ELE RESPONDE. — série amigos empresários 2/5, reel no modelo de 7 etapas."
+canal: lives1
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner) para médicos e profissionais liberais: o consultório pode responder paciente às onze da noite sem você acordar. Chegar de manhã com a agenda organizada, dúvidas respondidas e retornos marcados. Muita gente perde paciente e cliente porque a mensagem ficou sem resposta. Não precisa entender de tecnologia, só saber o que quer delegar: agentes de inteligência artificial são uma equipe digital que atende, organiza e lembra. Você volta a ter tempo para as pessoas. CTA: tudo no inema.club, com o curso gratuito Gestão de Agentes, ou comente EQUIPE. Título com gancho forte (ex.: 'Você descansa. Ele responde.'), com #shorts."
+youtube_20261012: https://www.youtube.com/shorts/Q-1fVtckvwc

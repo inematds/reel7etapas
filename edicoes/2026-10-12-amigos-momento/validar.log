@@ -1,0 +1,19 @@
+[reel7etapas] ritmo: maior trecho sem troca de imagem 3.2 s
+✅ duração                  34.4s
+✅ formato                  1080x1920
+✅ fps                      30.00
+✅ codec vídeo              h264
+✅ codec áudio              aac
+✅ loudness                 -14.4 LUFS
+✅ sem tela preta inicial   imagem desde o frame 0
+✅ frame 0 (informação)     0.203 de bordas
+✅ trechos parados          nenhum acima de 4 s
+✅ legendas (estrutura)     44 cues
+✅ legendas (palavras)      0 de 44 cues com mais de 3 palavras
+✅ legendas (sobreposição)  0 sobreposições
+✅ folha de quadros         /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-12-amigos-momento/build/qa.png (0.0s, 2.0s, 5.0s, 17.2s, 33.4s)
+
+perfil divulgacao · contrato 1.2.1
+RESULTADO: APROVADO (falta a revisão humana: gancho, prova, pronúncia)
+
+[reel7etapas] validar: OK — revise as folhas em /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-12-amigos-momento/build/revisao
