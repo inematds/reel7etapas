@@ -1,0 +1,31 @@
+[reel7etapas] portão das imagens: OK (vertical, clara, cor neutra, sem repetição)
+[reel7etapas] fala do avatar × roteiro: 94%
+[reel7etapas] 1:0.0 · 2:3.3 · 3:6.4 · 4:8.9 · 5:12.1 · 6:22.4 · 7:27.8 · cta 29.1 · fim 30.5 · total 33.5
+[reel7etapas] quadro 0/1005
+[reel7etapas] quadro 300/1005
+[reel7etapas] quadro 600/1005
+[reel7etapas] quadro 900/1005
+[reel7etapas] portão zona segura + fonte mínima: OK
+[reel7etapas] vídeo /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-13-site-pronto-ia/video.mp4 33.5 s 11.5 MB
+[reel7etapas] ritmo: maior trecho sem troca de imagem 3.3 s
+✅ duração                  33.5s
+✅ formato                  1080x1920
+✅ fps                      30.00
+✅ codec vídeo              h264
+✅ codec áudio              aac
+✅ loudness                 -14.3 LUFS
+✅ sem tela preta inicial   imagem desde o frame 0
+✅ frame 0 (informação)     0.173 de bordas
+✅ trechos parados          nenhum acima de 4 s
+✅ legendas (estrutura)     39 cues
+✅ legendas (palavras)      0 de 39 cues com mais de 3 palavras
+✅ legendas (sobreposição)  0 sobreposições
+✅ folha de quadros         /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-13-site-pronto-ia/build/qa.png (0.0s, 2.0s, 5.0s, 16.8s, 32.5s)
+
+perfil divulgacao · contrato 1.2.1
+RESULTADO: APROVADO (falta a revisão humana: gancho, prova, pronúncia)
+
+[reel7etapas] validar: OK — revise as folhas em /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-13-site-pronto-ia/build/revisao
+[reel7etapas] mapa /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-13-site-pronto-ia/mapa.jpg
+[reel7etapas] capa /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-13-site-pronto-ia/capa.jpg
+[reel7etapas] Terminei: reel pronto e validado — /home/nmaldaner/projetos/reel7etapas/edicoes/2026-10-13-site-pronto-ia/video.mp4

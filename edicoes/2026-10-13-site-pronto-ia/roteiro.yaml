@@ -1,0 +1,88 @@
+# reel7etapas — edição 2026-10-13-site-pronto-ia (como preparar seu site para a IA, a partir do inemaSEO)
+tema: "Prepare seu site para a IA"
+data: "13/10/2026"
+palavra: SITE
+fala: |
+  Seu site pode ser a resposta quando alguém pergunta pro ChatGPT. Já pensou o cliente perguntando e a resposta trazendo o seu nome? Tem muito site bonito que ninguém encontra nessas respostas. E o melhor: não precisa pagar ferramenta nem escrever cem páginas novas. Primeiro você arruma a fundação: libera a entrada pros robôs das inteligências artificiais, cria um arquivo de apresentação e diz quem você é em cada página. Depois mede toda semana e avisa os buscadores. Assim o Google, o Bing e as inteligências artificiais passam a citar o seu site. Tá tudo no inema ponto club. Ou comenta SITE que eu te mando o link.
+# Fatos: inemaSEO (inematds/inemaseo-metodo): robots liberando as IAs, llms.txt, Person/Organization em todas as páginas,
+# medição semanal no Search Console sem a marca, IndexNow + Bing a cada publicação; sem ferramenta paga.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "seu site como resposta do ChatGPT"
+    por_que: "mostra o resultado (ser citado pela IA) antes de qualquer técnica"
+    capa: {ganho: "SEU SITE NA RESPOSTA DO CHATGPT", linha1: "A IA INDICA", linha2: "O SEU SITE?", sub: "PREPARE ELE EM 10 ETAPAS"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Notebook aberto numa mesa clara de escritório de dia, luz neutra da janela; na tela, uma janela de conversa simples com um balão de resposta e, dentro do balão, o cartão de um site com uma foto pequena de uma loja e uma estrela de destaque azul. Ao lado, uma xícara branca e um caderno. Cores neutras, azul e cinza, sem letras legíveis."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "o cliente ouvir o seu nome"
+    por_que: "a pessoa se imagina sendo recomendada sem pagar anúncio"
+    ancora: pensou
+    linha1: "O CLIENTE PERGUNTA"
+    linha2: "E OUVE SEU NOME"
+    destaque: {titulo: "INDICADO", texto: "sem pagar\nanúncio"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Mulher de uns 35 anos sentada num café claro de dia, luz neutra da janela, segurando o celular na vertical e sorrindo surpresa para a tela, que mostra um balão de resposta com o cartão de uma pequena empresa local em destaque. Ambiente bem iluminado, cores neutras com toques de azul, sem letras legíveis."
+  - id: medo
+    nome: MEDO
+    gatilho: "site bonito que ninguém encontra"
+    por_que: "o medo de ter investido num site invisível"
+    ancora: bonito
+    linha1: "SITE BONITO"
+    linha2: "QUE NINGUÉM ACHA"
+    cor: vermelho
+    destaque: {titulo: "INVISÍVEL", texto: "fora das\nrespostas", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "Homem de uns 45 anos, dono de pequena empresa, olhando preocupado para um monitor num escritório claro de dia, luz fria da janela; na tela, um site bonito e caprichado, mas com um contador de visitas zerado e uma placa vermelha pequena de alerta no canto. Toques vermelhos, ambiente bem iluminado, sem letras legíveis."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "sem ferramenta paga, sem cem páginas"
+    por_que: "derruba a objeção do custo e do trabalho infinito de conteúdo"
+    ancora: melhor
+    linha1: "SEM FERRAMENTA PAGA"
+    linha2: "SEM CEM PÁGINAS"
+    destaque: {titulo: "GRÁTIS", texto: "arruma o que\njá existe"}
+    camera: push
+    foco: [0.5, 0.45]
+    cena: "Mulher de uns 50 anos relaxada no sofá da sala de dia, luz neutra entrando pela janela, com o notebook no colo e uma pilha alta de papéis de rascunho deixada de lado no chão; ela sorri tranquila olhando a tela com poucas tarefas simples. Rosto bem iluminado, cores neutras, sem letras legíveis."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "arrume a fundação primeiro"
+    por_que: "dá nome à solução e mostra os três passos em verbos simples"
+    ancora: primeiro
+    linha1: "PRIMEIRO"
+    linha2: "A FUNDAÇÃO"
+    destaque: {titulo: "3 PASSOS", texto: "libera os robôs\napresenta o site\ndiz quem é você"}
+    camera: sobe
+    foco: [0.5, 0.5]
+    cena: "Mesa clara de escritório de dia, luz neutra da janela. No centro, três pequenos robôs amigáveis brancos e azuis, do tamanho de uma caneca, bem visíveis e nítidos, trabalhando juntos: um abre a porta de uma maquete de casa simples, outro carrega um envelope de apresentação e o terceiro segura um crachá com uma foto de rosto. Visual realista e divertido, cores neutras com azul, sem letras legíveis."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "Google, Bing e as IAs citam você"
+    por_que: "fecha a imagem do resultado: ser citado em todo lugar"
+    ancora: assim
+    linha1: "GOOGLE, BING E IAs"
+    linha2: "CITAM SEU SITE"
+    destaque: {titulo: "MEDIDO", texto: "toda semana\ne avisado aos\nbuscadores"}
+    camera: pan_esq
+    foco: [0.45, 0.5]
+    cena: "Manhã clara num escritório pequeno, luz do dia neutra pela janela; uma empreendedora de uns 40 anos sorri com uma xícara de café diante de um monitor que mostra um gráfico de linha subindo e três balões de resposta, cada um com o cartão do mesmo site em destaque. Cores neutras com azul e verde, sem letras legíveis."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (o site) e uma ação pequena: comentar SITE"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "método aberto\nem 10 etapas"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa mesa clara de dia, luz neutra da janela; na tela, no alto, um vídeo vertical mostrando um site com um selo azul de destaque; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "SITE", linha2: "que eu te mando o link"}
+legenda_envio: "PREPARE SEU SITE PARA A IA — reel 7 etapas a partir do inemaSEO (método aberto: Google, Bing e respostas das IAs)."
+canal: lives3
+youtube_20261013: https://www.youtube.com/shorts/uR--AOlFDkM

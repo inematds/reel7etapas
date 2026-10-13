@@ -1,0 +1,88 @@
+# reel7etapas — edição 2026-10-13-oswork-base-leigo (OSWork = a base para quem não é da área criar qualquer sistema de agentes)
+tema: "OSWork: a base para quem não sabe nada"
+data: "13/10/2026"
+palavra: OSWORK
+fala: |
+  Mesmo sem saber nada de computador, você pode montar um sistema que trabalha por você. Já pensou criar os seus próprios ajudantes, do jeito do seu negócio? Tem muita gente travada, achando que isso é só pra programador. E o melhor: você começa do zero, na tela preta do Windows, um passo de cada vez. No OSWork você aprende a criar pastas, chamar o agente e guardar o seu projeto na internet. Com essa base, qualquer sistema de agentes vira só mais um projeto. Você deixa de depender dos outros. Tá tudo no inema ponto club. Ou comenta OSWORK que eu te mando o link.
+# Fatos: OSWork (eventos.inema.pro/oswork, oswork-quick, oswork-v62): cmd no Windows → pasta projetos\<projeto> → Explorador →
+# Claude Code/Codex na pasta → git + gh + SSH → GitHub/Pages → depois VPS Linux. Gratuito no INEMA.CLUB.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "sem saber nada, um sistema que trabalha por você"
+    por_que: "promete o resultado para quem se acha fora da área"
+    capa: {ganho: "UMA BASE PARA CRIAR QUALQUER AGENTE", linha1: "NÃO SABE NADA?", linha2: "COMECE AQUI", sub: "A BASE DOS AGENTES"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Homem de uns 55 anos, de camisa polo, sentado numa mesa de cozinha clara de dia, luz neutra da janela, olhando curioso e confiante para um notebook aberto; na tela, uma janela simples de terminal preta com poucas linhas brancas e, ao lado, uma pasta de arquivos aberta. Ambiente bem iluminado, cores neutras com azul, sem letras legíveis."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "ajudantes do jeito do seu negócio"
+    por_que: "a pessoa imagina a própria empresa com ajuda sob medida"
+    ancora: pensou
+    linha1: "SEUS PRÓPRIOS"
+    linha2: "AJUDANTES"
+    destaque: {titulo: "SOB MEDIDA", texto: "do jeito do\nseu negócio"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Dona de uma pequena loja de roupas, uns 45 anos, no balcão claro de dia, luz neutra da vitrine; ao lado dela, flutuando sobre o balcão, três pequenos ícones de ajudantes em forma de cartões luminosos azuis: um com um envelope, um com uma planilha e um com um balão de conversa. Ela sorri. Visual realista, cores neutras com azul, sem letras legíveis."
+  - id: medo
+    nome: MEDO
+    gatilho: "achar que é só pra programador"
+    por_que: "a trava que impede o leigo de começar"
+    ancora: travada
+    linha1: "ACHA QUE É"
+    linha2: "SÓ PRA PROGRAMADOR?"
+    cor: vermelho
+    destaque: {titulo: "TRAVADO", texto: "e ficando\npara trás", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "Mulher de uns 50 anos com os braços cruzados e expressão insegura diante de um monitor cheio de código colorido confuso, num escritório claro de dia, luz fria da janela; atrás dela, desfocados, jovens trabalhando rápido em vários monitores. Toques vermelhos discretos, ambiente bem iluminado, sem letras legíveis."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "do zero, um passo de cada vez"
+    por_que: "derruba a objeção mostrando um começo pequeno e guiado"
+    ancora: melhor
+    linha1: "DO ZERO"
+    linha2: "UM PASSO POR VEZ"
+    destaque: {titulo: "SEM SABER", texto: "começa na\ntela preta\ndo Windows"}
+    camera: push
+    foco: [0.5, 0.45]
+    cena: "Mão de uma pessoa de uns 60 anos digitando com calma num teclado de notebook, numa mesa clara de dia com luz neutra da janela; na tela, uma janela preta de terminal com uma única linha curta e um cursor piscando; ao lado, um caderno com uma lista numerada de três passos e uma caneta. Clima tranquilo, cores neutras, sem letras legíveis."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "o OSWork ensina a base"
+    por_que: "dá nome à solução e lista o que se aprende em verbos simples"
+    ancora: aprende
+    linha1: "OSWORK:"
+    linha2: "A BASE"
+    destaque: {titulo: "APRENDE", texto: "criar pastas\nchamar o agente\nguardar o projeto"}
+    camera: sobe
+    foco: [0.5, 0.5]
+    cena: "Mesa clara de escritório de dia, luz neutra; sobre ela, uma maquete de fundação de concreto bem firme e limpa, e em cima dela pequenas peças de montar que formam três pastas de arquivo, um pequeno robô branco e azul amigável e uma nuvem com uma seta para cima. Visual realista e limpo, cores neutras com azul, sem letras legíveis."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "qualquer sistema vira mais um projeto"
+    por_que: "fecha a imagem: autonomia, sem depender de ninguém"
+    ancora: qualquer
+    linha1: "QUALQUER SISTEMA"
+    linha2: "VIRA MAIS UM PROJETO"
+    destaque: {titulo: "LIVRE", texto: "sem depender\ndos outros"}
+    camera: pan_esq
+    foco: [0.45, 0.5]
+    cena: "Manhã clara num pequeno escritório, luz do dia neutra pela janela; um homem de uns 50 anos sorri satisfeito diante de um monitor que mostra várias pastas de projeto organizadas lado a lado, cada uma com um pequeno ícone diferente de robô ajudante. Xícara de café na mesa. Cores neutras com azul e verde, sem letras legíveis."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (o site) e uma ação pequena: comentar OSWORK"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "do zero,\npasso a passo"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa mesa clara de dia, luz neutra da janela; na tela, no alto, um vídeo vertical mostrando uma janela preta de terminal num notebook; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "OSWORK", linha2: "que eu te mando o link"}
+legenda_envio: "OSWORK: A BASE PARA QUEM NÃO SABE NADA — reel 7 etapas: do zero na tela preta do Windows até qualquer sistema de agentes."
+canal: lives3
+youtube_20261013: https://www.youtube.com/shorts/LSf8gkBnamg
