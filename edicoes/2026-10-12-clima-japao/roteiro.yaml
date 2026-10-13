@@ -1,0 +1,87 @@
+# reel7etapas — edição 2026-10-12-clima-japao (série "clima no mundo", base: eventosextremospub/edicoes/2026-10-12-mundo-clima/pesquisa/levantamento.md)
+tema: "832 mm em dois dias no Japão"
+data: "12/10/2026"
+palavra: CLIMA
+fala: |
+  Oitocentos e trinta e dois milímetros de chuva em dois dias. É mais do que chove num ano inteiro em boa parte do sertão. Imagina ter tempo de tirar a sua família de casa antes da água subir. No Japão, o tufão Dujuan deixou sete mortos, e um milhão e novecentas mil pessoas receberam ordem de sair de casa. E o melhor: o aviso existe e é de graça. Cadastra o seu CEP na Defesa Civil e acompanha a chuva num painel em tempo real. Quem recebe o alerta cedo tem tempo de agir. Tá tudo no inema ponto club. Ou comenta CLIMA que eu te mando o link.
+# Fatos: JMA via imprensa: 832 mm em 48 h em Oshima, maior desde 1991; Kyodo: 7 mortos, 5 desaparecidos; FDMA: 1,9 milhão sob ordem de evacuação (21–22/09/2026).
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "832 mm em 2 dias"
+    por_que: "número absurdo de chuva prende; comparação com o sertão traduz o tamanho"
+    capa: {ganho: "TENHA TEMPO DE TIRAR SUA FAMÍLIA DE CASA", linha1: "832 MM", linha2: "EM 2 DIAS", sub: "TUFÃO NO JAPÃO"}
+    camera: push
+    foco: [0.5, 0.55]
+    cena: "Costa de uma ilha japonesa de dia sob chuva torrencial, ondas fortes batendo no quebra-mar, palmeiras e árvores curvadas pelo vento, ruas com água correndo, casas baixas de telhado escuro. Céu cinza claro, luz neutra de dia."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "tempo de tirar a família"
+    por_que: "o que a pessoa quer é tempo para agir"
+    ancora: imagina
+    linha1: "TEMPO PARA"
+    linha2: "SAIR DE CASA"
+    destaque: {titulo: "ANTES", texto: "da água\nsubir"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Pai de uns 40 anos de capa de chuva ajudando a filha pequena a calçar botas de chuva na porta de casa, de dia, com chuva leve lá fora. Luz neutra de dia, rostos bem iluminados."
+  - id: medo
+    nome: MEDO
+    gatilho: "7 mortos e 1,9 milhão com ordem de sair"
+    por_que: "o número real mostra o tamanho do perigo"
+    ancora: tufao
+    linha1: "1,9 MILHÃO"
+    linha2: "MANDADOS SAIR"
+    cor: vermelho
+    destaque: {titulo: "7 MORTOS", texto: "tufão Dujuan\n21–22/09\n(Kyodo)", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.55]
+    cena: "Encosta de morro desabada sobre uma estrada numa cidade japonesa de dia, lama e árvores caídas, equipes de resgate de capacete e uniforme laranja trabalhando. Céu nublado claro, luz neutra."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "o aviso existe e é de graça"
+    por_que: "derruba a ideia de que alerta é caro ou difícil"
+    ancora: melhor
+    linha1: "O AVISO"
+    linha2: "É DE GRAÇA"
+    destaque: {titulo: "GRÁTIS", texto: "alerta oficial\nno celular"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Senhora de uns 65 anos, tranquila, sentada no sofá de uma sala clara de dia, segurando o celular e sorrindo ao ler uma notificação com um ícone de nuvem, sem letras legíveis. Luz neutra de janela."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "CEP na Defesa Civil + painel de chuva"
+    por_que: "dá a ação concreta"
+    ancora: cadastra
+    linha1: "ALERTA NO CEP"
+    linha2: "+ PAINEL DE CHUVA"
+    destaque: {titulo: "40199", texto: "manda o CEP\npor mensagem"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Notebook aberto numa mesa clara de dia mostrando um mapa de chuva com manchas azuis e roxas e um gráfico de barras de milímetros, sem letras legíveis; ao lado, um celular com notificação de alerta. Luz neutra de janela."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "quem recebe cedo tem tempo de agir"
+    por_que: "fecha a imagem: preparado e tranquilo"
+    ancora: cedo
+    linha1: "ALERTA CEDO"
+    linha2: "= TEMPO DE AGIR"
+    destaque: {titulo: "PRONTO", texto: "mochila e\ndocumentos\nseparados"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Casal brasileiro de uns 45 anos numa sala clara de dia arrumando calmamente uma mochila de emergência com lanterna, garrafas de água, remédios e uma pasta de documentos sobre a mesa. Luz neutra de dia."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou comenta CLIMA"
+    por_que: "dá o caminho (site) e uma ação pequena"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "painéis de\nchuva e alerta"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia, com a janela desfocada ao fundo. Na tela, no alto, um vídeo vertical de chuva forte sobre uma cidade costeira; embaixo, a área de comentários com avatares redondos, corações e balões, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "CLIMA", linha2: "que eu te mando o link"}
+legenda_envio: "832 MM EM 2 DIAS (tufão no Japão) — reel 7 etapas, série clima no mundo."
+canal: lives10
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner) sobre o tufão Dujuan no Japão (21–22/09/2026): 832 mm de chuva em 48 horas na ilha de Oshima, o maior volume desde 1991 (agência meteorológica do Japão, via imprensa), 7 mortos (Kyodo) e 1,9 milhão de pessoas com ordem de evacuação. Como se proteger: cadastrar o CEP na Defesa Civil (mensagem de texto para 40199) e acompanhar um painel de chuva; projetos gratuitos no inema.club. CTA: comente CLIMA. Título com gancho, começando por '832 mm em 2 dias', com #shorts. Escreva 'mensagem de texto', nunca 'SMS'."

@@ -1,0 +1,87 @@
+# reel7etapas — edição 2026-10-12-clima-tailandia (série "clima no mundo", base: eventosextremospub/edicoes/2026-10-12-mundo-clima/pesquisa/levantamento.md)
+tema: "3 milhões atingidos pela água na Tailândia"
+data: "12/10/2026"
+palavra: CLIMA
+fala: |
+  Três milhões de pessoas atingidas pela água, e a chuva não para há quase um mês. Imagina saber com dias de antecedência que a água vai chegar na sua rua. Na Tailândia, desde dezesseis de setembro, já são quarenta e quatro mortos e mais de um milhão de casas atingidas. E o melhor: você não precisa ser meteorologista para se proteger. Os alertas e os dados de chuva são abertos: cadastra o seu CEP na Defesa Civil e acompanha um painel de chuva em tempo real. Assim você sai antes, e não depois. Tá tudo no inema ponto club. Ou comenta CLIMA que eu te mando o link.
+# Fatos: DDPM da Tailândia via Malay Mail (08/10/2026) e AFP: 44 mortos, 3,13 milhões de afetados em 21 províncias + Bangkok, >1,14 milhão de domicílios, chuva desde 16/09.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "3 milhões de pessoas atingidas pela água"
+    por_que: "número enorme + imagem de cidade alagada prendem em 2 s"
+    capa: {ganho: "SAIBA ANTES QUE A ÁGUA CHEGUE NA SUA RUA", linha1: "3 MILHÕES", linha2: "DEBAIXO D'ÁGUA", sub: "TAILÂNDIA · OUT/2026"}
+    camera: push
+    foco: [0.5, 0.55]
+    cena: "Rua de uma grande cidade do Sudeste Asiático completamente alagada de dia, água marrom até a cintura, pessoas atravessando com sacolas erguidas, um barco de resgate com coletes laranja, motos submersas e lojas com placas sem letras legíveis. Céu nublado claro, luz neutra de dia."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "saber com dias de antecedência"
+    por_que: "a pessoa quer proteger a casa e a família"
+    ancora: imagina
+    linha1: "SABER ANTES"
+    linha2: "DA ÁGUA CHEGAR"
+    destaque: {titulo: "DIAS", texto: "de aviso\nantes"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Mãe de uns 40 anos na sala clara de uma casa brasileira, de dia, olhando o celular com atenção enquanto o filho pequeno brinca ao lado; pela janela, céu cinzento com nuvens de chuva chegando. Luz neutra de janela no rosto."
+  - id: medo
+    nome: MEDO
+    gatilho: "44 mortos e 1 milhão de casas"
+    por_que: "o número real mostra que não é exagero"
+    ancora: setembro
+    linha1: "44 MORTOS"
+    linha2: "1 MILHÃO DE CASAS"
+    cor: vermelho
+    destaque: {titulo: "DESDE 16/09", texto: "21 províncias\ne Bangkok\n(governo tailandês)", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.55]
+    cena: "Vista aérea de dia de um bairro residencial inteiro alagado, telhados de casas aparecendo sobre a água marrom, uma estrada submersa e um caminhão de resgate parado na água. Céu nublado claro, luz neutra."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa ser meteorologista"
+    por_que: "derruba a ideia de que previsão é coisa de especialista"
+    ancora: melhor
+    linha1: "NÃO PRECISA SER"
+    linha2: "METEOROLOGISTA"
+    destaque: {titulo: "DE GRAÇA", texto: "alerta e dados\nabertos"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Homem de uns 55 anos, tranquilo, na mesa da cozinha clara de dia, com uma xícara de café, olhando o celular que mostra um mapa simples com manchas azuis de chuva, sem letras legíveis. Luz neutra da janela, rosto bem iluminado."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "CEP na Defesa Civil + painel de chuva"
+    por_que: "dá a ação concreta e o nome da ferramenta"
+    ancora: alertas
+    linha1: "ALERTA NO CEP"
+    linha2: "+ PAINEL DE CHUVA"
+    destaque: {titulo: "40199", texto: "manda o CEP\npor mensagem"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Mão segurando um smartphone de dia numa sala clara; na tela, uma notificação grande de alerta com ícone de nuvem de chuva e um mapa com áreas coloridas em azul e vermelho, sem letras legíveis. Ao fundo, janela com céu nublado claro."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "sair antes, e não depois"
+    por_que: "fecha a imagem: família segura"
+    ancora: assim
+    linha1: "VOCÊ SAI ANTES"
+    linha2: "E NÃO DEPOIS"
+    destaque: {titulo: "SEGURO", texto: "família e\ndocumentos\nprotegidos"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Família brasileira (pai, mãe e duas crianças) colocando mochilas e uma caixa de documentos no porta-malas de um carro numa rua seca, de dia, com nuvens de chuva escuras ao longe. Todos calmos e organizados. Luz neutra de dia."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou comenta CLIMA"
+    por_que: "dá o caminho (site) e uma ação pequena"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "painéis de\nchuva e alerta"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia, com a janela desfocada ao fundo. Na tela, no alto, um vídeo vertical de uma rua alagada; embaixo, a área de comentários com avatares redondos, corações e balões, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "CLIMA", linha2: "que eu te mando o link"}
+legenda_envio: "3 MILHÕES DEBAIXO D'ÁGUA (Tailândia) — reel 7 etapas, série clima no mundo."
+canal: lives10
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner) sobre as enchentes na Tailândia: desde 16/09/2026, 44 mortos e 3,1 milhões de pessoas atingidas em 21 províncias e Bangkok, mais de 1 milhão de casas (departamento de prevenção de desastres da Tailândia, via imprensa). Como se proteger: cadastrar o CEP na Defesa Civil (mensagem de texto para 40199) e acompanhar um painel de chuva em tempo real; projetos gratuitos no inema.club. CTA: comente CLIMA. Título com gancho, começando por '3 milhões debaixo d'água', com #shorts. Escreva 'mensagem de texto', nunca 'SMS'."

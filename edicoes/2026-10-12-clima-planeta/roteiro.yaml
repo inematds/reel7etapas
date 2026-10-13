@@ -1,0 +1,87 @@
+# reel7etapas — edição 2026-10-12-clima-planeta (série "clima no mundo", base: eventosextremospub/edicoes/2026-10-12-mundo-clima/pesquisa/levantamento.md)
+tema: "Dois meses seguidos acima de 1,5 °C + El Niño histórico"
+data: "12/10/2026"
+palavra: CLIMA
+fala: |
+  Dois meses seguidos acima do grau e meio que o Acordo de Paris tenta evitar. Imagina saber como vai ser o próximo verão antes de todo mundo. O Copernicus mediu: este foi o segundo setembro mais quente da história, e os oceanos bateram recorde. E o El Niño tem oitenta e três por cento de chance de ser o mais forte desde mil novecentos e cinquenta. E o melhor: dá pra acompanhar tudo isso de graça, com dados oficiais. Painel de chuva, alerta no CEP e previsão de quinze dias. Você se prepara antes do calor e da chuva. Tá tudo no inema ponto club. Ou comenta CLIMA que eu te mando o link.
+# Fatos: Copernicus C3S (12/10/2026): setembro +1,63 °C sobre o pré-industrial, 2º setembro mais quente, oceanos com recorde para o mês; agosto +1,65 °C, empatado como mês mais quente. NOAA CPC (08/10/2026): 83% de chance de El Niño histórico em out–dez.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "acima do limite de Paris, 2 meses seguidos"
+    por_que: "o limite famoso, passado de novo, gera alarme"
+    capa: {ganho: "SAIBA COMO VAI SER O PRÓXIMO VERÃO", linha1: "+1,5 °C", linha2: "2 MESES SEGUIDOS", sub: "O PLANETA FERVENDO"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Planeta Terra visto do espaço de dia, com os oceanos coloridos por um mapa de calor em tons de vermelho e laranja sobre o azul, nuvens brancas e o contorno das Américas visível. Imagem realista, iluminada pelo sol."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "saber como vai ser o próximo verão"
+    por_que: "a pessoa quer planejar a vida, a roça, a viagem"
+    ancora: imagina
+    linha1: "SABER O VERÃO"
+    linha2: "ANTES DE TODOS"
+    destaque: {titulo: "PREVISÃO", texto: "para planejar\na sua vida"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Agricultor brasileiro de uns 50 anos, de chapéu, no meio de uma plantação verde de dia, olhando o céu com o celular na mão. Céu azul com algumas nuvens, luz neutra de dia."
+  - id: medo
+    nome: MEDO
+    gatilho: "2º setembro mais quente, oceanos com recorde"
+    por_que: "número oficial mostra que é medido, não opinião"
+    ancora: mediu
+    linha1: "OCEANOS"
+    linha2: "COM RECORDE"
+    cor: vermelho
+    destaque: {titulo: "+1,63 °C", texto: "setembro de 2026\n(Copernicus)", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.55]
+    cena: "Recife de corais branqueados em águas rasas e claras, de dia, com peixes pequenos ao redor e o sol atravessando a água. Imagem subaquática realista, luz neutra."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "dá pra acompanhar de graça, com dados oficiais"
+    por_que: "derruba a ideia de que clima é assunto de cientista"
+    ancora: melhor
+    linha1: "DE GRAÇA"
+    linha2: "DADOS OFICIAIS"
+    destaque: {titulo: "ABERTO", texto: "satélite e\nprevisão"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Mulher de uns 35 anos sentada à mesa de uma sala clara de dia, tranquila, com um notebook mostrando um mapa do mundo colorido por temperatura, sem letras legíveis. Luz neutra de janela, rosto bem iluminado."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "painel de chuva, alerta no CEP e previsão de 15 dias"
+    por_que: "dá as ferramentas concretas"
+    ancora: painel
+    linha1: "PAINEL + ALERTA"
+    linha2: "+ 15 DIAS"
+    destaque: {titulo: "3 COISAS", texto: "chuva · alerta\n· previsão"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Tela de computador numa mesa clara de dia dividida em três partes: um mapa de chuva com manchas azuis, um ícone grande de alerta no celular ao lado, e um gráfico de barras de previsão para vários dias, sem letras legíveis. Luz neutra de janela."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "você se prepara antes do calor e da chuva"
+    por_que: "fecha a imagem: no controle"
+    ancora: prepara
+    linha1: "VOCÊ SE PREPARA"
+    linha2: "ANTES"
+    destaque: {titulo: "NO CONTROLE", texto: "calor e chuva\nsem surpresa"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Família brasileira numa varanda clara de dia, tranquila, com garrafas de água, um ventilador e plantas regadas; a mãe mostra no celular a previsão para os filhos. Céu azul com nuvens ao fundo. Luz neutra de dia."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou comenta CLIMA"
+    por_que: "dá o caminho (site) e uma ação pequena"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "painéis de\nchuva e alerta"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia, com a janela desfocada ao fundo. Na tela, no alto, um vídeo vertical do planeta Terra com o mar em tons quentes; embaixo, a área de comentários com avatares redondos, corações e balões, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "CLIMA", linha2: "que eu te mando o link"}
+legenda_envio: "+1,5 °C, 2 MESES SEGUIDOS (planeta e El Niño) — reel 7 etapas, série clima no mundo."
+canal: lives10
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner): agosto e setembro de 2026 ficaram acima de 1,5 °C sobre a era pré-industrial (Copernicus); setembro foi o 2º mais quente da história para o mês, com oceanos em recorde; a NOAA calcula 83% de chance de o El Niño ser o mais forte desde 1950 (08/10/2026). Como se preparar: painel de chuva, alerta da Defesa Civil no CEP (mensagem de texto para 40199) e previsão de 15 dias; projetos gratuitos de clima no inema.club. CTA: comente CLIMA. Título com gancho, começando por '+1,5 °C dois meses seguidos', com #shorts. Escreva 'mensagem de texto', nunca 'SMS'."

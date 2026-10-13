@@ -1,0 +1,87 @@
+# reel7etapas — edição 2026-10-12-clima-furacoes (série "clima no mundo", base: eventosextremospub/edicoes/2026-10-12-mundo-clima/pesquisa/levantamento.md)
+tema: "Furacão que ganhou 177 km/h em um dia"
+data: "12/10/2026"
+palavra: CLIMA
+fala: |
+  Um furacão ganhou cento e setenta e sete quilômetros por hora de vento em um único dia. Imagina ter um dia inteiro de aviso, em vez de uma hora. Em três semanas, o Polo virou categoria cinco no Pacífico, o Simon assustou a costa do México, e o Isaias deixou quatro mortos e mais de novecentos mil sem luz nos Estados Unidos. E o melhor: o mar quente que alimenta isso é medido todo dia por satélite, e os dados são abertos. Cadastra o seu CEP na Defesa Civil para receber os alertas. Quem sabe antes se prepara. Tá tudo no inema ponto club. Ou comenta CLIMA que eu te mando o link.
+# Fatos: Polo Cat. 5 em 22/09, +110 mph (177 km/h) em 24 h (AP via KPTV, Mexico News Daily); Simon Cat. 4 em 10/10, olho rente a Jalisco, ~5 mil evacuados (AP), pouso não confirmado; Isaias pouso Cat. 2 em Destin (FL) em 10/10, ≥4 mortos e >900 mil clientes sem energia (NBC/CNN).
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "+177 km/h em um dia"
+    por_que: "a velocidade de crescimento assusta e prende"
+    capa: {ganho: "UM DIA DE AVISO EM VEZ DE UMA HORA", linha1: "+177 KM/H", linha2: "EM 1 DIA", sub: "FURACÕES NAS AMÉRICAS"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Vista de satélite de um furacão enorme sobre o oceano azul, com o olho bem definido no centro e bandas de nuvens brancas em espiral, iluminado pelo sol de dia. Imagem realista de satélite, cores naturais."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "um dia de aviso em vez de uma hora"
+    por_que: "o que a pessoa quer é tempo"
+    ancora: imagina
+    linha1: "UM DIA"
+    linha2: "DE AVISO"
+    destaque: {titulo: "24 H", texto: "para se\npreparar"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Homem de uns 45 anos fechando as janelas de madeira de uma casa de praia de dia, com céu nublado claro e coqueiros balançando ao vento ao fundo. Expressão calma e decidida. Luz neutra de dia."
+  - id: medo
+    nome: MEDO
+    gatilho: "3 furacões em 3 semanas"
+    por_que: "a sequência mostra que não é caso isolado"
+    ancora: semanas
+    linha1: "3 FURACÕES"
+    linha2: "EM 3 SEMANAS"
+    cor: vermelho
+    destaque: {titulo: "900 MIL", texto: "sem luz nos EUA\n(Isaias, 10/10)", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.55]
+    cena: "Rua de cidade litorânea dos Estados Unidos de dia depois de um furacão: postes de energia caídos, galhos e telhas espalhados, um telhado de hotel arrancado, céu cinza claro. Luz neutra de dia."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "o mar quente é medido todo dia, dados abertos"
+    por_que: "mostra que a informação está ao alcance de qualquer um"
+    ancora: melhor
+    linha1: "DADOS ABERTOS"
+    linha2: "TODO DIA"
+    destaque: {titulo: "SATÉLITE", texto: "mede o mar\nquente"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Monitor numa mesa clara de dia mostrando um mapa do oceano colorido por temperatura, com áreas vermelhas e laranja de mar quente e azuis de mar frio, sem letras legíveis. Ao lado, uma xícara de café. Luz neutra de janela."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "alerta da Defesa Civil no CEP"
+    por_que: "dá a ação concreta"
+    ancora: cadastra
+    linha1: "ALERTA"
+    linha2: "NO SEU CEP"
+    destaque: {titulo: "40199", texto: "manda o CEP\npor mensagem"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Mão segurando um smartphone de dia numa varanda clara; na tela, uma notificação grande de alerta com ícone de ciclone e um mapa com áreas coloridas, sem letras legíveis. Ao fundo, céu nublado claro."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "quem sabe antes se prepara"
+    por_que: "fecha a imagem: casa protegida, família segura"
+    ancora: prepara
+    linha1: "QUEM SABE ANTES"
+    linha2: "SE PREPARA"
+    destaque: {titulo: "PRONTO", texto: "água, lanterna\ne documentos"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Família numa sala clara de dia organizando calmamente uma caixa com garrafas de água, lanterna, rádio de pilha e uma pasta de documentos sobre a mesa; as janelas estão protegidas com tábuas. Luz neutra de dia."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou comenta CLIMA"
+    por_que: "dá o caminho (site) e uma ação pequena"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "painéis de\nchuva e alerta"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia, com a janela desfocada ao fundo. Na tela, no alto, um vídeo vertical de um furacão visto de satélite; embaixo, a área de comentários com avatares redondos, corações e balões, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "CLIMA", linha2: "que eu te mando o link"}
+legenda_envio: "+177 KM/H EM 1 DIA (furacões nas Américas) — reel 7 etapas, série clima no mundo."
+canal: lives10
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner) sobre os furacões nas Américas em setembro e outubro de 2026: o Polo virou categoria 5 no Pacífico e ganhou 177 km/h de vento em 24 horas (AP); o Simon, categoria 4, ameaçou a costa de Jalisco, no México; o Isaias tocou terra na Flórida com pelo menos 4 mortos e mais de 900 mil clientes sem energia (NBC/CNN). Não dizer que o Simon tocou terra. Como se proteger: cadastrar o CEP na Defesa Civil (mensagem de texto para 40199); projetos gratuitos de clima no inema.club. CTA: comente CLIMA. Título com gancho, começando por '+177 km/h em um dia', com #shorts. Escreva 'mensagem de texto', nunca 'SMS'."
