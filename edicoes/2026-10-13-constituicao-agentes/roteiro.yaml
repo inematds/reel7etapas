@@ -1,0 +1,88 @@
+# reel7etapas — edição 2026-10-13-constituicao-agentes (kit Constituição dos Agentes)
+tema: "A constituição dos seus agentes"
+data: "13/10/2026"
+palavra: AGENTE
+fala: |
+  Seu ajudante digital pode decidir certo até quando ninguém previu a situação. Já pensou deixar o atendimento rodando sozinho, sem medo de passar vergonha com cliente? Tem empresa colocando robô pra falar com cliente só com uma lista de ordens, e na primeira pergunta diferente ele faz besteira. E o melhor: não precisa ser programador. Faça como a empresa que criou o Claude: escreva a constituição dos seus agentes. A missão, as prioridades, o que ele nunca faz e quando chamar uma pessoa. Depois teste com casos difíceis antes de cada mudança. Assim o agente julga como a sua melhor funcionária julgaria. Tá tudo no inema ponto club. Ou comenta AGENTE que eu te mando o link.
+# Fatos: inematds/constituicao-agentes — modelo em 9 seções (missão, prioridades, princípios, limites, permissões,
+# escalonamento, casos difíceis, medição, revisão), 8 casos de teste, inspirado na constituição do Claude (Anthropic, 22/01/2026, CC0).
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "decide certo sem você por perto"
+    por_que: "mostra o resultado (um ajudante confiável) antes de qualquer tecnologia"
+    capa: {ganho: "SEU AJUDANTE DECIDE CERTO SOZINHO", linha1: "ELE DECIDE", linha2: "COMO VOCÊ", sub: "A CONSTITUIÇÃO DOS AGENTES"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Recepção clara de uma pequena clínica de dia, luz neutra da janela. Sobre o balcão, um notebook aberto mostrando uma conversa de atendimento com balões de mensagem e um pequeno selo verde de confirmação. Ao fundo, a dona da clínica, mulher de uns 45 anos, passa tranquila com uma pasta na mão, sem precisar olhar a tela. Cores neutras, azul e branco, sem letras legíveis."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "atendimento rodando sozinho"
+    por_que: "a pessoa se imagina livre do atendimento sem medo de erro"
+    ancora: pensou
+    linha1: "ATENDIMENTO"
+    linha2: "RODANDO SOZINHO"
+    destaque: {titulo: "24 H", texto: "sem passar\nvergonha"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Homem de uns 50 anos, dono de uma pequena loja, sentado num banco de praça de dia, luz natural neutra, relaxado, olhando o celular na vertical e sorrindo; na tela, uma conversa com cliente sendo respondida sozinha, balões de mensagem e um selo verde. Ambiente claro, cores neutras, sem letras legíveis."
+  - id: medo
+    nome: MEDO
+    gatilho: "robô que faz besteira com cliente"
+    por_que: "o medo de expor a empresa a um vexame com cliente"
+    ancora: empresa
+    linha1: "SÓ UMA LISTA"
+    linha2: "DE ORDENS"
+    cor: vermelho
+    destaque: {titulo: "BESTEIRA", texto: "na primeira\npergunta\ndiferente", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "Escritório claro de dia, luz fria da janela. Mulher de uns 40 anos com a mão na testa, preocupada, olhando o monitor; na tela, uma conversa com cliente com um balão de resposta destacado em vermelho e um ícone de alerta vermelho. Ao lado do teclado, uma folha impressa com uma lista curta de tópicos. Toques vermelhos, ambiente bem iluminado, sem letras legíveis."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa ser programador"
+    por_que: "derruba a objeção técnica que faz desistir"
+    ancora: melhor
+    linha1: "NÃO PRECISA SER"
+    linha2: "PROGRAMADOR"
+    destaque: {titulo: "SEM CÓDIGO", texto: "é texto,\nem 9 partes"}
+    camera: push
+    foco: [0.5, 0.45]
+    cena: "Mulher de uns 55 anos sentada à mesa da cozinha de dia, luz neutra da janela, escrevendo à mão num caderno aberto com calma e um sorriso leve; ao lado, uma xícara branca e o notebook fechado. Rosto bem iluminado, cores neutras, sem letras legíveis."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "escreva a constituição dos seus agentes"
+    por_que: "dá nome à solução e mostra o que ela contém em palavras simples"
+    ancora: faca
+    linha1: "A CONSTITUIÇÃO"
+    linha2: "DOS SEUS AGENTES"
+    destaque: {titulo: "ELA DIZ", texto: "missão · prioridades\no que nunca faz\nquando chamar alguém"}
+    camera: sobe
+    foco: [0.5, 0.5]
+    cena: "Mesa clara de escritório de dia, luz neutra da janela. No centro, um documento encadernado elegante, aberto, como uma pequena carta de princípios, com um selo azul em relevo; em volta, três pequenos robôs amigáveis brancos e azuis, do tamanho de uma caneca, lendo o documento com atenção. Visual realista e divertido, cores neutras com azul, sem letras legíveis."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "julga como a sua melhor funcionária"
+    por_que: "fecha a imagem do resultado: um agente com o critério da sua equipe"
+    ancora: assim
+    linha1: "JULGA COMO A SUA"
+    linha2: "MELHOR FUNCIONÁRIA"
+    destaque: {titulo: "TESTADO", texto: "casos difíceis\nantes de\ncada mudança"}
+    camera: pan_esq
+    foco: [0.45, 0.5]
+    cena: "Manhã clara num pequeno escritório, luz do dia neutra pela janela; uma gestora de uns 40 anos sorri com uma xícara de café diante de um monitor que mostra uma lista de testes toda marcada com checks verdes. Cores neutras com azul e verde, sem letras legíveis."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou uma palavra para comentar"
+    por_que: "dá o caminho (o site) e uma ação pequena: comentar AGENTE"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "modelo pronto\ne casos de teste"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa mesa clara de dia, luz neutra da janela; na tela, no alto, um vídeo vertical mostrando um documento com selo azul; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: comenta, linha1: "ou comenta", palavra: "AGENTE", linha2: "que eu te mando o link"}
+legenda_envio: "A CONSTITUIÇÃO DOS SEUS AGENTES — reel 7 etapas a partir do kit constituicao-agentes (modelo em 9 partes + casos de teste)."
+canal: lives3
+youtube_20261013: https://www.youtube.com/shorts/InaeW8YdlEE
