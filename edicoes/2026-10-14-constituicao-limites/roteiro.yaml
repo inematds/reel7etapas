@@ -1,0 +1,93 @@
+# reel7etapas — edição 2026-10-14-constituicao-limites (refaz do 2026-10-13-constituicao-agentes após a crítica de 13/10)
+# Mudanças: gancho com conflito concreto (desconto não autorizado), sem promessa de perfeição, cenário único (a mesma loja),
+# print real do modelo do kit na descoberta, CTA "quer o link? me pede" (sem palavra-chave até automatizar a resposta),
+# layout padrão 'abre' (avatar aberto só na capa, depois a caixa) e capa desfocada; opção 'quadro'.
+tema: "A constituição dos seus agentes: limites claros"
+data: "14/10/2026"
+# layout: padrão (abre); a opção é "layout: quadro"
+fala: |
+  A IA está tomando decisões que ninguém autorizou. Você quer o atendimento rodando vinte e quatro horas, mas com regras claras. Imagina o cliente pedindo um desconto que ninguém aprovou. O agente aceita. E agora? A empresa que criou o Claude orienta a IA com uma constituição. Você escreve a missão, as prioridades, os limites e quando chamar uma pessoa. Sem programar. Testa com casos difíceis, e o agente passa a saber quando responder e quando chamar você. Tá tudo no inema ponto club. Quer o link? Me pede aqui nos comentários.
+# Fatos: inematds/constituicao-agentes — modelo em 9 seções (missão, prioridades, princípios, limites, autonomia,
+# quando pedir ajuda, casos difíceis, medição, revisão), 8 casos de teste (desconto é o 1º limite do modelo),
+# inspirado na constituição do Claude (Anthropic, 22/01/2026, CC0). A constituição orienta; não garante o acerto.
+# Cenário único: loja pequena de roupas femininas, paredes brancas, arara de roupas, balcão de madeira clara,
+# a dona (mulher de uns 45 anos, cabelo castanho preso, blusa azul-marinho), notebook prata e celular.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "a IA decidindo o que ninguém autorizou"
+    por_que: "abre com o risco que vale para qualquer pessoa que usa IA, e a faixa mostra o ganho"
+    capa: {ganho: "SEU AGENTE COM LIMITES CLAROS", linha1: "DECISÕES QUE", linha2: "NINGUÉM AUTORIZOU", sub: "A CONSTITUIÇÃO DOS AGENTES"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Pequena loja de roupas femininas de dia, paredes brancas, arara de roupas coloridas ao fundo, balcão de madeira clara. Atrás do balcão, a dona da loja, mulher de uns 45 anos, cabelo castanho preso, blusa azul-marinho, olha um notebook prata aberto com uma conversa de atendimento cheia de balões de mensagem. Sem letras legíveis."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "atendimento 24 h com regras"
+    por_que: "a pessoa quer o agente trabalhando, mas sob as regras dela"
+    ancora: quer
+    linha1: "24H COM"
+    linha2: "REGRAS CLARAS"
+    destaque: {titulo: "24 H", texto: "atende enquanto\nvocê cuida\nda loja"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "A mesma pequena loja de roupas femininas à noite, fechada, luzes do teto apagadas, só uma luminária neutra acesa sobre o balcão de madeira clara. Em cima do balcão, um celular em pé aceso, com uma conversa de atendimento sendo respondida, balões de mensagem e um selo verde. Arara de roupas na penumbra ao fundo. Sem pessoas, sem letras legíveis."
+  - id: medo
+    nome: MEDO
+    gatilho: "o desconto que ninguém aprovou"
+    por_que: "uma cena que todo dono de negócio reconhece: o agente dá o que não podia"
+    ancora: imagina
+    linha1: "E SE ELE PROMETER"
+    linha2: "O QUE NÃO PODE?"
+    cor: vermelho
+    destaque: {titulo: "DESCONTO", texto: "que ninguém\naprovou", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "A mesma loja de roupas de dia, paredes brancas. A dona, mulher de uns 45 anos, cabelo castanho preso, blusa azul-marinho, atrás do balcão de madeira clara, com a mão na testa, preocupada, olhando o notebook prata; na tela, um balão de resposta destacado em vermelho com um grande símbolo de porcentagem e um ícone de alerta vermelho. Toques vermelhos, ambiente bem iluminado, sem letras legíveis."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "a constituição do seu agente"
+    por_que: "dá nome à solução e mostra o documento de verdade (o modelo do kit)"
+    ancora: empresa
+    linha1: "A CONSTITUIÇÃO"
+    linha2: "DO SEU AGENTE"
+    imagem: img/print-modelo.png
+    camera: push
+    foco: [0.5, 0.6]
+    cena: "print real do modelo/constituicao-modelo.md do kit"
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "você escreve as regras, sem programar"
+    por_que: "derruba a objeção técnica: é texto, com as partes que importam"
+    ancora: escreve
+    linha1: "VOCÊ ESCREVE"
+    linha2: "AS REGRAS"
+    destaque: {titulo: "SEM CÓDIGO", texto: "missão · limites\nquando chamar\numa pessoa"}
+    camera: sobe
+    foco: [0.5, 0.45]
+    cena: "A mesma loja de roupas de dia, paredes brancas, luz neutra da janela. A dona, mulher de uns 45 anos, cabelo castanho preso, blusa azul-marinho, apoiada no balcão de madeira clara, escrevendo à mão num caderno aberto com calma e um sorriso leve; o notebook prata fechado ao lado. Rosto bem iluminado, sem letras legíveis."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "sabe quando chamar você"
+    por_que: "o resultado sem exagero: o agente responde o comum e encaminha o difícil"
+    ancora: testa
+    linha1: "SABE QUANDO"
+    linha2: "CHAMAR VOCÊ"
+    destaque: {titulo: "8 TESTES", texto: "casos difíceis\nantes de\ncada mudança"}
+    camera: pan_esq
+    foco: [0.5, 0.5]
+    cena: "A mesma loja de roupas de dia. Close da mão da dona, mulher de blusa azul-marinho, segurando o celular na vertical sobre o balcão de madeira clara; na tela, um pedido encaminhado para aprovação com um botão verde grande e um botão cinza, e o polegar dela tocando o botão verde. Fundo da loja desfocado com a arara de roupas. Sem letras legíveis."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club, peça o link"
+    por_que: "dá o caminho (o site) e uma ação pequena: pedir o link nos comentários"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "modelo pronto\ne 8 casos\nde teste"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical em frente ao balcão de madeira clara da mesma loja de roupas, de dia; na tela, no alto um vídeo vertical e embaixo a área de comentários com avatares redondos, corações e balões de comentário. Arara de roupas desfocada ao fundo. Tela bem iluminada, sem letras legíveis."
+cta: {ancora: link, linha1: "quer o link?", palavra: "ME PEDE", linha2: "aqui nos comentários"}
+legenda_envio: "A CONSTITUIÇÃO DOS SEUS AGENTES — r7e refeito: limites claros (modelo de 9 partes + 8 testes). Teste, não publicado."
+canal: lives3

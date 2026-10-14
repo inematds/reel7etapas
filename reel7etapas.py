@@ -81,7 +81,7 @@ def falha(portao, msg):
 # 'caixa' é o antigo (caixa com moldura também na capa). Nos layouts sem 'capa', a etapa 1 fica em tela cheia.
 LAYOUTS = {
     "quadro":    dict(img=(0, 0, 1080, 1010), av=(0, 930, 1080, 870), forma="aberto", funde=60, funde_base=90, capa=True,
-                      moldura=(65, 410, 1015, 840), sem_destaque=True,
+                      moldura=(65, 440, 1015, 840), sem_destaque=True,   # 440: a 2ª linha da manchete (156 px) termina ~410
                       head_y=66, card=(65, 440, 640, 820), leg_y=893),   # avatar termina em 1800: boca e queixo fora do título do Shorts
     "dividido":  dict(img=(0, 0, 1080, 1100), av=(0, 1100, 1080, 820), forma="ret", head_y=66, card=(65, 590, 640, 998), leg_y=1050),
     "invertido": dict(img=(0, 880, 1080, 1040), av=(0, 0, 1080, 880), forma="ret", head_y=895, card=(65, 1280, 640, 1688), leg_y=1742),
