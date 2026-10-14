@@ -22,7 +22,7 @@ from datetime import date
 from pathlib import Path
 
 import yaml
-from PIL import Image, ImageDraw, ImageFilter, ImageStat
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageStat
 
 HOME = Path.home()
 RAIZ = Path(__file__).resolve().parent
@@ -74,26 +74,45 @@ def falha(portao, msg):
 
 
 # ---- layouts (roteiro 'layout:'): onde ficam a imagem da etapa, o avatar, a manchete, o cartão e a legenda.
-# 'padrao' é o original. Nos outros, a capa (etapa 1) continua em tela cheia e o layout entra na etapa 2.
+# Padrão desde 14/10 (escolha do Nei): 'abre' = avatar aberto (largura toda, sem moldura) só na capa, desfocada; da etapa 2
+# em diante, imagem em tela cheia, cartão à esquerda e o avatar pequeno na caixa (o modelo 'caixa').
+# Opção 'quadro' (14/10): avatar aberto do quadro 0 ao fim; em cima, fundo escuro liso, manchete e a imagem num quadro
+# arredondado SEM texto por cima (sem cartão de destaque); legenda entre o quadro e o avatar.
+# 'caixa' é o antigo (caixa com moldura também na capa). Nos layouts sem 'capa', a etapa 1 fica em tela cheia.
 LAYOUTS = {
+    "quadro":    dict(img=(0, 0, 1080, 1010), av=(0, 930, 1080, 870), forma="aberto", funde=60, funde_base=90, capa=True,
+                      moldura=(65, 410, 1015, 840), sem_destaque=True,
+                      head_y=66, card=(65, 440, 640, 820), leg_y=893),   # avatar termina em 1800: boca e queixo fora do título do Shorts
     "dividido":  dict(img=(0, 0, 1080, 1100), av=(0, 1100, 1080, 820), forma="ret", head_y=66, card=(65, 590, 640, 998), leg_y=1050),
     "invertido": dict(img=(0, 880, 1080, 1040), av=(0, 0, 1080, 880), forma="ret", head_y=895, card=(65, 1280, 640, 1688), leg_y=1742),
     "circulo":   dict(img=None, av=(290, 1270, 500, 500), forma="circulo", head_y=66, card=(65, 640, 640, 1048), leg_y=1180),
 }
-LAY = None          # layout ativo (None = padrão)
+LAY = None          # layout ativo (None = caixa)
+CAPA_ABERTA = False  # layout 'abre' (padrão): avatar aberto (como no 'quadro') só na capa; da etapa 2 em diante, o modelo caixa
 AV_CAPA = True      # avatar já no quadro 0 (pedido do Nei 12/10: o rosto dele é autoridade); capa.avatar: false desliga
 AVC = (190, 740, 700, 794)   # avatar GRANDE na capa (x, y, w, h; mesma proporção da caixa pequena); encolhe para AVX/AVY na etapa 2
 
 
+def topo_avatar_capa():
+    """y onde o avatar começa no quadro 0 (None = capa sem avatar)"""
+    if LAY is not None and LAY.get("capa"):
+        return LAY["av"][1]
+    if CAPA_ABERTA:
+        return LAYOUTS["quadro"]["av"][1]
+    return AVC[1] if AV_CAPA else None
+
+
 def carregar(pasta):
-    global ESTILO, LAY, HEAD_Y, LEG_Y, CARD, AV_CAPA
+    global ESTILO, LAY, HEAD_Y, LEG_Y, CARD, AV_CAPA, CAPA_ABERTA
     r = rc.carregar(pasta)
     if len(r.get("etapas") or []) != 7:
         falha("roteiro", "o roteiro precisa de exatamente 7 etapas")
     if r.get("estilo"):
         ESTILO = r["estilo"].strip()
-    if r.get("layout", "padrao") != "padrao":
-        LAY = LAYOUTS[r["layout"]]
+    lay = r.get("layout", "abre")
+    CAPA_ABERTA = lay == "abre"
+    if lay not in ("caixa", "padrao", "abre"):
+        LAY = LAYOUTS[lay]
         HEAD_Y, LEG_Y, CARD = LAY["head_y"], LAY["leg_y"], LAY["card"]
     AV_CAPA = (r["etapas"][0].get("capa") or {}).get("avatar", True) is not False
     return r
@@ -185,6 +204,10 @@ def cmd_imagens(pasta, refazer=()):
     reg = json.loads(reg_f.read_text()) if reg_f.exists() else {}
     falta = []
     for i, e in enumerate(r["etapas"]):
+        if e.get("imagem"):                  # imagem pronta (print real, mockup): copia e não gera
+            src = Path(e["imagem"]); src = src if src.is_absolute() else r["_dir"] / src
+            shutil.copy(src, _arq_img(r, i, e)); reg[str(i + 1)] = {"hash": "pronta", "gerador": f"pronta: {src.name}"}
+            continue
         h = hashlib.md5(_prompt(e, i).encode()).hexdigest()[:10]
         if i in refazer or not _arq_img(r, i, e).exists() or reg.get(str(i + 1), {}).get("hash") != h:
             falta.append((i, e, h))
@@ -201,6 +224,8 @@ def cmd_imagens(pasta, refazer=()):
             log("portão das imagens: OK (vertical, clara, cor neutra, sem repetição)"); return
         for i, m in ruins.items():
             log(f"  etapa {i + 1}: {m}")
+        if any(r["etapas"][i].get("imagem") for i in ruins):
+            falha("imagens", "imagem pronta reprovada (troque o arquivo): " + "; ".join(f"{i + 1}: {m}" for i, m in ruins.items()))
         falta = [(i, r["etapas"][i], reg.get(str(i + 1), {}).get("hash", "")) for i in ruins]
     falha("imagens", "; ".join(f"{i + 1}: {m}" for i, m in ruins.items()))
 
@@ -303,6 +328,11 @@ class Fundo:
     def __init__(self, r, L):
         self.r, self.L = r, L
         self.ims = [Image.open(_arq_img(r, i, e)).convert("RGB") for i, e in enumerate(r["etapas"])]
+        # capa desfocada e escurecida (pedido do Nei 13/10): a cena vira cenário e a mensagem aparece; capa.desfoque: 0 desliga
+        c = r["etapas"][0].get("capa") or {}; raio = c.get("desfoque", 10)
+        self.capa = self.ims[0]
+        if raio:
+            self.capa = ImageEnhance.Brightness(self.ims[0].filter(ImageFilter.GaussianBlur(raio))).enhance(c.get("brilho", 0.62))
         self.grad = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(self.grad)
         for y in range(700):
             d.line((0, y, W, y), fill=(0, 0, 0, int(205 * (1 - y / 700) ** 1.3)))
@@ -316,7 +346,7 @@ class Fundo:
         return [(ini + (fim - ini) * k / n, ini + (fim - ini) * (k + 1) / n, k) for k in range(n)]
 
     def _janela(self, i, t):
-        e = self.r["etapas"][i]; im = self.ims[i]
+        e = self.r["etapas"][i]; im = self.capa if i == 0 else self.ims[i]
         cam = e.get("camera", ["push", "pull", "pan_dir", "push", "sobe", "pan_esq", "push"][i])
         fx, fy = e.get("foco", [0.5, 0.45])
         for a, b, k in self.planos[i]:
@@ -343,19 +373,34 @@ class Fundo:
 
     def _tela(self, i, t):
         """quadro da etapa i: tela cheia (padrão e capa) ou a imagem dentro da caixa do layout, com degradê próprio"""
-        if LAY is None or LAY["img"] is None or i == 0:
+        if LAY is None or LAY["img"] is None or (i == 0 and not LAY.get("capa")):
             im = self._render(*self._janela(i, t)).convert("RGBA"); im.alpha_composite(self.grad); return im
+        if LAY.get("moldura") and i > 0:      # 'quadro': fundo liso e a imagem num quadro arredondado, sem texto por cima
+            return self._moldura(i, t)
         x, y, w, h = LAY["img"]
         if not hasattr(self, "grad_box"):
             g = Image.new("RGBA", (w, h), (0, 0, 0, 0)); d = ImageDraw.Draw(g)
             for yy in range(min(h, 480)):
                 d.line((0, yy, w, yy), fill=(0, 0, 0, int(200 * (1 - yy / 480) ** 1.3)))
-            for yy in range(max(0, h - 360), h):
-                d.line((0, yy, w, yy), fill=(0, 0, 0, int(215 * ((yy - (h - 360)) / 360) ** 1.2)))
+            base_y, alfa = (360, 215) if LAY["forma"] != "aberto" else (260, 150)   # aberto: base mais leve, o avatar funde por cima
+            for yy in range(max(0, h - base_y), h):
+                d.line((0, yy, w, yy), fill=(0, 0, 0, int(alfa * ((yy - (h - base_y)) / base_y) ** 1.2)))
             self.grad_box = g
         tela = Image.new("RGBA", (W, H), (8, 10, 14, 255))
         im = self._render(*self._janela(i, t), tam=(w, h)).convert("RGBA"); im.alpha_composite(self.grad_box)
         tela.paste(im, (x, y)); return tela
+
+    def _moldura(self, i, t):
+        x0, y0, x1, y1 = LAY["moldura"]; w, h = x1 - x0, y1 - y0
+        if not hasattr(self, "fundo_moldura"):
+            f = Image.new("RGBA", (W, H), (12, 12, 16, 255))
+            sh = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ImageDraw.Draw(sh).rounded_rectangle((x0, y0 + 10, x1, y1 + 10), 28, fill=(0, 0, 0, 170))
+            f.alpha_composite(sh.filter(ImageFilter.GaussianBlur(14)))
+            m = Image.new("L", (w, h), 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, w - 1, h - 1), 28, fill=255)
+            self.fundo_moldura, self.mask_moldura = f, m
+        im, z, cx, cy = self._janela(i, t)
+        quadro = self._render(im, z, cx, max(.3, cy - .08), tam=(w, h))   # quadro deitado: sobe um pouco para não cortar cabeça
+        tela = self.fundo_moldura.copy(); tela.paste(quadro, (x0, y0), self.mask_moldura); return tela
 
     def quadro(self, t):
         i = self.L.etapa(t)
@@ -473,8 +518,9 @@ class Desenho:
             c = e["capa"]; y = c.get("y", 880); cx = (SAFE[0] + SAFE[2]) / 2   # texto embaixo, cena visível
             topo = self.ganho(d, c["ganho"]) if c.get("ganho") else HEAD_Y + 40
             tam, tc = 172, 60
-            if AV_CAPA:                        # avatar grande no quadro 0: o texto encolhe e fica entre o ganho e o avatar
-                larg = SAFE[2] - SAFE[0] - 30; vao = AVC[1] - 24 - (topo + 24)
+            lim = topo_avatar_capa()
+            if lim is not None:                # avatar já no quadro 0: o texto encolhe e fica entre o ganho e o avatar
+                larg = SAFE[2] - SAFE[0] - 30; vao = lim - 24 - (topo + 24)
                 def altura(tm):
                     k = max(40, int(60 * tm / 172))
                     while c.get("sub") and fnt(MBLK, k).getlength(c["sub"]) > (SAFE[2] - SAFE[0]) - 70:
@@ -489,7 +535,7 @@ class Desenho:
             y += h1 + 16
             h2 = self.linha(base, t, t0, cx, y, c["linha2"], ANTON, tam, AMB, SAFE[2] - SAFE[0] - 30, "capa2", anim=False, centro=True)
             if c.get("sub"):
-                self.chip(base, d, t + 1, t0, cx, y + h2 + (30 if AV_CAPA else 46), c["sub"], "capa-sub", centro=True, tam=tc)
+                self.chip(base, d, t + 1, t0, cx, y + h2 + (30 if lim is not None else 46), c["sub"], "capa-sub", centro=True, tam=tc)
             return
         y = HEAD_Y
         h1 = self.linha(base, t, t0, SAFE[0], y, e["linha1"], ANTON, 128, BRANCO, SAFE[2] - SAFE[0], "manchete1")
@@ -591,7 +637,7 @@ class Desenho:
             self.manchete(im, d, tt, e, L.ini[i])
             if L.cta is not None and i == 6 and t >= L.cta:
                 self.cta(im, d, t, L.cta)
-            elif e.get("destaque"):
+            elif e.get("destaque") and not (LAY is not None and LAY.get("sem_destaque")):
                 self.cartao(im, d, t, L.ini[i] + 0.3, e["destaque"], "destaque")
             if legenda and t < L.fim + 0.4:
                 self.legenda(im, t)
@@ -616,7 +662,13 @@ def preparar(r):
 def portao_desenho(D):
     erros = []
     for t, nome, (x0, y0, x1, y1), tam in D.caixas:
-        if AV_CAPA and t < D.L.ini[1] and x1 > AVC[0] and x0 < AVC[0] + AVC[2] and y1 > AVC[1] and y0 < AVC[1] + AVC[3]:
+        if LAY is not None and LAY["forma"] == "aberto":     # avatar aberto: nada de texto sobre o rosto, em nenhum momento
+            if y1 > LAY["av"][1] + LAY["funde"]:
+                erros.append(f"{t:.1f}s {nome} cobre o avatar {(x0, y0, x1, y1)}")
+        elif CAPA_ABERTA and t < D.L.ini[1]:
+            if y1 > LAYOUTS["quadro"]["av"][1] + LAYOUTS["quadro"]["funde"]:
+                erros.append(f"{t:.1f}s {nome} da capa cobre o avatar aberto {(x0, y0, x1, y1)}")
+        elif AV_CAPA and t < D.L.ini[1] and x1 > AVC[0] and x0 < AVC[0] + AVC[2] and y1 > AVC[1] and y0 < AVC[1] + AVC[3]:
             erros.append(f"{t:.1f}s {nome} da capa cobre o avatar {(x0, y0, x1, y1)}")
         if x0 < SAFE[0] - 1 or y0 < SAFE[1] - 1 or x1 > SAFE[2] + 1 or y1 > SAFE[3] + 1:
             erros.append(f"{t:.1f}s {nome} fora da zona segura {(x0, y0, x1, y1)}")
@@ -645,6 +697,27 @@ def loudnorm(entrada, saida, alvo=-14.0):
     af = (f"loudnorm=I={alvo}:TP=-1.5:LRA=11:measured_I={j['input_i']}:measured_TP={j['input_tp']}:measured_LRA={j['input_lra']}:"
           f"measured_thresh={j['input_thresh']}:offset={j['target_offset']}:linear=true")
     run(["ffmpeg", "-v", "error", "-y", "-i", entrada, "-af", af, "-ar", "48000", saida])
+
+
+def _recorte(r, crop, aw, ah):
+    """recorte do avatar na proporção aw:ah, altura inteira, centrado no rosto que recorte_rosto achou"""
+    cw0, ch0, x00 = (int(v) for v in crop.split(":")[:3]); centro = x00 + cw0 / 2
+    vw, vh = (int(v) for v in subprocess.check_output(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height",
+                                        "-of", "csv=p=0", str(r["_av"])], text=True).strip().split(","))
+    ch = vh; cw = int(round(ch * aw / ah))
+    if cw > vw:
+        cw = vw; ch = int(round(vw * ah / aw))
+    return f"{cw}:{ch}:{int(max(0, min(vw - cw, centro - cw / 2)))}:0"
+
+
+def _mascara(arq, lay):
+    """máscara do avatar aberto: topo funde na imagem, base some no escuro (fica sob o título do Shorts)"""
+    _, _, aw, ah = lay["av"]; mk = Image.new("L", (aw, ah), 255); dm = ImageDraw.Draw(mk)
+    for yy in range(lay["funde"]):
+        dm.line((0, yy, aw, yy), fill=int(255 * ease(yy / lay["funde"])))
+    for yy in range(lay.get("funde_base", 0)):
+        dm.line((0, ah - 1 - yy, aw, ah - 1 - yy), fill=int(255 * ease(yy / lay["funde_base"])))
+    mk.save(arq); return arq
 
 
 def cmd_montar(pasta):
@@ -681,13 +754,7 @@ def cmd_montar(pasta):
     crop = rc.recorte_rosto(r); crop_capa = crop; i0 = L.ini[1]
     ax, ay, aw, ah = (AVX, AVY, AVW, AVH) if LAY is None else LAY["av"]
     if LAY is not None:                     # recorte na proporção da caixa do layout, centrado no rosto achado
-        cw0, ch0, x00 = (int(v) for v in crop.split(":")[:3]); centro = x00 + cw0 / 2
-        vw, vh = (int(v) for v in subprocess.check_output(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height",
-                                            "-of", "csv=p=0", str(r["_av"])], text=True).strip().split(","))
-        ch = vh; cw = int(round(ch * aw / ah))
-        if cw > vw:
-            cw = vw; ch = int(round(vw * ah / aw))
-        crop = f"{cw}:{ch}:{int(max(0, min(vw - cw, centro - cw / 2)))}:0"
+        crop = _recorte(r, crop, aw, ah)
     tag = B / "tag.txt"; tag.write_text(r.get("tag", "NEI MALDANER  |  INEMA"))
     yexp = f"if(lt(t,{i0 + 0.35:.2f}),{ay}+(1-(t-{i0:.2f})/0.35)*140,{ay})" if (LAY is None or LAY["forma"] == "ret") else str(ay)
     en = f"gte(t,{i0:.2f})"
@@ -701,7 +768,18 @@ def cmd_montar(pasta):
     fc = (f"[1:v]trim=start={i0:.3f},setpts=PTS-STARTPTS+{i0:.3f}/TB,crop={crop},scale={aw}:{ah},setsar=1,fps={FPS},"
           f"tpad=stop_mode=clone:stop_duration=10,{moldura}"
           f"[0:v][av]overlay=x={ax}:y='{yexp}':enable='{en}':eof_action=repeat,format=yuv420p[v]")
-    if AV_CAPA:                          # capa: avatar GRANDE (AVC) até a etapa 2; daí a caixa normal entra subindo
+    if LAY is not None and LAY["forma"] == "aberto":    # avatar aberto do quadro 0 ao fim: sem moldura, topo fundindo na imagem
+        mask = _mascara(B / "mascara.png", LAY)
+        fc = (f"[1:v]crop={crop},scale={aw}:{ah},setsar=1,fps={FPS},tpad=stop_mode=clone:stop_duration=10,format=rgba[avr];"
+              f"movie={mask},format=gray,scale={aw}:{ah}[mk];[avr][mk]alphamerge[av];"
+              f"[0:v][av]overlay=x={ax}:y={ay}:eof_action=repeat,format=yuv420p[v]")
+    elif CAPA_ABERTA:                    # capa com o avatar aberto (largura toda, sem moldura); na etapa 2 entra a caixa
+        R = LAYOUTS["quadro"]; _, ry, rw, rh = R["av"]; mask = _mascara(B / "mascara.png", R)
+        fc = fc.replace("[1:v]", "[a2]", 1).replace("[0:v][av]", "[cap][av]", 1)
+        fc = (f"[1:v]split[a1][a2];[a1]crop={_recorte(r, crop_capa, rw, rh)},scale={rw}:{rh},setsar=1,fps={FPS},format=rgba[avr0];"
+              f"movie={mask},format=gray,scale={rw}:{rh}[mk0];[avr0][mk0]alphamerge[avc];"
+              f"[0:v][avc]overlay=x=0:y={ry}:enable='lt(t,{i0:.3f})'[cap];" + fc)
+    elif AV_CAPA:                        # capa: avatar GRANDE (AVC) até a etapa 2; daí a caixa normal entra subindo
         cx_, cy_, cw_, ch_ = AVC
         fc = fc.replace("[1:v]", "[a2]", 1).replace("[0:v][av]", "[cap][av]", 1)
         fc = (f"[1:v]split[a1][a2];[a1]crop={crop_capa},scale={cw_}:{ch_},setsar=1,fps={FPS},"

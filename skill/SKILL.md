@@ -31,8 +31,19 @@ folhas em tamanho real — e publica já impecável. Ele confere depois.
 | 7 | Comentário | Onde está e qual ação pequena ela faz agora? | TUDO NO INEMA.CLUB · ou comenta JARVIS |
 
 Regras de texto: resultado antes da tecnologia; uma tese por vídeo; sem jargão (IA, agente, LLM)
-antes da etapa 5. **Fecho padrão da fala:** "Tá tudo no inema ponto club. Ou comenta <PALAVRA> que eu
-te mando o link." (o funil de DM do "comenta" não está automatizado — o site é o caminho principal).
+antes da etapa 5. **Fecho padrão da fala (14/10):** "Tá tudo no inema ponto club. Quer o link? Me pede aqui nos
+comentários." — sem palavra-chave enquanto a resposta não for automatizada; no roteiro,
+`cta: {ancora: link, linha1: "quer o link?", palavra: "ME PEDE", linha2: "aqui nos comentários"}`.
+**Gancho com conflito concreto** (uma cena que o dono de negócio reconhece, ex. "o cliente pede um desconto que
+ninguém aprovou; o agente aceita") e **sem promessa de perfeição** ("reduz erro", "sabe quando chamar você").
+**Cenário único:** as 6 cenas no mesmo lugar e com a mesma pessoa descrita igual em cada `cena`; mostrar a coisa
+de verdade (print) com `imagem: img/<arquivo>.png` na etapa (mockup em janela sobre fundo claro, sem `destaque`
+para o print aparecer). Crítica de 13/10 do reel da constituição.
+**Visual (escolha do Nei, 14/10):** padrão = B (`abre`): o avatar abre o vídeo aberto, largura toda, SEM moldura,
+sobre a capa desfocada e escurecida (`capa.desfoque: 0` desliga); da etapa 2 em diante, imagem em tela cheia, cartão
+à esquerda e avatar no quadradinho à direita. Opção A = `layout: quadro`: avatar aberto do começo ao fim (termina em
+y 1800, fora do título do Shorts); em cima, fundo liso, manchete e a imagem num quadro sem texto por cima (sem cartão
+de destaque). `layout: caixa` = o antigo (caixa com moldura também na capa). Os dois estão no guia (#visuais).
 Se houver número na etapa Medo, com fonte.
 
 ## Passo a passo
