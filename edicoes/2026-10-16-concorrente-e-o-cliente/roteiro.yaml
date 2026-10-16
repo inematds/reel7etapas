@@ -1,0 +1,88 @@
+# reel7etapas — edição 2026-10-16-concorrente-e-o-cliente (vídeo EmaXeEdlJkI: os concorrentes dos SaaS serão os profissionais que os usavam, com REA + vibe code)
+tema: "O maior concorrente do software por assinatura vai ser o profissional que usava ele (REA + vibe code)"
+data: "16/10/2026"
+palavra: REA
+fala: |
+  O maior concorrente dos programas por assinatura vai ser quem usava eles. O contador que conhece cada tela do sistema. A dentista que sabe tudo o que falta na agenda. Pra empresa de software, é o pior cenário: o cliente sabe exatamente o que presta e o que sobra. E ele não precisa saber programar: descreve em português e a inteligência artificial escreve o código. Junta isso com o REA, a engenharia reversa que entende como o programa original funciona, e nasce um concorrente. Feito por quem vive o problema todo dia, mais simples e mais barato. Tá tudo no inema ponto club. Quer o link? Me pede aqui nos comentários.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "o concorrente é o próprio cliente"
+    por_que: "virada inesperada: quem pagava vira quem compete"
+    capa: {ganho: "QUEM USAVA, AGORA FAZ O SEU", linha1: "O CONCORRENTE", linha2: "É O CLIENTE", sub: "REA + VIBE CODE"}
+    cor: vermelho
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Escritório de contabilidade claro, de dia, com luz de janela. Um contador de uns 50 anos, de camisa branca e óculos, olha confiante para a câmera, braços cruzados, ao lado de um monitor que mostra um sistema de planilhas genérico, sem letras. Rosto bem iluminado, destaque vermelho na gravata."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "o profissional conhece cada tela"
+    por_que: "o saber do dia a dia vira vantagem"
+    ancora: contador
+    linha1: "QUEM CONHECE"
+    linha2: "CADA TELA"
+    destaque: {titulo: "ANOS", texto: "usando o sistema\ntodo dia"}
+    camera: pull
+    foco: [0.5, 0.48]
+    cena: "No mesmo escritório de contabilidade claro de dia, o contador de camisa branca e óculos aponta com a caneta para um detalhe no monitor, explicando para uma colega jovem ao lado; na mesa, pastas organizadas. Sem letras legíveis na tela. Luz de janela, cores naturais."
+  - id: medo
+    nome: MEDO
+    gatilho: "pior cenário: o cliente sabe o que presta e o que sobra"
+    por_que: "o risco para quem vende software: perder para quem conhece o uso"
+    ancora: pior
+    linha1: "O PIOR"
+    linha2: "CENÁRIO"
+    cor: vermelho
+    destaque: {titulo: "PRA EMPRESA", texto: "o cliente sabe\no que sobra", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "Sala de reunião de uma empresa de software, clara, de dia: um executivo de terno, sozinho à mesa, olha preocupado para um gráfico vermelho em queda na tela da parede, sem números legíveis. Luz fria de janela, destaque vermelho no gráfico."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa programar: descreve em português"
+    por_que: "derruba a objeção técnica"
+    ancora: programar
+    linha1: "SEM SABER"
+    linha2: "PROGRAMAR"
+    destaque: {titulo: "EM PORTUGUÊS", texto: "você descreve,\na IA escreve"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "No mesmo escritório de contabilidade claro de dia, o contador de camisa branca e óculos fala com o notebook como quem conversa, com uma folha de papel com rabiscos de tela ao lado; na tela, uma janela de conversa simples, sem código e sem letras legíveis. Ambiente claro."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "vibe code + REA = nasce um concorrente"
+    por_que: "dá nome à combinação"
+    ancora: junta
+    linha1: "VIBE CODE"
+    linha2: "+ REA"
+    destaque: {titulo: "REA", texto: "entende como\no original funciona"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Bancada clara de oficina, de dia, com luz de janela: duas peças grandes de quebra-cabeça de madeira, uma azul e uma branca, sendo encaixadas por duas mãos humanas; ao fundo, um notebook aberto. Visual limpo, cores naturais, destaque azul."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "feito por quem vive o problema"
+    por_que: "o resultado: mais simples e mais barato"
+    ancora: feito
+    linha1: "MAIS SIMPLES,"
+    linha2: "MAIS BARATO"
+    destaque: {titulo: "DE QUEM VIVE", texto: "o problema\ntodo dia"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Consultório odontológico claro de dia: uma dentista de uns 40 anos, de jaleco branco, sorri mostrando num tablet a agenda simples que ela mesma fez, em blocos coloridos sem letras, para uma recepcionista sorridente. Luz clara de dia, cores vivas e limpas."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club, peça o link"
+    por_que: "dá o caminho e uma ação pequena"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "guia aberto\npra você"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão do contador de camisa branca segurando um smartphone na vertical no mesmo escritório de contabilidade claro de dia. Na tela do celular, no alto, um vídeo vertical com peças de quebra-cabeça; embaixo, a área de comentários com avatares redondos, corações e balões, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: link, linha1: "quer o link?", palavra: "ME PEDE", linha2: "aqui nos comentários"}
+legenda_envio: "O concorrente é o cliente: o profissional que usava o software vai fazer o dele com REA + vibe code. Reel r7e do vídeo do Wes Roth."
+canal: lives4
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner): o maior concorrente dos programas por assinatura (SaaS) vai ser o profissional que usava eles — o contador que conhece cada tela, a dentista que sabe o que falta na agenda. Ele descreve em português e a IA escreve o código (vibe code); com o REA (Reverse Engineer Anything) entende como o original funciona. Nasce um concorrente mais simples e mais barato, feito por quem vive o problema. CTA: peça o link nos comentários. Título com gancho forte e #shorts."
+youtube_20261016: https://www.youtube.com/shorts/7l3r-trsbtk

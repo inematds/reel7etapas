@@ -1,0 +1,90 @@
+# reel7etapas — edição 2026-10-16-ia-passou-na-prova (vídeo EmaXeEdlJkI: SRE-Bench, GPT-6 Astra 88% / 99,2%; com gráfico e diagrama)
+tema: "A IA passou na prova mais difícil de engenharia reversa: 88% de acerto de primeira"
+data: "16/10/2026"
+palavra: REA
+fala: |
+  Uma inteligência artificial passou na prova mais difícil de engenharia reversa. A regra é simples: ela vê o programa funcionando e tem que refazer tudo, sem ver uma linha do código. Resultado: oitenta e oito por cento de acerto na primeira tentativa, e noventa e nove em quatro. E custa pouco: o que levava semanas de especialista agora roda numa tarde. O nome disso, pra quem quer usar, é REA: ele liga o seu agente às ferramentas de engenharia reversa. Quer dizer: todo programa pode ser entendido e refeito. Inclusive o que você paga todo mês. Tá tudo no inema ponto club. Quer o link? Me pede aqui nos comentários.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "a IA passou na prova mais difícil"
+    por_que: "afirmação forte com número logo na capa"
+    capa: {ganho: "ENTENDA POR QUE TUDO MUDOU", linha1: "88% DE", linha2: "PRIMEIRA", sub: "A IA QUE REFAZ SOFTWARE"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Sala de aula universitária clara, de dia, com luz de janela: sobre uma carteira de madeira, uma folha de prova com uma nota circulada em vermelho, sem letras nem números legíveis, ao lado de um notebook aberto mostrando janelas de programa. Ao fundo, um professor de uns 55 anos de camisa clara olha a folha impressionado. Cores naturais, destaque vermelho no círculo."
+  - id: desejo
+    nome: A PROVA
+    gatilho: "vê o programa e refaz sem o código"
+    por_que: "explica o teste em 4 passos com um diagrama"
+    ancora: regra
+    linha1: "SEM VER"
+    linha2: "O CÓDIGO"
+    imagem: img/diagrama-prova.png
+    cor_livre: true
+    camera: pull
+    foco: [0.5, 0.45]
+    cena: "diagrama da prova (4 passos)"
+  - id: medo
+    nome: RESULTADO
+    gatilho: "88% de primeira, 99% em quatro"
+    por_que: "o número com fonte, em gráfico"
+    ancora: resultado
+    linha1: "QUASE"
+    linha2: "PERFEITO"
+    cor: vermelho
+    chip: "FONTE: SRE-BENCH"
+    imagem: img/grafico-sre.png
+    cor_livre: true
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "gráfico SRE-Bench"
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "custa pouco: semanas viram uma tarde"
+    por_que: "derruba a ideia de que é caro ou demorado"
+    ancora: custa
+    linha1: "SEMANAS VIRAM"
+    linha2: "UMA TARDE"
+    destaque: {titulo: "BARATO", texto: "o que levava\nsemanas de especialista"}
+    camera: pan_dir
+    foco: [0.5, 0.45]
+    cena: "Na mesma sala de aula universitária clara de dia, sobre a carteira, um calendário de parede com muitas semanas riscadas ao lado de uma ampulheta pequena quase toda cheia em cima, e o notebook aberto. Sem letras nem números legíveis. Luz clara de janela, cores neutras, destaque azul na ampulheta."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "o nome é REA, liga o agente às ferramentas"
+    por_que: "dá nome à ferramenta que qualquer um usa"
+    ancora: nome
+    linha1: "O NOME É"
+    linha2: "REA"
+    destaque: {titulo: "REA", texto: "liga o seu agente\nàs ferramentas"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Bancada clara de laboratório, de dia: um notebook aberto ligado por cabos coloridos a três caixas de ferramentas metálicas abertas com lupas, chaves e pinças, como se o computador usasse as ferramentas. Visual limpo, cores naturais, destaque azul nos cabos."
+  - id: beneficio
+    nome: CONSEQUÊNCIA
+    gatilho: "todo programa pode ser entendido e refeito"
+    por_que: "leva do teste para a vida da pessoa: o programa que ela paga"
+    ancora: dizer
+    linha1: "TODO PROGRAMA"
+    linha2: "SE REFAZ"
+    destaque: {titulo: "ATÉ O SEU", texto: "o que você\npaga todo mês"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Na mesma sala de aula clara de dia, uma estudante de uns 25 anos sorri mostrando o notebook com dois programas lado a lado quase iguais, o da direita com um selo verde de visto, sem letras. Luz clara de dia, cores vivas e limpas."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club, peça o link"
+    por_que: "dá o caminho e uma ação pequena"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "o guia do REA\naberto pra você"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão da estudante segurando um smartphone na vertical na mesma sala de aula clara de dia. Na tela do celular, no alto, um vídeo vertical com uma folha de prova; embaixo, a área de comentários com avatares redondos, corações e balões, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: link, linha1: "quer o link?", palavra: "ME PEDE", linha2: "aqui nos comentários"}
+legenda_envio: "A IA passou na prova mais difícil de engenharia reversa: 88% de primeira, 99,2% em quatro (SRE-Bench). Reel r7e com gráfico, do vídeo do Wes Roth."
+canal: lives4
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner): uma IA (GPT-6 Astra) passou na prova mais difícil de engenharia reversa, o SRE-Bench (Columbia): vê o programa funcionando e refaz tudo sem o código. 88% de acerto na primeira tentativa e 99,2% em até quatro (dado citado por Wes Roth). O que levava semanas de especialista roda numa tarde. Para usar: o REA (Reverse Engineer Anything) liga o seu agente às ferramentas de engenharia reversa. Todo programa pode ser entendido e refeito. CTA: peça o link nos comentários. Título com gancho forte e #shorts."
+youtube_20261016: https://www.youtube.com/shorts/y98TbL5bLrc

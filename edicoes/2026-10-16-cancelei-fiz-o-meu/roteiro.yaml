@@ -1,0 +1,87 @@
+# reel7etapas — edição 2026-10-16-cancelei-fiz-o-meu (vídeo EmaXeEdlJkI: o criador cancelou o editor de vídeo e fez o dele em 2 h)
+tema: "Cancelei a assinatura e fiz o meu: o programa que você paga, refeito só com o que você usa"
+data: "16/10/2026"
+palavra: CLONE
+fala: |
+  Cancelei a assinatura e fiz o meu. Foi o que um criador americano disse depois de refazer o editor de vídeo dele em duas horas. Sabe aquele programa que você paga todo mês, mas só usa cinco por cento? Aí vem propaganda pedindo mais dinheiro, trava na hora de salvar, e o suporte é um robô que não resolve. Hoje você descreve o que precisa e a inteligência artificial monta. Agenda da clínica, controle de estoque, orçamento da obra: dá pra fazer o seu, só com o que você usa. E com o REA ela ainda entende como o original funciona. Sem mensalidade, sem propaganda, do seu jeito. Tá tudo no inema ponto club. Quer o link? Me pede aqui nos comentários.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "cancelei a assinatura e fiz o meu"
+    por_que: "resultado concreto e rápido: duas horas"
+    capa: {ganho: "O SEU PROGRAMA, SEM MENSALIDADE", linha1: "CANCELEI", linha2: "E FIZ O MEU", sub: "EM DUAS HORAS, COM IA"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Home office claro de dia com luz de janela. Um homem de uns 40 anos, de camiseta verde-escura, sorri satisfeito e aperta com força a tecla Enter do notebook, como quem fecha um assunto. Na tela, um botão grande de confirmação vermelho, sem letras. Rosto bem iluminado."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "você só usa cinco por cento do que paga"
+    por_que: "a pessoa reconhece que paga por muito mais do que usa"
+    ancora: sabe
+    linha1: "VOCÊ USA"
+    linha2: "SÓ 5%"
+    destaque: {titulo: "5%", texto: "do programa\nque paga todo mês"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "No mesmo home office claro de dia, uma caixa de ferramentas enorme aberta sobre a mesa, cheia de dezenas de ferramentas, e a mão do homem de camiseta verde-escura tirando só uma chave de fenda. Ao lado, o notebook. Luz de janela, cores naturais, destaque azul na chave."
+  - id: medo
+    nome: MEDO
+    gatilho: "propaganda, trava, suporte robô"
+    por_que: "as dores que todo assinante já viveu"
+    ancora: propaganda
+    linha1: "TRAVA, COBRA"
+    linha2: "E NÃO RESOLVE"
+    cor: vermelho
+    destaque: {titulo: "SUPORTE", texto: "um robô\nque não resolve", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.45]
+    cena: "No mesmo home office, o homem de camiseta verde-escura com as duas mãos na cabeça, frustrado, diante do notebook cuja tela está cheia de janelas de aviso vermelhas empilhadas e uma barra de progresso parada, sem letras. Luz fria de janela, rosto bem visível."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "você descreve e a IA monta"
+    por_que: "derruba a objeção de que precisa programar"
+    ancora: descreve
+    linha1: "DESCREVE"
+    linha2: "E A IA MONTA"
+    destaque: {titulo: "SEM CÓDIGO", texto: "você fala\no que precisa"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "No mesmo home office claro de dia, o homem de camiseta verde-escura fala tranquilo com o notebook, com um bloco de papel ao lado onde desenhou à mão o rascunho simples de uma tela com três botões, sem letras. Na tela do notebook, a mesma tela aparecendo pronta. Ambiente claro."
+  - id: descoberta
+    nome: EXEMPLOS
+    gatilho: "agenda, estoque, orçamento: o seu, só com o que usa"
+    por_que: "exemplos do dia a dia do pequeno negócio"
+    ancora: agenda
+    linha1: "AGENDA, ESTOQUE,"
+    linha2: "ORÇAMENTO"
+    destaque: {titulo: "O SEU", texto: "só com o que\nvocê usa"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Três telas lado a lado na mesa do mesmo home office claro de dia: um tablet com uma agenda simples em blocos coloridos, um notebook com prateleiras e caixas desenhadas como ícones de estoque, e um celular com uma planta de casa e uma lista; nenhuma letra legível. Visual limpo, cores naturais."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "com o REA, sem mensalidade, do seu jeito"
+    por_que: "dá nome à ferramenta e fecha com a vida depois"
+    ancora: mensalidade
+    linha1: "SEM"
+    linha2: "MENSALIDADE"
+    destaque: {titulo: "REA", texto: "entende como\no original funciona"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "O homem de camiseta verde-escura relaxado na cadeira do mesmo home office claro de dia, com uma caneca de café, sorrindo para o notebook que mostra o programa próprio dele, simples e limpo, sem letras. Sobre a mesa, uma fatura de assinatura rasgada ao meio. Luz clara de dia, cores vivas."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club, peça o link"
+    por_que: "dá o caminho e uma ação pequena"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "guia aberto\npra você"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão do homem de camiseta verde-escura segurando um smartphone na vertical no mesmo home office claro de dia. Na tela do celular, no alto, um vídeo vertical com uma caixa de ferramentas; embaixo, a área de comentários com avatares redondos, corações e balões, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: link, linha1: "quer o link?", palavra: "ME PEDE", linha2: "aqui nos comentários"}
+legenda_envio: "Cancelei a assinatura e fiz o meu: o programa que você paga, refeito com IA só com o que você usa. Reel r7e do vídeo do Wes Roth."
+canal: lives4
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner): 'cancelei a assinatura e fiz o meu' — um criador americano refez o editor de vídeo que pagava em duas horas com IA. Você usa só 5% do programa que paga; propaganda, travamento e suporte robô. Hoje você descreve o que precisa e a IA monta: agenda da clínica, controle de estoque, orçamento da obra. Com o REA (Reverse Engineer Anything) ela entende como o original funciona. Sem mensalidade, do seu jeito. CTA: peça o link nos comentários. Título com gancho forte e #shorts."
+youtube_20261016: https://www.youtube.com/shorts/jBqnS1HXYX0

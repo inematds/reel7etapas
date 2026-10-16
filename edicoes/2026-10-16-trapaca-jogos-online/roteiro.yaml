@@ -1,0 +1,90 @@
+# reel7etapas — edição 2026-10-16-trapaca-jogos-online (vídeo EmaXeEdlJkI, Wes Roth: o lado sombrio do REA nos jogos online)
+# Só ALERTA: cita os exemplos que ele cita, sem passo a passo nem como esconder.
+tema: "Trapaça nos jogos online: a engenharia reversa com IA (REA) mudou o nível"
+data: "16/10/2026"
+palavra: REA
+fala: |
+  A trapaça nos jogos online acabou de mudar de nível. Um criador famoso testou num jogo competitivo e mostrou o que dá pra fazer: tanque com o teto transparente, inimigo visto através da parede, minimapa onde o jogo não tem. Pra quem joga limpo, é perder sem saber por quê. E não foi um programa de trapaça comprado: a inteligência artificial entendeu o jogo por dentro, sem o código. O nome disso é REA, engenharia reversa de qualquer programa. Ele fez só como experimento e apagou tudo. Mas as empresas de jogos vão ter que correr atrás. Tá tudo no inema ponto club. Quer o link? Me pede aqui nos comentários.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "trapaça nos jogos online mudou de nível"
+    por_que: "conflito que todo jogador reconhece: perder para quem trapaceia"
+    capa: {ganho: "SAIBA ANTES DA PRÓXIMA PARTIDA", linha1: "TRAPAÇA NOS", linha2: "JOGOS ONLINE", sub: "AGORA COM IA: O REA"}
+    cor: vermelho
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Quarto de um jogador, de dia, com luz de janela. Um rapaz de uns 22 anos, de moletom cinza e headset preto, sentado diante de um monitor grande numa mesa gamer, olha a tela com a boca aberta de espanto. Na tela, um jogo de guerra com tanques num campo aberto, sem letras. Rosto bem iluminado, destaque vermelho nas luzes do teclado."
+  - id: desejo
+    nome: O QUE DÁ PRA FAZER
+    gatilho: "os exemplos concretos que ele mostrou"
+    por_que: "imagem concreta: ver o inimigo através da parede"
+    ancora: testou
+    linha1: "VER ATRAVÉS"
+    linha2: "DA PAREDE"
+    cor: vermelho
+    destaque: {titulo: "ELE MOSTROU", texto: "tanque transparente\nraio X na parede\nminimapa extra", cor: vermelho}
+    camera: pull
+    foco: [0.5, 0.48]
+    cena: "Close do monitor do mesmo quarto claro de dia: na tela, um jogo de guerra em terceira pessoa onde o contorno de um soldado inimigo aparece brilhando em vermelho através de um muro de concreto, como raio X, e um tanque tem o teto transparente como vidro. Sem letras, sem números, sem interface legível. A mão do rapaz de moletom cinza no mouse, em primeiro plano."
+  - id: medo
+    nome: MEDO
+    gatilho: "perder sem saber por quê"
+    por_que: "a perda injusta é o que mais irrita quem joga limpo"
+    ancora: limpo
+    linha1: "PERDER SEM"
+    linha2: "SABER POR QUÊ"
+    cor: vermelho
+    destaque: {titulo: "INJUSTO", texto: "pra quem\njoga limpo", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.45]
+    cena: "No mesmo quarto claro de dia, o rapaz de moletom cinza tira o headset e encosta na cadeira, frustrado, com a mão na testa, olhando a tela do monitor que mostra uma tela de derrota toda vermelha e cinza, sem letras. Luz fria de janela, rosto bem visível."
+  - id: facilidade
+    nome: COMO
+    gatilho: "não foi trapaça comprada: a IA entendeu o jogo"
+    por_que: "o novo é a IA entender o programa por dentro, sem o código"
+    ancora: comprado
+    linha1: "A IA ENTENDEU"
+    linha2: "O JOGO"
+    destaque: {titulo: "SEM O CÓDIGO", texto: "entendeu o jogo\npor dentro"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Na mesma mesa gamer, de dia com luz de janela, o monitor mostra o modelo 3D de um tanque de guerra cinza desmontado em peças flutuando em ordem, como um diagrama explodido, sobre fundo azul claro, sem letras. O rapaz de moletom cinza observa de perto, sério."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "o nome é REA, engenharia reversa de qualquer programa"
+    por_que: "dá nome à tecnologia por trás"
+    ancora: nome
+    linha1: "O NOME É"
+    linha2: "REA"
+    destaque: {titulo: "REA", texto: "engenharia reversa\nde qualquer programa"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Na mesma mesa gamer, de dia: um console de videogame e um gabinete de computador abertos, com as peças internas organizadas no ar à frente deles como num diagrama explodido, e uma lupa grande de vidro sobre as peças. Visual limpo, cores naturais, destaque azul."
+  - id: beneficio
+    nome: ALERTA
+    gatilho: "ele apagou tudo, mas as empresas vão ter que correr"
+    por_que: "fecha com a ética (experimento) e com o que muda daqui pra frente"
+    ancora: experimento
+    linha1: "OS JOGOS VÃO"
+    linha2: "TER QUE MUDAR"
+    destaque: {titulo: "EXPERIMENTO", texto: "ele testou\ne apagou tudo"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Escritório de uma empresa de jogos, claro, de dia: três desenvolvedores, dois homens e uma mulher, em volta de um monitor grande, discutindo preocupados, um apontando para a tela, que mostra o mesmo jogo de tanques, sem letras. Luz de janela, cores vivas e limpas."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club, peça o link"
+    por_que: "dá o caminho e uma ação pequena"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "o guia do REA\naberto pra você"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical no mesmo quarto de jogador claro de dia. Na tela do celular, no alto, um vídeo vertical com um tanque de guerra; embaixo, a área de comentários com avatares redondos, corações e balões, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: link, linha1: "quer o link?", palavra: "ME PEDE", linha2: "aqui nos comentários"}
+legenda_envio: "Trapaça nos jogos online: o REA (engenharia reversa com IA) mudou o nível. Reel r7e do vídeo do Wes Roth (só alerta)."
+canal: lives4
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner), tom de ALERTA: a trapaça nos jogos online mudou de nível. Um criador conhecido testou num jogo competitivo e mostrou tanque com teto transparente, inimigo visto através da parede e minimapa onde o jogo não tem; a IA entendeu o jogo por dentro, sem o código. Isso vem do REA (Reverse Engineer Anything), engenharia reversa com IA. Ele fez só como experimento e apagou tudo; as empresas de jogos vão ter que correr atrás. Não ensinar trapaça. CTA: peça o link nos comentários. Título com gancho forte e #shorts. Não citar o nome do criador nem do jogo."
+youtube_20261016: https://www.youtube.com/shorts/4XibTf7QfoE

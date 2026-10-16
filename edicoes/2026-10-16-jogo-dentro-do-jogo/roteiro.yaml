@@ -1,0 +1,95 @@
+# reel7etapas — edição 2026-10-16-jogo-dentro-do-jogo (vídeo EmaXeEdlJkI: os mashups de jogos do começo do vídeo, explicando o REA)
+# Imagens 1–6 = quadros do vídeo original (mockup 9:16: fundo desfocado + janela nítida); só a 7 é gerada.
+tema: "Um jogo dentro do outro: a IA refaz qualquer jogo sem o código (REA)"
+data: "16/10/2026"
+palavra: REA
+fala: |
+  Colocaram o Homem-Aranha dentro do Skyrim. O Mario correndo em outro jogo, com os mesmos pulos de sempre. Um portal do Minecraft no meio do GTA: a explosão acontece nos dois jogos. Até um jogo de snowboard antigo do Nintendo sessenta e quatro foi refeito pra rodar no computador. Ninguém teve o código desses jogos. A inteligência artificial olhou como cada um funciona e refez. Isso é o REA, engenharia reversa de qualquer software. E o que vale pra jogo vale pro programa que você paga todo mês. Tá tudo no inema ponto club. Quer o link? Me pede aqui nos comentários.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "o Homem-Aranha dentro do Skyrim"
+    por_que: "imagem absurda e reconhecível nos 2 primeiros segundos"
+    capa: {ganho: "QUALQUER JOGO DENTRO DE OUTRO", linha1: "UM JOGO", linha2: "DENTRO DO OUTRO", sub: "A IA REFAZ SEM O CÓDIGO", desfoque: 0}
+    imagem: img/j1-aranha-skyrim.png
+    cor_livre: true
+    camera: push
+    foco: [0.5, 0.45]
+    cena: "quadro do vídeo: Homem-Aranha no Skyrim"
+  - id: desejo
+    nome: MARIO
+    gatilho: "o Mario com os mesmos pulos, em outro jogo"
+    por_que: "mostra que a mecânica vem junto"
+    ancora: mario
+    linha1: "OS MESMOS"
+    linha2: "PULOS"
+    imagem: img/j4-mario-gmod.png
+    cor_livre: true
+    camera: pull
+    foco: [0.5, 0.45]
+    cena: "quadro do vídeo: Mario em outro jogo"
+  - id: medo
+    nome: PORTAL
+    gatilho: "a explosão acontece nos dois jogos"
+    por_que: "o detalhe que impressiona: os dois jogos conversam"
+    ancora: portal
+    linha1: "MINECRAFT"
+    linha2: "NO GTA"
+    cor: vermelho
+    imagem: img/j7-nether-gta.png
+    cor_livre: true
+    camera: pan_dir
+    foco: [0.5, 0.45]
+    cena: "quadro do vídeo: portal do Minecraft no GTA"
+  - id: facilidade
+    nome: ANTIGO
+    gatilho: "jogo de Nintendo 64 refeito para PC"
+    por_que: "até o que só rodava num console antigo volta"
+    ancora: snowboard
+    linha1: "DO NINTENDO 64"
+    linha2: "PRO PC"
+    imagem: img/j5-snowboard.png
+    cor_livre: true
+    camera: push
+    foco: [0.5, 0.45]
+    cena: "quadro do vídeo: Snowboard Kids refeito"
+  - id: descoberta
+    nome: SEM CÓDIGO
+    gatilho: "ninguém teve o código"
+    por_que: "o ponto central: a IA refaz olhando o comportamento"
+    ancora: ninguem
+    linha1: "NINGUÉM TEVE"
+    linha2: "O CÓDIGO"
+    imagem: img/j2-minecraft.png
+    cor_livre: true
+    camera: sobe
+    foco: [0.5, 0.45]
+    cena: "quadro do vídeo: Minecraft com arma de outro jogo"
+  - id: beneficio
+    nome: REA
+    gatilho: "isso é o REA; vale pro programa que você paga"
+    por_que: "dá nome e leva do jogo para a vida da pessoa"
+    ancora: isso
+    linha1: "ISSO É O"
+    linha2: "REA"
+    imagem: img/j3-mario-wow.png
+    cor_livre: true
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "quadro do vídeo: Mario em jogo de fantasia"
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club, peça o link"
+    por_que: "dá o caminho e uma ação pequena"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "o guia do REA\naberto pra você"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara de dia com luz de janela, um controle de videogame sobre a mesa. Na tela do celular, no alto, um vídeo vertical com um personagem de jogo colorido pulando; embaixo, a área de comentários com avatares redondos, corações e balões, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: link, linha1: "quer o link?", palavra: "ME PEDE", linha2: "aqui nos comentários"}
+legenda_envio: "Um jogo dentro do outro: Homem-Aranha no Skyrim, Minecraft no GTA, Mario em outro jogo. A IA refaz sem o código (REA). Reel r7e com os quadros do vídeo do Wes Roth."
+canal: lives4
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner): colocaram o Homem-Aranha dentro do Skyrim, o Mario em outro jogo com os mesmos pulos, um portal do Minecraft no meio do GTA (a explosão acontece nos dois), e um jogo de snowboard do Nintendo 64 refeito para PC. Ninguém teve o código: a IA olhou como cada jogo funciona e refez. Isso é o REA (Reverse Engineer Anything), engenharia reversa com IA — e o que vale pra jogo vale pro programa que você paga. CTA: peça o link nos comentários. Título com gancho forte e #shorts."
+youtube_20261016: https://www.youtube.com/shorts/u5oK5RpBwP4

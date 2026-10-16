@@ -1,0 +1,90 @@
+# reel7etapas — edição 2026-10-16-clonar-e-crime (vídeo EmaXeEdlJkI: o REA é legal? sala limpa nos EUA; e no Brasil? provocação)
+# Não afirma nada sobre a lei brasileira: só pergunta. Fecho = provocação "certo ou errado?".
+tema: "Clonar um programa com IA é crime? A sala limpa nos EUA e a pergunta: e no Brasil?"
+data: "16/10/2026"
+palavra: COMENTA
+fala: |
+  Clonar um programa com inteligência artificial é crime? Nos Estados Unidos, quem defende diz que não, desde que ninguém copie o código. Funciona assim: um time descreve só o que o programa faz, e outro time constrói do zero, sem ver nada do original. Isso se chama sala limpa, e é usado há décadas. Mas as empresas vão brigar na justiça, e os processos devem começar logo. Agora, com o REA, a engenharia reversa com IA, qualquer pessoa consegue fazer isso. E aqui no Brasil, como vai ser? Você acha certo ou errado clonar um programa? Comenta aqui. E o guia tá no inema ponto club.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "clonar com IA é crime?"
+    por_que: "pergunta direta que divide opiniões"
+    capa: {ganho: "SAIBA ANTES DE CLONAR", linha1: "CLONAR É", linha2: "CRIME?", sub: "O REA E A LEI"}
+    cor: vermelho
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Escritório de advocacia claro, de dia, com luz de janela: sobre uma mesa de madeira, um martelo de juiz ao lado de um notebook aberto que mostra dois aplicativos quase idênticos lado a lado, sem letras. Uma advogada de uns 45 anos, de blazer azul-marinho, olha a tela com a sobrancelha levantada. Cores naturais, destaque vermelho num carimbo sobre a mesa."
+  - id: desejo
+    nome: EUA
+    gatilho: "nos EUA a defesa: sem copiar o código, vale"
+    por_que: "o argumento de quem defende"
+    ancora: estados
+    linha1: "SEM COPIAR"
+    linha2: "O CÓDIGO"
+    destaque: {titulo: "NOS EUA", texto: "quem defende\ndiz que vale"}
+    camera: pull
+    foco: [0.5, 0.48]
+    cena: "No mesmo escritório de advocacia claro de dia, a advogada de blazer azul-marinho explica gesticulando com a mão aberta, ao lado de uma pequena bandeira dos Estados Unidos sobre a estante. Luz de janela, cores naturais."
+  - id: medo
+    nome: SALA LIMPA
+    gatilho: "um time descreve, outro constrói do zero"
+    por_que: "explica a técnica que sustenta o argumento"
+    ancora: time
+    linha1: "SALA"
+    linha2: "LIMPA"
+    destaque: {titulo: "2 TIMES", texto: "um descreve,\noutro constrói"}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "Duas salas de escritório claras separadas por uma parede de vidro fosco, de dia: na sala da esquerda, duas pessoas escrevem num quadro branco com diagramas simples de caixas e setas, sem letras; na sala da direita, outras duas pessoas trabalham em notebooks, construindo. Uma folha de papel passa por uma abertura na parede. Luz neutra, cores naturais."
+  - id: facilidade
+    nome: BRIGA
+    gatilho: "as empresas vão brigar na justiça"
+    por_que: "o risco real: processos à vista"
+    ancora: brigar
+    linha1: "VAI DAR"
+    linha2: "PROCESSO"
+    cor: vermelho
+    destaque: {titulo: "JUSTIÇA", texto: "os processos\ndevem começar logo", cor: vermelho}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "Corredor claro de um fórum, de dia, com luz de janela: dois advogados de terno, um homem e uma mulher, caminham carregando pastas grossas de processo, sérios, decididos. Cores neutras, destaque vermelho nas fitas das pastas."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "com o REA, qualquer pessoa consegue"
+    por_que: "o que muda: deixa de ser coisa de empresa grande"
+    ancora: agora
+    linha1: "QUALQUER UM"
+    linha2: "COM O REA"
+    destaque: {titulo: "REA", texto: "engenharia reversa\ncom IA"}
+    camera: sobe
+    foco: [0.5, 0.48]
+    cena: "Mesa de cozinha clara de casa, de dia, com luz de janela: um rapaz de uns 28 anos de camiseta branca, sozinho, com o notebook aberto mostrando dois aplicativos lado a lado, sem letras, e uma xícara ao lado. Visual simples e comum, cores naturais, destaque azul na tela."
+  - id: beneficio
+    nome: PROVOCAÇÃO
+    gatilho: "e no Brasil, como vai ser?"
+    por_que: "traz a discussão para o público e abre o debate"
+    ancora: brasil
+    linha1: "E NO"
+    linha2: "BRASIL?"
+    destaque: {titulo: "CERTO", texto: "ou errado\nclonar um programa?"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "No mesmo escritório de advocacia claro de dia, a advogada de blazer azul-marinho, pensativa, segura a capa de um livro de leis grosso fechado, sem letras legíveis, ao lado de uma pequena bandeira do Brasil sobre a mesa. Luz clara de dia, cores vivas e limpas."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "certo ou errado? comenta"
+    por_que: "pergunta que pede uma resposta curta nos comentários"
+    ancora: comenta
+    linha1: "CERTO OU"
+    linha2: "ERRADO?"
+    cor: vermelho
+    destaque: {titulo: "COMENTA", texto: "certo\nou errado?"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical no mesmo escritório de advocacia claro de dia. Na tela do celular, no alto, um vídeo vertical com um martelo de juiz; embaixo, a área de comentários com muitos avatares redondos, balões verdes e vermelhos de opinião, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: guia, linha1: "certo ou errado?", palavra: "COMENTA", linha2: "e o guia tá no inema.club"}
+legenda_envio: "Clonar um programa com IA é crime? A sala limpa nos EUA, os processos que vêm e a pergunta: e no Brasil? Certo ou errado? Reel r7e do vídeo do Wes Roth."
+canal: lives4
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner), provocação: clonar um programa com IA é crime? Nos EUA, quem defende diz que não, desde que ninguém copie o código: é a 'sala limpa' (clean room), um time descreve o que o programa faz e outro constrói do zero; é usada há décadas. Mas as empresas vão brigar na justiça e os processos devem começar logo. Com o REA (Reverse Engineer Anything) qualquer pessoa consegue fazer isso. E no Brasil, como vai ser? Você acha certo ou errado clonar um programa? Não afirmar nada sobre a lei brasileira. CTA: comenta certo ou errado; guia em inema.club. Título em forma de pergunta e #shorts."
+youtube_20261016: https://www.youtube.com/shorts/Up_66To1oCU

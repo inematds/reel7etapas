@@ -1,0 +1,89 @@
+# reel7etapas — edição 2026-10-16-software-por-raiva (vídeo EmaXeEdlJkI: "spite SaaS" — gente vai criar software por raiva do tratamento, não pelo preço)
+tema: "Software por raiva: quem trata mal o cliente ganha um clone de graça (e o REA acelera isso)"
+data: "16/10/2026"
+palavra: REA
+fala: |
+  Muita gente vai criar o próprio software por raiva, não por dinheiro. Imagina nunca mais depender de quem te tratou mal. Uma das maiores empresas de programas foi processada nos Estados Unidos por esconder a multa pra cancelar: metade do que faltava do ano. Agora não precisa ser uma empresa pra fazer outro: uma pessoa e a inteligência artificial bastam. Já refizeram do zero a suíte de criação inteira, de graça. E o nome da chave é REA, engenharia reversa de qualquer software. Quem trata mal o cliente vai ganhar um concorrente de graça. Isso pode quebrar muita empresa. Tá tudo no inema ponto club. Quer o link? Me pede aqui nos comentários.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "software feito por raiva, não por dinheiro"
+    por_que: "inverte a lógica de mercado: o motivo agora é o mau tratamento"
+    capa: {ganho: "NUNCA MAIS REFÉM DE ASSINATURA", linha1: "POR RAIVA,", linha2: "NÃO PELO PREÇO", sub: "O REA VAI QUEBRAR O SOFTWARE"}
+    cor: vermelho
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Escritório de casa claro, de dia, com luz de janela. Uma mulher de uns 38 anos, de camisa azul, encara o notebook com raiva contida, braços cruzados, mandíbula tensa. Na tela, uma janela de aviso vermelha genérica, sem letras. Rosto bem iluminado, destaque vermelho na tela."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "nunca mais depender de quem te tratou mal"
+    por_que: "o desejo é independência, não economia"
+    ancora: imagina
+    linha1: "NUNCA MAIS"
+    linha2: "DEPENDER"
+    destaque: {titulo: "LIVRE", texto: "de quem\nte tratou mal"}
+    camera: pull
+    foco: [0.5, 0.48]
+    cena: "No mesmo escritório de casa claro de dia, a mesma mulher de camisa azul sorri aliviada, encostada na cadeira, com uma corrente de metal partida em dois sobre a mesa ao lado do notebook. Luz de janela, cores naturais."
+  - id: medo
+    nome: MEDO
+    gatilho: "multa escondida pra cancelar: metade do resto do ano"
+    por_que: "a perda concreta, com fonte (processo da FTC contra a Adobe, 2024)"
+    ancora: maiores
+    linha1: "MULTA PRA"
+    linha2: "CANCELAR"
+    cor: vermelho
+    destaque: {titulo: "50%", texto: "do que faltava\nprocesso da FTC, 2024", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "Na mesma mesa do escritório de casa, de dia, uma fatura de papel com uma linha marcada em vermelho, uma tesoura cortando um cartão de crédito genérico ao meio e uma calculadora; a mão da mulher de camisa azul segura a fatura com força. Sem letras legíveis. Luz fria de janela."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "uma pessoa e a IA bastam"
+    por_que: "derruba a ideia de que só outra empresa poderia competir"
+    ancora: pessoa
+    linha1: "UMA PESSOA"
+    linha2: "E A IA"
+    destaque: {titulo: "BASTA", texto: "não precisa\nde uma empresa"}
+    camera: push
+    foco: [0.5, 0.42]
+    cena: "No mesmo escritório de casa claro de dia, a mulher de camisa azul digita tranquila no notebook, sozinha à mesa, com uma xícara ao lado. Na tela, janelas de um programa de edição de fotos sendo montado, sem letras. Ambiente claro e simples."
+  - id: descoberta
+    nome: PROVA
+    gatilho: "já refizeram a suíte de criação inteira do zero"
+    por_que: "prova real: o site do clone gratuito"
+    ancora: refizeram
+    linha1: "A SUÍTE INTEIRA"
+    linha2: "DE GRAÇA"
+    imagem: img/artcraft2.png
+    luz_min: 20
+    camera: sobe
+    foco: [0.5, 0.45]
+    cena: "print do site do clone gratuito da suíte de criação (quadro do vídeo do Wes Roth)"
+  - id: beneficio
+    nome: CHAVE
+    gatilho: "o nome da chave é REA; quem trata mal ganha concorrente"
+    por_que: "dá nome à ferramenta e a consequência para o mercado"
+    ancora: chave
+    linha1: "A CHAVE"
+    linha2: "É O REA"
+    destaque: {titulo: "REA", texto: "engenharia reversa\nde qualquer software"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Uma grande chave de metal prateada encaixada na fechadura de uma porta de vidro de um prédio comercial moderno, de dia; atrás do vidro, um escritório de software vazio com cadeiras e mesas. Luz clara de dia, cores neutras, destaque azul no reflexo."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club, peça o link"
+    por_que: "dá o caminho e uma ação pequena"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "o guia do REA\naberto pra você"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão da mulher de camisa azul segurando um smartphone na vertical no mesmo escritório de casa claro de dia. Na tela do celular, no alto, um vídeo vertical com uma corrente partida; embaixo, a área de comentários com avatares redondos, corações e balões, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: link, linha1: "quer o link?", palavra: "ME PEDE", linha2: "aqui nos comentários"}
+legenda_envio: "Software por raiva, não pelo preço: quem trata mal o cliente ganha um clone de graça, e o REA é a chave. Reel r7e do vídeo do Wes Roth."
+canal: lives4
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner): muita gente vai criar o próprio software por raiva do tratamento, não pelo preço ('spite SaaS'). Exemplo: a Adobe foi processada pela FTC (2024) por esconder a multa de cancelamento (50% do restante do ano); já refizeram do zero uma suíte de criação gratuita (ArtCraft/PhotoCraft, clean room). A chave é o REA (Reverse Engineer Anything), engenharia reversa com IA. Quem trata mal o cliente ganha um concorrente de graça, e isso pode quebrar muita empresa de software. CTA: peça o link nos comentários. Título com gancho forte e #shorts."
+youtube_20261016: https://www.youtube.com/shorts/QfeZ8xXdnEU
