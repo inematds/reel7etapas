@@ -800,6 +800,10 @@ def cmd_montar(pasta):
 def cmd_validar(pasta):
     r = carregar(pasta); B = r["_b"]; v = r["_dir"] / "video.mp4"
     tp = json.loads((B / "tempos.json").read_text())
+    # reel 9:16 nunca chega a 3 min; o plano é ≤ 2:40 e passar um pouco é tolerado (Nei, 16/10/2026)
+    if tp["total"] >= 180:
+        falha("duracao", f"vídeo com {tp['total']:.0f} s (máx < 3 min; plano ≤ 2:40)")
+    log(f"duração: {tp['total']:.0f} s" + (" (passou do plano de 2:40, ainda < 3 min)" if tp["total"] > 160 else ""))
     cortes = tp["cortes"] + [tp["total"]]
     maior = max(b - a for a, b in zip(cortes, cortes[1:]))
     if maior > 3.6:

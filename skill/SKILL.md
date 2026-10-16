@@ -74,6 +74,7 @@ Se houver número na etapa Medo, com fonte.
 - legenda: ≤ 3 palavras, cabe na largura, cortes por frase sem terminar em palavra fraca
 - ritmo: imagem muda a cada ≤ 3,5 s (cortes de reenquadramento dentro da etapa)
 - fala do avatar ≥ 85% igual ao roteiro; âncoras ≥ 0,5 s uma da outra
+- duração: reel 9:16 nunca chega a 3 min — roteiro planejado para ≤ 2:40 (160 s); passar um pouco é tolerado, ≥ 180 s reprova (Nei, 16/10/2026)
 - áudio −14 LUFS (loudnorm em 2 passadas) e `qa_short.py` do makeshorts (perfil divulgacao) aprovado
 
 ## Regras
