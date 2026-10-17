@@ -1,0 +1,88 @@
+# reel7etapas — edição 2026-10-17-tesla-roadster-rocket (vídeo Facebook 197B3fwnRJ: explicação técnica do Roadster Rocket da Tesla)
+tema: "O carro da Tesla que voa: como funciona, sem complicar"
+data: "17/10/2026"
+palavra: ROCKET
+fala: |
+  O novo carro da Tesla voa, e isso não é inteligência artificial. Imagina um carro que chega a cem quilômetros por hora em menos de um segundo. Só que é caro: a estimativa é de quatrocentos a seiscentos mil dólares, e a produção só começa em dois mil e vinte e oito. Mas entender como ele funciona é simples, não precisa ser engenheiro. São dez propulsores de ar comprimido e uma lei de Newton: ação e reação. O ar sai com força para um lado, e o carro vai para o outro. Quatro empurram para a frente, quatro fazem voar e dois controlam o giro. Agora você explica como um carro voa. Tá tudo no inema ponto club. Quer o link? Me pede aqui nos comentários.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "resultado impossível em 2 segundos"
+    por_que: "um carro que voa e chega a 100 km/h em menos de um segundo prende antes de qualquer explicação"
+    # v2 (17/10, pedido do Nei): o Tesla Roadster voando, nítido e recortado, por cima do título; título vermelho, mais embaixo
+    capa: {ganho: "ENTENDA O CARRO QUE VOA, SEM COMPLICAR", linha1: "UM CARRO", linha2: "QUE VOA", cor2: vermelho, titulo_pos: baixo, tam: 112,
+           sobre: {img: img/capa/carro-recorte.png, x: 140, y: 350, w: 780, dx: 30, dy: 14}}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Pista de testes ampla, de dia, com céu claro e luz natural neutra. Um carro esportivo elétrico prateado, sem logotipos, levanta alguns palmos do chão soltando uma névoa branca fina de quatro bocais embaixo. Ao lado, uma engenheira de uns 35 anos, de jaqueta cinza e prancheta, observa de braços cruzados. Carro e engenheira nítidos e bem iluminados."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "um carro que acelera e voa"
+    por_que: "o sonho de ver um carro fazer o que nenhum faz"
+    ancora: imagina
+    linha1: "DE 0 A 100"
+    linha2: "EM 1 SEGUNDO"
+    destaque: {titulo: "< 1 s", texto: "para chegar a\n100 km/h"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Na mesma pista de testes clara, de dia, o carro esportivo prateado sem logotipos arranca em alta velocidade, com leve borrão de movimento atrás e névoa branca saindo da traseira. A engenheira de jaqueta cinza e prancheta aparece pequena ao fundo, olhando. Luz neutra de dia."
+  - id: medo
+    nome: MEDO
+    gatilho: "custo alto e demora"
+    por_que: "preço e espera quebram a ilusão: não é para qualquer um, e ainda não existe à venda"
+    ancora: caro
+    linha1: "ESTIMADO EM"
+    linha2: "US$ 400 A 600 MIL"
+    cor: vermelho
+    destaque: {titulo: "SÓ EM 2028", texto: "estimativa, a Tesla\nnão divulgou o preço", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "No mesmo hangar claro ao lado da pista, de dia, a engenheira de jaqueta cinza e prancheta olha preocupada para uma mesa com uma calculadora grande e pilhas de notas de dólar verdes. Ao fundo, o carro esportivo prateado coberto parcialmente por uma lona. Luz fria e neutra de janela."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa ser engenheiro"
+    por_que: "derruba a objeção de que é complicado demais para entender"
+    ancora: simples
+    linha1: "NÃO PRECISA SER"
+    linha2: "ENGENHEIRO"
+    destaque: {titulo: "NEWTON", texto: "ação e reação,\nvocê já conhece"}
+    camera: push
+    foco: [0.5, 0.45]
+    cena: "No mesmo hangar claro, de dia, a engenheira de jaqueta cinza sorri e solta ar de um balão de festa cheio, que sai voando pela sala, enquanto ela aponta para ele explicando. Em segundo plano, o carro esportivo prateado. Luz de janela neutra, rosto bem iluminado."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "dez propulsores de ar comprimido"
+    por_que: "dá nome à solução e mostra, em verbos simples, como o carro voa"
+    ancora: propulsores
+    linha1: "10 PROPULSORES"
+    linha2: "DE AR COMPRIMIDO"
+    destaque: {titulo: "GÁS FRIO", texto: "ar sai para um lado,\no carro vai\npara o outro"}
+    camera: sobe
+    foco: [0.5, 0.5]
+    cena: "No mesmo hangar claro, de dia, o carro esportivo prateado sem logotipos suspenso por um guindaste baixo, visto de baixo e de lado, com quatro bocais circulares na parte de baixo soltando névoa branca. A engenheira de jaqueta cinza e prancheta aponta para os bocais. Luz neutra, imagem nítida."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "agora você entende"
+    por_que: "fecha o resultado: a pessoa sai capaz de explicar como o carro voa"
+    ancora: agora
+    linha1: "AGORA VOCÊ EXPLICA"
+    linha2: "COMO UM CARRO VOA"
+    destaque: {titulo: "4 + 4 + 2", texto: "frente · voo\ne giro"}
+    camera: pan_esq
+    foco: [0.5, 0.5]
+    cena: "No mesmo hangar claro, de dia, a engenheira de jaqueta cinza explica sorrindo para dois amigos adultos, em frente a uma lousa branca com um desenho simples de um carro com setas, sem letras legíveis. O carro esportivo prateado ao fundo. Luz natural neutra, clima descontraído."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou pedir o link"
+    por_que: "dá o caminho (o site) e uma ação pequena: pedir o link nos comentários"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "vídeos, explicações\ne material"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical, num hangar claro e desfocado de dia. Na tela do celular, no alto, um vídeo vertical de um carro esportivo prateado pairando acima do chão; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: link, linha1: "quer o link?", palavra: "ME PEDE", linha2: "aqui nos comentários"}
+legenda_envio: "O carro da Tesla que voa: como funciona, sem complicar — reel no modelo de 7 etapas."
+canal: lives1
+youtube_20261017: https://www.youtube.com/shorts/qWffH0fDNeE

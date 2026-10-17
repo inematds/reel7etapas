@@ -125,7 +125,7 @@ def _arq_img(r, i, e):
 
 def _prompt(e, i=None):
     luz = f" Luz desta etapa: {e.get('luz') or LUZ[i]}." if i is not None and not e.get("cor_livre") else ""
-    return f"Cena: {e['cena'].strip()}\n\nEstilo: {ESTILO}{luz}"
+    return f"Cena: {e['cena'].strip()}\n\nEstilo: {(e.get('estilo') or ESTILO).strip()}{luz}"   # 'estilo' na etapa troca o estilo só dela (capa de impacto, 17/10)
 
 
 def _amarelo(im):
@@ -517,7 +517,7 @@ class Desenho:
         if capa:
             c = e["capa"]; y = c.get("y", 880); cx = (SAFE[0] + SAFE[2]) / 2   # texto embaixo, cena visível
             topo = self.ganho(d, c["ganho"]) if c.get("ganho") else HEAD_Y + 40
-            tam, tc = 172, 60
+            tam, tc = c.get("tam", 172), 60
             lim = topo_avatar_capa()
             if lim is not None:                # avatar já no quadro 0: o texto encolhe e fica entre o ganho e o avatar
                 larg = SAFE[2] - SAFE[0] - 30; vao = lim - 24 - (topo + 24)
@@ -531,9 +531,11 @@ class Desenho:
                     tam -= 4
                 alt, tc = altura(tam)
                 y = topo + 24 + max(0, (vao - alt) / 2)
+                if c.get("titulo_pos") == "baixo":   # título colado no avatar: o vão de cima fica para a cena (carro voando, 17/10)
+                    y = topo + 24 + max(0, vao - alt)
             h1 = self.linha(base, t, t0, cx, y, c["linha1"], ANTON, tam, BRANCO, SAFE[2] - SAFE[0] - 30, "capa1", anim=False, centro=True)
             y += h1 + 16
-            h2 = self.linha(base, t, t0, cx, y, c["linha2"], ANTON, tam, AMB, SAFE[2] - SAFE[0] - 30, "capa2", anim=False, centro=True)
+            h2 = self.linha(base, t, t0, cx, y, c["linha2"], ANTON, tam, cor(c.get("cor2")) if c.get("cor2") else AMB, SAFE[2] - SAFE[0] - 30, "capa2", anim=False, centro=True)
             if c.get("sub"):
                 self.chip(base, d, t + 1, t0, cx, y + h2 + (30 if lim is not None else 46), c["sub"], "capa-sub", centro=True, tam=tc)
             return
@@ -645,7 +647,26 @@ class Desenho:
 
 
 def quadro_completo(F, D, t, legenda=True, registrar=False):
-    im = F.quadro(t); im.alpha_composite(D.quadro(t, legenda, registrar)); return im
+    im = F.quadro(t); im.alpha_composite(D.quadro(t, legenda, registrar)); _sobre(F, im, t); return im
+
+
+def _sobre(F, im, t):
+    """capa.sobre {img, x, y, w}: PNG recortado (ex.: o carro voando) POR CIMA do título no quadro 0; sobe devagar
+    durante a capa e some no fade para a etapa 2 (pedido do Nei 17/10: carro impressionante sobre o título)"""
+    c = F.r["etapas"][0].get("capa") or {}; so = c.get("sobre")
+    if not so:
+        return
+    if not hasattr(F, "_sobre_im"):
+        o = Image.open(F.r["_dir"] / so["img"]).convert("RGBA")
+        F._sobre_im = o.resize((so["w"], round(o.height * so["w"] / o.width)), Image.LANCZOS)
+    t1 = F.L.ini[1]
+    if t >= t1 + XF:
+        return
+    o = F._sobre_im
+    if t >= t1:
+        o = o.copy(); o.putalpha(o.getchannel("A").point(lambda a: int(a * (1 - ease((t - t1) / XF)))))
+    p = ease(min(1, t / max(0.1, t1)))
+    im.alpha_composite(o, (int(so["x"] + so.get("dx", 30) * p), int(so["y"] - so.get("dy", 40) * p)))
 
 
 # ======================================================================= montagem
