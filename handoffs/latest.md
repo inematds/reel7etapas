@@ -3,13 +3,13 @@
 Cada linha é um assunto em andamento: leia o snapshot do assunto que for continuar. Gravado por handoff-grava.py.
 
 <!-- handoff-indice:inicio -->
-- `evento-do-chat-ao-agente` · handoffs/history/2026-10-18T214052Z-evento-do-chat-ao-agente.md · 18/10 18:40
+- `evento-do-chat-ao-agente` · handoffs/history/2026-10-18T223248Z-evento-do-chat-ao-agente.md · 18/10 19:32
 - `r7e-gatilho-d10` · handoffs/history/2026-10-18T213553Z-r7e-gatilho-d10.md · 18/10 18:35
 <!-- handoff-indice:fim -->
 
 ---
 
-Cópia integral do snapshot mais recente (handoffs/history/2026-10-18T214052Z-evento-do-chat-ao-agente.md):
+Cópia integral do snapshot mais recente (handoffs/history/2026-10-18T223248Z-evento-do-chat-ao-agente.md):
 
 # Handoff — 2026-10-18 — Evento "Do chat ao agente" no motor do eventosextremospub (versão voz entregue; versão avatar em andamento)
 
@@ -18,26 +18,27 @@ Cópia integral do snapshot mais recente (handoffs/history/2026-10-18T214052Z-ev
 
 ## Estado aceito
 - [confirmed] Versão com voz do Nei (Chatterbox local, sem avatar) entregue no bot v3, message_id 1614: video.mp4, 56 s, 9:16, −15,1 LUFS.
-- [confirmed] 8 imagens do Codex (capa "AINDA PRESO NO CHAT? 4 PASSOS ATÉ O SEU AGENTE" + 7) em capa/; prints reais da página em prints/ (menu fixo escondido, rodapé escurecido; versões -c para o layout canto).
-- [confirmed] Commits no eventosextremospub: 0c9a176 (edição) e 984c252 (fundo preto capa/preto.png nas telas + prints -c no canto); push feito. Linha no FALHAS.md do projeto.
-- [confirmed] Codex CLI atualizado para 0.163.0 (npm global); sob systemd-run o PATH pegava /usr/bin/codex 0.116 → passar -E PATH=$HOME/.npm-global/bin:... Linha no ~/projetos/wifi/FALHAS.md.
-- [confirmed] Avatar reenviado ao estúdio HeyGen com título "Do chat ao agente ev-b" (o 1º título travou por rascunho homônimo): video_id 73da724699c9490f8d081c199ec2fcfa. Units: dochat-avatar (baixa + retempo) e dochat-manda (avatar-e-manda.sh: gerar_cena --canto, compor_avatar.sh LAYOUT=canto, mede LUFS, envia ao v3).
+- [confirmed] 8 imagens do Codex em capa/ (capa "AINDA PRESO NO CHAT? 4 PASSOS ATÉ O SEU AGENTE" + 7); prints reais da página em prints/ (menu fixo escondido, rodapé escurecido; versões -c para o layout canto); capa/preto.png como fundo fixo das telas.
+- [confirmed] Commits no eventosextremospub: 0c9a176 (edição) e 984c252 (fundo preto + prints -c no canto); push feito. Linha no FALHAS.md do projeto (rascunho homônimo no HeyGen + legenda do canto sobre o print).
+- [confirmed] Codex CLI atualizado para 0.163.0 (npm global); config ~/.codex/config.toml intacta. Sob systemd-run o PATH pega /usr/bin/codex 0.116 → passar -E PATH=$HOME/.npm-global/bin:... Linha no ~/projetos/wifi/FALHAS.md.
+- [confirmed] Avatar reenviado ao estúdio HeyGen como "Do chat ao agente ev-b" (o título "Do chat ao agente r7e-ev" travou: rascunho homônimo, provavelmente criado por tentativa minha anterior; continua na lista de projetos do HeyGen, não apagado): video_id 73da724699c9490f8d081c199ec2fcfa. Units: dochat-avatar (baixa + retempo) e dochat-manda (avatar-e-manda.sh: gerar_cena --canto, compor_avatar.sh LAYOUT=canto, mede LUFS, envia ao v3).
+- [confirmed] Prévia do layout canto (tempos estimados) conferida após o ajuste: sem mapa nas trocas, legenda legível.
 
 ## Proposto / tentado, não confirmado
-- [?] Se dochat-avatar/dochat-manda terminaram e se o video-avatar.mp4 chegou ao v3: ver AVATAR-STATUS.txt e avatar.log na pasta da edição (não consegui ler no fim desta sessão por permissão).
+- [?] Se dochat-avatar/dochat-manda terminaram e se o video-avatar.mp4 chegou ao v3: ver AVATAR-STATUS.txt e avatar.log na pasta da edição (no fim desta sessão a leitura foi barrada por permissão).
 - [?] Volume da versão avatar: avatar-e-manda.sh só mede (compor_avatar.sh normaliza a voz); conferir se ficou em −14 ±1.
 
 ## Decisões
-- Falas usam pronúncia fonética no TTS/HeyGen ("inema ponto club", "inema cê cê bot"); a legenda mantém a grafia (campo legenda).
+- Falas com pronúncia fonética no TTS/HeyGen ("inema ponto club", "inema cê cê bot"); a legenda mantém a grafia (campo legenda).
 - Pergunta de comentário: "Em qual sequência você está?" (não a do clima); fecho no inema.club.
 
 ## Não fazer
 - Não publicar no YouTube nem em outro canal sem o Nei pedir.
 - Não embrulhar compor_avatar.sh/montar.sh em outro flock .render.lock.
-- Não aceitar oferta de troca de plano do HeyGen.
+- Não aceitar oferta de troca de plano do HeyGen; não apagar rascunho no HeyGen sem o Nei mandar.
 
 ## Próxima ação
-Ler edicoes/2026-10-18-do-chat-ao-agente/AVATAR-STATUS.txt. Se "bot v3 msg N": avisar o Nei. Se FALHOU: corrigir a etapa (avatar: `auto/avatar.sh` com DISPLAY=:99; montagem: rodar avatar-e-manda.sh de novo via systemd-run com -E PATH e -E DISPLAY=:99).
+Ler edicoes/2026-10-18-do-chat-ao-agente/AVATAR-STATUS.txt. Se "bot v3 msg N": avisar o Nei. Se FALHOU: corrigir a etapa (avatar: `auto/avatar.sh` com DISPLAY=:99 e título novo; montagem: rodar avatar-e-manda.sh de novo via systemd-run com -E PATH e -E DISPLAY=:99).
 
 
 <!-- handoff-estado:inicio -->
@@ -45,9 +46,10 @@ Ler edicoes/2026-10-18-do-chat-ao-agente/AVATAR-STATUS.txt. Se "bot v3 msg N": a
 
 Gravado por handoff-grava.py no momento do handoff. `--conferir` compara com o projeto agora.
 
-- commit: 413c56c1b5bf6129705d5da75c31ec1446eef359 · branch: main
-- arquivos sujos fora de handoffs/: 400 (lista cortada)
-- `FALHAS.md` · sha256:08da61795950 · sujo
+- commit: 3c6624c3939bb09de8f2257182df869f285d96fa · branch: main
+- arquivos sujos fora de handoffs/: 433 (lista cortada)
+- `FALHAS.md` · sha256:c7f3ef9f609c · sujo
+- `diagramas.py` · sha256:1ebbb09ff545 · sujo
 - `edicoes/.wes-imagens-ok` · sha256:e3b0c44298fc · sujo
 - `edicoes/2026-10-11-google-carbon/capa.jpg` · sha256:520cdd52a5e6 · sujo
 - `edicoes/2026-10-11-google-carbon/fazer.log` · sha256:54e31940ecca · sujo
@@ -246,5 +248,4 @@ Gravado por handoff-grava.py no momento do handoff. `--conferir` compara com o p
 - `edicoes/2026-10-14-robo-uma-foto/publicar.log` · sha256:9a4afda982db · sujo
 - `edicoes/2026-10-14-robo-uma-foto/publicar2.log` · sha256:dd43d27871ba · sujo
 - `edicoes/2026-10-14-robo-uma-foto/roteiro.yaml` · sha256:ef774f475358 · sujo
-- `edicoes/2026-10-14-software-ensina-robos/avatar/APROVADO_HEYGEN` · sha256:e96d3b53c1af · sujo
 <!-- handoff-estado:fim -->
