@@ -18,6 +18,20 @@ Guia: https://inematds.github.io/reel7etapas/guia/
 **Sem portão de aprovação do Nei** (pedido de 11/10/2026): você valida — portões do motor + leitura das
 folhas em tamanho real — e publica já impecável. Ele confere depois.
 
+## Acabamento = motor do eventosextremospub (D11, Nei 18/10/2026 — vence o motor Pillow abaixo)
+
+"Ficou padrão... olha o eventosextremospub, muito mais viral." O roteiro de 7 etapas e o plano (D9/D10) continuam; o vídeo
+monta no motor do eventosextremospub (modelo: `~/projetos/eventosextremospub/edicoes/2026-10-18-r7e-hacker`):
+1. avatar do r7e (`reel7etapas.py avatar`) → pasta `eventosextremospub/edicoes/<data>-r7e-<slug>/` com `falas.json` (a fala
+   dividida nas 7 etapas; `legenda` com algarismos), `avatar/avatar.mp4`, `avatar/retempo.py`, `capa/preto.png`;
+2. imagens: `codex exec` em `capa/` com `pedido.txt` (preto #0c0c10 + luz amarela, vermelho só no perigo; o título do gancho
+   DESENHADO dentro de `abertura.png`, metade de cima) → `ev_util.py vertical` + `ev_util.py abertura`; prints reais com
+   `ev_util.py print <raw> prints/x-c.png --escuro`; conferir a grafia do título;
+3. `ficha.json` (marca, selo, telas por fala, painéis com itens/contador, CTA em pergunta, club, fonte, cores) →
+   `python3 avatar/retempo.py` → `python3 ~/projetos/reel7etapas/ev_cena.py <pasta>` →
+   `DISPLAY=:99 GEO=geo-br.js LAYOUT=canto motor/compor_avatar.sh <pasta> <pasta>/video-avatar.mp4`;
+4. lote pronto de exemplo: `edicoes/ev-lote-1018.py`. Publicar no lives7 pela fila `~/projetos/wifi/fila-lives7/fila_lives7.py --add`.
+
 ## Propósito e plano (D10 do inema-design, Nei 18/10/2026 — vem ANTES de tudo)
 
 **Objetivo: trazer público para o inema.club.** "Se não viralizar, não atingiu o objetivo." CTA fixo: "Tá tudo no

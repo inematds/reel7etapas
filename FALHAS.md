@@ -2,6 +2,7 @@
 
 | data | o que quebrou | menor correção | prompt \| infra |
 |---|---|---|---|
+| 2026-10-18 | 7 reels D10 reprovados pelo Nei: "ficou padrão" (letra Anton + tarja sobre foto de banco, diagramas Pillow) | não remendar o motor Pillow: montar no motor do eventosextremospub (D11), com ev_cena.py + ficha | prompt |
 | 2026-10-18 | 5 reels D10: a tarja da manchete (`letra: tarja`) cobria o topo dos diagramas e a letra preta da tarja saía borrada (contorno + sombra pretos) | diagramas.py começa em y 540; `palavra()` sem contorno/sombra quando a letra é escura | infra |
 | 2026-10-18 | portão de luz reprovou o gancho D9 (assunto no terço de cima, resto escuro de propósito): "escura demais 6/255" | `luz_min: 0` no gancho; o portão mede o centro, que é escuro por composição | prompt |
 | 2026-10-18 | demissao-gestores: dois diagramas de cartões (etapas 2 e 5) iguais → portão "parecida demais" | trocar um deles de tipo (frase); regra: no máximo um bloco de cartões por reel | prompt |
