@@ -1,0 +1,91 @@
+# reel7etapas — edição 2026-10-18-opencode-chaves (viral: ataque ao OpenCode roubou chaves; como eu protejo as minhas)
+tema: "Hackers roubaram chaves no OpenCode: como eu protejo as minhas"
+data: "18/10/2026"
+palavra: ME PEDE
+fala: |
+  Hackers invadiram o OpenCode e roubaram as chaves de acesso de milhares de pessoas. Mas dá pra dormir tranquilo. Imagina saber que, mesmo se roubarem a sua chave, o prejuízo tem teto. Teve gente que acordou com mil e setecentos dólares de conta numa noite só. E você não precisa ser especialista em segurança. Eu faço três coisas: coloco limite de gasto em cada chave, crio uma chave por assunto e tenho um monitor que acompanha meus gastos com IA e toca o alarme quando foge do normal. Roubaram uma? Eu revogo só aquela e o resto segue funcionando. Tá tudo no inema ponto club. Quer o link? Me pede aqui nos comentários.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "notícia quente: ataque real roubou chaves de usuários comuns"
+    por_que: "quem usa IA com chave própria se vê no lugar das vítimas na hora"
+    capa: {ganho: "HACKERS ROUBARAM AS CHAVES", linha1: "US$ 1.700", linha2: "NUMA NOITE", cor2: vermelho, avatar: false, desfoque: 0, y: 1110}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Quarto escuro de madrugada. Um homem de uns 45 anos, barba grisalha curta, camiseta, sentado na beira da cama, o rosto iluminado só pela tela do celular, olhos arregalados e a mão na cabeça em choque. Na tela do celular, uma fatura com um valor enorme em vermelho e um alerta vermelho, sem dígitos legíveis. Luz azulada e fria da tela, o resto do quarto no escuro."
+    cor_livre: true
+    luz_min: 25
+    estilo: "Fotografia realista de impacto, cara de foto jornalística ou de cena de cinema, vertical 9:16, NÍTIDA em tudo. Contraste alto e luz dramática: uma fonte de luz forte e direcional, sombras profundas, fundo escuro. Emoção forte e clara (choque, medo, caos) ou objeto-choque, entendida num celular em meio segundo. COMPOSIÇÃO OBRIGATÓRIA: o assunto principal grande (50 a 70% da largura) entre 12% e 55% da altura; os 10% de cima calmos e escuros (entra uma faixa de texto); de 58% para baixo, superfície ou fundo escuro simples, sem nada importante (entra a manchete). Sem texto, sem letras legíveis, sem dígitos legíveis, sem logotipos, sem marcas, sem moldura, sem bordas."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "dormir tranquilo mesmo se roubarem"
+    por_que: "o desejo não é segurança perfeita, é o prejuízo ter teto"
+    ancora: imagina
+    linha1: "PREJUÍZO"
+    linha2: "COM TETO"
+    destaque: {titulo: "DORME EM PAZ", texto: "mesmo se\nroubarem a chave"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "O mesmo escritório em casa de dia, luz natural neutra. O mesmo homem de barba grisalha curta e camisa polo azul-marinho sorri tranquilo, recostado, segurando uma caneca. Na tela do notebook, um medidor em forma de velocímetro com o ponteiro parado numa faixa verde e uma trava no limite, sem letras legíveis."
+  - id: medo
+    nome: MEDO
+    gatilho: "número real de prejuízo numa noite (fonte: relatos de usuários afetados, out/2026)"
+    por_que: "mostra que a conta cai em quem é dono da chave, não no invasor"
+    ancora: acordou
+    linha1: "US$ 1.700"
+    linha2: "NUMA NOITE"
+    cor: vermelho
+    destaque: {titulo: "NA SUA CONTA", texto: "relatos de usuários\nafetados · out/2026"}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "O mesmo homem de barba grisalha curta e camisa polo azul-marinho, de manhã cedo, ainda de cabelo bagunçado, segura o celular com as duas mãos e arregala os olhos. Na tela do celular, uma fatura com um valor enorme em vermelho e um gráfico subindo como foguete, sem letras legíveis. Luz fria neutra de manhã, mesma sala de casa."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa ser especialista"
+    por_que: "derruba a objeção de que proteção é coisa de time de segurança"
+    ancora: especialista
+    linha1: "NÃO PRECISA SER"
+    linha2: "ESPECIALISTA"
+    destaque: {titulo: "3 AJUSTES", texto: "feitos uma vez\nno painel"}
+    camera: push
+    foco: [0.5, 0.45]
+    cena: "O mesmo homem de barba grisalha curta e camisa polo azul-marinho clica calmamente no notebook, na mesma mesa de casa de dia. Na tela, um painel simples com três chaves em cartões coloridos e um botão deslizante de limite ao lado de cada uma, sem letras legíveis. Luz de dia neutra."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "as três proteções com nome"
+    por_que: "limite por chave, chave por assunto e monitor com alarme no baseline"
+    ancora: limite
+    linha1: "LIMITE EM"
+    linha2: "CADA CHAVE"
+    destaque: {titulo: "1 POR ASSUNTO", texto: "e um monitor\ncom alarme"}
+    camera: sobe
+    foco: [0.5, 0.5]
+    cena: "Vista de cima de uma mesa de madeira clara: um quadro de chaves de parede com cinco chaves separadas, cada uma num gancho com uma etiqueta de cor diferente (azul, verde, roxa, laranja, cinza), e ao lado um pequeno monitor de computador mostrando uma linha de gráfico estável com uma faixa de alerta vermelha acima. Luz de dia neutra, imagem nítida, sem letras."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "revoga uma, o resto segue"
+    por_que: "o roubo vira um incômodo pequeno, não um desastre"
+    ancora: revogo
+    linha1: "REVOGA UMA,"
+    linha2: "O RESTO SEGUE"
+    destaque: {titulo: "SEM SUSTO", texto: "o alarme avisa\nantes da conta"}
+    camera: pan_esq
+    foco: [0.5, 0.5]
+    cena: "O mesmo escritório em casa claro e arejado de dia, plantas verdes, janela grande. O mesmo homem de barba grisalha curta e camisa polo azul-marinho tira uma única chave do quadro de chaves na parede e a joga numa caixinha, sorrindo, enquanto as outras chaves continuam penduradas. Luz natural neutra."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club, pedir o link nos comentários"
+    por_que: "dá o caminho e uma ação pequena: pedir o link"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "passo a passo\ndas 3 proteções"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical, num escritório em casa claro desfocado de dia. Na tela do celular, no alto, um vídeo vertical de um quadro de chaves coloridas; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: link, linha1: "quer o link?", palavra: "ME PEDE", linha2: "aqui nos comentários"}
+legenda_envio: "TESTE D9 (gancho gatilho, mesmo avatar) — título: Hackers roubaram chaves de IA. Teve gente que acordou com US$ 1.700 de conta"
+canal: lives4
+letra: forte
+layout: caixa
+titulo_post: "Hackers roubaram chaves de IA. Teve gente que acordou com US$ 1.700 de conta"

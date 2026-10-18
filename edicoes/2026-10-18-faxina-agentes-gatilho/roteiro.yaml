@@ -1,0 +1,91 @@
+# reel7etapas — edição 2026-10-18-faxina-agentes (divulga o guia + vídeo "Faxina no setup do Claude e do Codex", repo inematds/faxina-agentes)
+tema: "Faxina no setup do Claude e do Codex: o agente obedece e gasta menos"
+data: "18/10/2026"
+palavra: FAXINA
+fala: |
+  Seu agente ignora as regras e queima o seu limite? O problema não é o modelo. Imagina o seu agente obedecendo de primeira e gastando bem menos tokens. Hoje ele recebe três arquivos de instrução, skills de tutorial e memória velha antes da primeira palavra, e cada erro custa horas. E você não precisa reinstalar nada: um prompt faz a auditoria. O nome disso é faxina do setup. Um AGENTS.md só, uma pasta por projeto e playbooks com o seu jeito de trabalhar. Agora o seu agente trabalha leve e obedece. Tá tudo no inema ponto club. Quer o link? Comenta FAXINA aqui embaixo.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "dor concreta: agente que ignora regra e queima o limite"
+    por_que: "quem usa Claude ou Codex já viu o agente desobedecer e o limite acabar no meio do dia"
+    capa: {ganho: "O PROBLEMA NÃO É O MODELO", linha1: "VOCÊ ENTOPE", linha2: "O SEU AGENTE", avatar: false, desfoque: 0, y: 1110}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Um robô humanoide industrial estilo Tesla Optimus, acabamento cinza fosco, cabeça com visor preto na frente, soterrado até o peito numa montanha de papéis, pastas, post-its e cadernos amassados num escritório escuro; só os ombros, um braço estendido pedindo socorro e a cabeça aparecem para fora. Uma única luminária de mesa ilumina a cena de lado. Papéis caindo do alto."
+    cor_livre: true
+    luz_min: 25
+    estilo: "Fotografia realista de impacto, cara de foto jornalística ou de cena de cinema, vertical 9:16, NÍTIDA em tudo. Contraste alto e luz dramática: uma fonte de luz forte e direcional, sombras profundas, fundo escuro. Emoção forte e clara (choque, medo, caos) ou objeto-choque, entendida num celular em meio segundo. COMPOSIÇÃO OBRIGATÓRIA: o assunto principal grande (50 a 70% da largura) entre 12% e 55% da altura; os 10% de cima calmos e escuros (entra uma faixa de texto); de 58% para baixo, superfície ou fundo escuro simples, sem nada importante (entra a manchete). Sem texto, sem letras legíveis, sem dígitos legíveis, sem logotipos, sem marcas, sem moldura, sem bordas."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "agente que obedece de primeira"
+    por_que: "o desejo é o agente fazer certo na primeira vez e o limite durar"
+    ancora: imagina
+    linha1: "OBEDECE DE"
+    linha2: "PRIMEIRA"
+    destaque: {titulo: "MENOS TOKENS", texto: "o limite dura\no dia inteiro"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "O mesmo escritório, agora organizado, luz de dia neutra. A mesma mulher (cabelo castanho preso, camisa azul-clara) sorri tranquila diante do notebook numa mesa limpa. O robô humanoide industrial cinza fosco de visor preto entrega a ela uma única pasta organizada. Estantes ao fundo com caixas iguais e alinhadas."
+  - id: medo
+    nome: MEDO
+    gatilho: "cada erro custa horas"
+    por_que: "o custo real da bagunça é tempo perdido refazendo o que o agente errou"
+    ancora: erro
+    linha1: "CADA ERRO"
+    linha2: "CUSTA HORAS"
+    cor: vermelho
+    destaque: {titulo: "SINAIS TROCADOS", texto: "três arquivos\ndando ordens"}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "Close de uma mesa de escritório bagunçada, luz fria neutra: três pranchetas com folhas de instrução diferentes empilhadas uma sobre a outra, post-its colados por cima, caixas de arquivo abertas transbordando, um relógio de parede ao fundo marcando tarde da noite. A mão da mulher de camisa azul-clara segura a cabeça, de costas, desanimada."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa reinstalar nada"
+    por_que: "derruba a objeção de que arrumar o setup dá muito trabalho"
+    ancora: reinstalar
+    linha1: "SEM REINSTALAR"
+    linha2: "NADA"
+    destaque: {titulo: "UM PROMPT", texto: "faz a auditoria\ninteira"}
+    camera: push
+    foco: [0.5, 0.45]
+    cena: "A mesma mulher de camisa azul-clara digita calmamente no notebook numa mesa clara; na tela do notebook, um painel de relatório com barras coloridas e notas em círculos, sem letras legíveis. O robô humanoide industrial cinza fosco de visor preto, de pé atrás dela, segura uma prancheta com uma lista de verificação. Luz de dia neutra."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "o nome disso é faxina do setup"
+    por_que: "dá nome à solução: um AGENTS.md, pastas por projeto e playbooks"
+    ancora: nome
+    linha1: "FAXINA DO"
+    linha2: "SETUP"
+    destaque: {titulo: "AGENTS.md", texto: "pastas e\nplaybooks"}
+    camera: sobe
+    foco: [0.5, 0.5]
+    cena: "Vista de cima de uma mesa de madeira clara com organização perfeita: um único documento central em destaque, e em volta dele três pastas de cores diferentes (azul, verde, roxa) alinhadas, cada uma com um caderno fino dentro. Uma mão de robô humanoide cinza fosca coloca a última pasta no lugar. Luz de dia neutra, imagem nítida, sem letras."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "agente leve que obedece"
+    por_que: "fecha o resultado: setup enxuto, agente obediente, limite sobrando"
+    ancora: leve
+    linha1: "LEVE E"
+    linha2: "OBEDIENTE"
+    destaque: {titulo: "SOBRA LIMITE", texto: "foco no que\nfaz dinheiro"}
+    camera: pan_esq
+    foco: [0.5, 0.5]
+    cena: "Escritório claro e arejado de dia, plantas verdes, janela grande. A mesma mulher de camisa azul-clara se recosta na cadeira sorrindo com uma xícara de café, enquanto o robô humanoide industrial cinza fosco de visor preto trabalha num segundo notebook ao lado dela. Mesa limpa, clima leve, luz natural neutra."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou comentar FAXINA"
+    por_que: "dá o caminho (guia grátis com o prompt) e uma ação pequena: comentar a palavra"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "prompt, modelos\ne guia"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical, num escritório claro desfocado de dia. Na tela do celular, no alto, um vídeo vertical de uma mesa organizada com pastas coloridas; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: link, linha1: "quer o link?", palavra: "FAXINA", linha2: "comenta aqui embaixo"}
+legenda_envio: "TESTE D9 (gancho gatilho, mesmo avatar) — título: Seu agente de IA não é burro. Você que entope ele de lixo"
+canal: lives4
+letra: forte
+layout: caixa
+titulo_post: "Seu agente de IA não é burro. Você que entope ele de lixo"

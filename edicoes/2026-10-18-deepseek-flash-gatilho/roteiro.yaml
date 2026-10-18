@@ -1,0 +1,91 @@
+# reel7etapas — edição 2026-10-18-deepseek-flash (viral: DeepSeek V4.1 Flash, quase o resultado dos grandes por centavos; base: vídeo mhtOoTI6MM4)
+tema: "DeepSeek V4.1 Flash: quase o resultado dos grandes, pagando centavos"
+data: "18/10/2026"
+palavra: ME PEDE
+fala: |
+  Saiu um modelo que entrega quase o mesmo resultado dos maiores do mundo, pagando noventa vezes menos. Imagina rodar o mesmo projeto e pagar centavos em vez de dólares. Num teste, o Opus cobrou seis dólares; esse cobrou vinte e três centavos. E você não precisa trocar tudo: ele demora mais, então usa nas tarefas que podem esperar. O nome dele é DeepSeek quatro ponto um Flash, lançado ontem. Forte em código, em agentes e em mundos três D inteiros num arquivo só. Agora você só paga caro quando tem pressa. Tá tudo no inema ponto club. Quer o link? Me pede aqui nos comentários.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "choque de preço: quase o mesmo resultado, 90 vezes mais barato"
+    por_que: "quem paga IA sente na hora a diferença entre dólares e centavos"
+    capa: {ganho: "LANÇADA ONTEM", linha1: "US$ 6 CONTRA", linha2: "23 CENTAVOS", cor2: vermelho, avatar: false, desfoque: 0, y: 1110}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mesa de escritório escura vista de cima em ângulo, iluminada por uma única luz forte vinda de cima, como numa sala de interrogatório. À esquerda, uma nota fiscal gigante e comprida desenrolando da mesa e caindo até o chão em curvas; à direita, uma nota fiscal minúscula do tamanho de um selo, sozinha. Papéis brancos com linhas impressas borradas, nada legível. Fundo quase preto. Sem pessoas."
+    cor_livre: true
+    luz_min: 25
+    estilo: "Fotografia realista de impacto, cara de foto jornalística ou de cena de cinema, vertical 9:16, NÍTIDA em tudo. Contraste alto e luz dramática: uma fonte de luz forte e direcional, sombras profundas, fundo escuro. Emoção forte e clara (choque, medo, caos) ou objeto-choque, entendida num celular em meio segundo. COMPOSIÇÃO OBRIGATÓRIA: o assunto principal grande (50 a 70% da largura) entre 12% e 55% da altura; os 10% de cima calmos e escuros (entra uma faixa de texto); de 58% para baixo, superfície ou fundo escuro simples, sem nada importante (entra a manchete). Sem texto, sem letras legíveis, sem dígitos legíveis, sem logotipos, sem marcas, sem moldura, sem bordas."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "pagar centavos em vez de dólares"
+    por_que: "o desejo é manter o resultado e cortar a conta"
+    ancora: imagina
+    linha1: "CENTAVOS EM"
+    linha2: "VEZ DE DÓLARES"
+    destaque: {titulo: "MESMO PROJETO", texto: "conta\nmuito menor"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "O mesmo escritório de dia, luz natural neutra. A mesma mulher de cabelo preto curto e blusa verde-escura sorri e coloca uma única moeda num cofrinho de vidro transparente cheio de moedas sobre a mesa, ao lado do notebook aberto com um mundo colorido de blocos na tela, sem letras."
+  - id: medo
+    nome: MEDO
+    gatilho: "comparação real de custo (fonte: teste público citado pelo canal Universe of AI, 17/10/2026)"
+    por_que: "mostra quanto ela pode estar pagando a mais pelo mesmo trabalho"
+    ancora: teste
+    linha1: "US$ 6 CONTRA"
+    linha2: "23 CENTAVOS"
+    cor: vermelho
+    destaque: {titulo: "MESMA TAREFA", texto: "teste público\nout/2026"}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "Close na mesa do mesmo escritório, luz fria neutra: duas notas fiscais impressas lado a lado, uma longa e cheia caindo da mesa até o chão, outra curtinha do tamanho de um bilhete. A mão da mulher de blusa verde-escura segura a nota longa, preocupada. Sem letras legíveis."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa trocar tudo"
+    por_que: "derruba a objeção de migrar tudo e assume o defeito: ele demora mais"
+    ancora: trocar
+    linha1: "NÃO PRECISA"
+    linha2: "TROCAR TUDO"
+    destaque: {titulo: "DEMORA MAIS", texto: "use no que\npode esperar"}
+    camera: push
+    foco: [0.5, 0.45]
+    cena: "A mesma mulher de cabelo preto curto e blusa verde-escura, calma, arruma duas bandejas de papel na mesa do mesmo escritório de dia: uma bandeja vermelha com poucas pastas marcadas com um relógio, outra bandeja azul grande com muitas pastas e uma ampulheta ao lado. Luz natural neutra, sem letras."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "nome do modelo e o que ele faz bem"
+    por_que: "DeepSeek V4.1 Flash, lançado em 17/10, forte em código, agentes e mundos 3D"
+    ancora: nome
+    linha1: "DEEPSEEK"
+    linha2: "4.1 FLASH"
+    destaque: {titulo: "LANÇADO 17/10", texto: "código, agentes\ne mundos 3D"}
+    camera: sobe
+    foco: [0.5, 0.5]
+    cena: "Vista de cima de uma mesa de madeira clara: um notebook aberto mostrando um castelo medieval detalhado feito de pequenos blocos coloridos, com rio, árvores e casas, e ao lado uma baleia azul de brinquedo e uma única moeda. Luz de dia neutra, imagem nítida, sem letras."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "paga caro só quando tem pressa"
+    por_que: "ela passa a escolher onde gastar, em vez de pagar caro em tudo"
+    ancora: pressa
+    linha1: "CARO SÓ"
+    linha2: "COM PRESSA"
+    destaque: {titulo: "SOBRA DINHEIRO", texto: "você escolhe\nonde gastar"}
+    camera: pan_esq
+    foco: [0.5, 0.5]
+    cena: "O mesmo escritório claro e arejado de dia, plantas verdes, janela grande. A mesma mulher de cabelo preto curto e blusa verde-escura se recosta na cadeira sorrindo com uma xícara de café, o notebook mostrando um mundo de blocos coloridos, e o cofrinho de vidro cheio de moedas ao lado. Luz natural neutra."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club, pedir o link nos comentários"
+    por_que: "dá o caminho e uma ação pequena: pedir o link"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "comparativos\ne como usar"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical, num escritório claro desfocado de dia. Na tela do celular, no alto, um vídeo vertical de um castelo de blocos coloridos; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: link, linha1: "quer o link?", palavra: "ME PEDE", linha2: "aqui nos comentários"}
+legenda_envio: "TESTE D9 (gancho gatilho, mesmo avatar) — título: A IA chinesa que cobrou 23 centavos onde o Opus cobrou US$ 6"
+canal: lives4
+letra: forte
+layout: caixa
+titulo_post: "A IA chinesa que cobrou 23 centavos onde o Opus cobrou US$ 6"

@@ -1,0 +1,91 @@
+# reel7etapas — edição 2026-10-18-diga-o-que-importa (divulga o guia + vídeo "Diga o que importa", repo inematds/diga-o-que-importa)
+tema: "O gestor já sabe o mais difícil: só falta falar com o agente (regra 5-4-3)"
+data: "18/10/2026"
+palavra: AGENTE
+fala: |
+  Você já sabe o mais difícil. Seus processos, seus clientes, seus fornecedores e a sua equipe. Imagina tudo isso trabalhando por você, do seu jeito. Sem isso, você paga caro por um sistema que não entende a sua empresa. E não precisa ser programador: é como integrar um funcionário novo. O nome disso é regra cinco, quatro, três: cinco perguntas, quatro níveis de autonomia e três casos de teste para o seu agente de IA. Agora o seu negócio funciona do seu jeito, mesmo quando você não está. Tá tudo no inema ponto club. Quer o link? Me pede aqui nos comentários.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "o gestor já tem o mais difícil"
+    por_que: "o dono de negócio se reconhece: ele sabe como tudo funciona, só não sabe passar isso adiante"
+    capa: {ganho: "POR ISSO A IA ERRA COM VOCÊ", linha1: "VOCÊ NÃO", linha2: "EXPLICOU NADA", avatar: false, desfoque: 0, y: 1110}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Padaria lotada de clientes na hora do pico. No centro, um funcionário novo de uns 20 anos, crachá no peito e avental, perdido e apavorado, uma bandeja de pães escorregando das mãos com pães voando no ar. Clientes impacientes apontando para ele. Ao fundo, o dono, homem de uns 50 anos de cabelo grisalho e avental azul-marinho, de costas, sem olhar. Luz dura de cima, sombras fortes, sensação de caos."
+    cor_livre: true
+    luz_min: 25
+    estilo: "Fotografia realista de impacto, cara de foto jornalística ou de cena de cinema, vertical 9:16, NÍTIDA em tudo. Contraste alto e luz dramática: uma fonte de luz forte e direcional, sombras profundas, fundo escuro. Emoção forte e clara (choque, medo, caos) ou objeto-choque, entendida num celular em meio segundo. COMPOSIÇÃO OBRIGATÓRIA: o assunto principal grande (50 a 70% da largura) entre 12% e 55% da altura; os 10% de cima calmos e escuros (entra uma faixa de texto); de 58% para baixo, superfície ou fundo escuro simples, sem nada importante (entra a manchete). Sem texto, sem letras legíveis, sem dígitos legíveis, sem logotipos, sem marcas, sem moldura, sem bordas."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "o negócio funcionando por você"
+    por_que: "o desejo é o negócio rodar do jeito dele sem ele estar em tudo"
+    ancora: imagina
+    linha1: "TRABALHANDO"
+    linha2: "POR VOCÊ"
+    destaque: {titulo: "DO SEU JEITO", texto: "processos, clientes\ne equipe"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Na mesma padaria clara de dia, o mesmo dono de uns 50 anos, cabelo grisalho curto, avental azul-marinho, sorri tomando um café numa mesa enquanto, ao fundo, um robô humanoide branco fosco estilo Tesla Optimus com VISOR PRETO na frente da cabeça, liso, sem rosto de tela, organiza pedidos num tablet ao lado do balcão. Luz neutra."
+  - id: medo
+    nome: MEDO
+    gatilho: "pagar caro por sistema que não entende"
+    por_que: "todo dono já pagou por sistema ou ferramenta que não servia para a empresa dele"
+    ancora: caro
+    linha1: "PAGAR CARO"
+    linha2: "POR NADA"
+    cor: vermelho
+    destaque: {titulo: "NÃO ENTENDE", texto: "sistema que não\nconhece a sua empresa", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "Na mesma padaria, dia nublado claro, o mesmo dono, HOMEM de uns 55 anos com cabelo GRISALHO curto e barba GRISALHA curta, de avental azul-marinho, preocupado, olhando uma pilha de notas e boletos sobre o balcão, ao lado de um computador velho com uma tela cheia de janelas de erro sem letras legíveis. Luz fria e neutra."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa ser programador"
+    por_que: "derruba a objeção técnica: é igual integrar um funcionário novo, coisa que ele já sabe fazer"
+    ancora: programador
+    linha1: "NÃO PRECISA SER"
+    linha2: "PROGRAMADOR"
+    destaque: {titulo: "FUNCIONÁRIO NOVO", texto: "você já sabe\nintegrar um"}
+    camera: push
+    foco: [0.5, 0.45]
+    cena: "Na mesma padaria clara de dia, o mesmo dono, HOMEM de uns 55 anos com cabelo GRISALHO curto e barba GRISALHA curta, de avental azul-marinho entrega um avental e uma prancheta de boas-vindas a um robô humanoide branco fosco estilo Tesla Optimus com VISOR PRETO na frente da cabeça, como quem recebe um funcionário novo; os dois apertam as mãos diante do balcão. Luz de dia neutra, rosto bem iluminado."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "regra 5-4-3"
+    por_que: "dá nome ao método com números fáceis de lembrar"
+    ancora: nome
+    linha1: "REGRA"
+    linha2: "5 · 4 · 3"
+    destaque: {titulo: "5 · 4 · 3", texto: "perguntas · níveis\n· casos de teste"}
+    camera: sobe
+    foco: [0.5, 0.5]
+    cena: "Na mesma padaria clara de dia, o mesmo dono, HOMEM de uns 55 anos com cabelo GRISALHO curto e barba GRISALHA curta, de avental azul-marinho, sentado numa mesa com o robô humanoide branco fosco estilo Tesla Optimus com VISOR PRETO na frente da cabeça, aponta para três pilhas de cartões sobre a mesa, de alturas diferentes (cinco cartões, quatro cartões e três cartões), sem letras. Luz neutra, imagem nítida."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "funciona mesmo sem você"
+    por_que: "fecha o resultado: o negócio segue o jeito dele mesmo quando ele não está"
+    ancora: agora
+    linha1: "MESMO QUANDO"
+    linha2: "VOCÊ NÃO ESTÁ"
+    destaque: {titulo: "SEU JEITO", texto: "o agente segue\nas suas regras"}
+    camera: pan_esq
+    foco: [0.5, 0.5]
+    cena: "Na mesma padaria clara de dia, o robô humanoide branco fosco estilo Tesla Optimus com VISOR PRETO na frente da cabeça atende uma cliente sorridente no balcão entregando uma caixa de bolo, enquanto o mesmo dono, HOMEM de uns 55 anos com cabelo GRISALHO curto e barba GRISALHA curta, de avental azul-marinho, ao fundo, conversa tranquilo ao celular com a família. Dia claro, luz natural neutra."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou pedir o link"
+    por_que: "dá o caminho (o guia grátis) e uma ação pequena: pedir o link nos comentários"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "guia, modelos\ne vídeo"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical, numa padaria clara desfocada de dia. Na tela do celular, no alto, um vídeo vertical com um padeiro grisalho e um robô humanoide branco fosco estilo Tesla Optimus com visor preto na cabeça (nunca robô cartoon, fofo ou de rosto redondo com olhos); embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: link, linha1: "quer o link?", palavra: "ME PEDE", linha2: "aqui nos comentários"}
+legenda_envio: "TESTE D9 (gancho gatilho, mesmo avatar) — título: Você contrataria alguém sem explicar o trabalho? É o que você faz com a IA"
+canal: lives4
+letra: forte
+layout: caixa
+titulo_post: "Você contrataria alguém sem explicar o trabalho? É o que você faz com a IA"

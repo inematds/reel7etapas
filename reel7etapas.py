@@ -28,7 +28,14 @@ HOME = Path.home()
 RAIZ = Path(__file__).resolve().parent
 sys.path.insert(0, str(Path(os.environ.get("R7_REELCOMENTA", HOME / "projetos/reelcomenta"))))
 import reelcomenta as rc  # noqa: E402  (transcrição, recorte do rosto, estúdio HeyGen, envio ao bot)
-from reelcomenta import W, H, FPS, ANTON, MBLK, MXB, AMB, VERM, BRANCO, ESC, DEJAVU, fnt, ease, cor, run, dur  # noqa: E402
+from reelcomenta import W, H, FPS, ANTON, MBLK, MXB, AMB, VERM, BRANCO, ESC, DEJAVU, fnt, ease, run, dur  # noqa: E402
+
+CONTORNO = 0   # 'letra: forte' no roteiro (18/10, D9): amarelo #FACC15 + contorno preto 8 px na manchete e na legenda
+
+
+def cor(nome, padrao=None):
+    """cor nomeada do roteiro; sem nome = o amarelo ATIVO (muda com 'letra: forte')"""
+    return rc.CORES.get(nome or "", padrao if padrao is not None else AMB)
 
 QA_SHORT = Path(os.environ.get("R7_QA_SHORT", HOME / "projetos/makeshorts/.claude/skills/makeshorts/scripts/qa_short.py"))
 YT_PUBX = Path(os.environ.get("R7_YT_PUBX", HOME / "projetos/yt-pubx/yt-pubx"))
@@ -103,10 +110,12 @@ def topo_avatar_capa():
 
 
 def carregar(pasta):
-    global ESTILO, LAY, HEAD_Y, LEG_Y, CARD, AV_CAPA, CAPA_ABERTA
+    global ESTILO, LAY, HEAD_Y, LEG_Y, CARD, AV_CAPA, CAPA_ABERTA, AMB, CONTORNO
     r = rc.carregar(pasta)
     if len(r.get("etapas") or []) != 7:
         falha("roteiro", "o roteiro precisa de exatamente 7 etapas")
+    if r.get("letra") == "forte":
+        AMB = (250, 204, 21); rc.CORES["ambar"] = AMB; CONTORNO = 8
     if r.get("estilo"):
         ESTILO = r["estilo"].strip()
     lay = r.get("layout", "abre")
@@ -442,7 +451,8 @@ class Desenho:
             w, h = bb[2] - bb[0] + 2 * pad, bb[3] - bb[1] + 2 * pad
             sh = Image.new("RGBA", (w, h), (0, 0, 0, 0)); ImageDraw.Draw(sh).text((pad - bb[0] + 3, pad - bb[1] + 5), s, font=f, fill=(0, 0, 0, 230))
             sh = sh.filter(ImageFilter.GaussianBlur(7))
-            ImageDraw.Draw(sh).text((pad - bb[0], pad - bb[1]), s, font=f, fill=rgb + (255,))
+            ImageDraw.Draw(sh).text((pad - bb[0], pad - bb[1]), s, font=f, fill=rgb + (255,),
+                                    stroke_width=CONTORNO, stroke_fill=(0, 0, 0, 255))
             self.cache[ch] = (sh, pad, bb)
         return self.cache[ch]
 
@@ -783,7 +793,7 @@ def cmd_montar(pasta):
         mask = B / "mascara.png"; mk = Image.new("L", (aw, ah), 0); ImageDraw.Draw(mk).ellipse((0, 0, aw - 1, ah - 1), fill=255); mk.save(mask)
         moldura = f"format=rgba[avr];movie={mask},format=gray,scale={aw}:{ah}[mk];[avr][mk]alphamerge[av];"
     else:
-        moldura = (f"drawbox=x=0:y=0:w=iw:h=ih:color=0xE2A23B@1:t=6,"
+        moldura = (f"drawbox=x=0:y=0:w=iw:h=ih:color=0x{AMB[0]:02X}{AMB[1]:02X}{AMB[2]:02X}@1:t=6,"
                    f"drawbox=x=6:y={ah - 44}:w={aw - 12}:h=38:color=0x0b0f14@0.85:t=fill,"
                    f"drawtext=fontfile={DEJAVU}:textfile={tag}:x=18:y={ah - 34}:fontsize=19:fontcolor=white[av];")
     fc = (f"[1:v]trim=start={i0:.3f},setpts=PTS-STARTPTS+{i0:.3f}/TB,crop={crop},scale={aw}:{ah},setsar=1,fps={FPS},"
@@ -804,7 +814,7 @@ def cmd_montar(pasta):
         cx_, cy_, cw_, ch_ = AVC
         fc = fc.replace("[1:v]", "[a2]", 1).replace("[0:v][av]", "[cap][av]", 1)
         fc = (f"[1:v]split[a1][a2];[a1]crop={crop_capa},scale={cw_}:{ch_},setsar=1,fps={FPS},"
-              f"drawbox=x=0:y=0:w=iw:h=ih:color=0xE2A23B@1:t=10,"
+              f"drawbox=x=0:y=0:w=iw:h=ih:color=0x{AMB[0]:02X}{AMB[1]:02X}{AMB[2]:02X}@1:t=10,"
               f"drawbox=x=10:y={ch_ - 66}:w={cw_ - 20}:h=56:color=0x0b0f14@0.85:t=fill,"
               f"drawtext=fontfile={DEJAVU}:textfile={tag}:x=30:y={ch_ - 52}:fontsize=30:fontcolor=white[avc];"
               f"[0:v][avc]overlay=x={cx_}:y={cy_}:enable='lt(t,{i0:.3f})'[cap];" + fc)

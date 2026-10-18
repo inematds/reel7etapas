@@ -1,0 +1,91 @@
+# reel7etapas — edição 2026-10-18-camada-contexto (divulga o guia + vídeo "Seu contexto num lugar só", repo inematds/camada-contexto)
+tema: "Camada de contexto: o seu negócio num lugar só, que qualquer IA lê"
+data: "18/10/2026"
+palavra: CONTEXTO
+fala: |
+  O seu negócio está preso dentro de um app? Dá pra soltar. Imagina o Claude e o Codex trabalhando no mesmo contexto, o seu, ao mesmo tempo. Hoje você sobe tudo em cada app e no fim tem duas cópias do negócio que nunca batem, e um erro numa delas fica pra sempre. E não precisa saber programar: um repositório privado no GitHub resolve. O nome disso é camada de contexto. Em cima a IA, no meio a ponte, embaixo o que é seu. Agora você troca de modelo sem refazer nada. Tá tudo no inema ponto club. Quer o link? Comenta CONTEXTO aqui embaixo.
+etapas:
+  - id: gancho
+    nome: GANCHO
+    gatilho: "dor concreta: negócio preso dentro de um app"
+    por_que: "quem usa Claude e ChatGPT já sentiu que o contexto ficou preso num deles"
+    capa: {ganho: "E SE FECHAREM A SUA CONTA?", linha1: "SEU NEGÓCIO", linha2: "VAI JUNTO", cor2: vermelho, avatar: false, desfoque: 0, y: 1110}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Uma mão de mulher empurrando com força uma porta de vidro grossa trancada por uma corrente pesada e um cadeado grande. Do outro lado do vidro, visíveis e inalcançáveis, prateleiras com as pastas coloridas, cadernos e documentos da empresa dela. Luz fria e contrastada do lado de dentro, lado de fora escuro. Reflexo no vidro."
+    cor_livre: true
+    luz_min: 25
+    estilo: "Fotografia realista de impacto, cara de foto jornalística ou de cena de cinema, vertical 9:16, NÍTIDA em tudo. Contraste alto e luz dramática: uma fonte de luz forte e direcional, sombras profundas, fundo escuro. Emoção forte e clara (choque, medo, caos) ou objeto-choque, entendida num celular em meio segundo. COMPOSIÇÃO OBRIGATÓRIA: o assunto principal grande (50 a 70% da largura) entre 12% e 55% da altura; os 10% de cima calmos e escuros (entra uma faixa de texto); de 58% para baixo, superfície ou fundo escuro simples, sem nada importante (entra a manchete). Sem texto, sem letras legíveis, sem dígitos legíveis, sem logotipos, sem marcas, sem moldura, sem bordas."
+  - id: desejo
+    nome: DESEJO
+    gatilho: "dois agentes no mesmo contexto ao mesmo tempo"
+    por_que: "o desejo é usar o melhor de cada IA sem copiar nada de um lado pro outro"
+    ancora: imagina
+    linha1: "DUAS IAs, UM"
+    linha2: "CONTEXTO"
+    destaque: {titulo: "AO MESMO TEMPO", texto: "Claude e Codex\nna mesma fonte"}
+    camera: pull
+    foco: [0.5, 0.5]
+    cena: "Escritório claro de dia, luz neutra. Dois robôs humanoides industriais estilo Tesla Optimus, um com detalhes laranja-claro e outro com detalhes verde-água, ambos com visor preto, sentados lado a lado numa mesa longa, cada um num notebook; entre eles, no centro da mesa, uma única caixa-arquivo aberta de madeira clara com pastas coloridas, que os dois consultam. A mulher de camisa azul-clara, de pé atrás, sorri satisfeita."
+  - id: medo
+    nome: MEDO
+    gatilho: "duas cópias que nunca batem"
+    por_que: "o medo é decidir em cima da cópia errada e perder o controle do próprio negócio"
+    ancora: erro
+    linha1: "DUAS CÓPIAS"
+    linha2: "QUE NÃO BATEM"
+    cor: vermelho
+    destaque: {titulo: "SEPARADAS", texto: "cada app com\na sua versão"}
+    camera: pan_dir
+    foco: [0.5, 0.5]
+    cena: "Mesa de escritório com luz fria neutra: duas pilhas de documentos quase iguais, uma à esquerda e outra à direita, separadas por uma rachadura funda na madeira da mesa que vai se abrindo; folhas soltas caem da pilha da direita na fenda. A mulher de camisa azul-clara, preocupada, segura uma folha de cada pilha comparando, as duas diferentes."
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "não precisa saber programar"
+    por_que: "derruba a objeção de que repositório é coisa de programador"
+    ancora: programar
+    linha1: "SEM SABER"
+    linha2: "PROGRAMAR"
+    destaque: {titulo: "UM REPOSITÓRIO", texto: "privado, grátis,\ncomo um e-mail"}
+    camera: push
+    foco: [0.5, 0.45]
+    cena: "A mulher de camisa azul-clara, tranquila, coloca pastas coloridas dentro de um cofre-arquivo moderno de metal escuro com a porta aberta e uma pequena luz verde acesa, numa mesa clara; o robô humanoide industrial cinza fosco de visor preto ajuda segurando a porta. Luz de dia neutra, ambiente organizado."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "o nome disso é camada de contexto"
+    por_que: "dá nome à solução e mostra as três camadas: IA, ponte e o que é seu"
+    ancora: nome
+    linha1: "CAMADA DE"
+    linha2: "CONTEXTO"
+    destaque: {titulo: "3 CAMADAS", texto: "IA · ponte\no que é seu"}
+    camera: sobe
+    foco: [0.5, 0.5]
+    cena: "Corte transversal de um prédio moderno de três andares, estilo maquete arquitetônica limpa, vista de frente: no andar de cima, dois robôs humanoides de visor preto trabalhando em mesas; no andar do meio, uma ponte de cabos e engrenagens ligando os andares; no térreo, um cofre amplo e iluminado cheio de pastas coloridas e cadernos. Luz de dia neutra, imagem nítida, sem letras."
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "trocar de modelo sem refazer nada"
+    por_que: "fecha o resultado: liberdade para trocar de IA sem perder o negócio"
+    ancora: troca
+    linha1: "TROQUE A IA"
+    linha2: "SEM REFAZER"
+    destaque: {titulo: "LIVRE", texto: "o negócio fica,\na IA muda"}
+    camera: pan_esq
+    foco: [0.5, 0.5]
+    cena: "A mulher de camisa azul-clara, sorrindo, ao lado de um arquivo de pastas coloridas intacto no centro. À direita dela, um robô humanoide industrial de TAMANHO ADULTO (da altura dela), estilo Tesla Optimus, corpo cinza fosco e branco, cabeça com VISOR PRETO liso na frente, sem olhos, sem boca, sem rosto de tela, está sendo encaixado numa base de metal ligada ao arquivo por cabos; ao fundo, outro robô do mesmo estilo e tamanho adulto sai andando para o lado. Nada de robô pequeno, fofo, de brinquedo ou mascote. Escritório claro de dia, luz natural neutra."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou comentar CONTEXTO"
+    por_que: "dá o caminho (kit grátis) e uma ação pequena: comentar a palavra"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "pastas, instruções\ne guia"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical, num escritório claro desfocado de dia. Na tela do celular, no alto, um vídeo vertical de uma caixa-arquivo com pastas coloridas; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: link, linha1: "quer o link?", palavra: "CONTEXTO", linha2: "comenta aqui embaixo"}
+legenda_envio: "TESTE D9 (gancho gatilho, mesmo avatar) — título: Se o ChatGPT fechar a sua conta amanhã, o seu negócio vai junto?"
+canal: lives4
+letra: forte
+layout: caixa
+titulo_post: "Se o ChatGPT fechar a sua conta amanhã, o seu negócio vai junto?"

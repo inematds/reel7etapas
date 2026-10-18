@@ -48,13 +48,21 @@ Se houver número na etapa Medo, com fonte.
 
 ## Passo a passo
 
+**Gancho = GATILHO (D9 do inema-design, Nei 18/10/2026 — vence o "capa = ganho" abaixo, que fica só no histórico):**
+o quadro 0, a faixa (`capa.ganho`), a manchete e a 1ª frase da fala mexem com a pessoa — **medo, novidade ou
+provocação** — com fato/número concreto e fonte (ex.: "HACKERS ROUBARAM AS CHAVES · US$ 1.700 NUMA NOITE",
+"US$ 6 → 23 CENTAVOS", "SE FECHAREM A SUA CONTA, SEU NEGÓCIO VAI JUNTO?"). Nunca promessa/benefício no quadro 0 e
+nunca desarmar o medo na 1ª frase ("mas dá pra dormir tranquilo" vai para a facilidade). Imagem do gancho = o
+flagrante, NÍTIDA (`capa.desfoque: 0`), luz dramática liberada (`luz:` + `cor_livre: true` na etapa 1). O
+ganho/alívio entra da etapa 4 em diante. Título do post (yt-pubx/TikTok/Instagram) com o mesmo gatilho.
+
 1. **Roteiro.** `cd ~/projetos/reel7etapas && python3 reel7etapas.py novo <slug>`. Reescreva `fala`
    (550–700 caracteres ≈ 40 s; "inema ponto club"; número/ano por extenso) e as 7 `etapas`:
    `ancora` (palavra da fala que aparece uma vez depois da etapa anterior; evite nomes próprios — o
    Whisper erra), `linha1/linha2` (curtas), `destaque` opcional `{titulo, texto, cor}`, `camera`
    (`push|pull|pan_dir|pan_esq|sobe`, alterne), `foco` [x,y] do plano fechado, `cena` (prompt em
    português, concreto, com pessoas/objetos reais — o motor já impõe estilo e composição), `gatilho`
-   e `por_que` (só no mapa). Etapa 1 usa `capa` (`ganho:` = faixa no topo do quadro 0 com o que a pessoa ganha, ex. "O SEU PRÓPRIO SOFTWARE, SEM PAGAR ASSINATURA"; em teste desde 12/10). Se o Nei disser "o ganho é X", X vai em `capa.ganho`, em MAIÚSCULAS, curto (≤ 2 linhas). Se ele não disser, escreva você o ganho a partir da promessa do reel; nunca deixe o quadro 0 sem ganho. `cta: {ancora: comenta, palavra: X, linha2: ...}`.
+   e `por_que` (só no mapa). Etapa 1 usa `capa` (`ganho:` = faixa no topo do quadro 0 com o que a pessoa ganha, ex. "O SEU PRÓPRIO SOFTWARE, SEM PAGAR ASSINATURA"; em teste desde 12/10). Se o Nei disser "o ganho é X", use X como ideia e reescreva para ficar impactante e viral (pedido dele em 12/10: "o ganho pode ser ajustado por você"), mantendo o sentido: MAIÚSCULAS, curto (≤ 2 linhas, ~6 palavras), ganho concreto da pessoa. Se ele não disser, escreva você o ganho a partir da promessa do reel; nunca deixe o quadro 0 sem ganho. O avatar do Nei aparece GRANDE no quadro 0 (centro, 700×794; motor 12/10: o rosto dele é autoridade) e encolhe para o canto na etapa 2; o texto da capa encolhe sozinho para caber entre o ganho e o avatar, então ganho curto (≤ 2 linhas) deixa a capa legível. `capa.avatar: false` desliga só se o Nei pedir. `cta: {ancora: comenta, palavra: X, linha2: ...}`.
 2. **Trilha (opcional):** `python3 ~/projetos/cardshorts/cardshorts.py musica edicoes/<pasta>/build/trilha.wav "<prompt>"`.
 3. **Avatar:** grave `avatar/APROVADO_HEYGEN` (frase do pedido + data). `fazer` chama o estúdio se faltar
    o `avatar/avatar.mp4` (fila de 5 min a 1 h — rode em segundo plano).
@@ -79,7 +87,10 @@ Se houver número na etapa Medo, com fonte.
 
 ## Regras
 
+- `cena` clara: de dia, luz de janela. Nunca "à noite", "sala escura" ou "ambiente escuro", a não ser que o assunto exija, porque o estilo do motor já é escuro e o portão de luz (≥ 55) reprova. Isso aconteceu 2× em 11/10.
 - `cena` com luz NEUTRA: nunca "luz dourada", "cores quentes", "pôr do sol" nem objeto dourado em toda cena (o gerador do Codex já puxa para o amarelo). O âmbar da marca fica só no texto desenhado por cima. O motor pede luz por etapa (medo frio, benefício dia claro; troque com `luz:` na etapa) e o `cor` neutraliza o que vier acima de 18; acima de 25 depois disso o portão reprova. Imagem que precisa ser quente (fogo, pôr do sol): `cor_livre: true` na etapa. Aconteceu no REA sem travas (12/10): 7 imagens com amarelo 23–53.
+- Sigla ou nome próprio na fala (REA, JARVIS, inema.club): depois do avatar, ler as palavras de `build/palavras.json` e corrigir o que o Whisper errou ("ria" → REA, "inema" + ".club" → inema.club) antes do `montar`. O arquivo fica em cache enquanto o avatar não muda.
+
 - Imagem: Codex `image_gen` pela assinatura; flux2-klein só reserva ou pedido explícito.
 - Avatar só pelo estúdio do HeyGen (assinatura), nunca API de geração; nunca aceitar troca de plano.
 - Falhou? Linha no `FALHAS.md` (data | o que quebrou | menor correção | prompt/infra).
