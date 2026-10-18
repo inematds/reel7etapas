@@ -1,0 +1,96 @@
+# reel7etapas — edição 2026-10-18-chat-ao-agente (D9 + D10: medo de ficar para trás + urgência; tema do Nei 18/10: "sai na frente: do chat ao agente, grátis antes de ficar só no PRO")
+tema: "Sai na frente: do chat ao agente que produz pra você"
+data: "18/10/2026"
+palavra: ME PEDE
+letra: tarja
+fala: |
+  Sai na frente dos outros. Não é parar de usar o chat, é fazer os agentes produzirem pra você. No chat, você pergunta, copia e cola. No terminal, o agente abre os seus arquivos, executa e entrega pronto. Quem ficar só no chat vai ver o colega entregar antes, todo dia. Por isso eu criei o curso Do chat ao agente, um passo a passo do zero. Ele está grátis agora, aproveita antes de ficar só no PRO. Tá tudo no inema ponto club. Ou me pede o link aqui nos comentários.
+estilo: |
+  Fotografia realista cinematográfica, vertical 9:16, com cara de foto real (pele com textura, ambiente de verdade), NÍTIDA. Luz direcional com contraste e sombras (nada chapado), rosto bem iluminado, cores naturais com UMA cor forte de destaque no assunto; sem tom amarelado, sem luz dourada. Emoção clara e forte no rosto ou um objeto-símbolo grande, fácil de entender num celular em meio segundo. COMPOSIÇÃO OBRIGATÓRIA: o assunto principal fica inteiro na faixa central da imagem, entre 25% e 60% da altura; os 20% de cima são fundo calmo (ali entra o título) e os 35% de baixo são superfície ou fundo sem nada importante (ali entram o apresentador e um cartão). Sem texto, sem letras legíveis, sem números, sem logotipos, sem marcas, sem moldura.
+etapas:
+  - id: gancho
+    nome: PROVOCAÇÃO
+    gatilho: "você ainda copia e cola do chat?"
+    por_que: "todo mundo que usa ChatGPT se reconhece no copia e cola"
+    capa: {linha1: "VOCÊ AINDA", linha2: "COPIA E COLA?", cor2: vermelho, desfoque: 0, titulo_pos: baixo}
+    camera: push
+    foco: [0.5, 0.22]
+    cena: "Mulher de uns 35 anos de madrugada num escritório escuro, exausta, cercada de post-its colados por todo lado, copiando e colando entre duas janelas no notebook; a luz fria da tela no rosto cansado e uma pilha alta de papéis de tarefas ao lado."
+    cor_livre: true
+    luz_min: 0
+    estilo: "Fotografia realista de impacto, cara de foto jornalística ou cena de cinema, vertical 9:16, NÍTIDA. Contraste alto e luz dramática direcional, sombras profundas. Emoção forte e clara (exaustão, frustração). COMPOSIÇÃO OBRIGATÓRIA: o assunto principal inteiro no TERÇO DE CIMA da imagem, entre 8% e 34% da altura, grande e centralizado; de 36% para baixo, só fundo escuro simples e liso, sem nada importante (ali entram a manchete e o apresentador). Sem texto, sem letras legíveis, sem dígitos legíveis, sem logotipos, sem marcas, sem moldura."
+  - id: desejo
+    nome: CONTRASTE
+    gatilho: "no chat você copia e cola; no agente ele entrega"
+    por_que: "mostra a diferença em 3 segundos"
+    ancora: produzirem
+    linha1: "CHAT OU"
+    linha2: "AGENTE?"
+    imagem: img/d2-2.png
+    passos: [img/d2-1.png, img/d2-2.png]
+    cor_livre: true
+    luz_min: 0
+    cena: "diagrama (antes/depois): no chat × no agente"
+  - id: medo
+    nome: DESCOBERTA
+    gatilho: "no terminal o agente abre, executa e entrega"
+    por_que: "prova visual: o agente trabalhando"
+    ancora: terminal
+    linha1: "O AGENTE"
+    linha2: "ENTREGA PRONTO"
+    imagem: img/d3-5.png
+    passos: [img/d3-1.png, img/d3-2.png, img/d3-3.png, img/d3-4.png, img/d3-5.png]
+    cor_livre: true
+    luz_min: 0
+    cena: "diagrama (terminal): pedido em português e o agente entregando"
+  - id: facilidade
+    nome: MEDO
+    gatilho: "o colega entrega antes, todo dia"
+    por_que: "medo de ficar para trás no trabalho"
+    ancora: colega
+    linha1: "SEU COLEGA"
+    linha2: "JÁ ENTREGOU"
+    cor: vermelho
+    destaque: {titulo: "TODO DIA", texto: "ele sai\nna frente", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.45]
+    cena: "Escritório no fim da tarde: em primeiro plano, uma mulher estressada no meio de papéis e várias janelas abertas no notebook, olhando para o lado; ao fundo, um colega relaxado de braços atrás da cabeça, sorrindo, com o trabalho entregue e um painel colorido na tela."
+  - id: descoberta
+    nome: SOLUÇÃO
+    gatilho: "o curso Do chat ao agente, passo a passo do zero"
+    por_que: "prova real: o curso existe"
+    ancora: criei
+    linha1: "DO CHAT"
+    linha2: "AO AGENTE"
+    imagem: img/d5-2.png
+    passos: [img/d5-1.png, img/d5-2.png]
+    cor_livre: true
+    luz_min: 0
+    cena: "print real: curso Do chat ao agente"
+  - id: beneficio
+    nome: URGÊNCIA
+    gatilho: "grátis agora, antes de ficar só no PRO"
+    por_que: "escassez real"
+    ancora: grátis
+    linha1: "APROVEITA"
+    linha2: "AGORA"
+    imagem: img/d6-3.png
+    passos: [img/d6-1.png, img/d6-2.png, img/d6-3.png]
+    cor_livre: true
+    luz_min: 0
+    cena: "diagrama (frase): grátis agora · depois só no PRO"
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou pedir o link"
+    por_que: "leva para o inema.club"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "do chat\nao agente"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara desfocada de dia. Na tela do celular, no alto, um vídeo vertical de uma janela de terminal com linhas coloridas; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: link, linha1: "quer o link?", palavra: "ME PEDE", linha2: "aqui nos comentários"}
+legenda_envio: "D10 — Do chat ao agente (medo + urgência). Título: Você ainda copia e cola do chat? Seu colega já não"
+titulo_post: "Você ainda copia e cola do chat? Seu colega já não"
+canal: lives4

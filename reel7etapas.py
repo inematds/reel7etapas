@@ -30,6 +30,7 @@ sys.path.insert(0, str(Path(os.environ.get("R7_REELCOMENTA", HOME / "projetos/re
 import reelcomenta as rc  # noqa: E402  (transcrição, recorte do rosto, estúdio HeyGen, envio ao bot)
 from reelcomenta import W, H, FPS, ANTON, MBLK, MXB, AMB, VERM, BRANCO, ESC, DEJAVU, fnt, ease, run, dur  # noqa: E402
 
+TARJA = False  # 'letra: tarja' (18/10, D10): forte + a 2ª linha da manchete numa caixa sólida
 CONTORNO = 0   # 'letra: forte' no roteiro (18/10, D9): amarelo #FACC15 + contorno preto 8 px na manchete e na legenda
 
 
@@ -110,12 +111,13 @@ def topo_avatar_capa():
 
 
 def carregar(pasta):
-    global ESTILO, LAY, HEAD_Y, LEG_Y, CARD, AV_CAPA, CAPA_ABERTA, AMB, CONTORNO
+    global ESTILO, LAY, HEAD_Y, LEG_Y, CARD, AV_CAPA, CAPA_ABERTA, AMB, CONTORNO, TARJA
     r = rc.carregar(pasta)
     if len(r.get("etapas") or []) != 7:
         falha("roteiro", "o roteiro precisa de exatamente 7 etapas")
-    if r.get("letra") == "forte":
+    if r.get("letra") in ("forte", "tarja"):
         AMB = (250, 204, 21); rc.CORES["ambar"] = AMB; CONTORNO = 8
+    TARJA = r.get("letra") == "tarja"
     if r.get("estilo"):
         ESTILO = r["estilo"].strip()
     lay = r.get("layout", "abre")
@@ -348,6 +350,10 @@ class Fundo:
         for y in range(900, H):
             d.line((0, y, W, y), fill=(0, 0, 0, int(225 * min(1, (y - 900) / 520) ** 1.2)))
         self.planos = [self._planos(i) for i in range(7)]
+        # 'passos: [png, png, ...]' na etapa (18/10, D10): diagrama que se monta — as imagens entram em sequência na etapa,
+        # sem o plano fechado (zoom 1,38 cortaria o diagrama); a última também vai em 'imagem:' (portões)
+        self.passos = {i: [Image.open(Path(x) if Path(x).is_absolute() else r["_dir"] / x).convert("RGB") for x in e["passos"]]
+                       for i, e in enumerate(r["etapas"]) if e.get("passos")}
 
     def _planos(self, i):
         ini, fim = self.L.ini[i], self.L.fim_etapa(i)
@@ -356,6 +362,12 @@ class Fundo:
 
     def _janela(self, i, t):
         e = self.r["etapas"][i]; im = self.capa if i == 0 else self.ims[i]
+        if i in self.passos:                 # diagrama: troca de passo em partes iguais da etapa, push bem leve
+            ini, fim = self.L.ini[i], self.L.fim_etapa(i); ps = self.passos[i]
+            fr = min(0.999, max(0.0, (t - ini) / max(0.1, fim - ini)))
+            # o último passo fica mais tempo (é o que ensina): divide em len+1 partes e o último pega 2
+            k = min(len(ps) - 1, int(fr * (len(ps) + 1)))
+            return ps[k], 1.0 + 0.04 * fr, .5, .5
         cam = e.get("camera", ["push", "pull", "pan_dir", "push", "sobe", "pan_esq", "push"][i])
         fx, fy = e.get("foco", [0.5, 0.45])
         for a, b, k in self.planos[i]:
@@ -456,15 +468,26 @@ class Desenho:
             self.cache[ch] = (sh, pad, bb)
         return self.cache[ch]
 
-    def linha(self, base, t, t0, x, y, s, fonte, tam_max, rgb, larg, nome, anim=True, centro=False):
-        """desenha uma linha com palavras que entram em sequência (escala + fade); devolve a altura usada"""
+    def linha(self, base, t, t0, x, y, s, fonte, tam_max, rgb, larg, nome, anim=True, centro=False, tarja=None):
+        """desenha uma linha com palavras que entram em sequência (escala + fade); devolve a altura usada.
+        tarja=(r,g,b): caixa sólida atrás da linha ('letra: tarja', 18/10) — a letra vem escura no amarelo, branca no resto"""
         tam = tam_max
+        if tarja:
+            larg -= 48
         while tam > 40 and fnt(fonte, tam).getlength(s) > larg:
             tam -= 2
         f = fnt(fonte, tam); esp = f.getlength(" ")
         ws = s.split(); larg_tot = sum(f.getlength(w) for w in ws) + esp * (len(ws) - 1)
-        xx = x - larg_tot / 2 if centro else x
+        xx = x - larg_tot / 2 if centro else x + (24 if tarja else 0)
         asc = f.getbbox("ÁÇ")[1]; desc_alt = f.getbbox("Ág")[3] - asc
+        if tarja:
+            p0 = 1.0 if not anim else ease((t - t0) / 0.2)
+            if p0 > 0:
+                cx_ = Image.new("RGBA", base.size, (0, 0, 0, 0))
+                ImageDraw.Draw(cx_).rounded_rectangle((xx - 24, y + asc - 16, xx + larg_tot + 24, y + asc + desc_alt + 16), 18,
+                                                      fill=tarja + (int(250 * p0),))
+                base.alpha_composite(cx_)
+            rgb = ESC if sum(tarja) > 450 else BRANCO
         self._reg(t, nome, (xx, y + asc, xx + larg_tot, y + asc + desc_alt), tam)
         for k, w in enumerate(ws):
             img, pad, bb = self.palavra(w, fonte, tam, rgb)
@@ -544,15 +567,18 @@ class Desenho:
                 if c.get("titulo_pos") == "baixo":   # título colado no avatar: o vão de cima fica para a cena (carro voando, 17/10)
                     y = topo + 24 + max(0, vao - alt)
             h1 = self.linha(base, t, t0, cx, y, c["linha1"], ANTON, tam, BRANCO, SAFE[2] - SAFE[0] - 30, "capa1", anim=False, centro=True)
-            y += h1 + 16
-            h2 = self.linha(base, t, t0, cx, y, c["linha2"], ANTON, tam, cor(c.get("cor2")) if c.get("cor2") else AMB, SAFE[2] - SAFE[0] - 30, "capa2", anim=False, centro=True)
+            y += h1 + 16 + (22 if TARJA else 0)
+            c2 = cor(c.get("cor2")) if c.get("cor2") else AMB
+            h2 = self.linha(base, t, t0, cx, y, c["linha2"], ANTON, tam, c2, SAFE[2] - SAFE[0] - 30, "capa2", anim=False, centro=True,
+                            tarja=c2 if TARJA else None)
             if c.get("sub"):
                 self.chip(base, d, t + 1, t0, cx, y + h2 + (30 if lim is not None else 46), c["sub"], "capa-sub", centro=True, tam=tc)
             return
         y = HEAD_Y
         h1 = self.linha(base, t, t0, SAFE[0], y, e["linha1"], ANTON, 128, BRANCO, SAFE[2] - SAFE[0], "manchete1")
-        y += h1 + 14
-        h2 = self.linha(base, t, t0 + 0.12, SAFE[0], y, e["linha2"], ANTON, 156, cor(e.get("cor")), SAFE[2] - SAFE[0], "manchete2")
+        y += h1 + 14 + (22 if TARJA else 0)
+        h2 = self.linha(base, t, t0 + 0.12, SAFE[0], y, e["linha2"], ANTON, 156, cor(e.get("cor")), SAFE[2] - SAFE[0], "manchete2",
+                        tarja=cor(e.get("cor")) if TARJA else None)
         if e.get("chip"):
             self.chip(base, d, t, t0 + 0.45, SAFE[0], y + h2 + 30, e["chip"], "chip", rgb_fundo=cor(e.get("cor")), tam=50)
 

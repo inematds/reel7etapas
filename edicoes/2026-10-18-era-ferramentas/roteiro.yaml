@@ -1,0 +1,95 @@
+# reel7etapas — edição 2026-10-18-era-ferramentas (D9 + D10: provocação; tema do Nei 18/10: "a era das ferramentas acabou, se não souber pedir perdeu")
+tema: "A era das ferramentas acabou: quem não souber pedir perdeu"
+data: "18/10/2026"
+palavra: ME PEDE
+letra: tarja
+fala: |
+  A era das ferramentas acabou. Quem ainda corre atrás do aplicativo novo está sendo superficial. O código de quase tudo já está no GitHub, de graça, e o Claude e o Codex fazem o que você pedir. Mas se não souber pedir, perdeu: enquanto você testa o aplicativo da semana, outro já mandou o agente fazer o trabalho inteiro. E pedir bem se aprende rápido, não precisa ser programador. São três coisas: o que você quer, o contexto e como conferir. Quem sabe pedir usa qualquer ferramenta, até a que nem saiu ainda. Tá tudo no inema ponto club. Ou me pede o link aqui nos comentários.
+estilo: |
+  Fotografia realista cinematográfica, vertical 9:16, com cara de foto real (pele com textura, ambiente de verdade), NÍTIDA. Luz direcional com contraste e sombras (nada chapado), rosto bem iluminado, cores naturais com UMA cor forte de destaque no assunto; sem tom amarelado, sem luz dourada. Emoção clara e forte no rosto ou um objeto-símbolo grande, fácil de entender num celular em meio segundo. COMPOSIÇÃO OBRIGATÓRIA: o assunto principal fica inteiro na faixa central da imagem, entre 25% e 60% da altura; os 20% de cima são fundo calmo (ali entra o título) e os 35% de baixo são superfície ou fundo sem nada importante (ali entram o apresentador e um cartão). Sem texto, sem letras legíveis, sem números, sem logotipos, sem marcas, sem moldura.
+etapas:
+  - id: gancho
+    nome: PROVOCAÇÃO
+    gatilho: "a era das ferramentas acabou; caçar app é superficial"
+    por_que: "provoca quem vive testando ferramenta nova: ele se reconhece e quer se defender"
+    capa: {linha1: "QUEM CAÇA APP", linha2: "É SUPERFICIAL", cor2: vermelho, desfoque: 0, titulo_pos: baixo}
+    camera: push
+    foco: [0.5, 0.22]
+    cena: "Homem de uns 35 anos num quarto escuro, afundado até o peito numa avalanche de dezenas de caixas de software e cartões coloridos de aplicativos genéricos, sem logotipos, que caem do teto em volta dele; rosto cansado e perdido, iluminado pela luz fria de três monitores."
+    cor_livre: true
+    luz_min: 0
+    estilo: "Fotografia realista de impacto, cara de foto jornalística ou cena de cinema, vertical 9:16, NÍTIDA. Contraste alto e luz dramática direcional, sombras profundas. Emoção forte e clara (choque, medo, caos) ou objeto-choque. COMPOSIÇÃO OBRIGATÓRIA: o assunto principal inteiro no TERÇO DE CIMA da imagem, entre 8% e 34% da altura, grande e centralizado; de 36% para baixo, só fundo escuro simples e liso, sem nada importante (ali entram a manchete e o apresentador). Sem texto, sem letras legíveis, sem dígitos legíveis, sem logotipos, sem marcas, sem moldura."
+  - id: desejo
+    nome: NOVIDADE
+    gatilho: "o código está no GitHub e a IA faz o que você pede"
+    por_que: "vira a chave: a ferramenta deixou de ser o diferencial"
+    ancora: código
+    linha1: "TÁ TUDO"
+    linha2: "NO GIT"
+    imagem: img/d2-3.png
+    passos: [img/d2-1.png, img/d2-2.png, img/d2-3.png]
+    cor_livre: true
+    luz_min: 0
+    cena: "diagrama (fluxo): você pede → Claude/Codex → pronto"
+  - id: medo
+    nome: MEDO
+    gatilho: "se não souber pedir, perdeu"
+    por_que: "compara com o outro que já entregou"
+    ancora: perdeu
+    linha1: "NÃO SABE PEDIR?"
+    linha2: "PERDEU"
+    cor: vermelho
+    imagem: img/d3-2.png
+    passos: [img/d3-1.png, img/d3-2.png]
+    cor_livre: true
+    luz_min: 0
+    cena: "diagrama (antes/depois): quem caça app × quem sabe pedir"
+  - id: facilidade
+    nome: FACILIDADE
+    gatilho: "pedir bem se aprende rápido"
+    por_que: "derruba o 'isso é pra programador'"
+    ancora: pedir
+    linha1: "SE APRENDE"
+    linha2: "RÁPIDO"
+    destaque: {titulo: "SEM CÓDIGO", texto: "é saber\nexplicar"}
+    camera: push
+    foco: [0.5, 0.45]
+    cena: "Mulher brasileira de uns 40 anos numa mesa de cozinha à noite, iluminada por uma luminária de lado, sorrindo surpresa para o notebook, com um caderno de anotações ao lado; expressão clara de 'entendi!'."
+  - id: descoberta
+    nome: DESCOBERTA
+    gatilho: "pedir bem = 3 coisas"
+    por_que: "dá o método na hora: a pessoa sai sabendo algo"
+    ancora: três
+    linha1: "PEDIR BEM"
+    linha2: "3 COISAS"
+    imagem: img/d5-3.png
+    passos: [img/d5-1.png, img/d5-2.png, img/d5-3.png]
+    cor_livre: true
+    luz_min: 0
+    cena: "diagrama (cartões): o que você quer · o contexto · como conferir"
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "quem sabe pedir usa qualquer ferramenta"
+    por_que: "fecha: nunca mais fica para trás"
+    ancora: qualquer
+    linha1: "QUALQUER"
+    linha2: "FERRAMENTA"
+    destaque: {titulo: "ATÉ A NOVA", texto: "que nem\nsaiu ainda"}
+    camera: pan_esq
+    foco: [0.5, 0.45]
+    cena: "Homem de uns 35 anos calmo e confiante, de braços cruzados numa sala clara e organizada, enquanto ao lado dele um robô humanoide industrial estilo Tesla Optimus, cinza fosco, cabeça com visor preto na frente, trabalha em três monitores com gráficos coloridos."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou pedir o link"
+    por_que: "leva para o inema.club"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GRÁTIS", texto: "aprenda\na pedir"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara desfocada de dia. Na tela do celular, no alto, um vídeo vertical de um robô humanoide trabalhando num computador; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: link, linha1: "quer o link?", palavra: "ME PEDE", linha2: "aqui nos comentários"}
+legenda_envio: "D10 — A era das ferramentas acabou (provocação). Título: Pare de caçar ferramenta nova. Quem não souber pedir, perdeu"
+titulo_post: "Pare de caçar ferramenta nova. Quem não souber pedir, perdeu"
+canal: lives4
