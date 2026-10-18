@@ -1,1 +1,2 @@
+- `evento-do-chat-ao-agente` · handoffs/history/2026-10-18T214052Z-evento-do-chat-ao-agente.md · 18/10 18:40
 - `r7e-gatilho-d10` · handoffs/history/2026-10-18T213553Z-r7e-gatilho-d10.md · 18/10 18:35

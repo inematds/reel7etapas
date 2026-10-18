@@ -3,54 +3,41 @@
 Cada linha é um assunto em andamento: leia o snapshot do assunto que for continuar. Gravado por handoff-grava.py.
 
 <!-- handoff-indice:inicio -->
+- `evento-do-chat-ao-agente` · handoffs/history/2026-10-18T214052Z-evento-do-chat-ao-agente.md · 18/10 18:40
 - `r7e-gatilho-d10` · handoffs/history/2026-10-18T213553Z-r7e-gatilho-d10.md · 18/10 18:35
 <!-- handoff-indice:fim -->
 
 ---
 
-Cópia integral do snapshot mais recente (handoffs/history/2026-10-18T213553Z-r7e-gatilho-d10.md):
+Cópia integral do snapshot mais recente (handoffs/history/2026-10-18T214052Z-evento-do-chat-ao-agente.md):
 
-# Handoff — 2026-10-18 — r7e: gancho gatilho (D9) + propósito/plano (D10), 5 reels novos aguardando avatar
+# Handoff — 2026-10-18 — Evento "Do chat ao agente" no motor do eventosextremospub (versão voz entregue; versão avatar em andamento)
 
 ## Projeto e escopo
-~/projetos/reel7etapas (repo inematds/reel7etapas) + kit ~/projetos/inema-design + hub ~/projetos/wifi. Nei avaliou que os reels r7e não têm gancho nem emoção (sem visualização no TikTok/Instagram, comparado ao reel de clima de 13/10).
-
-## Objetivo atual
-Entregar no bot v3 (sem publicar no YouTube) os 5 reels novos D10: era-ferramentas, faturar-2027, saas-morrendo, chat-ao-agente, opencode-v3 (hacker). Também: clima da semana com avatar e evento "Do chat ao agente" com avatar (eventosextremospub).
+~/projetos/eventosextremospub, pasta edicoes/2026-10-18-do-chat-ao-agente. Pedido do Nei: "quero https://eventos.inema.pro/do-chat-ao-agente/ use o motor no eventosextremospub e me mande no v3". Só mandar no v3; não publicar.
 
 ## Estado aceito
-- [confirmed] Kit D9 (gancho do r7e = medo/novidade/provocação, imagem nítida) e D10 (objetivo = público no inema.club, plano antes da fala, rosto meia tela → PiP, ≥ 2 diagramas, etapas como checklist) — commits inema-design 7e825bb e 55829ef; regra antiga no HISTORICO.md.
-- [confirmed] Motor: `letra: forte|tarja` (#FACC15 + contorno; tarja sólida na 2ª linha), `passos:` (diagrama em sequência), moldura do avatar na cor ativa; `diagramas.py` (fluxo, antes_depois, cartoes, barras, linha_tempo, terminal, painel, frase, site) — commits d926ec5, 2261b38, e756762, cc0cbe8.
-- [confirmed] 5 reels antigos refeitos com o mesmo avatar (pastas `*-gatilho`) enviados ao v3.
-- [confirmed] 5 reels D10: roteiros, imagens (portão OK) e 17 diagramas prontos; capa sem faixa, gancho na manchete de 2 linhas, `titulo_pos: baixo`, `luz_min: 0` no gancho.
-- [confirmed] Avatares dos 5 ENVIADOS ao estúdio HeyGen (video_id.txt em cada avatar/): opencode-v3 0f95e21c…, era-ferramentas 50fdaedf…, faturar-2027 73e91759…, saas-morrendo 9d3a86f0…, chat-ao-agente 14077a69… — fonte: edicoes/fila-avatar-1018.done. NENHUM avatar.mp4 baixado ainda.
-- [confirmed] Aviso vermelho no v3 1 dia antes de vencer a sessão do HeyGen: ~/projetos/wifi/heygen-aviso/aviso.py + timer systemd --user heygen-aviso (9h/19h); sessão atual vence 17/11/2026 17:44 (cookie heygen_session, 30 dias) — commit wifi 39c046f; teste enviado ao v3.
+- [confirmed] Versão com voz do Nei (Chatterbox local, sem avatar) entregue no bot v3, message_id 1614: video.mp4, 56 s, 9:16, −15,1 LUFS.
+- [confirmed] 8 imagens do Codex (capa "AINDA PRESO NO CHAT? 4 PASSOS ATÉ O SEU AGENTE" + 7) em capa/; prints reais da página em prints/ (menu fixo escondido, rodapé escurecido; versões -c para o layout canto).
+- [confirmed] Commits no eventosextremospub: 0c9a176 (edição) e 984c252 (fundo preto capa/preto.png nas telas + prints -c no canto); push feito. Linha no FALHAS.md do projeto.
+- [confirmed] Codex CLI atualizado para 0.163.0 (npm global); sob systemd-run o PATH pegava /usr/bin/codex 0.116 → passar -E PATH=$HOME/.npm-global/bin:... Linha no ~/projetos/wifi/FALHAS.md.
+- [confirmed] Avatar reenviado ao estúdio HeyGen com título "Do chat ao agente ev-b" (o 1º título travou por rascunho homônimo): video_id 73da724699c9490f8d081c199ec2fcfa. Units: dochat-avatar (baixa + retempo) e dochat-manda (avatar-e-manda.sh: gerar_cena --canto, compor_avatar.sh LAYOUT=canto, mede LUFS, envia ao v3).
 
 ## Proposto / tentado, não confirmado
-- [?] Clima da semana (EVX-2026-10-18-semana): enviado ao estúdio (video_id gravado); a cadeia de download/montagem/envio ao v3 (scratchpad clima-avatar.sh, sumiu com o scratchpad) foi relançada com DISPLAY=:99 mas a sessão terminou — verificar se video-avatar.mp4 existe em eventosextremospub/edicoes/2026-10-18-semana.
-- [?] Evento "Do chat ao agente" (eventosextremospub/edicoes/2026-10-18-do-chat-ao-agente): relançado (auto/avatar.sh + avatar-e-manda.sh, DISPLAY=:99); estado desconhecido.
-- [?] Se o HeyGen renova a sessão sozinho com o uso: ver ~/projetos/wifi/heygen-aviso/historico.log.
+- [?] Se dochat-avatar/dochat-manda terminaram e se o video-avatar.mp4 chegou ao v3: ver AVATAR-STATUS.txt e avatar.log na pasta da edição (não consegui ler no fim desta sessão por permissão).
+- [?] Volume da versão avatar: avatar-e-manda.sh só mede (compor_avatar.sh normaliza a voz); conferir se ficou em −14 ±1.
 
 ## Decisões
-- CTA fixo: "Tá tudo no inema ponto club. Ou me pede o link aqui nos comentários" (Nei 18/10).
-- Avatar novo por reel aprovado para estas 5 produções (APROVADO_HEYGEN gravado com a frase do Nei).
-- Só a janela de LOGIN do HeyGen vai na tela do Nei (:10); todo o estúdio roda no :99 com DISPLAY=:99 explícito (a sessão herda DISPLAY=:10.0) — memória heygen-login-na-tela.
+- Falas usam pronúncia fonética no TTS/HeyGen ("inema ponto club", "inema cê cê bot"); a legenda mantém a grafia (campo legenda).
+- Pergunta de comentário: "Em qual sequência você está?" (não a do clima); fecho no inema.club.
 
-## Não fazer (restrições e travas)
-- Não publicar no YouTube estes reels nem a versão com avatar do clima (a versão mapa já está no lives10) sem o Nei pedir.
-- Não usar Metricool/API sem autorização explícita (não autorizada).
-- Não abrir o estúdio na tela do Nei; nunca trocar plano do HeyGen.
+## Não fazer
+- Não publicar no YouTube nem em outro canal sem o Nei pedir.
+- Não embrulhar compor_avatar.sh/montar.sh em outro flock .render.lock.
+- Não aceitar oferta de troca de plano do HeyGen.
 
-## Pela metade
-- Baixar os 5 avatares: `cd ~/projetos/reel7etapas && DISPLAY=:99 python3 reel7etapas.py avatar edicoes/2026-10-18-<slug>` (pula o envio, pois video_id.txt existe; baixa status/vídeo).
-- Depois, para cada um: `python3 reel7etapas.py montar <pasta> && validar && mapa`, revisar as folhas (capa com rosto meia tela, tarja, diagramas), `python3 reel7etapas.py enviar <pasta>` (bot v3).
-- Dúvida aberta com o Nei: "Do chat ao agente" grátis × página de evento exclusiva do INEMA.PRO (a fala diz "grátis agora, antes de ficar só no PRO").
-
-## Próxima ação exata
-Rodar o download dos 5 avatares no :99 e, em seguida, montar/validar/enviar ao v3; conferir clima e evento no eventosextremospub.
-
-## Checagem de compartilhamento
-- Sem segredos, tokens ou cookies (só datas de validade): sim.
+## Próxima ação
+Ler edicoes/2026-10-18-do-chat-ao-agente/AVATAR-STATUS.txt. Se "bot v3 msg N": avisar o Nei. Se FALHOU: corrigir a etapa (avatar: `auto/avatar.sh` com DISPLAY=:99; montagem: rodar avatar-e-manda.sh de novo via systemd-run com -E PATH e -E DISPLAY=:99).
 
 
 <!-- handoff-estado:inicio -->
@@ -58,7 +45,7 @@ Rodar o download dos 5 avatares no :99 e, em seguida, montar/validar/enviar ao v
 
 Gravado por handoff-grava.py no momento do handoff. `--conferir` compara com o projeto agora.
 
-- commit: cc0cbe85a750ea9aeae73e51ecf1c135a1767e0f · branch: main
+- commit: 413c56c1b5bf6129705d5da75c31ec1446eef359 · branch: main
 - arquivos sujos fora de handoffs/: 400 (lista cortada)
 - `FALHAS.md` · sha256:08da61795950 · sujo
 - `edicoes/.wes-imagens-ok` · sha256:e3b0c44298fc · sujo
@@ -260,5 +247,4 @@ Gravado por handoff-grava.py no momento do handoff. `--conferir` compara com o p
 - `edicoes/2026-10-14-robo-uma-foto/publicar2.log` · sha256:dd43d27871ba · sujo
 - `edicoes/2026-10-14-robo-uma-foto/roteiro.yaml` · sha256:ef774f475358 · sujo
 - `edicoes/2026-10-14-software-ensina-robos/avatar/APROVADO_HEYGEN` · sha256:e96d3b53c1af · sujo
-- `diagramas.py` · sha256:91ca2d7057fd · citado
 <!-- handoff-estado:fim -->
