@@ -461,10 +461,12 @@ class Desenho:
         if ch not in self.cache:
             f = fnt(fonte, tam); bb = f.getbbox(s); pad = 24
             w, h = bb[2] - bb[0] + 2 * pad, bb[3] - bb[1] + 2 * pad
-            sh = Image.new("RGBA", (w, h), (0, 0, 0, 0)); ImageDraw.Draw(sh).text((pad - bb[0] + 3, pad - bb[1] + 5), s, font=f, fill=(0, 0, 0, 230))
-            sh = sh.filter(ImageFilter.GaussianBlur(7))
-            ImageDraw.Draw(sh).text((pad - bb[0], pad - bb[1]), s, font=f, fill=rgb + (255,),
-                                    stroke_width=CONTORNO, stroke_fill=(0, 0, 0, 255))
+            sh = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+            if rgb != ESC:                   # sombra só na letra clara; na tarja ela borrava a letra preta
+                ImageDraw.Draw(sh).text((pad - bb[0] + 3, pad - bb[1] + 5), s, font=f, fill=(0, 0, 0, 230))
+                sh = sh.filter(ImageFilter.GaussianBlur(7))
+            ImageDraw.Draw(sh).text((pad - bb[0], pad - bb[1]), s, font=f, fill=rgb + (255,),   # letra escura (dentro da tarja) sem contorno
+                                    stroke_width=0 if rgb == ESC else CONTORNO, stroke_fill=(0, 0, 0, 255))
             self.cache[ch] = (sh, pad, bb)
         return self.cache[ch]
 

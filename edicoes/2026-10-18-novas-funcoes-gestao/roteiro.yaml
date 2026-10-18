@@ -1,0 +1,97 @@
+# reel7etapas — edição 2026-10-18-novas-funcoes-gestao (D9 + D10: provocação + alívio; tema do Nei 18/10: "a transformação é saber lidar com novas funções na gestão; para quem já atua é fácil, só ajusta"; base: Diga o que importa (guia grátis, regra 5-4-3, gestor/técnico/agente) e Constituição dos Agentes v6.2 (INEMA.CLUB PRO, 5 aulas))
+tema: "Seu novo funcionário não é gente: as novas funções do gestor"
+data: "18/10/2026"
+palavra: ME PEDE
+letra: tarja
+fala: |
+  Na sua empresa vai ter funcionário que não é gente, e alguém vai ter que chefiar. A transformação na gestão é essa: aprender as novas funções. E pra quem já é gestor, é fácil. Você já sabe o mais difícil: o processo, o cliente e a equipe. Só ajusta. O gestor diz o quê e o porquê, o técnico garante o como e o agente executa. Comece pela regra cinco, quatro, três: cinco perguntas, quatro níveis de autonomia e três casos de teste. Depois escreva a constituição do seu agente: o que ele faz, o que nunca faz e quando chama você. Tá tudo no inema ponto club. Ou me pede o link aqui nos comentários.
+estilo: |
+  Fotografia realista cinematográfica, vertical 9:16, com cara de foto real (pele com textura, ambiente de verdade), NÍTIDA. Luz direcional com contraste e sombras (nada chapado), rosto bem iluminado, cores naturais com UMA cor forte de destaque no assunto; sem tom amarelado, sem luz dourada. Emoção clara e forte no rosto ou um objeto-símbolo grande, fácil de entender num celular em meio segundo. COMPOSIÇÃO OBRIGATÓRIA: o assunto principal fica inteiro na faixa central da imagem, entre 25% e 60% da altura; os 20% de cima são fundo calmo (ali entra o título) e os 35% de baixo são superfície ou fundo sem nada importante (ali entram o apresentador e um cartão). Sem texto, sem letras legíveis, sem números, sem logotipos, sem marcas, sem moldura.
+etapas:
+  - id: gancho
+    nome: PROVOCAÇÃO
+    gatilho: "na sua empresa vai ter funcionário que não é gente"
+    por_que: "novidade estranha e concreta: quem vai chefiar isso?"
+    capa: {linha1: "SEU FUNCIONÁRIO", linha2: "NÃO É GENTE", cor2: vermelho, desfoque: 0, titulo_pos: baixo}
+    camera: push
+    foco: [0.5, 0.22]
+    cena: "Reunião de equipe numa sala de empresa: entre os funcionários sentados à mesa, numa das cadeiras está um robô humanoide industrial estilo Tesla Optimus, cinza fosco, cabeça com visor preto na frente, com um crachá no peito; a gerente de uns 45 anos, de pé na cabeceira, olha para ele surpresa, e os colegas se entreolham. Luz dramática de janela lateral, contraste alto."
+    cor_livre: true
+    luz_min: 0
+    estilo: "Fotografia realista de impacto, cara de foto jornalística ou cena de cinema, vertical 9:16, NÍTIDA. Contraste alto e luz dramática direcional, sombras profundas. Emoção forte e clara (surpresa, estranhamento). COMPOSIÇÃO OBRIGATÓRIA: o assunto principal inteiro no TERÇO DE CIMA da imagem, entre 8% e 34% da altura, grande e centralizado; de 36% para baixo, só fundo escuro simples e liso, sem nada importante (ali entram a manchete e o apresentador). Sem texto, sem letras legíveis, sem dígitos legíveis, sem logotipos, sem marcas, sem moldura."
+  - id: desejo
+    nome: NOVIDADE
+    gatilho: "a transformação é aprender as novas funções"
+    por_que: "mostra o antes e o agora do cargo"
+    ancora: transformação
+    linha1: "NOVAS"
+    linha2: "FUNÇÕES"
+    imagem: img/d2-2.png
+    passos: [img/d2-1.png, img/d2-2.png]
+    cor_livre: true
+    luz_min: 0
+    cena: "diagrama (antes/agora): o gestor de antes × o gestor de agora"
+  - id: medo
+    nome: ALÍVIO
+    gatilho: "pra quem já é gestor é fácil: só ajusta"
+    por_que: "tira o medo de quem já tem experiência"
+    ancora: fácil
+    linha1: "PRA GESTOR"
+    linha2: "É FÁCIL"
+    destaque: {titulo: "SÓ AJUSTA", texto: "você já sabe\no mais difícil"}
+    camera: pull
+    foco: [0.5, 0.45]
+    cena: "Gestora experiente de uns 50 anos, cabelo grisalho curto, de braços cruzados e sorriso confiante no meio do chão de uma pequena fábrica organizada, com a equipe trabalhando atrás dela. Luz forte de janela de lado."
+  - id: facilidade
+    nome: TIME
+    gatilho: "o gestor diz o quê e o porquê, o técnico o como, o agente executa"
+    por_que: "mostra o novo time em 3 papéis"
+    ancora: diz
+    linha1: "UM TIME"
+    linha2: "DE TRÊS"
+    imagem: img/d4-3.png
+    passos: [img/d4-1.png, img/d4-2.png, img/d4-3.png]
+    cor_livre: true
+    luz_min: 0
+    cena: "diagrama (fluxo): gestor → técnico → agente"
+  - id: descoberta
+    nome: MÉTODO
+    gatilho: "regra 5-4-3"
+    por_que: "o método na hora"
+    ancora: comece
+    linha1: "REGRA"
+    linha2: "5 · 4 · 3"
+    imagem: img/d5-3.png
+    passos: [img/d5-1.png, img/d5-2.png, img/d5-3.png]
+    cor_livre: true
+    luz_min: 0
+    cena: "diagrama (cartões): 5 perguntas · 4 níveis · 3 casos"
+  - id: beneficio
+    nome: DESCOBERTA
+    gatilho: "a constituição do agente: faz, nunca faz, quando chama você"
+    por_que: "prova real: o curso existe"
+    ancora: constituição
+    linha1: "A CONSTITUIÇÃO"
+    linha2: "DO AGENTE"
+    imagem: img/d6-2.png
+    passos: [img/d6-1.png, img/d6-2.png]
+    cor_livre: true
+    luz_min: 0
+    cena: "print real: Constituição dos Agentes v6.2"
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou pedir o link"
+    por_que: "leva para o inema.club"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "GUIA + CURSO", texto: "regra 5-4-3 e\na constituição"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara desfocada de dia. Na tela do celular, no alto, um vídeo vertical de um robô humanoide sentado numa reunião; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: link, linha1: "quer o link?", palavra: "ME PEDE", linha2: "aqui nos comentários"}
+legenda_envio: "D10 — Seu funcionário não é gente (novas funções do gestor). Título: Sua empresa vai ter funcionário que não é gente. Quem vai chefiar?"
+titulo_post: "Sua empresa vai ter funcionário que não é gente. Quem vai chefiar?"
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner). A transformação na gestão: a empresa vai ter agentes de IA trabalhando como funcionários, e o gestor precisa aprender as novas funções. Para quem já é gestor é fácil: já sabe o mais difícil (processo, cliente, equipe), só ajusta. Time de três: o gestor diz o quê e o porquê, o técnico garante o como, o agente executa. Método: regra 5-4-3 (5 perguntas, 4 níveis de autonomia, 3 casos de teste) do guia gratuito Diga o que importa; depois a constituição do agente (o que faz, o que nunca faz, quando chama você) no curso Constituição dos Agentes, no inema.club. CTA: peça o link nos comentários. Título com gancho, começando por 'Sua empresa vai ter funcionário que não é gente', com #shorts."
+canal: lives3
+youtube_20261018: https://www.youtube.com/shorts/cMhIavjhdh0

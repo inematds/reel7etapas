@@ -1,0 +1,98 @@
+# reel7etapas — edição 2026-10-18-demissao-gestores (D9 + D10: medo; tema do Nei 18/10: "demissão em massa de gerentes e executivos que não dominam pessoas, processos e agentes; criei uma formação rápida para executivos"; base: Empresas de 2027 v6.2 — inematds.github.io/empresas-2027-v62, INEMA.CLUB PRO, 9 aulas de ~15 min)
+tema: "Demissão em massa de gerentes que não sabem gerir pessoas, processos e agentes"
+data: "18/10/2026"
+palavra: ME PEDE
+letra: tarja
+fala: |
+  Vem aí uma demissão em massa de gerentes e executivos. Não de todos: dos que não sabem gerir pessoas, processos e agentes ao mesmo tempo. Eu espero que demore, e que não comece em dois mil e vinte e sete. Mas eu conheço muita gente boa que ainda não sabe lidar com um agente de IA, e essas pessoas estão na fila. Por isso eu criei uma formação rápida para executivos, a Empresas de dois mil e vinte e sete. São nove aulas de quinze minutos, sem instalar nada, no chat que você já usa. Você sai sabendo escrever as regras do seu agente e medir o trabalho dele. Tá tudo no inema ponto club. Ou me pede o link aqui nos comentários.
+estilo: |
+  Fotografia realista cinematográfica, vertical 9:16, com cara de foto real (pele com textura, ambiente de verdade), NÍTIDA. Luz direcional com contraste e sombras (nada chapado), rosto bem iluminado, cores naturais com UMA cor forte de destaque no assunto; sem tom amarelado, sem luz dourada. Emoção clara e forte no rosto ou um objeto-símbolo grande, fácil de entender num celular em meio segundo. COMPOSIÇÃO OBRIGATÓRIA: o assunto principal fica inteiro na faixa central da imagem, entre 25% e 60% da altura; os 20% de cima são fundo calmo (ali entra o título) e os 35% de baixo são superfície ou fundo sem nada importante (ali entram o apresentador e um cartão). Sem texto, sem letras legíveis, sem números, sem logotipos, sem marcas, sem moldura.
+etapas:
+  - id: gancho
+    nome: MEDO
+    gatilho: "demissão em massa de gerentes e executivos"
+    por_que: "o gestor teme pelo cargo; quem tem chefe quer saber o que vem"
+    capa: {linha1: "DEMISSÃO EM MASSA", linha2: "DE GERENTES", cor2: vermelho, desfoque: 0, titulo_pos: baixo}
+    camera: push
+    foco: [0.5, 0.22]
+    cena: "Corredor de um escritório corporativo de vidro: vários executivos de terno e camisa social saindo em fila, cada um carregando uma caixa de papelão com seus objetos (porta-retrato, planta, caneca); o da frente, um homem de uns 50 anos de gravata afrouxada, olha para trás perplexo. Luz fria e dramática vinda das janelas."
+    cor_livre: true
+    luz_min: 0
+    estilo: "Fotografia realista de impacto, cara de foto jornalística ou cena de cinema, vertical 9:16, NÍTIDA. Contraste alto e luz dramática direcional, sombras profundas. Emoção forte e clara (choque, medo). COMPOSIÇÃO OBRIGATÓRIA: o assunto principal inteiro no TERÇO DE CIMA da imagem, entre 8% e 34% da altura, grande e centralizado; de 36% para baixo, só fundo escuro simples e liso, sem nada importante (ali entram a manchete e o apresentador). Sem texto, sem letras legíveis, sem dígitos legíveis, sem logotipos, sem marcas, sem moldura."
+  - id: desejo
+    nome: QUEM SAI
+    gatilho: "não de todos: dos que não sabem gerir pessoas, processos e agentes"
+    por_que: "a pessoa confere na hora se está do lado certo"
+    ancora: todos
+    linha1: "QUEM NÃO GERE"
+    linha2: "OS TRÊS SAI"
+    cor: vermelho
+    imagem: img/d2-3.png
+    passos: [img/d2-1.png, img/d2-2.png, img/d2-3.png]
+    cor_livre: true
+    luz_min: 0
+    cena: "diagrama (cartões): pessoas · processos · agentes"
+  - id: medo
+    nome: MEDO
+    gatilho: "gente boa que não sabe lidar com agente está na fila"
+    por_que: "não é sobre ser ruim: é sobre não ter aprendido isso"
+    ancora: espero
+    linha1: "GENTE BOA"
+    linha2: "NA FILA"
+    cor: vermelho
+    destaque: {titulo: "NÃO SABE", texto: "lidar com\num agente de IA", cor: vermelho}
+    camera: pan_dir
+    foco: [0.5, 0.45]
+    cena: "Executiva de uns 48 anos, experiente e bem vestida, sentada sozinha numa sala de reunião vazia depois do expediente, olhando preocupada para o notebook onde várias janelas de agentes de IA estão abertas; expressão de quem não sabe por onde começar. Luz fria de fim de tarde pela janela."
+  - id: facilidade
+    nome: SOLUÇÃO
+    gatilho: "uma formação rápida para executivos: Empresas de 2027"
+    por_que: "prova real: a formação existe"
+    ancora: criei
+    linha1: "FORMAÇÃO"
+    linha2: "RÁPIDA"
+    imagem: img/d4-2.png
+    passos: [img/d4-1.png, img/d4-2.png]
+    cor_livre: true
+    luz_min: 0
+    cena: "print real: Empresas de 2027 v6.2"
+  - id: descoberta
+    nome: FACILIDADE
+    gatilho: "9 aulas de 15 minutos, sem instalar nada, no chat que você já usa"
+    por_que: "derruba o 'não tenho tempo' e o 'não sou técnico'"
+    ancora: nove
+    linha1: "9 AULAS"
+    linha2: "DE 15 MIN"
+    imagem: img/d5-3.png
+    passos: [img/d5-1.png, img/d5-2.png, img/d5-3.png]
+    cor_livre: true
+    luz_min: 0
+    cena: "diagrama (frase): 9 aulas · 15 min cada · sem instalar nada"
+  - id: beneficio
+    nome: BENEFÍCIO
+    gatilho: "sai sabendo escrever as regras do agente e medir o trabalho dele"
+    por_que: "do medo para o comando"
+    ancora: sai
+    linha1: "VOCÊ NO"
+    linha2: "COMANDO"
+    destaque: {titulo: "REGRAS + NOTA", texto: "o agente trabalha\ne você mede"}
+    camera: push
+    foco: [0.5, 0.45]
+    cena: "Executiva de uns 45 anos, confiante e sorrindo, de pé numa sala de reunião clara apresentando para a diretoria um painel na tela grande com quadros coloridos de tarefas e indicadores, sem letras legíveis; os diretores atentos e concordando. Luz de janela forte de lado."
+  - id: comentario
+    nome: COMENTÁRIO
+    gatilho: "tudo no inema.club ou pedir o link"
+    por_que: "leva para o inema.club"
+    ancora: inema
+    linha1: "TUDO NO"
+    linha2: "INEMA.CLUB"
+    destaque: {titulo: "EMPRESAS 2027", texto: "formação para\nexecutivos"}
+    camera: push
+    foco: [0.5, 0.5]
+    cena: "Mão segurando um smartphone na vertical numa sala clara desfocada de dia. Na tela do celular, no alto, um vídeo vertical de executivos numa reunião; embaixo, a área de comentários com avatares redondos, corações e balões de comentário, sem letras legíveis. Tela bem iluminada."
+cta: {ancora: link, linha1: "quer o link?", palavra: "ME PEDE", linha2: "aqui nos comentários"}
+legenda_envio: "D10 — Demissão em massa de gerentes (medo → formação Empresas de 2027). Título: Vem aí demissão em massa de gerentes. Veja quem fica"
+titulo_post: "Vem aí demissão em massa de gerentes. Veja quem fica"
+contexto_youtube: "Short vertical do INEMA.CLUB (Nei Maldaner). Opinião do Nei: vem aí uma demissão em massa de gerentes e executivos que não sabem gerir pessoas, processos e agentes de IA ao mesmo tempo; ele espera que demore e não comece em 2027. Solução: a formação rápida para executivos Empresas de 2027 (9 aulas de ~15 minutos, sem instalar nada, no chat de IA que você já usa; sai sabendo escrever a constituição do agente e medir o trabalho dele), no inema.club. Não dizer que é grátis. CTA: peça o link nos comentários. Título com gancho de medo, começando por 'Vem aí demissão em massa de gerentes', com #shorts."
+canal: lives3
+youtube_20261018: https://www.youtube.com/shorts/xpDV5qQe5oE

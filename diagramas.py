@@ -12,7 +12,7 @@ F = Path.home() / ".local/share/fonts"
 ANTON, MBLK, MXB = str(F / "Anton-Regular.ttf"), str(F / "Montserrat-Black.ttf"), str(F / "Montserrat-ExtraBold.ttf")
 FUNDO, CARTAO, BORDA = (12, 12, 16), (24, 24, 32), (48, 48, 60)
 BRANCO, CINZA, AMAR, VERM, VERDE, AZUL, ESC = (255, 255, 255), (170, 176, 190), (250, 204, 21), (255, 64, 48), (34, 197, 94), (59, 158, 255), (12, 12, 16)
-TOPO, BASE = 440, 1150
+TOPO, BASE = 540, 1165       # 540: a manchete com tarja termina ~470 (18/10)
 X0, X1 = 70, 950        # direita livre: coluna de botões do TikTok/Instagram
 CX = (X0 + X1) / 2
 
@@ -75,10 +75,10 @@ def fluxo(nos, pasta, nome, cores=None):
         y = TOPO
         for i, (tit, sub) in enumerate(nos[:passo]):
             caixa(d, (X0, y, X1, y + h), cor_borda=cores[i], larg=6 if i == passo - 1 else 4)
-            ty = y + (h - (64 + (40 if sub else 0))) / 2
-            texto_c(d, CX, ty, tit, ANTON, cores[i] if i == n - 1 else BRANCO, tam=72)
+            ty = y + (h - (100 + (50 if sub else 0))) / 2
+            ht = texto_c(d, CX, ty, tit, ANTON, cores[i] if i == n - 1 else BRANCO, tam=72)
             if sub:
-                texto_c(d, CX, ty + 84, sub, MXB, CINZA, tam=36)
+                texto_c(d, CX, ty + ht + 10, sub, MXB, CINZA, tam=36)
             if i < passo - 1:
                 seta_baixo(d, CX, y + h + 6, y + h + seta - 6, cores[i])
             y += h + seta
