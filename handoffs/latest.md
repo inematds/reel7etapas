@@ -3,42 +3,51 @@
 Cada linha é um assunto em andamento: leia o snapshot do assunto que for continuar. Gravado por handoff-grava.py.
 
 <!-- handoff-indice:inicio -->
+- `r7e-gatilho-d10` · handoffs/history/2026-10-18T230041Z-r7e-gatilho-d10.md · 18/10 20:00
 - `evento-do-chat-ao-agente` · handoffs/history/2026-10-18T223248Z-evento-do-chat-ao-agente.md · 18/10 19:32
-- `r7e-gatilho-d10` · handoffs/history/2026-10-18T213553Z-r7e-gatilho-d10.md · 18/10 18:35
 <!-- handoff-indice:fim -->
 
 ---
 
-Cópia integral do snapshot mais recente (handoffs/history/2026-10-18T223248Z-evento-do-chat-ao-agente.md):
+Cópia integral do snapshot mais recente (handoffs/history/2026-10-18T230041Z-r7e-gatilho-d10.md):
 
-# Handoff — 2026-10-18 — Evento "Do chat ao agente" no motor do eventosextremospub (versão voz entregue; versão avatar em andamento)
+# Handoff — 2026-10-18 — r7e: gancho gatilho (D9) + propósito/plano (D10); 5 reels D10 no v3; 2 reels de gestão (lives3) esperando avatar
 
 ## Projeto e escopo
-~/projetos/eventosextremospub, pasta edicoes/2026-10-18-do-chat-ao-agente. Pedido do Nei: "quero https://eventos.inema.pro/do-chat-ao-agente/ use o motor no eventosextremospub e me mande no v3". Só mandar no v3; não publicar.
+~/projetos/reel7etapas (repo inematds/reel7etapas) + kit ~/projetos/inema-design (D9/D10) + ~/projetos/wifi (heygen-aviso, LIMITES). Pedido do Nei: o r7e não tinha gancho/emoção e não dava visualização no TikTok/Instagram (comparado ao reel do evento extremo/clima); avaliar formato, letra, imagem e prompt; refazer forte e viral.
 
 ## Estado aceito
-- [confirmed] Versão com voz do Nei (Chatterbox local, sem avatar) entregue no bot v3, message_id 1614: video.mp4, 56 s, 9:16, −15,1 LUFS.
-- [confirmed] 8 imagens do Codex em capa/ (capa "AINDA PRESO NO CHAT? 4 PASSOS ATÉ O SEU AGENTE" + 7); prints reais da página em prints/ (menu fixo escondido, rodapé escurecido; versões -c para o layout canto); capa/preto.png como fundo fixo das telas.
-- [confirmed] Commits no eventosextremospub: 0c9a176 (edição) e 984c252 (fundo preto + prints -c no canto); push feito. Linha no FALHAS.md do projeto (rascunho homônimo no HeyGen + legenda do canto sobre o print).
-- [confirmed] Codex CLI atualizado para 0.163.0 (npm global); config ~/.codex/config.toml intacta. Sob systemd-run o PATH pega /usr/bin/codex 0.116 → passar -E PATH=$HOME/.npm-global/bin:... Linha no ~/projetos/wifi/FALHAS.md.
-- [confirmed] Avatar reenviado ao estúdio HeyGen como "Do chat ao agente ev-b" (o título "Do chat ao agente r7e-ev" travou: rascunho homônimo, provavelmente criado por tentativa minha anterior; continua na lista de projetos do HeyGen, não apagado): video_id 73da724699c9490f8d081c199ec2fcfa. Units: dochat-avatar (baixa + retempo) e dochat-manda (avatar-e-manda.sh: gerar_cena --canto, compor_avatar.sh LAYOUT=canto, mede LUFS, envia ao v3).
-- [confirmed] Prévia do layout canto (tempos estimados) conferida após o ajuste: sem mapa nas trocas, legenda legível.
+- [confirmed] Kit inema-design: D9 (gancho do r7e = gatilho: medo/novidade/provocação, número com fonte, imagem nítida; "capa = ganho" foi para o HISTORICO) e D10 (objetivo = público no inema.club; plano antes da fala; rosto meia tela → PiP; ≥ 2 diagramas; etapas como checklist; CTA "tá tudo no inema.club, ou me pede o link") — commits 7e825bb e 55829ef (pushed).
+- [confirmed] Skill skill/SKILL.md com D9/D10 — commits d926ec5, 2261b38, e756762 (pushed).
+- [confirmed] Motor reel7etapas.py: `letra: forte` (#FACC15 + contorno 8), `letra: tarja` (2ª linha da manchete em caixa sólida; letra escura sem contorno/sombra), `passos:` (diagrama que se monta, sem zoom), moldura do avatar na cor ativa. diagramas.py novo (fluxo, antes_depois, cartoes, barras, linha_tempo, terminal, painel, frase, site) com área y 540–1165. Commit cc0cbe8 (pushed); as correções de depois (TOPO 540, tarja sem contorno, fluxo, frase) NÃO estão commitadas.
+- [confirmed] 5 reels "-gatilho" (mesmo avatar antigo, capa nítida) enviados ao v3 mais cedo.
+- [confirmed] 5 reels D10 com avatar novo, montados, validados (fala 97–99%), legendas corrigidas (Claude, IA) e enviados ao v3 (não publicados): opencode-v3, era-ferramentas, faturar-2027, saas-morrendo, chat-ao-agente.
+- [confirmed] Clima da semana com avatar (eventosextremospub/edicoes/2026-10-18-semana/video-avatar.mp4, 67 s) enviado ao v3, msg 1622; a versão mapa já estava no lives10. Evento "Do chat ao agente" com avatar chegou ao v3 às 19:01 (msg 1624, via dochat-manda de outra sessão).
+- [confirmed] HeyGen: sessão caiu (cookie heygen_session dura 30 dias; o novo vence 17/11/2026 17:44). Nei logou às 20:44 (janela aberta na tela :10 dele). Aviso vermelho no v3 1 dia antes: ~/projetos/wifi/heygen-aviso/aviso.py + timer systemd --user heygen-aviso (9h e 19h); teste enviado. Commit 39c046f no wifi (pushed). LIMITES.md atualizado.
+- [confirmed] Memória: heygen-login-na-tela.md (só o login na tela :10; estúdio sempre com DISPLAY=:99 explícito — a sessão do Claude herda DISPLAY=:10.0).
+- [confirmed] FALHAS.md do reel7etapas: 4 linhas de 18/10 (tarja sobre diagrama, portão de luz no gancho, cartões repetidos, Claude/IA na legenda) — não commitado.
 
 ## Proposto / tentado, não confirmado
-- [?] Se dochat-avatar/dochat-manda terminaram e se o video-avatar.mp4 chegou ao v3: ver AVATAR-STATUS.txt e avatar.log na pasta da edição (no fim desta sessão a leitura foi barrada por permissão).
-- [?] Volume da versão avatar: avatar-e-manda.sh só mede (compor_avatar.sh normaliza a voz); conferir se ficou em −14 ±1.
+- [?] 2 reels de gestão para o lives3 (edicoes/2026-10-18-demissao-gestores e 2026-10-18-novas-funcoes-gestao): roteiros, diagramas e fotos prontos e no portão; avatares ENVIADOS ao HeyGen (video_id aa446a0f2e0b406bb8356911b323aea7 e b30cd2f8b5f14297bfab63c06b623472) mas o download não terminou (processo morreu com a sessão). Falta: `DISPLAY=:99 python3 reel7etapas.py avatar <pasta>` (retoma pelo video_id.txt e baixa) → corrigir palavras.json (Claude/IA) → montar → validar → mapa → revisar folhas → `publicar` (canal lives3 + v3).
+- [?] Reação do Nei aos 5 reels D10 no v3.
 
 ## Decisões
-- Falas com pronúncia fonética no TTS/HeyGen ("inema ponto club", "inema cê cê bot"); a legenda mantém a grafia (campo legenda).
-- Pergunta de comentário: "Em qual sequência você está?" (não a do clima); fecho no inema.club.
+- CTA fixo: "Tá tudo no inema ponto club. Ou me pede o link aqui nos comentários."
+- Capa D10: sem faixa; gancho inteiro na manchete de 2 linhas logo acima do avatar meia tela (layout abre, desfoque 0, titulo_pos baixo, luz_min 0 no gancho).
+- Empresas de 2027 e Constituição dos Agentes aparecem como INEMA.CLUB PRO: não dizer "grátis" nesses reels.
+- Os 5 D10 só no v3 (análise); os 2 de gestão vão para o lives3 (pedido "use o r7e forte viral lives3").
 
 ## Não fazer
-- Não publicar no YouTube nem em outro canal sem o Nei pedir.
-- Não embrulhar compor_avatar.sh/montar.sh em outro flock .render.lock.
-- Não aceitar oferta de troca de plano do HeyGen; não apagar rascunho no HeyGen sem o Nei mandar.
+- Não abrir o estúdio na tela do Nei (sempre DISPLAY=:99); só a janela de login vai para a tela :10.
+- Não usar Metricool/API sem autorização explícita (não autorizado).
+- Não trocar plano do HeyGen; não apagar rascunhos no HeyGen.
+
+## Pendências em aberto
+- "Do chat ao agente": a página de evento diz links exclusivos INEMA.PRO; o reel D10 diz "grátis agora, antes de ficar só no PRO" — Nei não respondeu.
+- Commit das correções do motor/diagramas, FALHAS.md e roteiros/diagramas dos 2 de gestão.
 
 ## Próxima ação
-Ler edicoes/2026-10-18-do-chat-ao-agente/AVATAR-STATUS.txt. Se "bot v3 msg N": avisar o Nei. Se FALHOU: corrigir a etapa (avatar: `auto/avatar.sh` com DISPLAY=:99 e título novo; montagem: rodar avatar-e-manda.sh de novo via systemd-run com -E PATH e -E DISPLAY=:99).
+Baixar os 2 avatares de gestão e terminar/publicar no lives3 + v3 (ver acima); depois commit + push do reel7etapas.
 
 
 <!-- handoff-estado:inicio -->
@@ -46,7 +55,7 @@ Ler edicoes/2026-10-18-do-chat-ao-agente/AVATAR-STATUS.txt. Se "bot v3 msg N": a
 
 Gravado por handoff-grava.py no momento do handoff. `--conferir` compara com o projeto agora.
 
-- commit: 3c6624c3939bb09de8f2257182df869f285d96fa · branch: main
+- commit: 317acfa00e634c0ccb22509fe9fba776e994464e · branch: main
 - arquivos sujos fora de handoffs/: 433 (lista cortada)
 - `FALHAS.md` · sha256:c7f3ef9f609c · sujo
 - `diagramas.py` · sha256:1ebbb09ff545 · sujo
