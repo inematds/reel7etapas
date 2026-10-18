@@ -18,6 +18,24 @@ Guia: https://inematds.github.io/reel7etapas/guia/
 **Sem portão de aprovação do Nei** (pedido de 11/10/2026): você valida — portões do motor + leitura das
 folhas em tamanho real — e publica já impecável. Ele confere depois.
 
+## Propósito e plano (D10 do inema-design, Nei 18/10/2026 — vem ANTES de tudo)
+
+**Objetivo: trazer público para o inema.club.** "Se não viralizar, não atingiu o objetivo." CTA fixo: "Tá tudo no
+inema ponto club. Ou me pede o link aqui nos comentários."
+
+Antes de escrever a fala, grave `plano.md` na pasta da edição:
+1. **Pessoa:** público geral (IA traduzida para o dia a dia), não o nicho que já usa Claude/Codex.
+2. **O que ela quer:** ganhar algo, resolver uma dor ou chegar a um desejo. Uma frase.
+3. **Gancho:** o gatilho (medo, novidade ou provocação) com o fato/número e a fonte (D9).
+4. **Nota de potencial 0–10:** "um desconhecido rolando o feed para aqui?". Abaixo de 7, troque o ângulo ou proponha outro tema
+   ("faxina no setup", "camada de contexto" = nicho, nota baixa).
+5. **Visuais que ensinam:** pelo menos 2 diagramas/visuais por reel (barra comparando, antes/depois, fluxo, print real
+   com o detalhe em destaque), além das fotos.
+6. **Cada etapa forte:** as 7 etapas são checklist de gatilhos, não ordem obrigatória; nenhuma etapa morna.
+
+Só depois do plano: fala → avatar (novo, no estúdio, com `APROVADO_HEYGEN` daquela produção) → imagens → montar.
+**Rosto desde o quadro 0** em meia tela, passando a PiP na etapa 2 (nunca tela cheia; D8).
+
 ## O modelo (a ordem importa)
 
 | # | Etapa | Pergunta que a etapa responde | Exemplo JARVIS |
