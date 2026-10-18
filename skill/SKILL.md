@@ -53,7 +53,9 @@ o quadro 0, a faixa (`capa.ganho`), a manchete e a 1ª frase da fala mexem com a
 provocação** — com fato/número concreto e fonte (ex.: "HACKERS ROUBARAM AS CHAVES · US$ 1.700 NUMA NOITE",
 "US$ 6 → 23 CENTAVOS", "SE FECHAREM A SUA CONTA, SEU NEGÓCIO VAI JUNTO?"). Nunca promessa/benefício no quadro 0 e
 nunca desarmar o medo na 1ª frase ("mas dá pra dormir tranquilo" vai para a facilidade). Imagem do gancho = o
-flagrante, NÍTIDA (`capa.desfoque: 0`), luz dramática liberada (`luz:` + `cor_livre: true` na etapa 1). O
+flagrante, NÍTIDA (`capa.desfoque: 0`), luz dramática liberada (na etapa 1: `cor_livre: true`, `luz_min: 25` e `estilo:` próprio com a luz e a
+composição; com `cor_livre` o motor ignora `luz:`; modelo nos roteiros `*-gatilho` de 18/10). Capa sem avatar
+(`layout: caixa` + `capa.avatar: false`, manchete em `capa.y: 1110`) e `letra: forte` (#FACC15 + contorno). O
 ganho/alívio entra da etapa 4 em diante. Título do post (yt-pubx/TikTok/Instagram) com o mesmo gatilho.
 
 1. **Roteiro.** `cd ~/projetos/reel7etapas && python3 reel7etapas.py novo <slug>`. Reescreva `fala`
