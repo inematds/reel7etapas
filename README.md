@@ -4,6 +4,32 @@
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
+> **Novo padrão (18/10/2026): [r7ex](https://github.com/inematds/r7ex).** O roteiro de 7 etapas daqui continua; o vídeo
+> agora é montado no acabamento de telejornal do eventosextremospub, num repo próprio e independente. Para reel novo,
+> use o r7ex. Este repo segue como o motor antigo (Pillow) e o histórico. Resumo abaixo; a explicação completa está no
+> README do r7ex.
+
+## Como chegamos ao r7ex (18/10/2026)
+
+| Lote | Conteúdo | Forma | Resultado |
+|---|---|---|---|
+| 1. r7e antigo | assunto do dia, nicho, gancho = **promessa**, medo fraco | foto de banco de imagens desfocada, rosto em meia tela, Anton com âmbar | sem visualização no TikTok/Instagram |
+| 2. "-gatilho" (mesmo avatar) | fala igual | só o gancho: gatilho + número, imagem nítida, #FACC15 com contorno | melhor, "ainda padrão" |
+| 3. D10 | **plano antes da fala**, teses fortes, gatilho primeiro, CTA inema.club, prints reais | este motor, com tarja e diagramas Pillow | "ficou padrão" |
+| 4. **r7ex** | o mesmo do lote 3 (mesmo avatar) | motor do eventosextremospub: título na arte, preto e dourado, painéis, contador, karaokê | padrão novo |
+
+- Exemplos: evento extremo de referência https://www.youtube.com/shorts/DfdtX9HbkWg;
+  lote 1 https://www.youtube.com/shorts/E5Y94BLfuJU; lote 3 https://www.youtube.com/shorts/xpDV5qQe5oE;
+  r7ex https://youtube.com/shorts/DG30IdeqWcg.
+- **O conteúdo** acertou no lote 3 (plano, gatilho com número, fala nova). **A forma** acertou no lote 4.
+
+### Como mudar neste repo (motor antigo)
+- **Layout:** `reel7etapas.py`: `LAYOUTS` (abre, quadro, caixa…), `letra: forte|tarja` no roteiro, `capa.desfoque`,
+  `capa.avatar`; diagramas em `diagramas.py`.
+- **Estrutura:** as 7 `etapas` do `roteiro.yaml` (exatamente 7; âncora = palavra da fala onde a etapa começa;
+  `passos:` para diagrama em sequência).
+- **Planejamento:** regras no `skill/SKILL.md` (gancho = gatilho D9; propósito e plano D10) e no kit inema-design.
+
 ## O que é
 
 O reel7etapas é um modelo para escrever vídeos curtos (Reels, Shorts, TikTok) e uma ferramenta que monta esses vídeos sozinha. O roteiro segue sempre a mesma ordem de 7 etapas, pensada para segurar quem está rolando a tela e terminar com um pedido simples: comentar uma palavra. Serve para quem cria conteúdo e quer um caminho repetível, em vez de começar do zero a cada vídeo. Para só usar o modelo, basta ler a tabela das 7 etapas; para gerar o vídeo, a ferramenta usa o avatar do Nei no HeyGen, imagens geradas pelo Codex e um script em Python.
